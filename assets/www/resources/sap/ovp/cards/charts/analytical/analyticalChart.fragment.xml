@@ -1,0 +1,96 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:suite="sap.suite.ui.commons" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:dataSet="sap.viz.ui5.data" xmlns:feed="sap.viz.ui5.controls.common.feeds"
+	xmlns:ovp="sap.ovp.ui" xmlns:charts="sap.ovp.cards.charts">
+
+	<VBox class="ovpChartTitleVBox cardType" id="vbLayout">
+        <customData>
+            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>analyticalCardType}" writeToDom="true" />
+        </customData>
+	<template:with path="ovpCardProperties>/chartAnnotationPath"
+		helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='chart'>
+		<template:with path="ovpCardProperties>/selectionAnnotationPath"
+			helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='selVar'>
+			<template:with path="ovpCardProperties>/presentationAnnotationPath"
+				helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='preVar'>
+				<template:if test="{chart>}">
+<!-- 				FIORITECHP1-4935Reversal of Scale factor in Chart and Chart title. -->
+<!-- 					<template:if test="{chart>Title}"> -->
+<!-- 						<HBox class="ovpChartTitle" >  -->
+<!-- 							<items> -->
+<!-- 							<VBox class="ovpChartTitleText"> -->
+								<Text id="ovpCT" class="ovpChartTitle"  maxLines="1" 
+									text="{path: 'chart>Title', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" >
+									<customData>
+										<template:if test="{chart>Title}">
+											<ovp:CustomData key="aria-label" value="{path: 'chart>Title', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" writeToDom="true" />
+										</template:if>
+									</customData>
+								</Text>
+<!-- 				FIORITECHP1-4935Reversal of Scale factor in Chart and Chart title. -->
+<!-- 							</VBox> -->
+<!-- 							<VBox class="ovpChartTitleScaleText"> -->
+<!-- 								<Text id="ovpScaleUnit" class="ovpChartTitle" > -->
+<!-- 									<customData> -->
+<!-- 										<ovp:CustomData key="aria-label" value="" writeToDom="true" /> -->
+<!-- 										<ovp:CustomData key="role" value="heading" writeToDom="true" /> -->
+<!-- 									</customData> -->
+<!-- 								</Text> -->
+<!-- 							</VBox> -->
+<!-- 							</items> -->
+<!-- 						</HBox> -->
+<!-- 					</template:if> -->
+					<template:if test="{path:'chart>DimensionAttributes', formatter: 'sap.ovp.cards.charts.VizAnnotationManager.dimensionAttrCheck'}">
+						<template:if test="{path:'chart>MeasureAttributes', formatter: 'sap.ovp.cards.charts.VizAnnotationManager.measureAttrCheck'}">
+							<template:if test="{chart>ChartType}">
+								<charts:OVPVizDataHandler chartType="{path: 'chart>ChartType', formatter: 'sap.ovp.cards.charts.VizAnnotationManager.getChartType'}"
+								entitySet="{ path:'entitySet>' , formatter: 'sap.ovp.cards.charts.VizAnnotationManager.getEntitySet' }" 
+								data="{parts: [{path:'entitySet>'}, {path:'selVar>'}, {path:'preVar>'}, {path:'chart>DimensionAttributes'}, {path:'chart>MeasureAttributes'}, {path:'chart>ChartType'}], formatter: 'sap.ovp.cards.charts.VizAnnotationManager.formatItems'}"
+								aggregateData="{parts: [{path:'entitySet>'}, {path:'selVar>'}, {path:'preVar>'}, {path:'chart>undefined'}, {path:'chart>MeasureAttributes'}, {path:'chart>ChartType'}], formatter: 'sap.ovp.cards.charts.VizAnnotationManager.formatItems'}">
+								<charts:data>
+									<core:Element />
+								</charts:data>
+								<charts:aggregateData>
+									<core:Element />
+								</charts:aggregateData>
+								<charts:content width="100%">
+										<viz:VizFrame id="analyticalChart" class="ovpViz" uiConfig="{applicationSet:'fiori'}"
+											vizType="{parts: [{path: 'chart>ChartType'}, {path: 'chart>DimensionAttributes'}],
+												formatter: 'sap.ovp.cards.charts.VizAnnotationManager.getChartType'}" width="100%">
+											<viz:customData>
+												<template:if test="{chart>Title}">
+													<ovp:CustomData key="aria-label"
+													value="{path: 'chart>Title', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" writeToDom="true" />
+												</template:if>
+											</viz:customData>
+											<viz:dataset>
+												<dataSet:FlattenedDataset
+													data="{analyticalmodel>/}">
+												</dataSet:FlattenedDataset>
+											</viz:dataset>
+										</viz:VizFrame>
+										</charts:content>
+							</charts:OVPVizDataHandler>
+							</template:if>
+						</template:if>
+					</template:if>
+				</template:if>
+			</template:with>
+		</template:with>
+	</template:with>
+	</VBox>
+	
+	<template:with path="ovpCardProperties>/chartAnnotationPath"
+		helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='chart'>
+		<template:if test="{chart>}">
+			<template:if test="{chart>ChartType}">
+				<template:if test="{path:'chart>ChartType',formatter:'sap.ovp.cards.charts.VizAnnotationManager.checkBubbleChart'}">
+					<Text id="bubbleText" class="ovpChartFooter"/>
+				</template:if>
+			</template:if>
+		</template:if>
+	</template:with>
+
+</core:FragmentDefinition>

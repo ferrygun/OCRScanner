@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:ovp="sap.ovp.ui"
+	xmlns:sfi="sap.ui.comp.smartfield"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<MessagePage icon="sap-icon://message-error" text="{ovplibResourceBundle>LOAD_DATA_ERROR_HEADER}"
+		description="{ovplibResourceBundle>LOAD_DATA_ERROR_CONTENT}" class="stackContentOfError"
+		size="6.5rem" showHeader="false"></MessagePage>
+</core:FragmentDefinition>

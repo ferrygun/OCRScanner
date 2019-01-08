@@ -1,0 +1,71 @@
+{
+  "_version": "1.2.0",
+  "sap.app": {
+    "_version": "1.2.0",
+    "id": "sap.zen.dsh",
+    "type": "library",
+    "embeds": [
+      "fioriwrapper"
+    ],
+    "applicationVersion": {
+      "version": "1.52.4"
+    },
+    "title": "Design Studio Runtime Library.",
+    "description": "Design Studio Runtime Library.  Intended only to be used within S/4 HANA Fiori applications.",
+    "ach": "BI-RA-AD-EA",
+    "resources": "resources.json",
+    "offline": true,
+    "openSourceComponents": [
+      {
+        "name": "underscore",
+        "packagedWithMySelf": true,
+        "version": "0.0.0"
+      },
+      {
+        "name": "xlsx",
+        "packagedWithMySelf": true,
+        "version": "0.0.0"
+      },
+      {
+        "name": "jszip",
+        "packagedWithMySelf": true,
+        "version": "0.0.0"
+      }
+    ]
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "supportedThemes": []
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.52",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.52.0"
+        },
+        "sap.ui.table": {
+          "minVersion": "1.52.0"
+        },
+        "sap.ui.layout": {
+          "minVersion": "1.52.0"
+        },
+        "sap.m": {
+          "minVersion": "1.52.0"
+        },
+        "sap.viz": {
+          "minVersion": "1.52.0",
+          "lazy": true
+        },
+        "sap.zen.commons": {
+          "minVersion": "1.52.4"
+        },
+        "sap.zen.crosstab": {
+          "minVersion": "1.52.4"
+        }
+      }
+    }
+  }
+}

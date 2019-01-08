@@ -1,0 +1,46 @@
+{
+  "_version": "1.9.0",
+  "sap.app": {
+    "id": "sap.ui.export",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.52.4"
+    },
+    "title": "UI5 library: sap.ui.export",
+    "description": "UI5 library: sap.ui.export",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_belize",
+      "sap_belize_plus",
+      "sap_hcb"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.52",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.52.4"
+        }
+      }
+    },
+    "library": {
+      "i18n": "messagebundle.properties",
+      "css": false,
+      "content": {
+        "controls": [],
+        "elements": [],
+        "types": [
+          "sap.ui.export.EdmType"
+        ],
+        "interfaces": []
+      }
+    }
+  }
+}

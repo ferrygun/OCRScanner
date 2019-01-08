@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+    <ovp:EasyScanLayout id="ovpLayout" dragAndDropRootSelector=".ovpApplication" afterDragEnds="layoutChanged"
+                        dragAndDropEnabled="{path:'ui>', formatter:'.isDragAndDropEnabled'}">
+        <ovp:content>
+            <template:repeat list="{ui>/cards}" var="card">
+                <core:ComponentContainer id="{card>id}">
+
+                <core:customData>
+                    <ovp:CustomData key="role" value="listitem" writeToDom="true" />
+                </core:customData>
+
+                </core:ComponentContainer>
+            </template:repeat>
+        </ovp:content>
+
+        <ovp:customData>
+            <ovp:CustomData key="role" value="region" writeToDom="true" />
+            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>Cards}" writeToDom="true" />
+        </ovp:customData>
+
+    </ovp:EasyScanLayout>
+
+</core:FragmentDefinition>

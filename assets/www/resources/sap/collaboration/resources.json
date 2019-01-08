@@ -1,0 +1,1798 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library"
+		},
+		{
+			"name": ".theming"
+		},
+		{
+			"name": "AppType.type",
+			"designtime": true
+		},
+		{
+			"name": "DisplayFeedType.type",
+			"designtime": true
+		},
+		{
+			"name": "FeedType.type",
+			"designtime": true
+		},
+		{
+			"name": "components/controls/FeedEntryEmbedded-dbg.js",
+			"module": "sap/collaboration/components/controls/FeedEntryEmbedded.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/PlaceholderUtility.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/controls/FeedEntryEmbedded.js",
+			"module": "sap/collaboration/components/controls/FeedEntryEmbedded.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/PlaceholderUtility.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/controls/FeedEntryEmbeddedRenderer-dbg.js",
+			"module": "sap/collaboration/components/controls/FeedEntryEmbeddedRenderer.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/controls/FeedEntryEmbeddedRenderer.js",
+			"module": "sap/collaboration/components/controls/FeedEntryEmbeddedRenderer.js"
+		},
+		{
+			"name": "components/controls/FilterPopover-dbg.js",
+			"module": "sap/collaboration/components/controls/FilterPopover.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/controls/FilterPopover.js",
+			"module": "sap/collaboration/components/controls/FilterPopover.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/controls/PlaceholderUtility-dbg.js",
+			"module": "sap/collaboration/components/controls/PlaceholderUtility.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/controls/PlaceholderUtility.js",
+			"module": "sap/collaboration/components/controls/PlaceholderUtility.js",
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/controls/ReplyPopover-dbg.js",
+			"module": "sap/collaboration/components/controls/ReplyPopover.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/LanguageBundle.js"
+			]
+		},
+		{
+			"name": "components/controls/ReplyPopover.js",
+			"module": "sap/collaboration/components/controls/ReplyPopover.js",
+			"required": [
+				"sap/collaboration/components/utils/LanguageBundle.js"
+			]
+		},
+		{
+			"name": "components/controls/SocialTextArea-dbg.js",
+			"module": "sap/collaboration/components/controls/SocialTextArea.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/SuggestionUtility.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/m/InputBase.js",
+				"sap/m/List.js",
+				"sap/m/Popover.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TextArea.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "components/controls/SocialTextArea.js",
+			"module": "sap/collaboration/components/controls/SocialTextArea.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/SuggestionUtility.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/m/InputBase.js",
+				"sap/m/List.js",
+				"sap/m/Popover.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TextArea.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "components/controls/SuggestionUtility-dbg.js",
+			"module": "sap/collaboration/components/controls/SuggestionUtility.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/controls/SuggestionUtility.js",
+			"module": "sap/collaboration/components/controls/SuggestionUtility.js"
+		},
+		{
+			"name": "components/controls/TimelineEntryEmbedded-dbg.js",
+			"module": "sap/collaboration/components/controls/TimelineEntryEmbedded.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/PlaceholderUtility.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/controls/TimelineEntryEmbedded.js",
+			"module": "sap/collaboration/components/controls/TimelineEntryEmbedded.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/PlaceholderUtility.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/controls/TimelineEntryEmbeddedRenderer-dbg.js",
+			"module": "sap/collaboration/components/controls/TimelineEntryEmbeddedRenderer.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/controls/TimelineEntryEmbeddedRenderer.js",
+			"module": "sap/collaboration/components/controls/TimelineEntryEmbeddedRenderer.js"
+		},
+		{
+			"name": "components/feed/BOMode-dbg.js",
+			"module": "sap/collaboration/components/feed/BOMode.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/feed/Mode.js",
+				"sap/collaboration/components/utils/PendingRequestsUtil.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/Label.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "components/feed/BOMode.js",
+			"module": "sap/collaboration/components/feed/BOMode.js",
+			"required": [
+				"sap/collaboration/components/feed/Mode.js",
+				"sap/collaboration/components/utils/PendingRequestsUtil.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/Label.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "components/feed/Component-dbg.js",
+			"module": "sap/collaboration/components/feed/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/suite/ui/commons/library.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/feed/Component.js",
+			"module": "sap/collaboration/components/feed/Component.js",
+			"required": [
+				"sap/suite/ui/commons/library.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/feed/Component.json"
+		},
+		{
+			"name": "components/feed/GroupIDsMode-dbg.js",
+			"module": "sap/collaboration/components/feed/GroupIDsMode.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/feed/Mode.js",
+				"sap/collaboration/components/utils/PendingRequestsUtil.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "components/feed/GroupIDsMode.js",
+			"module": "sap/collaboration/components/feed/GroupIDsMode.js",
+			"required": [
+				"sap/collaboration/components/feed/Mode.js",
+				"sap/collaboration/components/utils/PendingRequestsUtil.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "components/feed/Mode-dbg.js",
+			"module": "sap/collaboration/components/feed/Mode.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "components/feed/Mode.js",
+			"module": "sap/collaboration/components/feed/Mode.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "components/feed/ModeFactory-dbg.js",
+			"module": "sap/collaboration/components/feed/ModeFactory.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/feed/BOMode.js",
+				"sap/collaboration/components/feed/GroupIDsMode.js",
+				"sap/collaboration/components/feed/UserMode.js"
+			]
+		},
+		{
+			"name": "components/feed/ModeFactory.js",
+			"module": "sap/collaboration/components/feed/ModeFactory.js",
+			"required": [
+				"sap/collaboration/components/feed/BOMode.js",
+				"sap/collaboration/components/feed/GroupIDsMode.js",
+				"sap/collaboration/components/feed/UserMode.js"
+			]
+		},
+		{
+			"name": "components/feed/UserMode-dbg.js",
+			"module": "sap/collaboration/components/feed/UserMode.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/feed/Mode.js"
+			]
+		},
+		{
+			"name": "components/feed/UserMode.js",
+			"module": "sap/collaboration/components/feed/UserMode.js",
+			"required": [
+				"sap/collaboration/components/feed/Mode.js"
+			]
+		},
+		{
+			"name": "components/feed/fragments/CustomListItem.fragment.xml",
+			"module": "sap/collaboration/components/feed/fragments/CustomListItem.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/Label.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "components/feed/fragments/GroupSelector.fragment.xml",
+			"module": "sap/collaboration/components/feed/fragments/GroupSelector.fragment.xml",
+			"required": [
+				"sap/m/List.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/SearchField.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "components/feed/views/GroupFeed-dbg.controller.js",
+			"module": "sap/collaboration/components/feed/views/GroupFeed.controller.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/FeedEntryEmbedded.js",
+				"sap/collaboration/components/controls/FilterPopover.js",
+				"sap/collaboration/components/controls/ReplyPopover.js",
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/feed/ModeFactory.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/DateUtil.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/m/MessageBox.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "components/feed/views/GroupFeed.controller.js",
+			"module": "sap/collaboration/components/feed/views/GroupFeed.controller.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/FeedEntryEmbedded.js",
+				"sap/collaboration/components/controls/FilterPopover.js",
+				"sap/collaboration/components/controls/ReplyPopover.js",
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/feed/ModeFactory.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/DateUtil.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/m/MessageBox.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "components/feed/views/GroupFeed.view.xml",
+			"module": "sap/collaboration/components/feed/views/GroupFeed.view.xml",
+			"required": [
+				"sap/collaboration/components/feed/views/GroupFeed.controller.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/Component-dbg.js",
+			"module": "sap/collaboration/components/fiori/feed/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/JamUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/library.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/Component.js",
+			"module": "sap/collaboration/components/fiori/feed/Component.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/JamUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/library.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/app/App-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/app/App.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/app/App-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/feed/app/App.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/app/App.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/app/App.controller.js"
+		},
+		{
+			"name": "components/fiori/feed/app/App.view.js",
+			"module": "sap/collaboration/components/fiori/feed/app/App.view.js"
+		},
+		{
+			"name": "components/fiori/feed/commons/Detail-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/commons/Detail.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/JamUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/commons/Detail-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/feed/commons/Detail.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/commons/Detail.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/commons/Detail.controller.js",
+			"required": [
+				"sap/collaboration/components/utils/JamUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/commons/Detail.view.js",
+			"module": "sap/collaboration/components/fiori/feed/commons/Detail.view.js"
+		},
+		{
+			"name": "components/fiori/feed/dialog/Component-dbg.js",
+			"module": "sap/collaboration/components/fiori/feed/dialog/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/JamUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/library.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/dialog/Component.js",
+			"module": "sap/collaboration/components/fiori/feed/dialog/Component.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/JamUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/library.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/feed/splitApp/FeedTypeMaster-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/splitApp/FeedTypeMaster-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/splitApp/FeedTypeMaster.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.controller.js"
+		},
+		{
+			"name": "components/fiori/feed/splitApp/FeedTypeMaster.view.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.view.js"
+		},
+		{
+			"name": "components/fiori/feed/splitApp/GroupMaster-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/GroupMaster.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/splitApp/GroupMaster-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/GroupMaster.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/splitApp/GroupMaster.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/GroupMaster.controller.js"
+		},
+		{
+			"name": "components/fiori/feed/splitApp/GroupMaster.view.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/GroupMaster.view.js"
+		},
+		{
+			"name": "components/fiori/feed/splitApp/SplitApp-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/SplitApp.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/splitApp/SplitApp-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/SplitApp.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/feed/splitApp/SplitApp.controller.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/SplitApp.controller.js"
+		},
+		{
+			"name": "components/fiori/feed/splitApp/SplitApp.view.js",
+			"module": "sap/collaboration/components/fiori/feed/splitApp/SplitApp.view.js"
+		},
+		{
+			"name": "components/fiori/notification/Component-dbg.js",
+			"module": "sap/collaboration/components/fiori/notification/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/library.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/commons/Button.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/notification/Component.js",
+			"module": "sap/collaboration/components/fiori/notification/Component.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/library.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/commons/Button.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/notification/Notification-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/notification/Notification.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/NotificationTypeUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/notification/Notification-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/notification/Notification.view.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/fiori/notification/NotificationContainer.js",
+				"sap/collaboration/library.js"
+			]
+		},
+		{
+			"name": "components/fiori/notification/Notification.controller.js",
+			"module": "sap/collaboration/components/fiori/notification/Notification.controller.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/NotificationTypeUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/notification/Notification.view.js",
+			"module": "sap/collaboration/components/fiori/notification/Notification.view.js",
+			"required": [
+				"sap/collaboration/components/fiori/notification/NotificationContainer.js",
+				"sap/collaboration/library.js"
+			]
+		},
+		{
+			"name": "components/fiori/notification/NotificationContainer-dbg.js",
+			"module": "sap/collaboration/components/fiori/notification/NotificationContainer.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/notification/NotificationContainer.js",
+			"module": "sap/collaboration/components/fiori/notification/NotificationContainer.js"
+		},
+		{
+			"name": "components/fiori/sharing/Component-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/library.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/Component.js",
+			"module": "sap/collaboration/components/fiori/sharing/Component.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/library.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/FolderSelection-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/sharing/FolderSelection.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/FolderSelection-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/sharing/FolderSelection.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/FolderSelection.controller.js",
+			"module": "sap/collaboration/components/fiori/sharing/FolderSelection.controller.js"
+		},
+		{
+			"name": "components/fiori/sharing/FolderSelection.view.js",
+			"module": "sap/collaboration/components/fiori/sharing/FolderSelection.view.js"
+		},
+		{
+			"name": "components/fiori/sharing/NoGroups-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/sharing/NoGroups.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/NoGroups-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/sharing/NoGroups.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/NoGroups.controller.js",
+			"module": "sap/collaboration/components/fiori/sharing/NoGroups.controller.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/NoGroups.view.js",
+			"module": "sap/collaboration/components/fiori/sharing/NoGroups.view.js"
+		},
+		{
+			"name": "components/fiori/sharing/Sharing-dbg.controller.js",
+			"module": "sap/collaboration/components/fiori/sharing/Sharing.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/fiori/sharing/helper/AttachmentsUtil.js",
+				"sap/collaboration/components/fiori/sharing/helper/ShareUtil.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/m/MessageToast.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/Sharing-dbg.view.js",
+			"module": "sap/collaboration/components/fiori/sharing/Sharing.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/Sharing.controller.js",
+			"module": "sap/collaboration/components/fiori/sharing/Sharing.controller.js",
+			"required": [
+				"sap/collaboration/components/fiori/sharing/helper/AttachmentsUtil.js",
+				"sap/collaboration/components/fiori/sharing/helper/ShareUtil.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/m/MessageToast.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/Sharing.view.js",
+			"module": "sap/collaboration/components/fiori/sharing/Sharing.view.js"
+		},
+		{
+			"name": "components/fiori/sharing/attachment/Attachment-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/attachment/Attachment.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js",
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentParameterException.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/attachment/Attachment.js",
+			"module": "sap/collaboration/components/fiori/sharing/attachment/Attachment.js",
+			"required": [
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js",
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentParameterException.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js",
+			"module": "sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js"
+		},
+		{
+			"name": "components/fiori/sharing/attachment/InvalidAttachmentParameterException-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentParameterException.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/attachment/InvalidAttachmentParameterException.js",
+			"module": "sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentParameterException.js"
+		},
+		{
+			"name": "components/fiori/sharing/dialog/Component-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/dialog/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/dialog/Component.js",
+			"module": "sap/collaboration/components/fiori/sharing/dialog/Component.js",
+			"required": [
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/helper/AttachmentsUtil-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/helper/AttachmentsUtil.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/helper/AttachmentsUtil.js",
+			"module": "sap/collaboration/components/fiori/sharing/helper/AttachmentsUtil.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js"
+			]
+		},
+		{
+			"name": "components/fiori/sharing/helper/ShareUtil-dbg.js",
+			"module": "sap/collaboration/components/fiori/sharing/helper/ShareUtil.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/fiori/sharing/helper/ShareUtil.js",
+			"module": "sap/collaboration/components/fiori/sharing/helper/ShareUtil.js"
+		},
+		{
+			"name": "components/resources/css/EmbeddedControl.css"
+		},
+		{
+			"name": "components/resources/css/MorePopover.css"
+		},
+		{
+			"name": "components/resources/css/ReplyPopover.css"
+		},
+		{
+			"name": "components/resources/css/Sharing.css"
+		},
+		{
+			"name": "components/resources/css/SocialProfile.css"
+		},
+		{
+			"name": "components/resources/css/SocialTextArea.css"
+		},
+		{
+			"name": "components/resources/css/SocialTimeline.css"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle.properties",
+			"locale": "",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_ar.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_ar.properties",
+			"locale": "ar",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_bg.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_bg.properties",
+			"locale": "bg",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_ca.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_ca.properties",
+			"locale": "ca",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_cs.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_cs.properties",
+			"locale": "cs",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_da.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_da.properties",
+			"locale": "da",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_de.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_de.properties",
+			"locale": "de",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_el.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_el.properties",
+			"locale": "el",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_en.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_en.properties",
+			"locale": "en",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_en_US_sappsd.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_en_US_saptrc.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_es.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_es.properties",
+			"locale": "es",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_et.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_et.properties",
+			"locale": "et",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_fi.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_fi.properties",
+			"locale": "fi",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_fr.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_fr.properties",
+			"locale": "fr",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_hi.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_hi.properties",
+			"locale": "hi",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_hr.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_hr.properties",
+			"locale": "hr",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_hu.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_hu.properties",
+			"locale": "hu",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_it.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_it.properties",
+			"locale": "it",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_iw.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_iw.properties",
+			"locale": "iw",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_ja.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_ja.properties",
+			"locale": "ja",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_kk.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_kk.properties",
+			"locale": "kk",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_ko.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_ko.properties",
+			"locale": "ko",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_lt.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_lt.properties",
+			"locale": "lt",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_lv.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_lv.properties",
+			"locale": "lv",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_nl.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_nl.properties",
+			"locale": "nl",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_no.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_no.properties",
+			"locale": "no",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_pl.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_pl.properties",
+			"locale": "pl",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_pt.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_pt.properties",
+			"locale": "pt",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_ro.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_ro.properties",
+			"locale": "ro",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_ru.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_ru.properties",
+			"locale": "ru",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_sh.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_sh.properties",
+			"locale": "sh",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_sk.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_sk.properties",
+			"locale": "sk",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_sl.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_sl.properties",
+			"locale": "sl",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_sv.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_sv.properties",
+			"locale": "sv",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_th.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_th.properties",
+			"locale": "th",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_tr.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_tr.properties",
+			"locale": "tr",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_uk.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_uk.properties",
+			"locale": "uk",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_vi.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_vi.properties",
+			"locale": "vi",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_zh_CN.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/i18n/messagebundle_zh_TW.properties",
+			"module": "sap/collaboration/components/resources/i18n/messagebundle_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "components/resources/i18n/messagebundle.properties"
+		},
+		{
+			"name": "components/resources/images/AssignedGroup.png"
+		},
+		{
+			"name": "components/resources/images/GroupActionAssign.png"
+		},
+		{
+			"name": "components/resources/images/GroupActionCopy.png"
+		},
+		{
+			"name": "components/resources/images/GroupActionCreate.png"
+		},
+		{
+			"name": "components/resources/images/GroupActionEdit.png"
+		},
+		{
+			"name": "components/resources/images/GroupActionTrash.png"
+		},
+		{
+			"name": "components/resources/images/GroupActionUnassign.png"
+		},
+		{
+			"name": "components/resources/images/GroupTypePrivateExternal.png"
+		},
+		{
+			"name": "components/resources/images/GroupTypePublicInternal.png"
+		},
+		{
+			"name": "components/resources/images/GroupTypepPrivateInternal.png"
+		},
+		{
+			"name": "components/resources/images/InvitationAccept.png"
+		},
+		{
+			"name": "components/resources/images/InvitationDecline.png"
+		},
+		{
+			"name": "components/resources/images/MemberDelete.png"
+		},
+		{
+			"name": "components/resources/images/MemberInviteConfirmed.png"
+		},
+		{
+			"name": "components/resources/images/MemberInviteDeclined.png"
+		},
+		{
+			"name": "components/resources/images/MemberInviteOpen.png"
+		},
+		{
+			"name": "components/resources/images/UnTag.png"
+		},
+		{
+			"name": "components/socialprofile/Component-dbg.js",
+			"module": "sap/collaboration/components/socialprofile/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/socialprofile/Component.js",
+			"module": "sap/collaboration/components/socialprofile/Component.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/socialprofile/SocialProfile-dbg.controller.js",
+			"module": "sap/collaboration/components/socialprofile/SocialProfile.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/socialprofile/SocialProfile-dbg.view.js",
+			"module": "sap/collaboration/components/socialprofile/SocialProfile.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/socialprofile/SocialProfile.controller.js",
+			"module": "sap/collaboration/components/socialprofile/SocialProfile.controller.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/socialprofile/SocialProfile.view.js",
+			"module": "sap/collaboration/components/socialprofile/SocialProfile.view.js"
+		},
+		{
+			"name": "components/socialtimeline/Component-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/controls/FilterPopover.js",
+				"sap/collaboration/components/controls/ReplyPopover.js",
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/socialtimeline/annotations/TimelineTermsUtility.js",
+				"sap/collaboration/components/socialtimeline/controls/TimelineItemEmbedded.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/JamDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/ServiceDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/TimelineDataHandler.js",
+				"sap/collaboration/components/socialtimeline/filter/FilterType.js",
+				"sap/collaboration/components/socialtimeline/validation/InputValidator.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/DateUtil.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/Component.js",
+			"module": "sap/collaboration/components/socialtimeline/Component.js",
+			"required": [
+				"sap/collaboration/components/controls/FilterPopover.js",
+				"sap/collaboration/components/controls/ReplyPopover.js",
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/socialtimeline/annotations/TimelineTermsUtility.js",
+				"sap/collaboration/components/socialtimeline/controls/TimelineItemEmbedded.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/JamDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/ServiceDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/TimelineDataHandler.js",
+				"sap/collaboration/components/socialtimeline/filter/FilterType.js",
+				"sap/collaboration/components/socialtimeline/validation/InputValidator.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/DateUtil.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/annotations/Metadata-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/annotations/Metadata.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/annotations/Metadata.js",
+			"module": "sap/collaboration/components/socialtimeline/annotations/Metadata.js",
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/annotations/MetadataException-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/annotations/MetadataException.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/annotations/MetadataException.js",
+			"module": "sap/collaboration/components/socialtimeline/annotations/MetadataException.js",
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/annotations/TimelineTermsUtility-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/annotations/TimelineTermsUtility.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/socialtimeline/annotations/MetadataException.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/annotations/TimelineTermsUtility.js",
+			"module": "sap/collaboration/components/socialtimeline/annotations/TimelineTermsUtility.js",
+			"required": [
+				"sap/collaboration/components/socialtimeline/annotations/MetadataException.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/controls/TimelineItemEmbedded-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/controls/TimelineItemEmbedded.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/FeedEntryEmbedded.js",
+				"sap/collaboration/components/controls/TimelineEntryEmbedded.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/controls/TimelineItemEmbedded.js",
+			"module": "sap/collaboration/components/socialtimeline/controls/TimelineItemEmbedded.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/controls/FeedEntryEmbedded.js",
+				"sap/collaboration/components/controls/TimelineEntryEmbedded.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/controls/TimelineItemEmbeddedRenderer-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/controls/TimelineItemEmbeddedRenderer.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/socialtimeline/controls/TimelineItemEmbeddedRenderer.js",
+			"module": "sap/collaboration/components/socialtimeline/controls/TimelineItemEmbeddedRenderer.js"
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/JamDataHandler-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/JamDataHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/JamDataHandler.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/JamDataHandler.js",
+			"required": [
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/SMIntegrationDataHandler-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+			"required": [
+				"sap/collaboration/components/utils/OdataUtil.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/ServiceDataHandler-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/ServiceDataHandler.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/ServiceDataHandler.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/ServiceDataHandler.js"
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/TimelineDataHandler-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/TimelineDataHandler.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/socialtimeline/datahandlers/TimelineDataHandler.js",
+			"module": "sap/collaboration/components/socialtimeline/datahandlers/TimelineDataHandler.js"
+		},
+		{
+			"name": "components/socialtimeline/filter/FilterType-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/filter/FilterType.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/socialtimeline/filter/FilterType.js",
+			"module": "sap/collaboration/components/socialtimeline/filter/FilterType.js"
+		},
+		{
+			"name": "components/socialtimeline/validation/InputValidator-dbg.js",
+			"module": "sap/collaboration/components/socialtimeline/validation/InputValidator.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/library.js"
+			]
+		},
+		{
+			"name": "components/socialtimeline/validation/InputValidator.js",
+			"module": "sap/collaboration/components/socialtimeline/validation/InputValidator.js",
+			"required": [
+				"sap/collaboration/library.js"
+			]
+		},
+		{
+			"name": "components/utils/CommonUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/CommonUtil.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/MessageQueueUtil.js",
+				"sap/m/MessageBox.js"
+			]
+		},
+		{
+			"name": "components/utils/CommonUtil.js",
+			"module": "sap/collaboration/components/utils/CommonUtil.js",
+			"required": [
+				"sap/collaboration/components/utils/MessageQueueUtil.js",
+				"sap/m/MessageBox.js"
+			]
+		},
+		{
+			"name": "components/utils/DateUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/DateUtil.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/utils/DateUtil.js",
+			"module": "sap/collaboration/components/utils/DateUtil.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/utils/JamUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/JamUtil.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/utils/JamUtil.js",
+			"module": "sap/collaboration/components/utils/JamUtil.js"
+		},
+		{
+			"name": "components/utils/LanguageBundle-dbg.js",
+			"module": "sap/collaboration/components/utils/LanguageBundle.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/utils/LanguageBundle.js",
+			"module": "sap/collaboration/components/utils/LanguageBundle.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "components/utils/MediaTypeToSAPIcon-dbg.js",
+			"module": "sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/utils/MediaTypeToSAPIcon.js",
+			"module": "sap/collaboration/components/utils/MediaTypeToSAPIcon.js"
+		},
+		{
+			"name": "components/utils/MessageQueueUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/MessageQueueUtil.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js"
+			]
+		},
+		{
+			"name": "components/utils/MessageQueueUtil.js",
+			"module": "sap/collaboration/components/utils/MessageQueueUtil.js",
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js"
+			]
+		},
+		{
+			"name": "components/utils/NotificationTypeUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/NotificationTypeUtil.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/utils/NotificationTypeUtil.js",
+			"module": "sap/collaboration/components/utils/NotificationTypeUtil.js"
+		},
+		{
+			"name": "components/utils/OdataUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/OdataUtil.js",
+			"isDebug": true,
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js"
+			]
+		},
+		{
+			"name": "components/utils/OdataUtil.js",
+			"module": "sap/collaboration/components/utils/OdataUtil.js",
+			"required": [
+				"sap/collaboration/components/utils/CommonUtil.js"
+			]
+		},
+		{
+			"name": "components/utils/PendingRequestsUtil-dbg.js",
+			"module": "sap/collaboration/components/utils/PendingRequestsUtil.js",
+			"isDebug": true
+		},
+		{
+			"name": "components/utils/PendingRequestsUtil.js",
+			"module": "sap/collaboration/components/utils/PendingRequestsUtil.js"
+		},
+		{
+			"name": "library-all-dbg.js",
+			"isDebug": true,
+			"merged": true
+		},
+		{
+			"name": "library-all.js",
+			"merged": true
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/collaboration/library.js",
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/suite/ui/commons/library.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			],
+			"included": [
+				"sap/collaboration/AppType.js",
+				"sap/collaboration/DisplayFeedType.js",
+				"sap/collaboration/FeedType.js"
+			]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/collaboration/library-preload.js",
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/InputBase.js",
+				"sap/m/Label.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/m/Popover.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/SearchField.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TextArea.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/suite/ui/commons/library.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/commons/Button.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js"
+			],
+			"included": [
+				"sap/collaboration/components/controls/FeedEntryEmbedded.js",
+				"sap/collaboration/components/controls/FeedEntryEmbeddedRenderer.js",
+				"sap/collaboration/components/controls/FilterPopover.js",
+				"sap/collaboration/components/controls/PlaceholderUtility.js",
+				"sap/collaboration/components/controls/ReplyPopover.js",
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/controls/SuggestionUtility.js",
+				"sap/collaboration/components/controls/TimelineEntryEmbedded.js",
+				"sap/collaboration/components/controls/TimelineEntryEmbeddedRenderer.js",
+				"sap/collaboration/components/feed/BOMode.js",
+				"sap/collaboration/components/feed/Component.js",
+				"sap/collaboration/components/feed/GroupIDsMode.js",
+				"sap/collaboration/components/feed/Mode.js",
+				"sap/collaboration/components/feed/ModeFactory.js",
+				"sap/collaboration/components/feed/UserMode.js",
+				"sap/collaboration/components/feed/fragments/CustomListItem.fragment.xml",
+				"sap/collaboration/components/feed/fragments/GroupSelector.fragment.xml",
+				"sap/collaboration/components/feed/views/GroupFeed.controller.js",
+				"sap/collaboration/components/feed/views/GroupFeed.view.xml",
+				"sap/collaboration/components/fiori/feed/Component.js",
+				"sap/collaboration/components/fiori/feed/app/App.controller.js",
+				"sap/collaboration/components/fiori/feed/app/App.view.js",
+				"sap/collaboration/components/fiori/feed/commons/Detail.controller.js",
+				"sap/collaboration/components/fiori/feed/commons/Detail.view.js",
+				"sap/collaboration/components/fiori/feed/dialog/Component.js",
+				"sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.controller.js",
+				"sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.view.js",
+				"sap/collaboration/components/fiori/feed/splitApp/GroupMaster.controller.js",
+				"sap/collaboration/components/fiori/feed/splitApp/GroupMaster.view.js",
+				"sap/collaboration/components/fiori/feed/splitApp/SplitApp.controller.js",
+				"sap/collaboration/components/fiori/feed/splitApp/SplitApp.view.js",
+				"sap/collaboration/components/fiori/notification/Component.js",
+				"sap/collaboration/components/fiori/notification/Notification.controller.js",
+				"sap/collaboration/components/fiori/notification/Notification.view.js",
+				"sap/collaboration/components/fiori/notification/NotificationContainer.js",
+				"sap/collaboration/components/fiori/sharing/Component.js",
+				"sap/collaboration/components/fiori/sharing/FolderSelection.controller.js",
+				"sap/collaboration/components/fiori/sharing/FolderSelection.view.js",
+				"sap/collaboration/components/fiori/sharing/NoGroups.controller.js",
+				"sap/collaboration/components/fiori/sharing/NoGroups.view.js",
+				"sap/collaboration/components/fiori/sharing/Sharing.controller.js",
+				"sap/collaboration/components/fiori/sharing/Sharing.view.js",
+				"sap/collaboration/components/fiori/sharing/attachment/Attachment.js",
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js",
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentParameterException.js",
+				"sap/collaboration/components/fiori/sharing/dialog/Component.js",
+				"sap/collaboration/components/fiori/sharing/helper/AttachmentsUtil.js",
+				"sap/collaboration/components/fiori/sharing/helper/ShareUtil.js",
+				"sap/collaboration/components/socialprofile/Component.js",
+				"sap/collaboration/components/socialprofile/SocialProfile.controller.js",
+				"sap/collaboration/components/socialprofile/SocialProfile.view.js",
+				"sap/collaboration/components/socialtimeline/Component.js",
+				"sap/collaboration/components/socialtimeline/annotations/Metadata.js",
+				"sap/collaboration/components/socialtimeline/annotations/MetadataException.js",
+				"sap/collaboration/components/socialtimeline/annotations/TimelineTermsUtility.js",
+				"sap/collaboration/components/socialtimeline/controls/TimelineItemEmbedded.js",
+				"sap/collaboration/components/socialtimeline/controls/TimelineItemEmbeddedRenderer.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/JamDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/ServiceDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/TimelineDataHandler.js",
+				"sap/collaboration/components/socialtimeline/filter/FilterType.js",
+				"sap/collaboration/components/socialtimeline/validation/InputValidator.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/DateUtil.js",
+				"sap/collaboration/components/utils/JamUtil.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+				"sap/collaboration/components/utils/MessageQueueUtil.js",
+				"sap/collaboration/components/utils/NotificationTypeUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/components/utils/PendingRequestsUtil.js",
+				"sap/collaboration/library.js",
+				"sap/collaboration/manifest.json"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.json",
+			"module": "sap/collaboration/library-preload.json",
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/InputBase.js",
+				"sap/m/Label.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/m/Popover.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/SearchField.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TextArea.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/suite/ui/commons/library-preload.json",
+				"sap/suite/ui/commons/library.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/commons/Button.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/library-preload.json",
+				"sap/ui/core/library.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js"
+			],
+			"included": [
+				"sap/collaboration/components/controls/FeedEntryEmbedded.js",
+				"sap/collaboration/components/controls/FeedEntryEmbeddedRenderer.js",
+				"sap/collaboration/components/controls/FilterPopover.js",
+				"sap/collaboration/components/controls/PlaceholderUtility.js",
+				"sap/collaboration/components/controls/ReplyPopover.js",
+				"sap/collaboration/components/controls/SocialTextArea.js",
+				"sap/collaboration/components/controls/SuggestionUtility.js",
+				"sap/collaboration/components/controls/TimelineEntryEmbedded.js",
+				"sap/collaboration/components/controls/TimelineEntryEmbeddedRenderer.js",
+				"sap/collaboration/components/feed/BOMode.js",
+				"sap/collaboration/components/feed/Component.js",
+				"sap/collaboration/components/feed/GroupIDsMode.js",
+				"sap/collaboration/components/feed/Mode.js",
+				"sap/collaboration/components/feed/ModeFactory.js",
+				"sap/collaboration/components/feed/UserMode.js",
+				"sap/collaboration/components/feed/fragments/CustomListItem.fragment.xml",
+				"sap/collaboration/components/feed/fragments/GroupSelector.fragment.xml",
+				"sap/collaboration/components/feed/views/GroupFeed.controller.js",
+				"sap/collaboration/components/feed/views/GroupFeed.view.xml",
+				"sap/collaboration/components/fiori/feed/Component.js",
+				"sap/collaboration/components/fiori/feed/app/App.controller.js",
+				"sap/collaboration/components/fiori/feed/app/App.view.js",
+				"sap/collaboration/components/fiori/feed/commons/Detail.controller.js",
+				"sap/collaboration/components/fiori/feed/commons/Detail.view.js",
+				"sap/collaboration/components/fiori/feed/dialog/Component.js",
+				"sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.controller.js",
+				"sap/collaboration/components/fiori/feed/splitApp/FeedTypeMaster.view.js",
+				"sap/collaboration/components/fiori/feed/splitApp/GroupMaster.controller.js",
+				"sap/collaboration/components/fiori/feed/splitApp/GroupMaster.view.js",
+				"sap/collaboration/components/fiori/feed/splitApp/SplitApp.controller.js",
+				"sap/collaboration/components/fiori/feed/splitApp/SplitApp.view.js",
+				"sap/collaboration/components/fiori/notification/Component.js",
+				"sap/collaboration/components/fiori/notification/Notification.controller.js",
+				"sap/collaboration/components/fiori/notification/Notification.view.js",
+				"sap/collaboration/components/fiori/notification/NotificationContainer.js",
+				"sap/collaboration/components/fiori/sharing/Component.js",
+				"sap/collaboration/components/fiori/sharing/FolderSelection.controller.js",
+				"sap/collaboration/components/fiori/sharing/FolderSelection.view.js",
+				"sap/collaboration/components/fiori/sharing/NoGroups.controller.js",
+				"sap/collaboration/components/fiori/sharing/NoGroups.view.js",
+				"sap/collaboration/components/fiori/sharing/Sharing.controller.js",
+				"sap/collaboration/components/fiori/sharing/Sharing.view.js",
+				"sap/collaboration/components/fiori/sharing/attachment/Attachment.js",
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentConstructorArgumentsException.js",
+				"sap/collaboration/components/fiori/sharing/attachment/InvalidAttachmentParameterException.js",
+				"sap/collaboration/components/fiori/sharing/dialog/Component.js",
+				"sap/collaboration/components/fiori/sharing/helper/AttachmentsUtil.js",
+				"sap/collaboration/components/fiori/sharing/helper/ShareUtil.js",
+				"sap/collaboration/components/socialprofile/Component.js",
+				"sap/collaboration/components/socialprofile/SocialProfile.controller.js",
+				"sap/collaboration/components/socialprofile/SocialProfile.view.js",
+				"sap/collaboration/components/socialtimeline/Component.js",
+				"sap/collaboration/components/socialtimeline/annotations/Metadata.js",
+				"sap/collaboration/components/socialtimeline/annotations/MetadataException.js",
+				"sap/collaboration/components/socialtimeline/annotations/TimelineTermsUtility.js",
+				"sap/collaboration/components/socialtimeline/controls/TimelineItemEmbedded.js",
+				"sap/collaboration/components/socialtimeline/controls/TimelineItemEmbeddedRenderer.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/JamDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/SMIntegrationDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/ServiceDataHandler.js",
+				"sap/collaboration/components/socialtimeline/datahandlers/TimelineDataHandler.js",
+				"sap/collaboration/components/socialtimeline/filter/FilterType.js",
+				"sap/collaboration/components/socialtimeline/validation/InputValidator.js",
+				"sap/collaboration/components/utils/CommonUtil.js",
+				"sap/collaboration/components/utils/DateUtil.js",
+				"sap/collaboration/components/utils/JamUtil.js",
+				"sap/collaboration/components/utils/LanguageBundle.js",
+				"sap/collaboration/components/utils/MediaTypeToSAPIcon.js",
+				"sap/collaboration/components/utils/MessageQueueUtil.js",
+				"sap/collaboration/components/utils/NotificationTypeUtil.js",
+				"sap/collaboration/components/utils/OdataUtil.js",
+				"sap/collaboration/components/utils/PendingRequestsUtil.js",
+				"sap/collaboration/library.js",
+				"sap/collaboration/manifest.json"
+			]
+		},
+		{
+			"name": "library.dependencies.json",
+			"designtime": true
+		},
+		{
+			"name": "library.dependencies.xml",
+			"designtime": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/collaboration/library.js",
+			"merged": true,
+			"required": [
+				"sap/suite/ui/commons/library.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			],
+			"included": [
+				"sap/collaboration/AppType.js",
+				"sap/collaboration/DisplayFeedType.js",
+				"sap/collaboration/FeedType.js"
+			]
+		},
+		{
+			"name": "library.properties",
+			"module": "sap/collaboration/library.properties"
+		},
+		{
+			"name": "library.templates.xml",
+			"designtime": true
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/collaboration/manifest.json"
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "themes/base/.theming",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/shared.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_bluecrystal/.theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/Notification.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/shared.css",
+			"theme": "sap_bluecrystal"
+		}
+	]
+}

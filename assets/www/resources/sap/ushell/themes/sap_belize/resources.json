@@ -1,0 +1,241 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "AboutDialog.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ActionItem.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ActionMode.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "AnchorItem.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "AnchorNavigationBar.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Appearance.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ApplicationContainer.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Catalog.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ContactSupport.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "DynamicTile.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "EndUserFeedback.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Factsheet.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Fiori2LoadingDialog.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "FloatingContainer.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "HeaderTile.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "HideGroupsButton.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "LoadingDialog.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "MeArea.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "NotificationSettings.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Notifications.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "PictureTile.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "PlusTile.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Search.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SearchBarChart.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SearchFacet.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SearchFacetDialog.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SearchFieldGroup.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SearchResultListItem.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SearchTileContainer.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ShellHeader.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ShellLayout.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "SplitContainer.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Tile.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "TileBase.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "TileContainer.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "TileState.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ToolAreaItem.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "UsageAnalyticsSelector.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "UserPreferencesButton.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "UserStatus.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		}
+	]
+}

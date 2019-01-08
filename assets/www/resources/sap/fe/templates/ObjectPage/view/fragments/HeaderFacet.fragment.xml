@@ -1,0 +1,32 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core"
+		xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		template:require="sap.fe.templates.ObjectPage.AnnotationHelper">
+
+	<template:if test="{=${headerFacet>Target/$AnnotationPath}.indexOf('DataPoint') >= 0}">
+		<template:then>
+			<template:with path="headerFacet>Target/$AnnotationPath/" var="dataPoint">
+				<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.HeaderDataPoint" type="XML"/>
+			</template:with>
+		</template:then>
+		<template:elseif test="{= ${headerFacet>Target/AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.Chart') >= 0}">
+			<Text text="Chart in header facet"/>
+		</template:elseif>
+		<template:elseif test="{= ${headerFacet>Target/AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.Identification') >= 0}">
+			<template:with path="headerFacet>Target" var="form">
+				<Text text="Identification in header facet"/>
+			</template:with>
+		</template:elseif>
+		<template:elseif test="{= ${headerFacet>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+			<template:with path="headerFacet>Target" var="contact">
+				<Text text="Communication contact in header facet"/>
+			</template:with>
+		</template:elseif>
+		<template:elseif test="{= ${headerFacet>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Address') >= 0}">
+			<template:with path="headerFacet>Target" var="contact">
+				<Text text="Address in header facet"/>
+			</template:with>
+		</template:elseif>
+	</template:if>
+</core:FragmentDefinition>

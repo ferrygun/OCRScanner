@@ -1,0 +1,94 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "annotation/Mapping-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "annotation/Mapping.js"
+		},
+		{
+			"name": "controls/PictureTile-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/PictureTile.js"
+		},
+		{
+			"name": "controls/PictureTileRenderer-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/PictureTileRenderer.js"
+		},
+		{
+			"name": "controls/PictureViewer-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/PictureViewer.js"
+		},
+		{
+			"name": "controls/PictureViewerItem-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/PictureViewerItem.js"
+		},
+		{
+			"name": "controls/PictureViewerRenderer-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/PictureViewerRenderer.js"
+		},
+		{
+			"name": "css/custom.css"
+		},
+		{
+			"name": "factory/ThingInspector-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "factory/ThingInspector.js"
+		},
+		{
+			"name": "tools/ODataUrlTemplating-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "tools/ODataUrlTemplating.js"
+		},
+		{
+			"name": "views/ThingViewer-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "views/ThingViewer-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "views/ThingViewer.controller.js"
+		},
+		{
+			"name": "views/ThingViewer.view.js"
+		},
+		{
+			"name": "vocabularies/Common.xml"
+		},
+		{
+			"name": "vocabularies/Communication.xml"
+		},
+		{
+			"name": "vocabularies/UI.xml"
+		}
+	]
+}

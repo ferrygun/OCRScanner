@@ -1,0 +1,262 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+@import "../base/library.less";
+@import "../../../../../Base/baseLib/sap_belize/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/sap_belize/base.less" */
+
+@import "../../../../sap/ui/core/themes/sap_belize/global.less";
+
+/* START "BarListCard.less" */
+.sapOvpBarListDataField {
+  font-size: @sapMFontMediumSize;
+}
+
+.sapOvpBarListObjectNumberWithoutState {
+  font-size: @sapMFontMediumSize;
+}
+
+.sapOvpExtendedBarListFirstDataField {
+  font-size: @sapMFontHeader5Size;
+}
+
+.sapOvpBarListObjectNumber {
+  font-size: @sapMFontMediumSize;
+}
+
+
+/* END "BarListCard.less" */
+
+/* START "Card.less" */
+.sapOvpBaseCard {
+  background-color: @sapUiTileBackground;
+  box-shadow: @sapUiShadowLevel0;
+}
+.sapOvpCardHeader {
+  color : @sapUiGroupTitleTextColor;
+  font-size: @sapMFontHeader3Size;
+}
+
+.sapOvpCardTitle {
+  font-size: @sapUiFontHeader3Size;
+}
+
+/*.sapOvpCardHeader .sapOvpCardTitle {
+  margin-bottom: 0.3rem;
+}*/
+
+.sapOvpCardContentContainer {
+  border-top: 1px solid @sapUiListBorderColor;
+  background-color: @sapUiTileBackground;
+}
+
+.sapOvpCardRightContent .sapOvpCardContentContainer {
+  border-top: 0;
+}
+
+.sapOvpCardContentContainer .ui5-viz-controls-viz-frame {
+  background-color: @sapUiTileBackground;
+}
+
+/*Carousel Content Header */
+.sapOvpCarouselContentHeader {
+  color : @sapUiGroupTitleTextColor;
+  font-size: @sapMFontHeader3Size;
+}
+
+.sapMCrsl:focus {
+    outline: 1px auto #000479;
+}
+
+.sapOvpCardFooter {
+  color: @sapUiContentLabelColor;
+  font-size: @sapMFontHeader6Size;
+}
+
+.sapOvpCardContentRightHeader{
+  background-color: @sapUiTileBackground;
+}
+
+.sapOvpCardContent{
+  background-color: @sapUiTileBackground;
+}
+
+.sapOvpBaseCard tr {
+  &:active {
+    background: @sapUiListActiveBackground;
+  }  
+}
+
+.sapMListShowSeparatorsAll .sapMListTblSubRow:last-child>td, .sapMListShowSeparatorsAll .sapMLIBShowSeparator:last-child>td {
+  border-bottom-color: @sapUiLightBG;
+}
+
+.sapOvpCardContentContainer {
+  .sapOvpStackCardContent {
+    & > .sapMFlexItem, .sapMLabel {
+      color: @sapUiHighlight;
+    }
+  }
+  &.sapOvpCardNavigable {
+    background-color: @sapUiTileBackground;
+    border-left: 1px solid @sapUiListBorderColor;
+    &:hover {
+      background-color: @sapUiListHoverBackground;
+      border-color: @sapUiListHoverBackground;
+    }
+    &:active {
+      background-color: @sapUiListActiveBackground;
+      border-color: @sapUiListActiveBackground;
+    }
+    &:active .sapOvpStackCardIcon, &:active label, &:active .sapMText, &:active .sapMLabel {
+      color: @sapUiTileBackground;
+    }
+  }
+}
+
+.sapOvpCardCategory {
+  font-size: @sapMFontSmallSize;
+  color: @sapUiContentLabelColor;
+}
+
+.sapOvpCardSubtitle {
+  font-size : @sapMFontHeader6Size;
+  color: @sapUiContentLabelColor;
+}
+
+/*.sapOvpCardHeader .sapOvpCardSubtitle {
+  margin-bottom: 1rem;
+}*/
+
+.sapOvpCarouselContentSubtitle {
+  font-size : @sapMFontSmallSize;
+}
+
+/* Align on card items text sizes */
+.sapOvpBaseCard .sapMText.sapMObjLTitle{
+  font-size: @sapMFontHeader5Size;
+  font-weight: normal;
+}
+
+.sapOvpBaseCard .sapMObjLNumber {
+  font-size: @sapMFontHeader6Size;
+}
+
+/* KPI Header Style Class */
+
+
+.sapOvpCardHeader .sapOvpKPIHeaderTitleStyle {
+  color: @sapUiGroupTitleTextColor;
+  font-size: @sapMFontHeader5Size;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderDimensionStyle {
+  font-size: @sapMFontSmallSize;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderFilterStyle {
+  font-size: @sapMFontSmallSize;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderTrendPercentStyle {
+  font-size: @sapMFontHeader6Size;
+
+}
+
+.sapOvpCardHeaderBorder {
+  border-bottom: none;
+}
+
+/* END "Card.less" */
+
+/* START "ObjectStream.less" */
+.sapOvpStackedCardPopup {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  .sapMDialogSection {
+    background-color: transparent;
+  }
+  .sapOvpObjectStreamHeader {
+    color: @sapUiInvertedElement !important;
+    font-size: @sapMFontHeader2Size
+  }
+  .sapOvpObjectStreamClose {
+    color: @sapUiInvertedElement;
+    &:hover {
+      .sapUiIcon {
+        background-color: @sapUiBrand;
+        border-color: @sapUiInvertedElement;
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+.sapOvpOSEdgeLeft, .sapOvpOSEdgeRight {
+  & > span {
+    background-color: @sapUiButtonBackground;
+    color: @sapUiButtonTextColor;
+  }
+  &:hover > span {
+    background-color: @sapUiButtonHoverBackground;
+  }
+}
+
+.sapOvpBaseCard .sapOvpCardContentContainer .sapMQuickViewCard{
+  &::after {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
+.sapOvpStackedCardPopup {
+  .sapOvpObjectStreamHeader {
+    font-size: @sapMFontHeader2Size;
+  }
+
+  .sapOvpObjectStreamClose {
+   font-size: @sapMFontHeader5Size;
+  }
+}
+
+
+/* END "ObjectStream.less" */
+
+/* START "OVPApp.less" */
+.ovpApplication {
+  .ovpGlobalFilterWrapper {
+    border: 0;
+  }
+}
+
+#sapOVPHideCardsTable.sapOVPHideCardsTable {
+  .sapOVPHideCardsTableItem {
+    background-color: @sapUiLightBG;
+  }
+  .sapOVPHideCardsDisabledCell {
+    color: darken(@sapUiDarkBorder, 20%);
+
+  }
+}
+/* END "OVPApp.less" */
+
+/* START "StackPlaceHolder.less" */
+.sapOvpStackPlaceHolder {
+    background-color: @sapUiButtonStandardBG;
+}
+.sapOvpStackPlaceHolderIcon{
+  color: @sapUiContentNonInteractiveIconColor;
+}
+
+.sapOvpStackPlaceHolderTextLine{
+  color: @sapUiLink;
+}
+/* END "StackPlaceHolder.less" */
+
+/* START "DashboardLayout.less" */
+
+/* END "DashboardLayout.less" */
+
+/* START "LinkListCard.less" */
+.sapOvpLinkListStandardHBox {
+    background-color: @sapUiTileBackground
+}
+/* END "LinkListCard.less" */

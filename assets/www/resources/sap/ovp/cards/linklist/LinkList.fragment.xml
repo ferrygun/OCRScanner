@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns:build="sap.build" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" xmlns="sap.m">
+	<template:if test="{ovpCardProperties>/staticContent}">
+		<template:then>
+			<template:if test="{= ${ovpCardProperties>/listFlavor} === 'standard'}">
+				<template:then>
+					<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListStaticDataStandard" type="XML"/>
+				</template:then>
+				<template:elseif test="{= ${ovpCardProperties>/listFlavor} === 'carousel'}">
+					<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListStaticDataCarousel" type="XML"/>
+				</template:elseif>
+				<template:elseif test="{= ${ovpCardProperties>/listFlavor} === 'grid'}">
+					<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListStaticDataGrid" type="XML"/>
+				</template:elseif>
+			</template:if>
+		</template:then>
+		<template:else>
+			<template:with helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" path='ovpCardProperties>/headerAnnotationPath' var='header'>
+				<template:if test="{= ${ovpCardProperties>/listFlavor} === 'standard'}">
+					<template:then>
+						<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListStandard" type="XML"/>
+					</template:then>
+					<template:elseif test="{= ${ovpCardProperties>/listFlavor} === 'carousel'}">
+						<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListCarousel" type="XML"/>
+					</template:elseif>
+					<template:elseif test="{= ${ovpCardProperties>/listFlavor} === 'grid'}">
+						<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListGrid" type="XML"/>
+					</template:elseif>
+				</template:if>
+				<template:with helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" path='ovpCardProperties>/communicationPath' var='contact'>
+					<template:if test="{contact>}">
+						<core:Fragment fragmentName="sap.ovp.cards.linklist.fragments.LinkListContactDetails" type="XML"/>
+					</template:if>
+				</template:with>
+			</template:with>
+		</template:else>
+	</template:if>
+</core:FragmentDefinition>

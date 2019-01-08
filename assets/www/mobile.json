@@ -1,0 +1,17 @@
+{
+	"smp": {
+		"appid": "com.demo.scanner",
+		"features": {
+			"logon": false,
+			"odata": false,
+			"device": false,
+			"network": false
+		},
+		"context": {
+			"serverHost": "mobile-h681fa0b9.us3.hana.ondemand.com",
+			"https": true,
+			"serverPort": "443",
+			"custom": {}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+xmlns="sap.m" xmlns:core="sap.ui.core"
+xmlns:ovp="sap.ovp.ui">
+<FlexBox class = "sapOvpHeaderCountMainDiv">
+	<Text id="ovpCountHeader" class="sapOvpHeaderCounter" maxLines="1">
+		<customData>
+			<ovp:CustomData key="role" value="heading" writeToDom="true" />
+		</customData>
+	</Text>
+</FlexBox>
+</core:FragmentDefinition>

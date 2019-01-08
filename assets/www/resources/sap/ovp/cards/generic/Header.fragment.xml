@@ -1,0 +1,68 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:build="sap.build"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+<!--     <template:if test="{= ${ovpCardProperties>/state} !== 'Loading' &amp;&amp; ${ovpCardProperties>/state} !== 'Error' || ${ovpCardProperties>/state} === 'undefined'}" > -->
+        <VBox id="ovpCardHeader"
+              class="{= ${ovpCardProperties>/category} || ${ovpCardProperties>/title} || ${ovpCardProperties>/subTitle} ? 'sapOvpCardHeader' : 'sapOvpCardHeader sapOvpCardHideHeader' } {= ${ovpCardProperties>/contentFragment} === 'sap.ovp.cards.stack.Stack' ? 'sapOvpStackCardHeader' :  'sapOvpCardHeaderBorder'}"
+              build:metadata="#pattern:GenericCard;isAbstract;prop::EntitySet:\{ovpCardProperties>/entitySet\}">
+            <customData>
+                <ovp:CustomData key="tabindex" value="0" writeToDom="true"/>
+                <ovp:CustomData key="role" value="button" writeToDom="true"/>
+            </customData>
+            <!--
+                For a Quickview card, the header is in the format "TypeName: Title".
+                TypeName is set in stack.controller and is hardcoded in the annotations.
+                Title comes from the data. Path to Title comes from annotation HeaderInfo/Title/Value.
+            -->
+            <template:if test="{= ${ovpCardProperties>/contentFragment} === 'sap.ovp.cards.quickview.Quickview'}">
+                <template:then>
+                    <template:with path="entityType>com.sap.vocabularies.UI.v1.HeaderInfo" var="header">
+                        <Text id="ovpQuickviewCardHeader"
+                                text="{= ${ovpCardProperties>/title} + ': ' + ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}}"
+                                class="sapOvpCardTitle tabindex-1"
+                                build:metadata="#pattern:GenericCard;prop:text:Title">
+                            <customData>
+                                <ovp:CustomData key="aria-label" value="{= ${ovpCardProperties>/title} + ': ' + ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}}" writeToDom="true"/>
+                                <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+                            </customData>
+                        </Text>
+                    </template:with>
+                </template:then>
+            <!--
+                For a other cards, the header is just the title.
+            -->
+                <template:else>
+                    <core:Fragment fragmentName="sap.ovp.cards.generic.Title" type="XML"/>
+                </template:else>
+
+            </template:if>
+            <!--
+                   *********** SubTitle *************
+            -->
+
+            <template:if test="{= ${ovpCardProperties>/contentFragment} !== 'sap.ovp.cards.quickview.Quickview'}">
+                <core:Fragment fragmentName="sap.ovp.cards.generic.SubTitle" type="XML"/>
+            </template:if>
+
+            <template:if test="{ovpCardProperties>/headerExtensionFragment}">
+                <core:Fragment fragmentName="{ovpCardProperties>/headerExtensionFragment}" type="XML"/>
+            </template:if>
+            <template:if test="{= ${ovpCardProperties>/contentFragment} === 'sap.ovp.cards.stack.Stack'}">
+                <FlexBox class="sapOvpCardViewAllContainer">
+                    <Text   
+                            id= "ViewAll"
+                            text="{ovplibResourceBundle>View_All_Stack_Card}"
+                            class="sapOvpCardViewAll cardHeaderText">
+                        <customData>
+                            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>View_All_Stack_Card}" writeToDom="true" />
+                        </customData>
+                    </Text>
+                </FlexBox>
+            </template:if>
+        </VBox>
+    
+</core:FragmentDefinition>
+

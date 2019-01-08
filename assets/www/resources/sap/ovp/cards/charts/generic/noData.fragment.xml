@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns:ovp="sap.ovp.ui"
+	xmlns="sap.m">
+	<FlexBox alignItems="Center" justifyContent="SpaceAround" class="noDataSection">
+		<Text maxLines="1"
+			text="{ovplibResourceBundle>noData}">
+			<customData>
+				<ovp:CustomData key="aria-label"
+					value="{ovplibResourceBundle>noData}"
+					writeToDom="true" />
+				<ovp:CustomData key="tabindex" value="0" writeToDom="true" />
+			</customData>
+		</Text>
+	</FlexBox>
+</core:FragmentDefinition>

@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:core="sap.ui.core" >
+
+	<VBox id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::RatingIndicatorVBox">
+		<items>
+			<Title id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::RatingIndicatorTitle"
+				   text="{path: 'dataPoint>Title@@.MODEL.value'}"/>
+			<Label id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::RatingIndicatorSubTitle"
+				   text="{= ${dataPoint>SampleSize} ? ${path: 'dataPoint>SampleSize', formatter: '.AH.buildRatingIndicatorSubtitleExpression'} : ${path: 'dataPoint>Description/@@.MODEL.value'}}"
+				   visible="{= (${dataPoint>SampleSize} || ${dataPoint>Description}) ? true : false}">
+				<template:with path="dataPoint>SampleSize" var="sampleSizeTarget">
+					<template:if test="{= ${dataPoint>SampleSize} &amp;&amp; ${sampleSizeTarget>$Path@com.sap.vocabularies.Common.v1.Label}}">
+						<template:then>
+							<customData>
+								<core:CustomData key="Subtitle" value="{path: 'sampleSizeTarget>$Path@com.sap.vocabularies.Common.v1.Label@@.MODEL.value'}"/>
+							</customData>
+						</template:then>
+					</template:if>
+				</template:with>
+			</Label>
+			<RatingIndicator id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::RatingIndicator"
+							 enabled="false"
+							 maxValue="{path: 'dataPoint>TargetValue/@@.MODEL.value'}"
+							 value="{path: 'dataPoint>Value/@@.MODEL.value'}"
+							 iconSize="1.375rem"
+							 class="sapUiTinyMarginTopBottom" />
+			<Label id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::RatingIndicatorFooter"
+				   text="{path:'dataPoint>', formatter: '.AH.buildRatingIndicatorFooterExpression'}"
+				   visible="{= !!${dataPoint>SampleSize}}">
+				<template:if test="{= ${dataPoint>TargetValue} &amp;&amp; !${dataPoint>TargetValue/$Path}}">
+					<template:then>
+						<customData>
+							<core:CustomData key="Footer" value="{path: 'dataPoint>TargetValue@@.MODEL.value'}"/>
+						</customData>
+					</template:then>
+				</template:if>
+			</Label>
+		</items>
+	</VBox>
+</core:FragmentDefinition>

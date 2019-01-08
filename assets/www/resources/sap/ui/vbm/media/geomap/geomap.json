@@ -1,0 +1,51 @@
+{
+   "SAPVB": {
+      "version": "2.0",
+      "MapProviders": {
+         "Set": {
+            "MapProvider": {
+               "name": "MAPQUEST",
+               "type": "",
+               "description": "",
+               "tileX": "256",
+               "tileY": "256",
+               "maxLOD": "19",
+               "copyright": "Tiles Courtesy of {LINK|MapQuest} {IMG} © OpenStreetMap under ODbL v1.0",
+               "copyrightLink": "http://www.mapquest.com",
+               "copyrightImage": "//developer.mapquest.com/sites/default/files/mapquest/osm/mq_logo.png",
+               "Source": [
+                  {
+                     "id": "s1",
+                     "url": "//otile1-s.mqcdn.com/tiles/1.0.0/map/{LOD}/{X}/{Y}.png"
+                  },
+                  {
+                     "id": "s2",
+                     "url": "//otile2-s.mqcdn.com/tiles/1.0.0/map/{LOD}/{X}/{Y}.png"
+                  },
+                  {
+                     "id": "s3",
+                     "url": "//otile3-s.mqcdn.com/tiles/1.0.0/map/{LOD}/{X}/{Y}.png"
+                  },
+                  {
+                     "id": "s4",
+                     "url": "//otile4-s.mqcdn.com/tiles/1.0.0/map/{LOD}/{X}/{Y}.png"
+                  }
+               ]
+            }
+         }
+      },
+      "MapLayerStacks": {
+         "Set": {
+            "MapLayerStack": {
+               "name": "Default",
+               "MapLayer": {
+                  "name": "layer1",
+                  "refMapProvider": "MAPQUEST",
+                  "opacity": "1.0",
+                  "colBkgnd": "RGB(255,255,255)"
+               }
+            }
+         }
+      }
+	}
+}

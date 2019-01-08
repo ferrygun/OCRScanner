@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns:build="sap.build" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
+	xmlns:ovp="sap.ovp.ui" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+	<List id="ovpLinkListGrid" class="sapOvpCardLinkListGridColSpan{ovpCardProperties>/cardLayout/colSpan}" 
+	        showSeparators="None">
+		<template:repeat list="{ovpCardProperties>/staticContent}" var="contentRow">
+			<CustomListItem>
+				<VBox alignItems="Center" width="100%">
+					<template:if test="{path: 'contentRow>imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isImageUrlStaticData'}">
+						<template:then>
+							<!--New Control in 1.37.0-Snapshot "ImageContent" is still InProgress -->
+							<Carousel>
+								<pages>
+									<VBox alignItems="Center">
+										<Image alt="{contentRow>imageAltText}" densityAware="true" width="64px" height="px4"
+											src="{path: 'contentRow>imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatUrl'}"></Image>
+									</VBox>
+								</pages>
+							</Carousel>
+						</template:then>
+						<template:else>
+							<core:Icon size="48px" width="64px" height="64px" src="{contentRow>imageUri}"/>
+						</template:else>
+					</template:if>
+					<template:if test="{contentRow>dataAction}">
+						<template:then>
+							<Link class="sapOvpCardLinkListTitle" press="onLinkListActionPressLocalData" app:dataAction="{contentRow>dataAction}"
+								text="{contentRow>title}" textAlign="Center" width="128px" wrapping="false"/>
+						</template:then>
+						<template:else>
+							<Link app:openInNewWindow="{contentRow>openInNewWindow}" app:targetUri="{contentRow>targetUri}" class="sapOvpCardLinkListTitle"
+								press="onLinkListItemPressLocalData" text="{contentRow>title}" textAlign="Center" width="128px" wrapping="false"/>
+						</template:else>
+					</template:if>
+					<Label class="sapOvpCardLinkListSubTitle" text="{contentRow>subTitle}" textAlign="Center" width="128px" wrapping="false"/>
+				</VBox>
+			</CustomListItem>
+		</template:repeat>
+	</List>
+</core:FragmentDefinition>

@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+                         xmlns:core="sap.ui.core"
+                         xmlns="sap.m">
+    <VBox class="sapUiSmallMarginTop sapUiSmallMarginBegin">
+        <HBox id="dialogCardOverlay" class="dialogCardVBox dialogCardOverlay">
+            <core:ComponentContainer id="dialogCard" busyIndicatorDelay="0" busy="true" visible="{visibility>/cardPreview}"/>
+            <Image id="dialogCardNoPreview" visible="{= !${visibility>/cardPreview}}" alt="No Preview" tooltip="No Preview"
+                   src="../../../../../resources/sap/ovp/cards/rta/Placeholder_Draft.png"/>
+        </HBox>
+        <HBox visible="{visibility>/showViewSwitch}">
+            <Button class="sapUiMediumMarginBottom" enabled="{/isViewResetEnabled}"
+                    press="resetView" text="Reset View" type="Transparent"/>
+        </HBox>
+    </VBox>
+</core:FragmentDefinition>

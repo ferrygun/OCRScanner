@@ -1,0 +1,55 @@
+{
+    "_version": "1.1.0",
+    "sap.flp": {
+        "type": "tile",
+        "tileSize": "1x1"
+    },
+    "sap.app": {
+        "id": "sap.ushell.components.tiles.cdm.applauncher",
+        "_version": "1.0.0",
+        "type": "component",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{title}}",
+        "description": "",
+        "tags": {
+            "keywords": []
+        },
+        "ach": "CA-FE-FLP-EU"
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "icons": {
+            "icon": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize",
+            "sap_belize_plus"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "componentName": "sap.ushell.components.tiles.cdm.applauncher",
+        "dependencies": {
+            "minUI5Version": "1.42",
+            "libs": {
+                "sap.m": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "rootView": "sap.ushell.components.tiles.cdm.applauncher",
+        "handleValidation": false
+    }
+}

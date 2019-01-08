@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<Column id="template::Column::{dataField>@@sap.ui.mdc.Field._helper.getStableIdPartFromDataField}"
+			hAlign="{= (${dataField>Value/$Path/$Type} === 'Edm.Decimal') ? 'End' : (${dataField>Value/$Path/$Type} === 'Edm.DateTimeOffset' || ${dataField>Value/$Path/$Type} === 'Edm.Date') ? 'End' : (${dataField>Criticality/$Path}) ? 'Center' : 'Begin' }">
+
+		<Label text="{dataField>@@.MODEL.label}" />
+
+		<!-- TODO Stefan: in case of dataFieldForAnnotation use Target/$AnnotationPath/Title as label-->
+
+		<customData>
+			<!-- TODO: to be discussed !!! -->
+			<!-- core:CustomData key="metaContextPath" value="{path : 'dataField>', formatter : 'sap.fe.core.AnnotationHelper.getMetaContextPath'}"/ -->
+		</customData>
+
+	</Column>
+
+</core:FragmentDefinition>

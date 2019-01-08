@@ -1,0 +1,22 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "AnalyticalMap-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "AnalyticalMap.controller.js"
+		},
+		{
+			"name": "AnalyticalMap.fragment.xml"
+		},
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		}
+	]
+}

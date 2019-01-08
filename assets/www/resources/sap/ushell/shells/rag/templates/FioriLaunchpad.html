@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2009-2017 SAP SE, All Rights Reserved -->
+<html class="sapUShellFullHeight">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <!-- Runtime Agent platform-independent default settings -->
+        <meta name="sap.ushellConfig.crossPlatformDefaults" content='{
+            "services": {
+                "PluginManager": {
+                    "config": {
+                        "loadPluginsFromSite": true
+                    }
+                },
+                "Container": {
+                    "adapter": {
+                        "config": {
+                            "systemProperties": {
+                            },
+                            "userProfile": {
+                                "metadata": {
+                                    "editablePropterties": [
+                                        "accessibility",
+                                        "contentDensity",
+                                        "theme"
+                                    ]
+                                },
+                                "defaults": {
+                                    "email": "{{include "./user/env/email.txt"}}",
+                                    "firstName": "{{include "./user/env/firstname.txt"}}",
+                                    "lastName": "{{include "./user/env/lastname.txt"}}",
+                                    "fullName": "{{include "./user/env/fullname.txt"}}",
+                                    "id": "{{include "./user/env/username.txt"}}",
+                                    "language": "{{include "./request/env/sap-language.txt"}}",
+                                    "languageBcp47": "{{include "./request/env/localeBcp47.txt"}}",
+                                    "sapDateFormat": "{{include "./user/env/sap-dateFormat.txt"}}",
+                                    "numberFormat": "{{include "./user/env/sap-decimalFormat.txt"}}",
+                                    "theme": "sap_belize",
+                                    "sapTimeFormat": "{{include "./user/env/sap-timeFormat.txt"}}",
+                                    "timeZone": "{{include "./user/env/sap-timeZone.txt"}}"
+                                }
+                            },
+                            "userProfilePersonalization": {{include "./user/store/flp/p/sap.ushell.UserProfile.json" merge="jsonmap" default="%7B%7D"}}
+                        }
+                    }
+                },
+                "CommonDataModel": {
+                    "adapter": {
+                        "config": {
+                            "ignoreSiteDataPersonalization": true,
+                            "siteDataUrl": "./shared/{{include "./shared/flp-site/flpCbToken.txt"}}/flp-site/flp-site_{{include "./request/env/localeUnderscore.txt"}}.json"
+                        }
+                    }
+                },
+                "Ui5ComponentLoader": {
+                    "config": {
+                        "amendedLoading": true
+                    }
+                }
+            }
+        }' />
+
+        <!-- Runtime Agent platform-specific default settings -->
+        <!--
+            TODO this config should NOT be hard-coded, but should be added
+            during packaging time, as
+            (A) the settings may be different on every Runtime Agent platform (e.g. RAG@ABAP) and
+            (B) the performance will be better compared to resolving it at
+            runtime.
+        -->
+        <meta name="sap.ushellConfig.platformSpecificDefaults" content='{
+            "renderers": {
+                "fiori2": {
+                    "componentData": {
+                        "config": {
+                            "enableSearch": true
+                        }
+                    }
+                }
+            },
+            "services": {
+                "Container": {
+                    "adapter": {
+                        "config": {
+                            "systemProperties": {
+                                "client": "$sapClient",
+                                "SID": "$sapSystemId",
+                                "alias": "$sapSystemId_$sapClient",
+                                "logoutUrl": "$logoutUrl"
+                            }
+                        }
+                    }
+                },
+                "SupportTicket": {
+                    "config": {
+                        "enabled": true
+                    },
+                    "adapter": {
+                        "module": "sap.ushell_abap.adapters.abap.SupportTicketAdapter"
+                    }
+                },
+                "EndUserFeedback": {
+                    "adapter": {
+                        "config": {
+                            "enabled": true
+                        },
+                        "module": "sap.ushell_abap.adapters.abap.EndUserFeedbackAdapter"
+                    }
+                },
+                "AppState": {
+                    "adapter": {
+                        "module": "sap.ushell_abap.adapters.abap.AppStateAdapter"
+                    }
+                },
+                "Personalization": {
+                    "adapter": {
+                        "config": {
+                            "storageResourceRoot": "./user/store/flp",
+                            "relativeUrlReadOptimized": "p/~{{include "./user/store/flp/p/_rag-token.txt"}}~",
+                            "relativeUrlWriteOptimized": "u"
+                        },
+                        "module": "sap.ushell.adapters.cdm.PersonalizationAdapter"
+                    }
+                },
+                "Search": {
+                    "adapter": {
+                        "module": "sap.ushell_abap.adapters.abap.SearchAdapter"
+                    }
+                }
+            },
+            "bootstrapPlugins": {
+                "UiAdaptationPersonalization": {
+                    "component": "sap.ushell.plugins.rta-personalize"
+                }
+            }
+        }' />
+
+        <!-- FLP settings from design-time site object -->
+        <meta name="sap.ushellConfig.flpSiteSettings" content='$flpSiteSettings' />
+
+        <script id="sap-ui-bootstrap" src="$ui5ResourceRoot/sap/ushell/bootstrap/cdm.js"></script>
+    </head>
+
+    <body class="sapUiBody sapUShellFullHeight" role="application">
+        <div id="canvas" class="sapUShellFullHeight"></div>
+    </body>
+
+</html>

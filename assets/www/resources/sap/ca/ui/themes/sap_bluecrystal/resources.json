@@ -1,0 +1,73 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "Chart.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "ChartToolBar.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "ClusterListItem.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "DatePicker.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "FileUpload.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "OverflowContainer.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "OverviewTile.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "PictureTile.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		}
+	]
+}

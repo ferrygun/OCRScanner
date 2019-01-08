@@ -1,0 +1,52 @@
+<core:FragmentDefinition controllerName="sap.ushell.renderers.fiori2.userAccount.UserAccountSetting"
+                         height="100%"
+                         width="100%"
+                         xmlns="sap.uxap"
+                         xmlns:m="sap.m"
+                         xmlns:core="sap.ui.core">
+    <m:VBox class="sapUiSmallMargin">
+        <m:FlexBox alignItems="{config>/flexAlignItems}" direction="{config>/textDirection}">
+            <m:Label text="{i18n>UserAccountNameFld}:"
+                     class="sapUshellUserAccountLabel"
+                     width="{config>/labelWidth}"
+                     textAlign="{config>/textAlign}"
+                     id="userAccountuserNameLable"/>
+            <m:Input value="{config>/name}"
+                     id="userAccountuserName"
+                     class="sapUshellUserAccountInput"
+                     editable="false"
+                     ariaLabelledBy="userAccountuserNameLable"/>
+
+        </m:FlexBox>
+
+
+        <m:FlexBox alignItems="{config>/flexAlignItems}" direction="{config>/textDirection}">
+            <m:Label text="{i18n>UserAccountEmailFld}:"
+                     class="sapUshellUserAccountLabel"
+                     width="{config>/labelWidth}"
+                     textAlign="{config>/textAlign}"
+                     id="userAccountuserMailLabel"/>
+            <m:Input value="{config>/mail}"
+                     id="userAccountuserMail"
+                     class="sapUshellUserAccountInput"
+                     editable="false"
+                     ariaLabelledBy="userAccountuserMailLabel"/>
+
+        </m:FlexBox>
+
+        <m:FlexBox alignItems="{config>/flexAlignItems}" direction="{config>/textDirection}">
+            <m:Label text="{i18n>UserAccountServerFld}:"
+                     class="sapUshellUserAccountLabel"
+                     width="{config>/labelWidth}"
+                     textAlign="{config>/textAlign}"
+                     id="userAccountuserServerLabel"/>
+            <m:Input value="{config>/server}"
+                     id="userAccountuserServer"
+                     class="sapUshellUserAccountInput"
+                     editable="false"
+                     ariaLabelledBy="userAccountuserServerLabel"/>
+
+        </m:FlexBox>
+
+    </m:VBox>
+</core:FragmentDefinition>

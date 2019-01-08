@@ -1,0 +1,3051 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+
+@import "../../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../../sap/ui/core/themes/base/global.less";
+
+/* START "SharedStyles.less" */
+/* =================================================================== */
+/* CSS Styles which are used in more than one control within this lib. */
+/* =================================================================== */
+.sapSuiteUiMicroChartPointer {
+	cursor: pointer;
+}
+
+/* END "SharedStyles.less" */
+
+
+/* START "AreaMicroChart.less" */
+/* ====================================================== */
+/* CSS for control sap.suite.ui.microchart/AreaMicroChart */
+/* Base Theme                                             */
+/* ====================================================== */
+
+.sapSuiteAMC {
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	outline: none;
+}
+
+.sapSuiteAMCLbl {
+	font-size: @sapMFontMediumSize;
+}
+
+.sapSuiteAMCSmallFont .sapSuiteAMCLbl {
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteAMCSideLabels {
+	position: absolute;
+	width: 23%;
+	top: 0px;
+	bottom: 0px;
+	min-width: 64px;
+	max-width: 80px;
+}
+
+.sapSuiteAMCSideLabels.sapSuiteAMCPositionLeft {
+	left: 0px;
+}
+
+.sapSuiteAMCSideLabels.sapSuiteAMCPositionRight {
+	right: 0px;
+}
+
+.sapSuiteAMCCanvas {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.sapSuiteAMC.sapSuiteAMCTopLbls > .sapSuiteAMCSideLabels,
+.sapSuiteAMC.sapSuiteAMCTopLbls > .sapSuiteAMCCanvas {
+	top: 1rem;
+}
+
+.sapSuiteAMC.sapSuiteAMCBtmLbls > .sapSuiteAMCSideLabels,
+.sapSuiteAMC.sapSuiteAMCBtmLbls > .sapSuiteAMCCanvas {
+	bottom: 1rem;
+}
+
+.sapSuiteAMCTarget {
+	outline-style: dotted;
+	width: 2px;
+}
+
+.sapSuiteAMCChart {
+	width: 2px;
+}
+
+.sapSuiteAMCLine {
+	width: 2px;
+}
+
+.sapSuiteAMCThreshold {
+	width: 1px;
+}
+
+.sapSuiteAMCLbl {
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-height: 1px;
+	width: 0%;
+}
+
+.sapSuiteMicroChartsResponsive .sapSuiteAMCLbl{
+	text-overflow: clip;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionTop {
+	position: absolute;
+	top: 0px;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionBtm {
+	position: absolute;
+	bottom: 0px;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionTop,
+.sapSuiteAMCLbl.sapSuiteAMCPositionBtm,
+.sapSuiteAMCLbl.sapSuiteAMCPositionLeft.sapSuiteAMCLblTypeL,
+.sapSuiteAMCLbl.sapSuiteAMCPositionCenter.sapSuiteAMCLblTypeC,
+.sapSuiteAMCLbl.sapSuiteAMCPositionRight.sapSuiteAMCLblTypeR {
+	width: 100%;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionLeft.sapSuiteAMCLblTypeLR,
+.sapSuiteAMCLbl.sapSuiteAMCPositionRight.sapSuiteAMCLblTypeLR {
+	width: 50%;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionLeft {
+	text-align: left;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionCenter {
+	text-align: center;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCPositionRight {
+	text-align: right;
+}
+
+.sapSuiteAMCSideLabels > .sapSuiteAMCLbl.sapSuiteAMCPositionLeft {
+	padding-right: 8px;
+	text-align: right;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.sapSuiteAMCSideLabels > .sapSuiteAMCLbl.sapSuiteAMCPositionRight {
+	padding-left: 8px;
+	text-align: left;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.sapSuiteAMCLabels {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.sapSuiteAMCLabels.sapSuiteAMCPositionTop {
+	top: 0px;
+}
+
+.sapSuiteAMCLabels.sapSuiteAMCPositionBtm {
+	bottom: 0px;
+}
+
+.sapSuiteAMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteAMC:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html[dir=rtl] .sapSuiteAMCLbl.sapSuiteAMCPositionRight {
+	text-align: left;
+}
+
+html[dir=rtl] .sapSuiteAMCLbl.sapSuiteAMCPositionLeft {
+	text-align: right;
+}
+
+html[dir=rtl] .sapSuiteAMCSideLabels > .sapSuiteAMCLbl.sapSuiteAMCPositionRight {
+	text-align: right;
+}
+
+html[dir=rtl] .sapSuiteAMCSideLabels > .sapSuiteAMCLbl.sapSuiteAMCPositionLeft {
+	text-align: left;
+}
+
+.sapSuiteAMCTarget.sapSuiteAMCSemanticColorGood,
+.sapSuiteAMCChart.sapSuiteAMCSemanticColorGood,
+.sapSuiteAMCLine.sapSuiteAMCSemanticColorGood {
+	color: @sapUiPositiveElement;
+}
+
+.sapSuiteAMCTarget.sapSuiteAMCSemanticColorCritical,
+.sapSuiteAMCChart.sapSuiteAMCSemanticColorCritical,
+.sapSuiteAMCLine.sapSuiteAMCSemanticColorCritical {
+	color: @sapUiCriticalElement;
+}
+
+.sapSuiteAMCTarget.sapSuiteAMCSemanticColorError,
+.sapSuiteAMCChart.sapSuiteAMCSemanticColorError,
+.sapSuiteAMCLine.sapSuiteAMCSemanticColorError {
+	color: @sapUiNegativeElement;
+}
+
+.sapSuiteAMCTarget.sapSuiteAMCSemanticColorNeutral,
+.sapSuiteAMCChart.sapSuiteAMCSemanticColorNeutral,
+.sapSuiteAMCLine.sapSuiteAMCSemanticColorNeutral {
+	color: @sapUiChartDataLineColorWithBG;
+}
+
+.sapSuiteAMCTarget.sapSuiteAMCNeutralNoThreshold,
+.sapSuiteAMCChart.sapSuiteAMCNeutralNoThreshold,
+.sapSuiteAMCLine.sapSuiteAMCNeutralNoThreshold {
+	color: @sapUiChartDataLineColor;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCSemanticColorNeutral {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCSemanticColorGood {
+	color: @sapUiPositiveText;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCSemanticColorCritical {
+	color: @sapUiCriticalText;
+}
+
+.sapSuiteAMCLbl.sapSuiteAMCSemanticColorError {
+	color: @sapUiNegativeText;
+}
+
+.sapSuiteAMCThreshold {
+	color: @sapUiChoroplethRegionBorder;
+}
+
+.sapSuiteAMCThreshold.sapSuiteAMCSemanticColorError {
+	background-color: @sapUiChartPaletteSemanticBadLight2;
+}
+
+.sapSuiteAMCThreshold.sapSuiteAMCSemanticColorGood {
+	background-color: @sapUiChartPaletteSemanticGoodLight2;
+}
+
+.sapSuiteAMCThreshold.sapSuiteAMCSemanticColorCritical {
+	background-color: @sapUiChartPaletteSemanticCriticalLight2;
+}
+
+/* END "AreaMicroChart.less" */
+
+/* START "BulletMicroChart.less" */
+/* ======================================================== */
+/* CSS for control sap.suite.ui.microchart/BulletMicroChart */
+/* Base Theme                                               */
+/* ======================================================== */
+
+.sapSuiteBMCContent {
+	position: relative;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 .125rem;
+	outline: none;
+	font-weight: bold;
+	font-family: @sapUiFontHeaderFamily;
+	&.sapSuiteBMCResponsive {
+		font-size: @sapMFontMediumSize;
+	}
+	&.sapSuiteBMCSmallFont {
+		font-size: @sapMFontSmallSize;
+	}
+}
+
+html.sap-desktop .sapSuiteBMCContent:focus {
+	outline-style: dotted;
+	outline-width: 1px;
+}
+.sapSuiteBMCContent:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteBMCSizeXS.sapSuiteBMCContent:focus {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteBMCSizeXS.sapSuiteBMCContent:focus::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -.3125rem;
+	left: -.125rem;
+	right: -.125rem;
+	bottom: -.75rem;
+	border-width: 1px;
+	border-style: dotted;
+}
+
+.sapSuiteBMCTargetBarValue {
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+
+html.sap-desktop .sapSuiteBMCContent:focus {
+	outline-color: @sapUiContentFocusColor ;
+}
+
+html.sap-desktop .sapSuiteBMCSizeXS.sapSuiteBMCContent:focus::after {
+	border-color: @sapUiContentFocusColor;
+}
+
+.sapSuiteBMCContent.sapSuiteBMCSizeL {
+	font-size: .875rem;
+	height: 5.875rem;
+	width: 12rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCContent.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCContent.sapSuiteBMCSizeAuto,
+.sapSuiteBMCContent.sapSuiteBMCSizeM {
+	font-size: .875rem;
+	height: 4.5rem;
+	width: 10.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCContent.sapSuiteBMCSizeAuto,
+.sapSuiteBMCContent.sapSuiteBMCSizeS {
+	font-size: .75rem;
+	height: 3.5rem;
+	width: 8.25rem;
+}
+
+.sapSuiteBMCContent.sapSuiteBMCSizeXS {
+	padding: .1rem 0 0 0;
+	height: .375rem;
+	width: 8rem;
+	outline-offset: .25rem;
+}
+
+.sapSuiteBMCChart {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.sapSuiteBMCBarValueMarkerHidden {
+	visibility: hidden;
+}
+
+.sapSuiteBMCBarValueMarker {
+	position: absolute;
+	width: .125rem;
+	margin: 0 -.125rem;
+}
+
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSizeL {
+	top: 1.8125rem;
+	height: .9rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCBarValueMarker.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCBarValueMarker.sapSuiteBMCSizeAuto,
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSizeM {
+	top: 1.125rem;
+	height: .95rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCBarValueMarker.sapSuiteBMCSizeAuto,
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSizeS {
+	top: 1rem;
+	height: .6rem;
+}
+
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSizeXS {
+	top: -.565rem;
+	height: .6rem;
+}
+
+.sapSuiteBMCTargetBarValue {
+	position: absolute;
+	width: .125rem;
+}
+
+.sapSuiteBMCTargetBarValue.sapSuiteBMCSizeL {
+	top: 2.0625rem;
+	height: 2rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCTargetBarValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCTargetBarValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCTargetBarValue.sapSuiteBMCSizeM {
+	top: 1.375rem;
+	height: 2rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCTargetBarValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCTargetBarValue.sapSuiteBMCSizeS {
+	top: 1.1875rem;
+	height: 1.3125rem;
+}
+
+.sapSuiteBMCTargetBarValue.sapSuiteBMCSizeXS {
+	top: -.3775rem;
+	height: 1.3125rem;
+}
+
+.sapSuiteBMCItemTitle {
+	color: @sapUiLightText;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sapSuiteBMCItemValue {
+	position: absolute;
+	height: 1rem;
+	margin: 0 1px;
+	color: @sapUiTextDisabled;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sapSuiteBMCItemValue.sapSuiteBMCSizeL {
+	top: .7125rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCItemValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCItemValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCItemValue.sapSuiteBMCSizeM {
+	top: .1125;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCItemValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCItemValue.sapSuiteBMCSizeS {
+	top: 0;
+}
+
+.sapSuiteBMCItemValue.sapSuiteBMCSizeXS {
+	top: 0;
+	width: 0;
+	height: 0;
+}
+
+.sapSuiteBMCTargetValue {
+	position: absolute;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: normal;
+	height: 1rem;
+}
+
+.sapSuiteBMCTargetValue.sapSuiteBMCSizeL {
+	top: 4.1625rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCTargetValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCTargetValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCTargetValue.sapSuiteBMCSizeM {
+	top: 3.475rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCTargetValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCTargetValue.sapSuiteBMCSizeS {
+	top: 2.6rem;
+}
+
+.sapSuiteBMCTargetValue.sapSuiteBMCSizeXS {
+	width: 0;
+	height: 0;
+}
+
+.sapSuiteBMCThreshold {
+	position: absolute;
+	background-color: @sapUiTextDisabled;
+	margin-left: 1px;
+	width: .125rem;
+	height: 1.5rem;
+}
+
+.sapSuiteBMCThreshold.sapSuiteBMCSizeL {
+	top: 2.1875rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCThreshold.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCThreshold.sapSuiteBMCSizeAuto,
+.sapSuiteBMCThreshold.sapSuiteBMCSizeM {
+	top: 1.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCThreshold.sapSuiteBMCSizeAuto,
+.sapSuiteBMCThreshold.sapSuiteBMCSizeS {
+	top: 1.1875rem;
+	height: 1.125rem;
+}
+
+.sapSuiteBMCThreshold.sapSuiteBMCSizeXS {
+	top: -.3775rem;
+	height: 1.125rem;
+}
+
+.sapSuiteBMCBar {
+	position: absolute;
+	left: 1%;
+	right: 0;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCSizeL {
+	top: 2.4375rem;
+	height: 1rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCBar.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCBar.sapSuiteBMCSizeAuto,
+.sapSuiteBMCBar.sapSuiteBMCSizeM {
+	top: 1.75rem;
+	height: 1rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCBar.sapSuiteBMCSizeAuto,
+.sapSuiteBMCBar.sapSuiteBMCSizeS {
+	top: 1.375rem;
+	height: .75rem;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCSizeXS {
+	top: -.19rem;
+	height: .75rem;
+}
+
+.sapSuiteBMCBarValue {
+	position: absolute;
+	left: 1%;
+	right: 1%;
+	min-width: .125rem;
+	box-sizing: border-box;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSizeL.sapSuiteBMCForecast {
+	height: .5rem;
+	top: 2.6875rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCBarValue.sapSuiteBMCSizeAuto.sapSuiteBMCForecast,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCBarValue.sapSuiteBMCSizeAuto.sapSuiteBMCForecast,
+.sapSuiteBMCBarValue.sapSuiteBMCSizeM.sapSuiteBMCForecast {
+	height: .5rem;
+	top: 2rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCBarValue.sapSuiteBMCSizeAuto.sapSuiteBMCForecast,
+.sapSuiteBMCBarValue.sapSuiteBMCSizeS.sapSuiteBMCForecast {
+	height: .375rem;
+	top: 1.5625rem;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSizeXS.sapSuiteBMCForecast {
+	height: .375rem;
+	top: 0;
+	width: 8rem;
+}
+
+.sapSuiteBMCDiamond {
+	position: absolute;
+	-webkit-transform: rotate(-45deg) translate(-.02rem,0);
+	-moz-transform: rotate(-45deg) translate(-.02rem,0);
+	-ms-transform: rotate(-45deg) translate(-.02rem,0);
+	transform: rotate(-45deg) translate(-.02rem,0);
+}
+
+html[dir=rtl] .sapSuiteBMCDiamond {
+	-webkit-transform: rotate(-45deg) translate(.02rem,0);
+	-moz-transform: rotate(-45deg) translate(.02rem,0);
+	-ms-transform: rotate(-45deg) translate(.02rem,0);
+	transform: rotate(-45deg) translate(.02rem,0);
+}
+
+.sapSuiteBMCDiamond.sapSuiteBMCSizeL {
+	top: 3.54rem;
+	width: .265rem;
+	height: .265rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCDiamond.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCDiamond.sapSuiteBMCSizeAuto,
+.sapSuiteBMCDiamond.M {
+	top: 2.8525rem;
+	width: .265rem;
+	height: .265rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCDiamond.sapSuiteBMCSizeAuto,
+.sapSuiteBMCDiamond.sapSuiteBMCSizeS {
+	top: 2.2275rem;
+	width: .265rem;
+	height: .265rem;
+}
+
+.sapSuiteBMCDiamond.sapSuiteBMCSizeXS {
+	top: .7rem;
+	width: .265rem;
+	height: .265rem;
+}
+
+.sapSuiteBMCForecastBarValue {
+	position: absolute;
+	left: 1%;
+	right: 1%;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSizeL,
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSizeL {
+	top: 2.4375rem;
+	height: 1rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteBMCForecastBarValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCForecastBarValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Desktop .sapSuiteBMCBarValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteBMCBarValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCBarValue.sapSuiteBMCSizeM,
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSizeM {
+	top: 1.75rem;
+	height: 1rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteBMCForecastBarValue.sapSuiteBMCSizeAuto,
+html.sapUiMedia-Std-Phone .sapSuiteBMCBarValue.sapSuiteBMCSizeAuto,
+.sapSuiteBMCBarValue.sapSuiteBMCSizeS,
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSizeS {
+	top: 1.375rem;
+	height: .75rem;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSizeXS,
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSizeXS {
+	top: -.19rem;
+	height: .75rem;
+}
+
+.sapSuiteBMCVerticalAlignmentContainer {
+	position:relative;
+	width: 100%;
+	height: 100%;
+}
+
+.sapSuiteBMCContent.sapSuiteBMCResponsive{
+	width: 100%;
+	height: 100%;
+}
+
+.sapSuiteBMCResponsive{
+	.sapSuiteBMCVerticalAlignmentContainer{
+		max-height: 4.5rem;
+		min-height: 3.5rem;
+		min-width: 2rem;
+		transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+		top: 50%;
+	}
+	.sapSuiteBMCChart{
+		max-height: 4.5rem;
+	}
+	.sapSuiteBMCTargetValue, .sapSuiteBMCItemValue {
+		top: 0.1125rem;
+	}
+	.sapSuiteBMCTopLabel, .sapSuiteBMCBottomLabel {
+		height: 1.125rem;
+		position: absolute;
+	}
+	.sapSuiteBMCBottomLabel {
+		bottom: 0rem;
+	}
+	.sapSuiteBMCChartCanvas {
+		position: absolute;
+		top: 1.125rem;
+		bottom: 1.125rem;
+		width: 100%;
+		min-height: 1.5rem;
+	}
+	.sapSuiteBMCTargetBarValue {
+		top: 11.1%;
+		height: 89%;
+	}
+	.sapSuiteBMCDiamond {
+		top: 83%;
+		width: .265rem;
+		height: .265rem;
+	}
+	.sapSuiteBMCThreshold {
+		top: 17%;
+		height: 67%;
+	}
+	.sapSuiteBMCBar,
+	.sapSuiteBMCForecastBarValue,
+	.sapSuiteBMCBarValue {
+		top: 28%;
+		height: 44%;
+	}
+	.sapSuiteBMCBarValueMarker {
+		top: 0px;
+		height: 44%;
+	}
+	.sapSuiteBMCForecast {
+		top: 39%;
+		height: 22%;
+	}
+}
+.sapSuiteBMCNoLabels {
+	.sapSuiteBMCVerticalAlignmentContainer {
+		min-height: 1.5rem;
+	}
+	.sapSuiteBMCTopLabel, .sapSuiteBMCBottomLabel {
+		display: none;
+	}
+	.sapSuiteBMCChartCanvas{
+		top: 50%;
+		transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+		height: 1.5rem;
+	}
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorTransparent {
+	background-color: transparent;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSemanticColorNeutral,
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSemanticColorNeutral,
+.sapSuiteBMCThreshold.sapSuiteBMCSemanticColorNeutral {
+	background-color: @sapUiChartPaletteSemanticNeutralDark1;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSemanticColorGood,
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSemanticColorGood,
+.sapSuiteBMCThreshold.sapSuiteBMCSemanticColorGood {
+	background-color: @sapUiChartPaletteSemanticGood;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSemanticColorCritical,
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSemanticColorCritical,
+.sapSuiteBMCThreshold.sapSuiteBMCSemanticColorCritical {
+	background-color: @sapUiChartPaletteSemanticCritical;
+}
+.sapSuiteBMCThreshold.sapSuiteBMCSemanticColorCritical {
+	background-color: @sapUiCriticalElement;
+}
+
+.sapSuiteBMCBarValue.sapSuiteBMCSemanticColorError,
+.sapSuiteBMCBarValueMarker.sapSuiteBMCSemanticColorError {
+	background-color: @sapUiChartPaletteSemanticBad;
+}
+.sapSuiteBMCThreshold.sapSuiteBMCSemanticColorError,
+.sapSuiteBMCDiamond {
+	background-color: @sapUiNegativeElement;
+}
+
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSemanticColorNeutral {
+	background-color: @sapUiChartPaletteSemanticNeutralLight2;
+}
+
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSemanticColorGood {
+	background-color: @sapUiChartPaletteSemanticGoodLight3;
+}
+
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSemanticColorCritical {
+	background-color: @sapUiChartPaletteSemanticCriticalLight3;
+}
+
+.sapSuiteBMCForecastBarValue.sapSuiteBMCSemanticColorError {
+	background-color: @sapUiChartPaletteSemanticBadLight3;
+}
+
+.sapSuiteBMCBar {
+	background-color: @sapUiChartDataPointBG;
+	border-color: @sapUiChartDataPointBGBorderColor;
+}
+
+.sapSuiteBMCTargetBarValue {
+	border-left-color: @sapUiChartTargetShadowColor;
+	background-color: @sapUiChartTargetColor;
+}
+
+.sapSuiteBMCItemValue.sapSuiteBMCSemanticColorNeutral {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+.sapSuiteBMCItemValue.sapSuiteBMCSemanticColorGood {
+	color: @sapUiPositiveText;
+}
+
+.sapSuiteBMCItemValue.sapSuiteBMCSemanticColorCritical {
+	color: @sapUiCriticalText;
+}
+
+.sapSuiteBMCItemValue.sapSuiteBMCSemanticColorError {
+	color: @sapUiNegativeText;
+}
+
+
+/* END "BulletMicroChart.less" */
+
+/* START "ColumnMicroChart.less" */
+/* ======================================================== */
+/* CSS for control sap.suite.ui.microchart/ColumnMicroChart */
+/* Base Theme                                               */
+/* ======================================================== */
+
+.sapSuiteClMC {
+	display: inline-block;
+	outline: none;
+	min-height: 2px;
+	position: relative;
+	overflow: hidden;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteClMC.sapSuiteClMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteClMC.sapSuiteClMCSizeAuto,
+.sapSuiteClMC.sapSuiteClMCSizeL,
+.sapSuiteClMC.sapSuiteClMCSizeM {
+	height: 4.5rem;
+	width: 10.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteClMC.sapSuiteClMCSizeAuto,
+.sapSuiteClMC.sapSuiteClMCSizeS,
+.sapSuiteClMC.sapSuiteClMCSizeXS {
+	height: 3.5rem;
+	width: 8.25rem;
+}
+
+.sapSuiteClMCBars {
+	height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	padding: 1px;
+}
+
+.sapSuiteClMCCnt {
+	position: absolute;
+	top: 0px;
+	bottom: 0.125rem;
+	width: 100%;
+	text-align: center;
+}
+
+.sapSuiteClMCCnt.sapSuiteClMCPositionTop {
+	top: 1rem;
+}
+
+.sapSuiteClMCCnt.sapSuiteClMCPositionBtm {
+	bottom: 1rem;
+}
+
+.sapSuiteClMCBar {
+	outline: none;
+	box-sizing: border-box;
+	min-width: 3px;
+	position: relative;
+	float: left;
+	min-height: 1px;
+	top: ~"calc(100% - 1px)";
+	top: ~"-webkit-calc(100% - 1px)";
+	top: ~"-moz-calc(100% - 1px)";
+}
+
+.sapSuiteClMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteClMC:focus,
+html.sap-desktop .sapSuiteClMCBar:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapSuiteClMCLbls {
+	height: 1rem;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.sapSuiteClMCLbls.sapSuiteClMCPositionTop {
+	top: 0px;
+}
+
+.sapSuiteClMCLbls.sapSuiteClMCPositionBtm {
+	bottom: 0px;
+}
+
+.sapSuiteClMCLbl {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-height: 1px;
+	float: left;
+	width: 50%;
+	font-size: @sapMFontMediumSize;
+	&.sapSuiteClMCSmallFont {
+		font-size: @sapMFontSmallSize;
+	}
+}
+
+.sapSuiteClMCResponsive .sapSuiteClMCLbl{
+	text-overflow: clip;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCWideBtmLbl {
+	width: 100%;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCPositionLeft {
+	text-align: left;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCPositionRight {
+	text-align: right;
+}
+
+html[dir=rtl] {
+	.sapSuiteClMCLbl.sapSuiteClMCPositionRight {
+		text-align: left;
+	}
+
+	.sapSuiteClMCLbl.sapSuiteClMCPositionLeft {
+		text-align: right;
+	}
+}
+
+.sapSuiteClMC.sapSuiteClMCResponsive {
+	width: 100%;
+	height: 100%;
+}
+
+html.sap-desktop .sapSuiteClMCBar.sapSuiteUiMicroChartPointer:hover {
+	border: 1px solid @sapUiContentFocusColor;
+	outline: 1px solid @sapUiContentFocusColor;
+}
+
+.sapSuiteClMCBar.sapSuiteClMCSemanticColorError {
+	background-color: @sapUiNegativeElement;
+}
+
+.sapSuiteClMCBar.sapSuiteClMCSemanticColorGood {
+	background-color: @sapUiPositiveElement;
+}
+
+.sapSuiteClMCBar.sapSuiteClMCSemanticColorCritical {
+	background-color: @sapUiCriticalElement;
+}
+
+.sapSuiteClMCBar.sapSuiteClMCSemanticColorNeutral {
+	background-color: @sapUiChartPaletteSemanticNeutral;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCSemanticColorNeutral {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCSemanticColorGood {
+	color: @sapUiPositiveText;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCSemanticColorCritical {
+	color: @sapUiCriticalText;
+}
+
+.sapSuiteClMCLbl.sapSuiteClMCSemanticColorError {
+	color: @sapUiNegativeText;
+}
+
+/* END "ColumnMicroChart.less" */
+
+/* START "ComparisonMicroChart.less" */
+/* ============================================================ */
+/* CSS for control sap.suite.ui.microchart/ComparisonMicroChart */
+/* Base Theme                                                   */
+/* ============================================================ */
+
+.sapSuiteCpMCChartContent {
+	position: relative;
+	outline: none;
+	overflow: hidden;
+	font-size: @sapMFontSmallSize;
+	&.sapSuiteCpMCResponsive {
+		font-size: @sapMFontMediumSize;
+	}
+	&.sapSuiteCpMCSmallFont {
+		font-size: @sapMFontSmallSize;
+	}
+}
+
+html.sap-desktop .sapSuiteCpMCChartContent[tabindex]:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapSuiteCpMCChartContent:focus:not([tabindex]) {
+	outline: none;
+}
+
+.sapSuiteCpMCChartContent.sapSuiteCpMCSizeL {
+	font-size: @sapMFontMediumSize;
+	min-height: 5.875rem;
+	width: 12rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartContent.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartContent.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartContent.sapSuiteCpMCSizeM {
+	width: 10.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartContent.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartContent.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartContent.sapSuiteCpMCSizeXS {
+	min-height: 5rem;
+	width: 8.25rem;
+}
+
+.sapSuiteCpMCChartDescInner {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	max-width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.sapSuiteCpMCChartItemHeader {
+	overflow : hidden;
+	white-space : nowrap;
+}
+
+.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide {
+	display: inline-block;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeL,
+.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeM {
+	width: 10rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeXS {
+	width: 8rem;
+}
+
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide {
+	display: inline-block;
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeL,
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeM,
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCResponsive {
+	left: 10rem;
+	margin: 0.25rem 0.1875rem 1px .5rem;
+	height: 0.375rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeXS {
+	left: 8rem;
+	padding-left: .5rem;
+	height: 0.875rem;
+}
+
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide {
+	position: relative;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeL,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeM {
+	height: 1.125rem;
+	max-height: 2.75rem;
+	min-height: 1.125rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeXS {
+	height: .9375rem;
+	min-height: .9375rem;
+	max-height: 1.4375rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeL,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeM {
+	min-height: 1.4375rem;
+	max-height: 2.8125rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartItem.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeXS {
+	min-height: 1.25rem;
+	max-height: 1.5rem;
+}
+
+.sapSuiteCpMCChartBar {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteCpMCChartBar:focus {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapSuiteCpMC .sapSuiteCpMCChartBar {
+	height: 0.375rem;
+	margin: 1px 0.125rem 0.1875rem 0.125rem;
+	overflow: hidden;
+}
+
+.sapSuiteCpMC .sapSuiteCpMCChartBar.sapSuiteCpMCSizeL {
+	margin-top: 0.3125rem;
+	margin-bottom: 0.3125rem;
+}
+
+.sapSuiteCpMC .sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeS,
+.sapSuiteCpMC .sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCSizeXS,
+.sapSuiteCpMC .sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeNormal.sapSuiteCpMCResponsive {
+	height: 0.25rem;
+	margin-bottom: 0.1875rem;
+}
+
+.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeNormal {
+	margin: 0px 0.125rem;
+}
+
+@-moz-document url-prefix() {
+	.sapSuiteCpMC .sapSuiteCpMCChartBar {
+		margin-right: 0.1875rem;
+	}
+
+	.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeNormal {
+		margin: 0px 0.1875rem 0px 0.125rem;
+	}
+}
+
+html.sap-desktop .sapSuiteCpMCChartBar.sapSuiteUiMicroChartPointer:hover {
+	border: 1px solid @sapUiContentFocusColor;
+	outline: 1px solid @sapUiContentFocusColor;
+}
+
+.sapSuiteCpMCChartItemTitle {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeL,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeM {
+	max-width: 10rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCSizeXS {
+	max-width: 8rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeL,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeM {
+	max-width: 7rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle.sapSuiteCpMCSizeXS {
+	max-width: 5.5rem;
+}
+
+.sapSuiteCpMCChartItemValue {
+	overflow: hidden;
+	max-width: 100%;
+	float: right;
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCTitle {
+	max-width: ~"calc(100% - 1.5rem)";
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCTitle.sapSuiteCpMCSizeL {
+	max-width: ~"calc(100% - 1.55rem)";
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeWide.sapSuiteCpMCTitle {
+	padding-left: .5rem;
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCSizeL {
+	min-height: 1rem;
+}
+
+.sapSuiteCpMCChartItemValue,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCViewTypeNormal,
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCSemanticColorNeutral {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCSemanticColorGood {
+	color: @sapUiPositiveText;
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCSemanticColorCritical {
+	color: @sapUiCriticalText;
+}
+
+.sapSuiteCpMCChartItemValue.sapSuiteCpMCSemanticColorError {
+	color: @sapUiNegativeText;
+}
+
+.sapSuiteCpMCChartBarValue {
+	background-color: @sapUiChartPaletteQualitativeHue1;
+}
+
+.sapSuiteCpMCChartBarValue.sapSuiteCpMCSemanticColorNeutral {
+	background-color: @sapUiChartPaletteSemanticNeutral;
+}
+
+.sapSuiteCpMCChartBarValue.sapSuiteCpMCSemanticColorGood {
+	background-color: @sapUiPositiveElement;
+}
+
+.sapSuiteCpMCChartBarValue.sapSuiteCpMCSemanticColorCritical {
+	background-color: @sapUiCriticalElement;
+}
+
+.sapSuiteCpMCChartBarValue.sapSuiteCpMCSemanticColorError {
+	background-color: @sapUiNegativeElement;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteCpMCChartBar.sapSuiteCpMCSizeAuto.sapSuiteCpMCViewTypeNormal > div,
+html.sapUiMedia-Std-Tablet .sapSuiteCpMCChartBar.sapSuiteCpMCSizeAuto.sapSuiteCpMCViewTypeNormal > div,
+.sapSuiteCpMCChartBar.sapSuiteCpMCSizeM.sapSuiteCpMCViewTypeNormal > div,
+.sapSuiteCpMCChartBar.sapSuiteCpMCSizeL.sapSuiteCpMCViewTypeNormal > div {
+	max-height: 0.75rem;
+	min-height: 0.375rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartBar.sapSuiteCpMCSizeAuto.sapSuiteCpMCViewTypeNormal > div,
+.sapSuiteCpMCChartBar.sapSuiteCpMCSizeS.sapSuiteCpMCViewTypeNormal > div,
+.sapSuiteCpMCChartBar.sapSuiteCpMCSizeXS.sapSuiteCpMCViewTypeNormal > div,
+.sapSuiteCpMCChartBar.sapSuiteCpMCResponsive.sapSuiteCpMCViewTypeNormal > div {
+	max-height: 0.5rem;
+	min-height: 0.25rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteCpMCChartBar.sapSuiteCpMCSizeAuto,
+.sapSuiteCpMCChartBar.sapSuiteCpMCSizeS,
+.sapSuiteCpMCChartBar.sapSuiteCpMCSizeXS,
+.sapSuiteCpMCChartBar.sapSuiteCpMCResponsive {
+	height: 0.25rem;
+	margin-top: 1px;
+}
+
+.sapSuiteCpMCChartBar.sapSuiteCpMCViewTypeWide > div {
+	max-height: 0.75rem;
+	min-height: 0.375rem;
+}
+
+.sapSuiteCpMCChartBar > div {
+	height: 2rem;
+	float: left;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.sapSuiteCpMCChartBarNegNoValue,
+.sapSuiteCpMCChartBarNoValue {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: @sapUiChartDataPointBG;
+	border: 1px solid @sapUiChartDataPointBGBorderColor;
+}
+
+.sapSuiteCpMCResponsive {
+	&.sapSuiteCpMCChartContent{
+		width: 100%;
+		height: 100%;
+		min-height: 2.5rem;
+		position: relative;
+	}
+	.sapSuiteCpMCVerticalAlignmentContainer{
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+		width: 100%;
+		height: 100%;
+		max-height: 6.25rem;
+		min-height: 2.5rem;
+	}
+	.sapSuiteCpMCChartItemHeader {
+		min-height: 0.9375rem
+	}
+	.sapSuiteCpMCChartItemHeader.sapSuiteCpMCViewTypeWide {
+		width: 100%;
+		max-width: 10rem;
+	}
+}
+
+.sapSuiteCpMCSmallFont .sapSuiteCpMCChartItemHeader,
+.sapSuiteCpMCSizeS.sapSuiteCpMCChartItemHeader {
+	min-height: 0.75rem;
+	max-height: 1rem;
+}
+
+.sapSuiteCpMCNotLastBarPart {
+	border-right: 1px solid @sapUiFieldBackground;
+}
+
+.sapSuiteCpMCNotFirstBarPart {
+	border-left: 1px solid @sapUiFieldBackground;
+}
+/* END "ComparisonMicroChart.less" */
+
+/* START "DeltaMicroChart.less" */
+/* =============================================================== */
+/* CSS for control sap.suite.ui.microchart/DeltaMicroChart.control */
+/* Base Theme                                                      */
+/* =============================================================== */
+
+.sapSuiteDMC {
+	position: relative;
+	display: inline-block;
+	outline: none;
+}
+
+.sapSuiteDMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteDMC:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMC.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMC.sapSuiteDMCSizeAuto,
+.sapSuiteDMC.sapSuiteDMCSizeM,
+.sapSuiteDMC.sapSuiteDMCSizeL {
+	min-height: 4.5rem;
+	width: 10.5rem;
+	font-size: @sapMFontMediumSize;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMC.sapSuiteDMCSizeAuto,
+.sapSuiteDMC.sapSuiteDMCSizeS,
+.sapSuiteDMC.sapSuiteDMCSizeXS {
+	min-height: 3.5rem;
+	width: 8.25rem;
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteDMCLbls {
+	position: absolute;
+	right: 0rem;
+	display: inline-block;
+	height: 100%;
+	margin-left: .5rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMCLbls.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMCLbls.sapSuiteDMCSizeAuto,
+.sapSuiteDMCLbls.sapSuiteDMCSizeM,
+.sapSuiteDMCLbls.sapSuiteDMCSizeL {
+	width: 4rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMCLbls.sapSuiteDMCSizeAuto,
+.sapSuiteDMCLbls.sapSuiteDMCSizeS,
+.sapSuiteDMCLbls.sapSuiteDMCSizeXS {
+	width: 3.5rem;
+}
+
+.sapSuiteDMCCnt {
+	position: absolute;
+	left: 0rem;
+	display: inline-block;
+	height: 100%;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMCCnt.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMCCnt.sapSuiteDMCSizeAuto,
+.sapSuiteDMCCnt.sapSuiteDMCSizeM,
+.sapSuiteDMCCnt.sapSuiteDMCSizeL {
+	right: 4.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMCCnt.sapSuiteDMCSizeAuto,
+.sapSuiteDMCCnt.sapSuiteDMCSizeS,
+.sapSuiteDMCCnt.sapSuiteDMCSizeXS {
+	right: 4rem;
+}
+
+.sapSuiteDMCValue1 {
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+	width: 100%;
+	height: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: right;
+}
+
+html[dir=rtl] .sapSuiteDMCValue1,
+html[dir=rtl] .sapSuiteDMCValue2,
+html[dir=rtl] .sapSuiteDMCDelta {
+	text-align: left;
+}
+
+.sapSuiteDMCValue2 {
+	position: absolute;
+	bottom: 0rem;
+	right: 0rem;
+	width: 100%;
+	height: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: right;
+}
+
+.sapSuiteDMCDelta {
+	margin: auto;
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	right: 0rem;
+	width: 100%;
+	height: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: right;
+	font-weight: bold;
+}
+
+.sapSuiteDMCChart {
+	margin: auto;
+	position: absolute;
+	top: 1rem;
+	bottom: 1rem;
+	left: 0rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMCChart.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMCChart.sapSuiteDMCSizeAuto,
+.sapSuiteDMCChart.sapSuiteDMCSizeM,
+.sapSuiteDMCChart.sapSuiteDMCSizeL {
+	top: 1.25rem;
+	bottom: 1.25rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMCChart.sapSuiteDMCSizeAuto,
+.sapSuiteDMCChart.sapSuiteDMCSizeS,
+.sapSuiteDMCChart.sapSuiteDMCSizeXS {
+	top: 1.125rem;
+	bottom: 1.125rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMCChart.sapSuiteDMCNoTitles.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMCChart.sapSuiteDMCsapSuiteDMCNoTitles.sapSuiteDMCSizeAuto,
+.sapSuiteDMCChart.sapSuiteDMCNoTitles.sapSuiteDMCSizeM,
+.sapSuiteDMCChart.sapSuiteDMCNoTitles.sapSuiteDMCSizeL,
+.sapSuiteDMCChart.sapSuiteDMCNoTitles {
+	top: .1875rem;
+	bottom: .3125rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMCChart.sapSuiteDMCNoTitles.sapSuiteDMCSizeAuto,
+.sapSuiteDMCChart.sapSuiteDMCNoTitles.sapSuiteDMCSizeS,
+.sapSuiteDMCChart.sapSuiteDMCNoTitles.sapSuiteDMCSizeXS {
+	top: .3rem;
+	bottom: .45rem;
+}
+
+.sapSuiteDMCTitle {
+	position: absolute;
+	left: 0rem;
+	right: 0rem;
+	height: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sapSuiteDMCTitle.sapSuiteDMCPositionTop {
+	top: 0rem;
+}
+
+.sapSuiteDMCTitle.sapSuiteDMCPositionBtm {
+	bottom: 0rem;
+}
+
+.sapSuiteDMCBar {
+	position: absolute;
+}
+
+.sapSuiteDMCBar:not(.sapSuiteDMCBarZeroWidth) {
+	min-width: 3px;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMCBar.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMCBar.sapSuiteDMCSizeAuto,
+.sapSuiteDMCBar.sapSuiteDMCSizeM,
+.sapSuiteDMCBar.sapSuiteDMCSizeL {
+	height: 0.375rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMCBar.sapSuiteDMCSizeAuto,
+.sapSuiteDMCBar.sapSuiteDMCSizeS,
+.sapSuiteDMCBar.sapSuiteDMCSizeXS {
+	height: .25rem;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCDirectionLeft {
+	left: 0rem;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCDirectionRight {
+	right: 0rem;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBar1 {
+	top: 0rem;
+}
+
+.sapSuiteDMCBarInternal {
+	background-color: grey;
+	height: 100%;
+}
+
+.sapSuiteDMCBarInternal.sapSuiteDMCDirectionLeft {
+	margin-right: 2px;
+	.sapSuiteDMCBarSizeSmaller:not(.sapSuiteDMCBarDeltaMaxDelta) & {
+		margin-right: 1px;
+	}
+}
+
+.sapSuiteDMCBarInternal.sapSuiteDMCDirectionRight {
+	margin-left: 2px;
+	.sapSuiteDMCBarSizeSmaller:not(.sapSuiteDMCBarDeltaMaxDelta) & {
+		margin-left: 1px;
+	}
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBarDelta {
+	margin: auto;
+	top: 0rem;
+	bottom: 0rem;
+	min-width: 4px;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeAuto,
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeM,
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeL {
+	height: 0.875rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeAuto,
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeS,
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCSizeXS {
+	height: .625rem;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCBarDeltaEqual {
+	min-width: 1px;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCBarDeltaEqual.sapSuiteDMCDirectionLeft {
+	left: 0rem;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBarDelta.sapSuiteDMCBarDeltaEqual.sapSuiteDMCDirectionLeft.sapSuiteDMCBarDeltaZero {
+	left: 3px;
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBar2 {
+	bottom: 0rem;
+	right: 0rem;
+}
+
+.sapSuiteDMCBarDeltaInt {
+	height: 100%;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.sapSuiteDMCBarDeltaStripe {
+	position: absolute;
+	height: 400%;
+	width: 1px;
+	background-color: black;
+	bottom: 0rem;
+}
+
+.sapSuiteDMCBarDeltaStripe.sapSuiteDMCDirectionLeft {
+	left: 0px;
+}
+
+.sapSuiteDMCBarDeltaStripe.sapSuiteDMCDirectionLeft.sapSuiteDMCBarDeltaEqual {
+	left: 0rem;
+}
+
+.sapSuiteDMCBarDeltaStripe.sapSuiteDMCDirectionRight {
+	right: 0rem;
+}
+
+.sapSuiteDMCBarDeltaStripe.sapSuiteDMCBarDeltaFirstStripeUp {
+	bottom: 0rem;
+}
+
+.sapSuiteDMCBarDeltaStripe.sapSuiteDMCBarDeltaFirstStripeDown {
+	top: 0rem;
+}
+
+.sapSuiteDMCCalc {
+	width: 10px;
+	height: 0px;
+}
+
+.sapSuiteDMCCalc1 {
+	width: 36%;
+}
+
+.sapSuiteDMCCalc2 {
+	width: 64%;
+}
+
+.sapSuiteDMCResponsive {
+	&.sapSuiteDMC {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	.sapSuiteDMCVerticalAlignmentContainer {
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+		width: 100%;
+		height: 100%;
+		max-height: 5rem;
+	}
+	.sapSuiteDMCCnt {
+		min-width: 1rem;
+		right: 5.0rem;
+	}
+	.sapSuiteDMCChart {
+		top: 1.25rem;
+		bottom: 1.25rem;
+		min-height: 1.2rem;
+	}
+	.sapSuiteDMCBar {
+		height: 15%;
+		&.sapSuiteDMCBarDelta {
+			height: 40%;
+		}
+	}
+	.sapSuiteDMCTitle {
+		height: 1.05rem;
+	}
+	.sapSuiteDMCLbls {
+		width: 4.5rem;
+	}
+}
+.sapSuiteDMCSmallFont {
+	.sapSuiteDMCCnt {
+		right: 4.1rem;
+	}
+	.sapSuiteDMCLbls {
+		width: 3.6rem;
+	}
+	.sapSuiteDMCTitle{
+		height: 0.9rem;
+	}
+}
+
+.sapSuiteDMCBar.sapSuiteDMCBarUniqueNonzero .sapSuiteDMCBarInternal{
+	&.sapSuiteDMCDirectionRight,
+	&.sapSuiteDMCDirectionLeft {
+		margin-left: .125rem;
+		margin-right: .125rem;
+	}
+}
+
+.sapSuiteDMC.sapSuiteDMCResponsive {
+	font-size: @sapMFontMediumSize;
+}
+
+.sapSuiteDMC.sapSuiteDMCSmallFont {
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteDMCDelta.sapSuiteDMCSemanticColorNeutral {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+.sapSuiteDMCDelta.sapSuiteDMCSemanticColorGood {
+	color: @sapUiPositiveText;
+}
+
+.sapSuiteDMCDelta.sapSuiteDMCSemanticColorCritical {
+	color: @sapUiCriticalText;
+}
+
+.sapSuiteDMCDelta.sapSuiteDMCSemanticColorError {
+	color: @sapUiNegativeText;
+}
+
+.sapSuiteDMCBarDeltaInt.sapSuiteDMCSemanticColorNeutral {
+	background-color: @sapUiChartPaletteSemanticNeutral;
+}
+
+.sapSuiteDMCBarDeltaInt.sapSuiteDMCSemanticColorGood {
+	background-color: @sapUiPositiveElement;
+}
+
+.sapSuiteDMCBarDeltaInt.sapSuiteDMCSemanticColorCritical {
+	background-color: @sapUiCriticalElement;
+}
+
+.sapSuiteDMCBarDeltaInt.sapSuiteDMCSemanticColorError {
+	background-color: @sapUiNegativeElement;
+}
+
+.sapSuiteDMCBarDeltaStripe {
+	background-color: @sapUiChartTargetColor;
+}
+
+.sapSuiteDMCBarInternal {
+	background-color: @sapUiChartPaletteSemanticNeutral;
+}
+
+/* END "DeltaMicroChart.less" */
+
+/* START "HarveyBallMicroChart.less" */
+/* ============================================================ */
+/* CSS for control sap.suite.ui.microchart/HarveyBallMicroChart */
+/* Base Theme                                                   */
+/* ============================================================ */
+
+.sapSuiteHBMC {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.sapSuiteHBMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteHBMC:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapSuiteHBMC.sapSuiteHBMCSizeL {
+	height: 5.625rem;
+	width: 12rem;
+}
+
+html.sap-desktop .sapSuiteHBMC.sapSuiteHBMCSizeAuto,
+html.sap-tablet .sapSuiteHBMC.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMC.sapSuiteHBMCSizeM {
+	height: 4.5rem;
+	min-width: 10.5rem;
+}
+
+.sapSuiteHBMC.sapSuiteHBMCResponsive,
+.sapSuiteHBMCChart.sapSuiteHBMCResponsive {
+	height: 100%;
+	width: 100%;
+}
+
+html.sap-phone .sapSuiteHBMC.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMC.sapSuiteHBMCSizeS,
+.sapSuiteHBMC.sapSuiteHBMCSizeXS {
+	height: 3.5rem;
+	min-width: 8.25rem;
+}
+
+.sapSuiteHBMCValue,
+.sapSuiteHBMCValueScale,
+.sapSuiteHBMCTotal,
+.sapSuiteHBMCTotalScale {
+	display: inline-block;
+	white-space: normal;
+	word-wrap: break-word;
+	text-overflow: '';
+}
+
+html[dir=rtl] .sapSuiteHBMCTotalScale,
+html[dir=rtl] .sapSuiteHBMCValueScale {
+	margin-right: 0.2rem;
+}
+
+html.sap-desktop .sapSuiteHBMCTotalScale.sapSuiteHBMCSizeAuto,
+html.sap-tablet .sapSuiteHBMCTotalScale.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCTotalScale.sapSuiteHBMCSizeM,
+html.sap-desktop .sapSuiteHBMCValueScale.sapSuiteHBMCSizeAuto,
+html.sap-tablet .sapSuiteHBMCValueScale.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCValueScale.sapSuiteHBMCSizeM {
+	max-width: 2.4375rem;
+	margin-left: 0.2rem;
+	font-size: @sapMFontMediumSize;
+}
+
+/* Common scale css*/
+html.sap-phone .sapSuiteHBMCTotalScale.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCTotalScale.sapSuiteHBMCSizeS,
+.sapSuiteHBMCTotalScale.sapSuiteHBMCSizeXS,
+html.sap-phone .sapSuiteHBMCValueScale.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCValueScale.sapSuiteHBMCSizeS,
+.sapSuiteHBMCValueScale.sapSuiteHBMCSizeXS {
+	max-width: 2.07rem;
+	margin-left: 0.1rem;
+	font-size: @sapMFontSmallSize;
+}
+
+
+/*Fraction label css*/
+html.sap-desktop .sapSuiteHBMCValue.sapSuiteHBMCSizeAuto,
+html.sap-tablet .sapSuiteHBMCValue.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCValue.sapSuiteHBMCSizeM {
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	height: 1.25rem;
+}
+
+html.sap-phone .sapSuiteHBMCValue.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCValue.sapSuiteHBMCSizeS,
+.sapSuiteHBMCValue.sapSuiteHBMCSizeXS {
+	font-size: 1rem;
+	height: 1rem;
+	line-height: 1rem;
+}
+
+/* Containers CSS */
+.sapSuiteHBMCValueContainer {
+	display: inline-block;
+	position: absolute;
+}
+
+.sapSuiteHBMCTotalContainer {
+	display: inline-block;
+	position: absolute;
+	bottom: 0rem;
+
+	color: @sapUiChartCategoryAxisLabelFontColor;
+	fill: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+html.sap-desktop .sapSuiteHBMCValueContainer.sapSuiteHBMCSizeAuto,
+html.sap-tablet .sapSuiteHBMCValueContainer.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCValueContainer.sapSuiteHBMCSizeM,
+.sapSuiteHBMCValueContainer.sapSuiteHBMCResponsive {
+	top: 0.875rem;
+	margin-left: 0.2rem;
+}
+
+html.sap-phone .sapSuiteHBMCValueContainer.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCValueContainer.sapSuiteHBMCSizeS,
+.sapSuiteHBMCValueContainer.sapSuiteHBMCSizeXS {
+	top: 0.4rem;
+	margin-left: 0.1rem;
+}
+
+html.sap-phone .sapSuiteHBMCTotal.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCTotal.sapSuiteHBMCSizeS,
+.sapSuiteHBMCTotal.sapSuiteHBMCSizeXS {
+	font-size: @sapMFontMediumSize;
+	height: @sapMFontMediumSize;
+}
+
+html.sap-desktop .sapSuiteHBMCTotal.sapSuiteHBMCSizeAuto,
+html.sap-tablet .sapSuiteHBMCTotal.sapSuiteHBMCSizeAuto,
+.sapSuiteHBMCTotal.sapSuiteHBMCSizeM {
+	font-size: @sapMFontLargeSize;
+	height: @sapMFontLargeSize;
+}
+
+.sapSuiteHBMCSegment {
+	stroke-width: 1.5;
+}
+
+.sapSuiteHBMCBackgroundCircle {
+	fill: @sapUiChartDataPointBG;
+}
+
+.sapSuiteHBMCSemanticColorNeutral {
+	&.sapSuiteHBMCValueContainer {
+		color: @sapUiNeutralText;
+		fill: @sapUiNeutralText;
+	}
+	&.sapSuiteHBMCValueScale, &.sapSuiteHBMCValue {
+		color: @sapUiNeutralText;
+	}
+	&.sapSuiteHBMCSegment {
+		fill: @sapUiChartPaletteSemanticNeutral;
+	}
+}
+
+.sapSuiteHBMCSemanticColorGood {
+	&.sapSuiteHBMCValueContainer {
+		color: @sapUiPositiveText;
+		fill: @sapUiPositiveText;
+	}
+	&.sapSuiteHBMCValueScale, &.sapSuiteHBMCValue {
+		color: @sapUiPositiveText;
+	}
+	&.sapSuiteHBMCSegment {
+		fill: @sapUiPositiveElement;
+	}
+}
+
+.sapSuiteHBMCSemanticColorCritical {
+	&.sapSuiteHBMCValueContainer {
+		color: @sapUiCriticalText;
+		fill: @sapUiCriticalText;
+	}
+	&.sapSuiteHBMCValueScale, &.sapSuiteHBMCValue {
+		color: @sapUiCriticalText;
+	}
+	&.sapSuiteHBMCSegment {
+		fill: @sapUiCriticalElement;
+	}
+}
+
+.sapSuiteHBMCSemanticColorError {
+	&.sapSuiteHBMCValueContainer {
+		color: @sapUiNegativeText;
+		fill: @sapUiNegativeText;
+	}
+	&.sapSuiteHBMCValueScale, &.sapSuiteHBMCValue {
+		color: @sapUiNegativeText;
+	}
+	&.sapSuiteHBMCSegment {
+		fill: @sapUiNegativeElement;
+	}
+}
+
+/* END "HarveyBallMicroChart.less" */
+
+/* START "InteractiveBarChart.less" */
+/* =========================================================== */
+/* CSS for control sap.suite.ui.microchart/InteractiveBarChart */
+/* Base Theme                                                  */
+/* =========================================================== */
+
+.sapSuiteIBC {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sapSuiteIBCBar {
+	width: 0%;
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
+	height: ~"calc(100% - 10px)"; /* 2px less because of border */
+}
+
+.sapSuiteIBCStage1:not(.sapSuiteIBCFullWidth) .sapSuiteIBCBar {
+	height: ~"calc(100% - 6px)"; /* 2px less because of border */
+}
+
+.sapSuiteIBCStage2:not(.sapSuiteIBCFullWidth) .sapSuiteIBCBar {
+	height: ~"calc(100% - 4px)"; /* 2px less because of border */
+}
+
+.sapUiSizeCompact .sapSuiteIBCStage1:not(.sapSuiteIBCFullWidth) .sapSuiteIBCBar {
+	height: ~"calc(100% - 8px)"; /* 2px less because of border */
+}
+
+.sapUiSizeCompact .sapSuiteIBCStage2:not(.sapSuiteIBCFullWidth) .sapSuiteIBCBar {
+	height: ~"calc(100% - 2px)"; /* 2px less because of border */
+}
+
+.sapSuiteIBCBarInteractionArea {
+	width: 100%;
+	max-height: 3rem;
+	height: 3rem;
+	position: relative;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	margin-bottom: 0.125rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.sapSuiteIBCBarInteractionArea:last-child .sapSuiteIBCDivider {
+	height: ~"calc(100% - 1px)";
+}
+
+.sapUiSizeCompact .sapSuiteIBCBarInteractionArea {
+	height: 2.25rem;
+	max-height: 2.25rem;
+}
+
+.sapSuiteIBCDisabledOverlay {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+}
+
+.sapSuiteIBCNonInteractive .sapSuiteIBCBarInteractionArea {
+	margin-bottom: 1px;
+}
+
+.sapSuiteIBCBarInteractionArea:focus {
+	outline: none;
+}
+
+html.sap-tablet .sapSuiteIBC:not(.sapSuiteIBCNonInteractive) .sapSuiteIBCBarInteractionArea:focus,
+html.sap-phone .sapSuiteIBC:not(.sapSuiteIBCNonInteractive) .sapSuiteIBCBarInteractionArea:focus {
+	border: 1px dotted transparent;
+}
+
+html.sap-tablet .sapSuiteIBC:focus,
+html.sap-phone .sapSuiteIBC:focus {
+	outline: none;
+}
+
+.sapSuiteIBCBarLabel {
+	box-sizing: border-box;
+	position: relative;
+}
+
+.sapSuiteIBCBarLabelText {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	font-family: @sapUiFontFamily;
+	font-weight: normal;
+	font-size: @sapMFontMediumSize;
+	margin-right: 0.375rem;
+	margin-left: 0.375rem;
+}
+html[dir="rtl"] .sapSuiteIBCBarLabelText {
+	text-align: right;
+}
+
+.sapSuiteIBCBarValue {
+	font-family: @sapUiFontFamily;
+	font-weight: normal;
+	font-size: @sapMFontMediumSize;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.sapSuiteIBCSmallFont .sapSuiteIBCBarValue {
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteIBCSmallFont .sapSuiteIBCBarLabelText {
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteIBCBarPositive .sapSuiteIBCBarValue {
+	text-align: right;
+	right: 0.25rem;
+	left: initial;
+}
+
+.sapSuiteIBCBarNegative .sapSuiteIBCBarValue {
+	text-align: left;
+	left: 0.25rem;
+	right: initial;
+}
+
+.sapSuiteIBCBarPositive .sapSuiteIBCBarValue.sapSuiteIBCBarValueOutside {
+	right: auto;
+}
+
+.sapSuiteIBCBarNegative .sapSuiteIBCBarValue.sapSuiteIBCBarValueOutside {
+	left: auto;
+}
+
+.sapSuiteIBCBarPositive .sapSuiteIBCBarValueNA {
+	left: 0.25rem;
+	right: initial;
+}
+
+.sapSuiteIBCBarNegative .sapSuiteIBCBarValueNA {
+	right: 0.25rem;
+	left: initial;
+}
+
+.sapSuiteIBCDivider {
+	position: relative;
+	width: 1px;
+	height: 3.25rem;
+	float: left;
+	z-index: 0;
+}
+
+.sapSuiteIBCFullWidth {
+	.sapSuiteIBCBarInteractionArea:first-child, .sapSuiteIBCDisabledOverlay + .sapSuiteIBCBarInteractionArea {
+		.sapSuiteIBCDivider {
+			top: -0.75rem;
+			height: 3.875rem;
+		}
+	}
+}
+
+.sapSuiteIBCBarWrapper {
+	display: inline-block;
+	padding-right: 0.375rem;
+	box-sizing: border-box;
+	position: relative;
+	height: 100%;
+}
+
+.sapSuiteIBCBarNegative {
+	float: right;
+}
+
+.sapSuiteIBCBarPositive {
+	float: left;
+}
+
+.sapSuiteIBCBarWrapperPositive, .sapSuiteIBCBarWrapperNegative {
+	height: 100%;
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.sapSuiteIBCFullWidth .sapSuiteIBCBarLabel {
+	height: 0.75rem + 0.125rem + 0.125rem; /* font-size + padding-top + padding-bottom (design) */
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.sapSuiteIBCFullWidth .sapSuiteIBCBarLabelText {
+	margin-left: 0.375rem + 0.25rem; /* area padding left + padding from divider (design) */
+	line-height: 0.75rem + 0.125rem + 0.125rem; /* font-size + padding-top + padding-bottom (design) */
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteIBCFullWidth .sapSuiteIBCBar {
+	height: ~"calc(100% - 4px)";
+}
+
+.sapSuiteIBCFullWidth .sapSuiteIBCBarWrapper {
+	padding-top: 0.75rem + 0.125rem; /* font-height + bottom-padding (design) */
+}
+
+.sapSuiteIBCFullWidth .sapSuiteIBCBarInteractionArea {
+	padding-left: 0.375rem;
+}
+
+.sapSuiteIBCBarSelected .sapSuiteIBCBarLabelText,
+.sapSuiteIBCBarSelected .sapSuiteIBCBarValue {
+	font-weight: bold;
+}
+
+.sapSuiteIBCSemanticMarker {
+	position: absolute;
+	width: 0.1875rem;
+	left: -1px;
+	top: -1px;
+	bottom: -1px;
+
+	&.sapSuiteIBCSemanticGood {
+		background-color: @sapUiPositiveElement;
+	}
+	&.sapSuiteIBCSemanticError {
+		background-color: @sapUiNegativeElement;
+	}
+	&.sapSuiteIBCSemanticCritical {
+		background-color: @sapUiCriticalElement;
+	}
+}
+
+/* END "InteractiveBarChart.less" */
+
+/* START "InteractiveDonutChart.less" */
+/* ===================================================================== */
+/* CSS for control sap.suite.ui.microchart/InteractiveDonutChart.control */
+/* Base Theme                                                            */
+/* ===================================================================== */
+
+.sapSuiteIDC {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	outline: none;
+}
+
+.sapSuiteIDCNonInteractive :not(.sapSuiteIDCDisabledOverlay) {
+	cursor: pointer;
+}
+
+.sapSuiteIDCChart {
+	width: 40%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding-right: 0.5rem;
+	box-sizing: border-box;
+}
+
+svg.sapSuiteIDCChartSVG {
+	float: right;
+}
+
+.sapSuiteIDCLegend {
+	width: 60%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.sapSuiteIDCLegendSegment:first-child {
+	margin-top: 0.125rem;
+}
+
+.sapSuiteIDCLegendSegment {
+	cursor: pointer;
+	margin-bottom: 0.125rem;
+	margin-right: 0.125rem;
+	margin-left: 0.125rem;
+	box-sizing: border-box;
+	height : 100%;
+	display: flex;
+	max-height: 3rem;
+	align-items: center;
+	outline: none;
+	border: 1px solid transparent;
+	position: relative;
+}
+
+.sapSuiteIDCLegendSegmentSelected {
+	font-weight: bold;
+	color: @sapUiContentForegroundTextColor;
+}
+
+html.sap-tablet .sapSuiteIDC:focus,
+html.sap-phone .sapSuiteIDC:focus {
+	outline: none;
+}
+
+.sapSuiteIDCLegendMarker {
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-left: 0.5rem;
+	margin-right: 0.25rem;
+	float: left;
+	border: 1px solid transparent;
+}
+
+.sapSuiteIDCLegendLabelValue {
+	width: ~"calc(100% - 1.125rem - 0.25rem - 0.5rem)"; /*escape calc in order to not use less-function (deduct marker width and marker margins)*/
+	float: left;
+
+	color: @sapUiContentLabelColor;
+	font-family: @sapUiFontFamily;
+	font-size: @sapMFontMediumSize;
+	cursor: pointer;
+
+	//sapSuiteIDCLegendLabelValue inside a selected or hovered-selected legend entry
+	.sapSuiteIDCLegendSegmentSelected &,
+	.sapSuiteIDCLegendSegmentSelected.sapSuiteIDCLegendSegmentHover & {
+		color: @sapUiContentForegroundTextColor;
+	}
+}
+
+.sapSuiteIDCSemanticMarker {
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	width: 0.1875rem;
+	left: -1px;
+
+	&.sapSuiteICSemanticColorGood {
+		background-color: @sapUiPositiveElement;
+	}
+	&.sapSuiteICSemanticColorError {
+		background-color: @sapUiNegativeElement;
+	}
+	&.sapSuiteICSemanticColorCritical {
+		background-color: @sapUiCriticalElement;
+	}
+}
+
+.sapSuiteIDCLegendLabel {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	box-sizing: border-box;
+}
+
+.sapSuiteIDCLegendValue {
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	float: right;
+	text-align: right;
+}
+
+.sapSuiteIDCDisabledOverlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	cursor: default;
+}
+
+.sapSuiteIDCSmallFont {
+	.sapSuiteIDCLegendLabel, .sapSuiteIDCLegendValue {
+		font-size: @sapMFontSmallSize;
+	}
+	.sapSuiteIDCLegendSegment {
+		margin-bottom: 1px;
+	}
+	.sapSuiteIDCLegendMarker {
+		width: 0.625rem;
+		height: 0.625rem;
+	}
+}
+
+.sapSuiteIDCChartSegmentGhost {
+	cursor: pointer;
+	fill: transparent;
+}
+
+/* SMALL-LEGEND-PADDING */
+.sapSuiteIDCSmallLegendPadding {
+	.sapSuiteIDCLegendMarker {
+		margin-left: 0.25rem;
+	}
+	.sapSuiteIDCLegendLabel, .sapSuiteIDCLegendValue {
+		font-size: @sapMFontSmallSize;
+	}
+	.sapSuiteIDCLegendLabelValue {
+		width: ~"calc(100% - 1.125rem - 0.25rem - 0.25rem)"; /*escape calc in order to not use less-function (deduct marker width and marker margins)*/
+	}
+}
+
+/* FULL-WIDTH */
+.sapSuiteIDCFullWidth {
+	.sapSuiteIDCChart {
+		width: 0%;
+		padding: 0;
+	}
+	.sapSuiteIDCLegend {
+		width: 100%;
+	}
+	.sapSuiteIDCLegendMarker {
+		visibility: hidden;
+		width: 0px;
+		margin: 0px;
+	}
+	.sapSuiteIDCLegendLabelValue {
+		width: 100%;
+	}
+	.sapSuiteIDCLegendLabel {
+		padding-left: 0.5rem;
+	}
+	.sapSuiteIDCLegendValue {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+	}
+	.sapSuiteIDCLegendLabel, .sapSuiteIDCLegendValue {
+		font-size: @sapMFontMediumSize;
+	}
+}
+
+.sapSuiteIDCFullWidth.sapSuiteIDCFullWidthSmallFont {
+	.sapSuiteIDCLegendLabel, .sapSuiteIDCLegendValue {
+		font-size: @sapMFontSmallSize;
+	}
+	.sapSuiteIDCLegendLabel {
+		padding-left: 0.25rem;
+	}
+	sapSuiteIDCLegendValue {
+		padding-right: 0.25rem;
+	}
+}
+
+/* COMPACT */
+.sapUiSizeCompact {
+	.sapSuiteIDCLegendSegment {
+		max-height: 2.25rem;
+	}
+}
+
+/* END "InteractiveDonutChart.less" */
+
+/* START "InteractiveLineChart.less" */
+/* ============================================================ */
+/* CSS for control sap.suite.ui.microchart/InteractiveLineChart */
+/* Base Theme                                                   */
+/* ============================================================ */
+
+.sapSuiteILC {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	outline: none;
+	z-index: 0; /* create a stacking context for the chart to have z-indices independent from the outside */
+}
+.sapSuiteILCNonInteractive :not(.sapSuiteILCDisabledOverlay) {
+	cursor: pointer;
+}
+.sapSuiteILCCanvasLayout {
+	top: 1.9375rem; /* 31px */
+	bottom: 3.9375rem; /* 63px */
+}
+.sapSuiteILCChartCanvas {
+	width: 100%;
+	position: absolute;
+}
+
+.sapSuiteILCSvgElement {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.sapSuiteILCPoint {
+	position: absolute;
+	left: 50%;
+	pointer-events: none;
+	z-index: 1;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	transform: translate(-50%, 50%);
+	border: 1px solid @sapUiGlobalBackgroundColor;
+	background-clip: content-box;
+
+	&.sapSuiteICSemanticColorGood, &.sapSuiteICSemanticColorCritical, &.sapSuiteICSemanticColorError {
+		border: 2px solid @sapUiGlobalBackgroundColor;
+		width: 0.625rem;
+		height: 0.625rem;
+	}
+	&.sapSuiteICSemanticColorGood {
+		background-color: @sapUiPositiveElement;
+	}
+	&.sapSuiteICSemanticColorError {
+		background-color: @sapUiNegativeElement;
+	}
+	&.sapSuiteICSemanticColorCritical {
+		background-color: @sapUiCriticalElement;
+	}
+}
+
+.sapSuiteILCSection {
+	position: absolute;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	outline: none;
+}
+.sapUiSizeCompact .sapSuiteILCSection,
+.sapSuiteILCNonInteractive .sapSuiteILCSection {
+	border-left-width: 0px;
+}
+.sapUiSizeCompact .sapSuiteILCSection:first-child,
+.sapSuiteILCNonInteractive .sapSuiteILCSection:first-child {
+	border-left-width: 1px;
+}
+.sapSuiteILCInteractionArea, .sapSuiteILCBackgroundArea {
+	bottom: -3.875rem;
+	top: -2rem;
+	width: 100%;
+	position: absolute;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop {
+	.sapSuiteILCInteractionArea, .sapSuiteILCBackgroundArea {
+		top: -1.999rem;
+	}
+}
+
+.sapSuiteILCBackgroundArea {
+	z-index: 0;
+}
+
+html.sap-tablet .sapSuiteILC:focus,
+html.sap-phone .sapSuiteILC:focus,
+html.sap-desktop .sapSuiteILC.sapSuiteILCNonInteractive .sapSuiteILCInteractionArea:focus {
+	outline: none;
+}
+.sapSuiteILCInteraction {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+.sapSuiteILCTextElement {
+	position: absolute;
+	left: 50%;
+	font-size: @sapMFontMediumSize;
+}
+.sapSuiteILCSmallFont .sapSuiteILCTextElement {
+	font-size: @sapMFontSmallSize;
+}
+
+.sapSuiteILCShiftBelow {
+	transform: translate(-50%, 150%);
+}
+.sapSuiteILCShiftAbove {
+	transform: translate(-50%, -50%);
+}
+.sapSuiteILCToplabel {
+	max-width: ~"calc(100% - 2px)"; /* 1pixel left + 1pixel right */
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.sapSuiteILCBottomText {
+	max-width: 100%;
+	bottom: -3rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transform: translate(-50%, 50%);
+}
+.sapSuiteILCSelected .sapSuiteILCTextElement {
+	font-weight: bold;
+}
+.sapSuiteILCBottomLabelArea {
+	position: absolute;
+	bottom: 0px;
+	height: 1.875rem;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: initial;
+	left: 0.125rem;
+	right: 0.125rem;
+}
+.sapSuiteILCBottomLabelAreaNoDivider {
+	border-top-style: none;
+}
+.sapSuiteILCDivider {
+	stroke-width: 1px;
+}
+.sapSuiteILCNaPoint, .sapSuiteILCNaLabel {
+	bottom: 1%;
+}
+.sapSuiteILCDisabledOverlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+.sapSuiteILCExpandedLabels .sapSuiteILCBottomText {
+	visibility: hidden;
+	transform: translateY(50%);
+}
+.sapSuiteILCExpandedLabels .sapSuiteILCSection:first-child .sapSuiteILCBottomText, .sapSuiteILCExpandedLabels .sapSuiteILCSection:last-child .sapSuiteILCBottomText {
+	visibility: inherit;
+	max-width: none;
+}
+.sapSuiteILCExpandedLabels .sapSuiteILCSection:last-child .sapSuiteILCBottomText {
+	text-align: right;
+	left: auto;
+	z-index: -1;
+	right: 0.125rem;
+}
+.sapSuiteILCExpandedLabels .sapSuiteILCSection:first-child .sapSuiteILCBottomText {
+	text-align: left;
+	left: 0.125rem;
+	z-index: -1;
+	right: auto;
+}
+
+/* END "InteractiveLineChart.less" */
+
+/* START "LineMicroChart.less" */
+/* ==================================================================== */
+/* CSS for control sap.suite.ui.microchart/LineMicroChart               */
+/* Base Theme                                                           */
+/* ==================================================================== */
+
+.sapSuiteLMC {
+	height: inherit;
+	width: inherit;
+	outline: none;
+	position: relative;
+	background-color: transparent;
+}
+
+.sapSuiteLMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteLMC:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+/* canvas with regular fontsize */
+.sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 3.3125rem)"; /* 53px = 2 * (18px label height + 3px padding) + 11 px point height (5.5px each side)*/
+	width: ~"calc(100% - 0.688rem)"; /* 11px point width (5.5px each side) */
+	top: 1.65625rem; /* (26.5px = 18px label height + 3px padding + 5.5px point height top) */
+	left: 0.344rem; /* 5.5px half the size of a point */
+	position: absolute;
+}
+
+.sapSuiteLMCNoBottomLabels .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 2rem)"; /* 32px = 1 * (18px label height + 3px padding) + 11 px point height (5.5px each side)*/
+	top: 1.65625rem; /* (26.5px = 18px label height + 3px padding + 5.5px point height top) */
+}
+
+.sapSuiteLMCNoTopLabels .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 2rem)"; /* 32px = 1 * (18px label height + 3px padding) + 11 px point height (5.5px each side)*/
+	top: 0.344rem; /* (5.5px point height top) */
+}
+
+.sapSuiteLMCNoTopLabels.sapSuiteLMCNoBottomLabels .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 0.688rem)"; /* 11 px point height (5.5px each side)*/
+	top: 0.344rem; /* (5.5px point height top) */
+}
+
+/* Canvas with small fontsize */
+.sapSuiteLMCSmallFont .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 3.0625rem)"; /* 49px = 2 * (16px label height + 3px padding) + 11 px point height (5.5px each side)*/
+	width: ~"calc(100% - 0.688rem)"; /* 11px point width (5.5px each side) */
+	top: 1.53125rem; /* (24.5px = 16px label height + 3px padding + 5.5px point height top) */
+	left: 0.344rem; /* 5.5px half the size of a point */
+	position: absolute;
+}
+
+.sapSuiteLMCSmallFont.sapSuiteLMCNoBottomLabels .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 1.875rem)"; /* 30px = 1 * (16px label height + 3px padding) + 11 px point height (5.5px each side)*/
+	top: 1.53125rem; /* (24.5px = 16px label height + 3px padding + 5.5px point height top) */
+}
+
+.sapSuiteLMCSmallFont.sapSuiteLMCNoTopLabels .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 1.875rem)"; /* 30px = 1 * (16px label height + 3px padding) + 11 px point height (5.5px each side)*/
+	top: 0.344rem; /* (5.5px point height top) */
+}
+
+.sapSuiteLMCSmallFont.sapSuiteLMCNoTopLabels.sapSuiteLMCNoBottomLabels .sapSuiteLMCSvgCanvas {
+	height: ~"calc(100% - 0.688rem)"; /* 11 px point height (5.5px each side)*/
+	top: 0.344rem; /* (5.5px point height top) */
+}
+
+.sapSuiteLMCSvgElement {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	preserveAspectRatio: none;
+	overflow: visible;
+}
+
+.sapSuiteLMCSvgWrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.sapSuiteLMCLeftBottomLabel,
+.sapSuiteLMCRightBottomLabel {
+	bottom: 0;
+}
+.sapSuiteLMCLeftTopLabel,
+.sapSuiteLMCRightTopLabel {
+	top: 0;
+}
+.sapSuiteLMCLeftTopLabel,
+.sapSuiteLMCLeftBottomLabel {
+	left: 0;
+}
+.sapSuiteLMCRightTopLabel,
+.sapSuiteLMCRightBottomLabel {
+	right: 0;
+}
+.sapSuiteLMCLeftTopLabel,
+.sapSuiteLMCLeftBottomLabel {
+	text-align: left;
+}
+.sapSuiteLMCRightTopLabel,
+.sapSuiteLMCRightBottomLabel {
+	text-align: right;
+}
+
+.sapSuiteLMCLabel {
+	position: absolute;
+	font-size: @sapMFontMediumSize;
+	font-weight: normal;
+	color: @sapUiContentLabelColor;
+	line-height: 1.125rem;
+	height: 1.125rem;
+	width: 50%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.sapSuiteLMCSizeResponsive .sapSuiteLMCLabel {
+	text-overflow: clip;
+}
+
+.sapSuiteLMCSmallFont .sapSuiteLMCLabel {
+	font-size: @sapMFontSmallSize;
+	height: 1rem;
+	line-height: 1rem;
+}
+
+.sapSuiteLMCLineThreshold {
+	stroke: @sapUiChartPaletteSemanticNeutralLight1;
+	stroke-width: 1px;
+}
+.sapSuiteLMCLine {
+	stroke-width: 0.125rem;
+}
+
+.sapSuiteLMCPoint {
+	position: absolute;
+	border-radius: 50%;
+	transform: translate(-50%,-50%);
+	border-color: @sapUiChartDataPointBorderColor;
+	border-width: 1px;
+	border-style: solid;
+	background-clip: padding-box;
+	width: 0.375rem;
+	height: 0.375rem;
+}
+
+.sapSuiteLMCPointEmphasized {
+	width: 0.5625rem;
+	height: 0.5625rem;
+}
+
+/* Point Colors */
+.sapSuiteLMCPointGood {
+	background-color: @sapUiSuccessBorder;
+}
+.sapSuiteLMCPointError {
+	background-color: @sapUiErrorBorder;
+}
+.sapSuiteLMCPointNeutral {
+	background-color: @sapUiNeutralBorder;
+}
+.sapSuiteLMCPointCritical {
+	background-color: @sapUiWarningBorder;
+}
+
+/* Line Colors */
+.sapSuiteLMCLineGood {
+	stroke: @sapUiSuccessBorder;
+}
+.sapSuiteLMCLineError {
+	stroke: @sapUiErrorBorder;
+}
+.sapSuiteLMCLineNeutral {
+	stroke: @sapUiNeutralBorder;
+}
+.sapSuiteLMCLineCritical {
+	stroke: @sapUiWarningBorder;
+}
+
+/* Label Colors */
+.sapSuiteLMCLabelCritical {
+	color: @sapUiWarningBorder;
+}
+.sapSuiteLMCLabelGood {
+	color: @sapUiSuccessBorder;
+}
+.sapSuiteLMCLabelError {
+	color: @sapUiErrorBorder;
+}
+
+/* CHART MODES */
+
+/* -------- Semantic [X] & Focus [X] -------- */
+.sapSuiteLMC.sapSuiteLMCSemanticMode.sapSuiteLMCFocusMode {
+	.sapSuiteLMCLine {
+		stroke: @sapUiNeutralBorder;
+	}
+}
+/* -------- Semantic [] & Focus [] -------- */
+.sapSuiteLMC:not(.sapSuiteLMCSemanticMode):not(.sapSuiteLMCFocusMode) {
+	.sapSuiteLMCPointNeutral {
+		background-color: @sapUiChartPaletteSequentialHue1;
+	}
+	.sapSuiteLMCLineNeutral {
+		stroke: @sapUiChartPaletteSequentialHue1;
+	}
+}
+/* -------- Semantic [X] & Focus [] -------- */
+.sapSuiteLMC.sapSuiteLMCSemanticMode:not(.sapSuiteLMCFocusMode) {
+	.sapSuiteLMCPointNeutral {
+		background-color: @sapUiChartPaletteSequentialHue1;
+	}
+	.sapSuiteLMCLineNeutral {
+		stroke: @sapUiChartPaletteSequentialHue1;
+	}
+}
+/* -------- Semantic [] & Focus [X] -------- */
+.sapSuiteLMC:not(.sapSuiteLMCSemanticMode).sapSuiteLMCFocusMode {
+	.sapSuiteLMCPointNeutral {
+		background-color: @sapUiChartPaletteSequentialHue1;
+	}
+	.sapSuiteLMCLineNeutral {
+		stroke: @sapUiChartPaletteSequentialHue1;
+	}
+}
+
+/* SIZES */
+
+.sapSuiteLMC.sapSuiteLMCSizeL {
+	height: 5.875rem;
+	width: 12rem;
+}
+
+.sapSuiteLMC.sapSuiteLMCSizeResponsive {
+	height: 100%;
+	width: 100%;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteLMC.sapSuiteLMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteLMC.sapSuiteLMCSizeAuto,
+.sapSuiteLMC.sapSuiteLMCSizeM {
+	height: 4.5rem;
+	width: 10.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteLMC.sapSuiteLMCSizeAuto,
+.sapSuiteLMC.sapSuiteLMCSizeS, .sapSuiteLMC.sapSuiteLMCSizeXS {
+	height: 3.5rem;
+	width: 8rem;
+}
+
+/* END "LineMicroChart.less" */
+
+/* START "RadialMicroChart.less" */
+/* ================================================================ */
+/* CSS for control sap.suite.ui.microchart/RadialMicroChart.control */
+/* Base Theme                                                       */
+/* ================================================================ */
+
+.sapSuiteRMC {
+	height: inherit;
+	width: inherit;
+	outline: none;
+}
+
+.sapSuiteRMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+html.sap-desktop .sapSuiteRMC:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteRMC.sapSuiteRMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteRMC.sapSuiteRMCSizeAuto,
+.sapSuiteRMC.sapSuiteRMCSizeM,
+.sapSuiteRMC.sapSuiteRMCSizeL {
+	height: 4.5rem;
+	width: 4.5rem;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteRMC.sapSuiteRMCSizeAuto,
+.sapSuiteRMC.sapSuiteRMCSizeS,
+.sapSuiteRMC.sapSuiteRMCSizeXS {
+	height: 3.5rem;
+	width: 3.5rem;
+}
+
+.sapSuiteRMC.sapSuiteRMCSizeResponsive {
+	height: 100%;
+	width: 100%;
+}
+
+.sapSuiteRMCRing{
+	fill: transparent;
+	stroke: transparent;
+}
+
+.sapSuiteRMCNeutralTextColor {
+	fill: @sapUiNeutralText;
+}
+
+.sapSuiteRMCGoodTextColor {
+	fill: @sapUiPositiveText;
+}
+
+.sapSuiteRMCErrorTextColor {
+	fill: @sapUiNegativeText;
+}
+
+.sapSuiteRMCCriticalTextColor {
+	fill: @sapUiCriticalText;
+}
+
+.sapSuiteRMCPathNeutral {
+	stroke: @sapUiChartPaletteSequentialHue1;
+}
+
+.sapSuiteRMCPathGood {
+	stroke: @sapUiPositiveElement;
+}
+
+.sapSuiteRMCPathError {
+	stroke: @sapUiNegativeElement;
+}
+
+.sapSuiteRMCPathCritical {
+	stroke: @sapUiCriticalElement;
+}
+
+/* END "RadialMicroChart.less" */
+
+/* START "StackedBarMicroChart.less" */
+/* ============================================================= */
+/* CSS for control sap.suite.ui.microcharts/StackedBarMicroChart */
+/* Base Theme                                                    */
+/* ============================================================= */
+
+.sapSuiteStackedMC {
+	font-size: @sapMFontSmallSize;
+	outline: none;
+	display: flex;
+
+	.sapSuiteStackedMCBar {
+		position: relative;
+		max-height: 1rem;
+		min-height: 0.75rem;
+		min-width: 1px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		height: 100%;
+
+		&.sapSuiteStackedMCBarNoLast {
+			min-width: 2px;
+			border-right: 1px solid @sapUiFieldBackground;
+		}
+	}
+}
+
+.sapSuiteStackedMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+.sapSuiteStackedMCBarLabel {
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 3px;
+	margin-right: 3px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+html.sapUiMedia-Std-Phone .sapSuiteStackedMC.sapSuiteStackedMCSizeAuto,
+.sapSuiteStackedMC.sapSuiteStackedMCSizeS,
+.sapSuiteStackedMC.sapSuiteStackedMCSizeXS {
+	width: 8rem;
+	height: 1rem;
+}
+
+html.sapUiMedia-Std-Desktop .sapSuiteStackedMC.sapSuiteStackedMCSizeAuto,
+html.sapUiMedia-Std-Tablet .sapSuiteStackedMC.sapSuiteStackedMCSizeAuto,
+.sapSuiteStackedMC.sapSuiteStackedMCSizeM,
+.sapSuiteStackedMC.sapSuiteStackedMCSizeL {
+	width: 10.5rem;
+	height: 1rem;
+}
+
+.sapSuiteStackedMC.sapSuiteStackedMCSizeResponsive {
+	width: 100%;
+	height: 100%;
+}
+
+html.sap-desktop .sapSuiteStackedMC:focus {
+	outline-color: @sapUiContentFocusColor;
+	outline-style: dotted;
+	outline-width: 1px;
+}
+
+.sapSuiteStackedMCBarSemanticColorNeutral {
+	background-color: @sapUiNeutralElement;
+}
+
+.sapSuiteStackedMCBarSemanticColorGood {
+	background-color: @sapUiPositiveElement;
+}
+
+.sapSuiteStackedMCBarSemanticColorCritical {
+	background-color: @sapUiCriticalElement;
+}
+
+.sapSuiteStackedMCBarSemanticColorError {
+	background-color: @sapUiNegativeElement;
+}
+
+/* END "StackedBarMicroChart.less" */
+

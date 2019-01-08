@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+        controllerName="sap.ovp.cards.generic.Card"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+	<ovp:Card id="ovpCardControl" class = "cardType">
+        <ovp:customData>
+            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>stackCardType}" writeToDom="true"/>
+        </ovp:customData>
+        <HBox class="sapOvpBaseCard sapOvpCardRightContent">
+	        <FlexBox class="sapOvpCardContentRightHeader">
+	            <core:Fragment fragmentName="sap.ovp.cards.generic.Header" type="XML"/>
+	            <layoutData>
+	                <FlexItemData growFactor="1" baseSize="1rem"/>
+	            </layoutData>
+	        </FlexBox>
+	        <ovp:CardContentContainer id="ovpCardContentContainer">
+	            <template:if test="{ovpCardProperties>/contentFragment}">
+	                    <core:Fragment fragmentName="{ovpCardProperties>/contentFragment}" type="XML"/>
+	            </template:if>
+	        </ovp:CardContentContainer>
+    	</HBox>
+	</ovp:Card>
+
+</core:FragmentDefinition>

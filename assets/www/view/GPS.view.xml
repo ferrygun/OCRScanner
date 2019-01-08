@@ -1,0 +1,33 @@
+<mvc:View controllerName="GPS.GPS.controller.GPS" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<App id="idAppControl">
+		<Page title="Camera test">
+			<content>
+				<HBox width="100%" id="__hbox0" justifyContent="SpaceBetween">
+					<items>
+						<Button text="Take a photo" width="150px" id="__button1" press="capturePhoto">
+							<layoutData>
+								<FlexItemData alignSelf="Stretch" id="__data5"/>
+							</layoutData>
+						</Button>
+						<Button text="Pick from gallery" width="150px" id="__button0" press="getPhoto">
+							<layoutData>
+								<FlexItemData alignSelf="Stretch" id="__data4"/>
+							</layoutData>
+						</Button>
+					</items>
+				</HBox>
+				<HBox width="100%" id="__hbox3" justifyContent="Center">
+					<items>
+						<Image width="400px" height="400px" id="myImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+							<layoutData>
+								<FlexItemData alignSelf="Stretch" id="__data6"/>
+							</layoutData>
+						</Image>
+					</items>
+				</HBox>
+
+			</content>
+		</Page>
+	</App>
+</mvc:View>

@@ -1,0 +1,163 @@
+{
+  "file-config": {
+    "access": {
+      "read": false,
+      "write": false,
+      "delete": false,
+      "visible": false
+    },
+    "validity": "volatile",
+    "scope": "system",
+    "mime-type": "application/octet-stream",
+    "dynamic": false,
+    "cacheability": "private",
+    "file-extensions": {
+      "js": {
+        "mime-type": "application/javascript"
+      },
+      "json": {
+        "mime-type": "application/json"
+      },
+      "html": {
+        "mime-type": "text/html",
+        "access": {
+          "read": true,
+          "visible": true
+        },
+        "dynamic": true,
+        "validity": "nostore"
+      },
+      "xml": {
+        "mime-type": "text/xml"
+      },
+      "css": {
+        "mime-type": "text/css"
+      },
+      "txt": {
+        "mime-type": "text/plain"
+      },
+      "properties": {
+        "mime-type": "text/plain"
+      },
+      "png": {
+        "mime-type": "image/png"
+      },
+      "jpg": {
+        "mime-type": "image/jpeg"
+      },
+      "jpeg": {
+        "mime-type": "image/jpeg"
+      },
+      "gif": {
+        "mime-type": "image/gif"
+      },
+      "ttf": {
+        "mime-type": "font/ttf"
+      },
+      "ico": {
+        "mime-type": "image/x-icon"
+      }
+    },
+    "subfolders": {
+      "shared": {
+        "scope": "shared",
+        "subfolders": {
+          "apps": {
+            "file-extensions": {
+              "html": {
+                "access": {
+                  "read": true,
+                  "visible": true
+                },
+                "dynamic": false
+              }
+            },
+            "access": {
+              "read": true,
+              "visible": true
+            },
+            "validity": "cached",
+            "cacheability": "public"
+          },
+          "flp-site": {
+            "access": {
+              "read": true
+            },
+            "dynamic": true,
+            "file-extensions": {
+              "json": {
+                "access": {
+                  "visible": true
+                },
+                "validity": "cacheBusted"
+              }
+            }
+          },
+          "roles": {
+            "subfolders": {
+              "*": {
+                "access": {
+                  "read": {
+                    "file": "../user/env/roles.txt",
+                    "anyOf": [
+                      "*Value"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "user": {
+        "scope": "user",
+        "access": {
+          "read": true
+        },
+        "subfolders": {
+          "store": {
+            "subfolders": {
+              "flp": {
+                "subfolders": {
+                  "p": {
+                    "cacheability": "private",
+                    "validity": "cacheBusted"
+                  },
+                  "u": {
+                    "cacheability": "private",
+                    "validity": "nostore"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "request": {
+        "scope": "user",
+        "access": {
+          "read": true
+        }
+      }
+    }
+  },
+  "validity": {
+    "cached": {
+      "cache-control": "max-age=31536000, <cacheability>",
+      "expires": "<expires-header>"
+    },
+    "volatile": {
+      "cache-control": "must-revalidate, <cacheability>",
+      "expires": "-1"
+    },
+    "nostore": {
+      "cache-control": "no-store, no-cache, <cacheability>",
+      "expires": "-1"
+    },
+    "cacheBusted": {
+      "cache-control": "max-age=31536000, <cacheability>",
+      "expires": "<expires-header>"
+    }
+  },
+  "language-map" : {}
+}

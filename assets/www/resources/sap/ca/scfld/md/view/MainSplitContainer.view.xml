@@ -1,0 +1,15 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core"
+           xmlns="sap.m" controllerName="sap.ca.scfld.md.view.MainSplitContainer" height="100%">
+
+    <SplitApp id="MainSplitContainer">
+        <masterPages>
+        </masterPages>
+        <detailPages>
+        </detailPages>
+    </SplitApp>
+</core:View>

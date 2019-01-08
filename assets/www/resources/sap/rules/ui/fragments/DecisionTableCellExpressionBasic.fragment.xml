@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:rules="sap.rules.ui">
+	<Popover showHeader="false" placement="PreferredBottomOrFlip" class="sapUiContentPadding">
+        <ScrollContainer horizontal="false" vertical="true"/>
+        <rules:DecisionTableCellExpressionBasic value="" visible="false" focusOnLoad="true"/>
+	</Popover>
+</core:FragmentDefinition> 

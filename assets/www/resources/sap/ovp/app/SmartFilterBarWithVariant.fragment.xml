@@ -1,0 +1,39 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+    <smartFilterBar:SmartFilterBar id="ovpGlobalFilter"
+                                   entityType="{ui>/globalFilterEntityType}"
+                                   persistencyKey="ovpGlobalFilter"
+                                   filterBarExpanded="true"
+                                   showMessages="false"
+                                   beforeVariantSave="onBeforeSFBVariantSave"
+                                   afterVariantLoad="onAfterSFBVariantLoad"
+                                   assignedFiltersChanged="onAssignedFiltersChanged"
+                                   useToolbar="false"
+                                   smartVariant="ovpPageVariant"
+                                   useDateRangeType="{ui>/useDateRangeType}"
+                                   liveMode="{ui>/enableLiveFilter}"
+                                   considerAnalyticalParameters="{ui>/considerAnalyticalParameters}">
+        <template:if test="{meta>}">
+            <smartFilterBar:controlConfiguration>
+                <template:with path='meta>com.sap.vocabularies.UI.v1.SelectionFields'
+                               var='selectionField'>
+                    <template:repeat list="{selectionField>}">
+                        <smartFilterBar:ControlConfiguration
+                                key="{= (${selectionField>PropertyPath}).replace('/', '.') }"
+                                groupId="_BASIC"
+                                />
+                    </template:repeat>
+                </template:with>
+                <core:ExtensionPoint name="SmartFilterBarControlConfigurationExtension|{ui>globalFilterEntityType}"/>
+            </smartFilterBar:controlConfiguration>
+        </template:if>
+		<smartFilterBar:customData>
+			<core:CustomData key="dateFormatSettings" value='\{"UTC":true,"style":"medium"\}'/>
+		</smartFilterBar:customData>
+    </smartFilterBar:SmartFilterBar>
+
+</core:FragmentDefinition>

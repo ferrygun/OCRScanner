@@ -1,0 +1,129 @@
+<core:FragmentDefinition xmlns="sap.m"
+                         xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui"
+                         xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" >
+    <template:with path="ovpCardProperties>/dataPointAnnotationPath"
+                   helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='dataPoint'>
+        <template:with path="ovpCardProperties>/selectionAnnotationPath"
+                       helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='selVar'>
+            <template:with path="ovpCardProperties>/presentationAnnotationPath"
+                           helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='preVar'>
+
+
+                <template:if test="{dataPoint>}">
+                    <VBox id="kpiHeader" class="sapOVPKpiHeaderVbox" tabindex="-1">
+
+                        <template:if test="{dataPoint>Value/Path}">
+                            <FlexBox items="{parts:[{path:'entitySet>'}, {path:'dataPoint>'}, {path:'selVar>'}], formatter: 'sap.ovp.cards.AnnotationHelper.getAggregateNumber'}"
+                                     id="kpiHBoxNumeric" class="numericContentHbox sapOvpKPIHeaderAggregateNumber" >
+                                <items>
+                                    <HBox class="innerNumericContentHbox sapOvpKpiContent" alignItems="End" justifyContent="SpaceBetween">
+                                        <ovp:OVPNumericContent id="kpiNumberValue"
+                                                        size="M" truncateValueTo="5"
+                                                        icon="{path:'dataPoint>',formatter:'sap.ovp.cards.AnnotationHelper.formThePathForTrendIcon'}"
+                                                        value="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formThePathForAggregateNumber'}"
+                                                        formatterValue="true"
+                                                        valueColor="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formatKPIHeaderState'}"
+                                                        state="Loaded" class="sapOvpKPIHeaderNumberValueStyle"
+                                                        press="press"
+                                                        withMargin="false">
+                                            <ovp:customData>
+                                                <ovp:CustomData key="aria-label" value="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formThePathForAggregateNumber'}" writeToDom="true" />
+                                                <ovp:CustomData key="role" value="heading" writeToDom="true" />
+                                                <ovp:CustomData key="class" value="kpiHeaderClass" writeToDom="true" />
+                                            </ovp:customData>
+                                        </ovp:OVPNumericContent>
+
+                                        <template:if test="{= ${path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formPathForPercentageChange'} !== ''}">
+                                            <FlexBox class="TargetDeviationFlexbox">
+                                                <VBox class="KpiTargetContainer">
+                                                    <Text id = "ovpKpiTarget" text="{ovplibResourceBundle>KPI_Target_Text}" class="KpiTargetText tabindex-1 cardHeaderText">
+                                                        <customData>
+                                                            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>KPI_Target_Text}" writeToDom="true" />
+                                                        </customData>
+                                                    </Text>
+                                                    <Text id = "ovpTargetValue" text="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formPathForTargetValue'}"
+                                                          class="sapOvpKPIHeaderTrendPercentStyle tabindex-1 cardHeaderText">
+                                                        <customData>
+                                                            <ovp:CustomData key="aria-label" value="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formPathForTargetValue'}" writeToDom="true" />
+                                                        </customData>
+                                                        <layoutData>
+                                                            <FlexItemData growFactor="1"/>
+                                                        </layoutData>
+                                                    </Text>
+                                                </VBox>
+                                                <VBox class="KpiDeviationContainer">
+                                                    <Text id= "ovpKPIDeviation" text="{ovplibResourceBundle>KPI_Deviation_Text}" class="KpiDeviationText tabindex-1 cardHeaderText">
+                                                        <customData>
+                                                            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>KPI_Deviation_Text}" writeToDom="true" />
+                                                        </customData>
+                                                    </Text>
+                                                    <Text
+                                                            id="kpiNumberPercentage"
+                                                            text="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formPathForPercentageChange'}"
+                                                            class="sapOvpKPIHeaderTrendPercentStyle tabindex-1 cardHeaderText">
+                                                        <customData>
+                                                            <ovp:CustomData key="aria-label" value="{path:'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.formPathForPercentageChange'}" writeToDom="true" />
+                                                        </customData>
+                                                        <layoutData>
+                                                            <FlexItemData growFactor="1"/>
+                                                        </layoutData>
+                                                    </Text>
+                                                </VBox>
+                                            </FlexBox>
+                                        </template:if>
+
+
+                                    </HBox>
+                                </items>
+                            </FlexBox>
+                        </template:if>
+
+                        <template:if test="{dataPoint>Value/Path}">
+                            <FlexBox class="UOMFlexbox">
+                                <template:if test="{ovpCardProperties>/valueSelectionInfo}">
+                                    <Text
+                                            id="ovpValueSelectionInfo"
+                                            maxLines="1"
+                                            text="{ovpCardProperties>/valueSelectionInfo}"
+                                            class="sapOvpKPIHeaderUnitOfMeasureStyle tabindex-1 cardHeaderText">
+                                        <customData>
+                                            <ovp:CustomData key="aria-label"
+                                                            value="{ovpCardProperties>/valueSelectionInfo}"
+                                                            writeToDom="true"/>
+                                        </customData>
+                                    </Text>
+                                </template:if>
+                            </FlexBox>
+                        </template:if>
+
+                        <template:if  test="{= (${ovpCardProperties>/showSortingInHeader} === true) &amp;&amp; ${path:'preVar>', formatter: 'sap.ovp.cards.AnnotationHelper.isPresentationVarientPresent'} === true}">
+                            <FlexBox alignItems="Start" justifyContent="SpaceBetween" class="KpiPreVarFlex" visible="{ovpCardProperties>/showSortingInHeader}">
+                                <Text id="headerGroupByText" maxLines="1"
+                                      text="{path:'preVar>', formatter:'sap.ovp.cards.AnnotationHelper.listGroupBy'}"
+                                      class="sapOvpKPIHeaderDimensionStyle tabindex-1 cardHeaderText">
+                                    <customData>
+                                        <ovp:CustomData key="aria-label" value="{path:'preVar>', formatter:'sap.ovp.cards.AnnotationHelper.listGroupBy'}" writeToDom="true" />
+                                    </customData>
+                                </Text>
+                            </FlexBox>
+                        </template:if>
+
+                        <template:if test="{= (${ovpCardProperties>/showFilterInHeader} === true) &amp;&amp; {parts:[{path:'selectionVar>'}, {path:'selVar>'}], formatter:'sap.ovp.cards.AnnotationHelper.formTheFilterByString'} !== ''}">
+                            <FlexBox alignItems="Start" justifyContent="flex-start" class="KpiSelVarFlex" visible="{ovpCardProperties>/showFilterInHeader}">
+                                <template:repeat list="{path:'selVar>SelectOptions'}" var="selectionVar">
+                                    <Text id="{path:'selectionVar>', formatter:'sap.ovp.cards.AnnotationHelper.formTheIdForFilter'}" text="{parts:[{path:'selectionVar>'}, {path:'selVar>'}], formatter:'sap.ovp.cards.AnnotationHelper.formTheFilterByString'}" class="sapOvpKPIHeaderFilterStyle tabindex-1 cardHeaderText" >
+                                        <customData>
+                                            <ovp:CustomData key="aria-label" value="{parts:[{path:'selectionVar>'}, {path:'selVar>'}], formatter:'sap.ovp.cards.AnnotationHelper.formTheFilterByString'}" writeToDom="true" />
+                                        </customData>
+                                    </Text>
+                                </template:repeat>
+                            </FlexBox>
+                        </template:if>
+
+                    </VBox>
+                </template:if>
+
+            </template:with>
+        </template:with>
+    </template:with>
+</core:FragmentDefinition>

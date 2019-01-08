@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover title="{ovplibResourceBundle>RELATED_APPS}" placement="Auto">
+		<HBox class="sapOvpLinkListStandardHBox">
+			<List showSeparators="None"
+				class="{= ${ovpCardProperties>/densityStyle} === 'cozy' ? 'sapOvpLinkListStandardPaddingCozy' : 'sapOvpLinkListStandardPaddingCompact' }">
+				<CustomListItem>
+					<!-- Content will be added via controler-->
+				</CustomListItem>
+			</List>
+		</HBox>
+	</Popover>
+</core:FragmentDefinition>

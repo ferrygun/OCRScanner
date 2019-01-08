@@ -1,0 +1,249 @@
+<core:FragmentDefinition xmlns:f="sap.ui.layout.form"
+                         xmlns:core="sap.ui.core"
+                         xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" xmlns="sap.m">
+        <f:Form editable="true">
+            <f:layout>
+                <f:ResponsiveGridLayout
+                        labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false"
+                        emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0"
+                        breakpointM="400" singleContainerFullSize="false" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer id="sapOvpSettingsFormContainer">
+                    <f:formElements>
+                        <!-- Title -->
+                        <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_TITLE}" visible="{visibility>/title}">
+                            <f:fields>
+                                <Input id="sapOvpSettingsTitle" value="{/title}" change="validateInputField"
+                                       placeholder="{ovplibResourceBundle>OVP_KEYUSER_INPUT_PLACEHOLDER}"
+                                       editable="true" required="true" class="sapUiSmallMarginBottom"
+                                       valueState="{= ${/title} === '' ? 'Error' : 'None'}"
+                                       valueStateText="{= ${/title} === '' ? ${ovplibResourceBundle>OVP_KEYUSER_INPUT_ERROR_VALUE_STATE} : ''}" />
+                            </f:fields>
+                        </f:FormElement>
+                        <!-- Dynamic Subtitle Switch -->
+                        <f:FormElement label="Dynamic Subtitle" visible="{visibility>/dynamicSwitchSubTitle}">
+                            <f:fields>
+                                <Switch id="sapOvpSettingsSwitchSubTitle"
+                                        state="{visibility>/dynamicSwitchStateSubTitle}"
+                                        type="Default"  change="updateCard" class="sapUiSmallMarginBottom"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <!-- Dynamic Sub Title -->
+                        <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_SUBTITLE}" visible="{visibility>/dynamicSubTitle}">
+                            <f:fields>
+                                <Select id="sapOvpSettingsDynamicSubTitle" width="100%"
+                                        items="{
+                                                                path: '/dynamicSubTitle'
+                                                            }"
+                                        selectedKey= "{/dynamicSubtitleAnnotationPath}"
+                                        forceSelection="false"
+                                        change="updateCard" class="sapUiSmallMarginBottom">
+                                    <core:Item key="{value}" text="{name}"/>
+                                </Select>
+                            </f:fields>
+                        </f:FormElement>
+                        <!-- Sub Title -->
+                        <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_SUBTITLE}" visible="{visibility>/subTitle}">
+                            <f:fields>
+                                <Input id="sapOvpSettingsSubTitle" value="{/subTitle}" change="updateCard"
+                                       editable="true" class="sapUiSmallMarginBottom"
+                                        />
+                            </f:fields>
+                        </f:FormElement>
+                        <template:if test="{= ${ovpCardProperties>/template} !== 'sap.ovp.cards.linklist'}" >
+                            <!-- View Name -->
+                            <f:FormElement label="View Name" visible="{visibility>/showViewName}">
+                                <f:fields>
+                                    <Input id="sapOvpSettingsViewName" value="{/viewName}" change="validateInputField"
+                                           placeholder="View Name" required="true" class="sapUiSmallMarginBottom"
+                                           valueState="{= ${/viewName} === '' ? 'Error' : 'None'}"
+                                           valueStateText="{= ${/viewName} === '' ? 'Please enter a View Name.' : ''}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- set Default -->
+                            <f:FormElement label="Set default view" visible="{visibility>/showDefaultView}">
+                                <f:fields>
+                                    <Switch id="sapOvpDefaultViewSwitch" state="{/isDefaultView}" change="updateCard"
+                                            type="Default" class="sapUiSmallMarginBottom" />
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- KPIHeader Switch -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_KPI_HEADER}" visible="{visibility>/kpiHeader}">
+                                <f:fields>
+                                    <Switch id="sapOvpSettingsKPIHeaderSwitch"
+                                            state="{/hasKPIHeader}"
+                                            type="Default"  change="updateCard" class="sapUiSmallMarginBottom"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- DataPoint -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_KPI_Value}" visible="{visibility>/dataPoint}">
+                                <f:fields>
+                                    <Select id="sapOvpSettingsDataPoint" width="100%"
+                                            items="{
+                                                                path: '/dataPoint'
+                                                            }"
+                                            selectedKey="{/dataPointAnnotationPath}"
+                                            forceSelection="false"
+                                             change="updateCard" class="sapUiSmallMarginBottom">
+                                        <core:Item key="{value}" text="{name}"/>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Value Selection Info -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_KPI_DESCRIPTION}" visible="{visibility>/valueSelectionInfo}">
+                                <f:fields>
+                                    <Input id="sapOvpSettingsValueSelectionInfo" value="{/valueSelectionInfo}" change="updateCard"
+                                           editable="true" class="sapUiSmallMarginBottom"
+                                            />
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- List Type -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_LIST_TYPE}" visible="{visibility>/listType}">
+                                <f:fields>
+                                    <Switch id="sapOvpSettingsListType" state="{/isExtendedList}" change="updateCard"
+                                            type="Default" class="sapUiSmallMarginBottom" />
+                                </f:fields>
+                            </f:FormElement>
+                        </template:if>
+                            <!-- List Flavor -->
+                            <f:FormElement label="{ovpCardProperties>/listFlavorName}" visible="{visibility>/listFlavor}">
+                                <f:fields>
+                                    <Switch id="sapOvpSettingsListFlavorForList" state="{/isBarList}" type="Default"
+                                             change="updateCard" class="sapUiSmallMarginBottom"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{ovpCardProperties>/listFlavorName}" visible="{visibility>/listFlavorForLinkList}">
+                                <f:fields>
+                                    <SegmentedButton id="sapOvpSettingsListFlavorForLinkList" select="updateCard"
+                                                     selectedKey="{/listFlavor}" class="sapUiSmallMarginBottom"
+                                            >
+                                        <items>
+                                            <SegmentedButtonItem id="sapOvpSettingsListFlavorList" key="standard"
+                                                                 text="List" />
+                                            <SegmentedButtonItem id="sapOvpSettingsListFlavorCarousel" key="carousel"
+                                                                 text="Carousel" />
+                                        </items>
+                                    </SegmentedButton>
+                                </f:fields>
+                            </f:FormElement>
+                        <template:if test="{= ${ovpCardProperties>/template} !== 'sap.ovp.cards.linklist'}" >
+                            <!-- Sort By -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_SORTBY}" visible="{visibility>/sortBy}">
+                                <f:fields>
+                                    <Select id="sapOvpSettingsSortBy" width="100%"
+                                            items="{
+                                                                path: '/modelProperties'
+                                                            }"
+                                            selectedKey="{/sortBy}"  change="updateCard" class="sapUiSmallMarginBottom">
+                                        <core:Item key="{value}" text="{name}"/>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Sort Order -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_SORTORDER}" visible="{visibility>/sortOrder}">
+                                <f:fields>
+                                    <SegmentedButton id="sapOvpSettingsSortOrder" select="updateCard"
+                                                     selectedKey="{/sortOrder}" class="sapUiSmallMarginBottom"
+                                                     >
+                                        <items>
+                                            <SegmentedButtonItem id="sapOvpSettingsSortOrderDescending" key="descending"
+                                                                 text="{ovplibResourceBundle>OVP_KEYUSER_ORDER_DESC}" />
+                                            <SegmentedButtonItem id="sapOvpSettingsSortOrderAscending" key="ascending"
+                                                                 text="{ovplibResourceBundle>OVP_KEYUSER_ORDER_ASC}" />
+                                        </items>
+                                    </SegmentedButton>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Selection Variant - Filter By -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_SELECTION_VAR}" visible="{visibility>/selectionVariant}">
+                                <f:fields>
+                                    <Select id="sapOvpSettingsFilterBy" width="100%"
+                                            items="{
+                                                                path: '/selectionVariant'
+                                                            }"
+                                            selectedKey= "{/selectionAnnotationPath}"
+                                             change="updateCard" class="sapUiSmallMarginBottom">
+                                        <core:Item key="{value}" text="{name}"/>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Presentation Variant - Presented By -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_PRESENTATION_VAR}" visible="{visibility>/presentationVariant}">
+                                <f:fields>
+                                    <Select id="sapOvpSettingsPresentedBy" width="100%"
+                                            items="{
+                                                                path: '/presentationVariant'
+                                                            }"
+                                            selectedKey= "{/presentationAnnotationPath}"
+                                             change="updateCard" class="sapUiSmallMarginBottom">
+                                        <core:Item key="{value}" text="{name}"/>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Line Item -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_LINEITEM_ANNO}" visible="{visibility>/lineItem}">
+                                <f:fields>
+                                    <Input id="sapOvpSettingsLineItem"
+                                           value="{
+                                                                path: '/lineItemQualifier'
+                                                            }"
+                                           showValueHelp="true" editable="true" enabled="true" valueHelpOnly="true"
+                                           valueHelpRequest="openLineItemValueHelpDialog" class="sapUiSmallMarginBottom"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Identification -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_IDENTIFICATION_ANNO}" visible="{visibility>/identification}">
+                                <f:fields>
+                                    <Select id="sapOvpSettingsIdentification" width="100%"
+                                            items="{
+                                                                path: '/identification'
+                                                            }"
+                                            selectedKey= "{/identificationAnnotationPath}"
+                                             change="updateCard" class="sapUiSmallMarginBottom">
+                                        <core:Item key="{value}" text="{name}"/>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <!-- Chart -->
+                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_TYPE_OF_CHART}" visible="{visibility>/chart}">
+                                <f:fields>
+                                    <Select id="sapOvpSettingsChart" width="100%"
+                                            items="{
+                                                                path: '/chart'
+                                                            }"
+                                            forceSelection="false"
+                                            selectedKey= "{/chartAnnotationPath}"
+                                             change="updateCard" class="sapUiSmallMarginBottom">
+                                        <core:Item key="{value}" text="{name}"/>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                        </template:if>
+                        <template:if test="{= ${ovpCardProperties>/template} === 'sap.ovp.cards.linklist' &amp;&amp; ${ovpCardProperties>/staticContent}}" >
+                            <f:FormElement>
+                                <f:fields>
+                                    <Toolbar>
+                                        <content>
+                                            <ToolbarSpacer />
+                                            <Button id="moveToTheTop" tooltip="Top" icon="sap-icon://collapse-group" press="onPressMoveToTheTop" enabled="{visibility>/moveToTheTop}" type="Transparent"/>
+                                            <Button id="moveUp" tooltip="Up" icon="sap-icon://navigation-up-arrow" press="onPressMoveUp" enabled="{visibility>/moveUp}" type="Transparent"/>
+                                            <Button id="moveDown" tooltip="Down" icon="sap-icon://navigation-down-arrow" press="onPressMoveDown" enabled="{visibility>/moveDown}" type="Transparent"/>
+                                            <Button id="moveToTheBottom" tooltip="Bottom" icon="sap-icon://expand-group" press="onPressMoveToTheBottom" enabled="{visibility>/moveToTheBottom}" type="Transparent"/>
+                                            <Button id="delete" tooltip="Delete" icon="sap-icon://delete" press="onPressDelete" enabled="{visibility>/delete}" type="Transparent"/>
+                                            <Button id="add" tooltip="Add" icon="sap-icon://add" press="onPressAdd" type="Transparent"/>
+                                        </content>
+                                    </Toolbar>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:fields>
+                                    <core:Fragment fragmentName="sap.ovp.cards.rta.StaticLinkListCardLineItemsPanel" type="XML"/>
+                                </f:fields>
+                            </f:FormElement>
+                        </template:if>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+</core:FragmentDefinition>

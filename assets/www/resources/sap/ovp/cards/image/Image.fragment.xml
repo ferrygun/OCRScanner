@@ -1,0 +1,27 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:build="sap.build"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+    <template:if test="{ovpCardProperties>/imageUrl}">
+        <HBox class="ovpImageContainer">
+            <customData>
+                <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>imageCard}" writeToDom="true" />
+                <ovp:CustomData key="role" value="heading" writeToDom="true" />
+            </customData>
+            <Image press="onImagePress"
+                src="{path: 'ovpCardProperties>/imageUrl', formatter: 'sap.ovp.cards.AnnotationHelper.formatUrl'}"
+                densityAware="true"
+                width="100%"
+                build:metadata="#pattern:GenericCard>Image;prop:src:ImageSource">
+                <customData>
+                    <ovp:CustomData key="draggable" value="false" writeToDom="true" />
+                    <ovp:CustomData key="ondragstart" value="return false;" writeToDom="true" />
+                </customData>
+            </Image>
+        </HBox>
+    </template:if>
+
+</core:FragmentDefinition>

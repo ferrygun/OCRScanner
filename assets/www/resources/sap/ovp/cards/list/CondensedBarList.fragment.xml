@@ -1,0 +1,73 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+        xmlns:build="sap.build"
+        xmlns:micro="sap.suite.ui.microchart">
+
+    <items>
+        <CustomListItem
+                id="listItem"
+                type="Active"
+                press="onListItemPress"
+                class="sapOvpBarList sapOvpBarCondensedList"
+                build:metadata="#pattern:GenericCard>CondensedBarList;set:ovpCardProperties>/annotationPath:com.sap.vocabularies.UI.v1.LineItem;set:ovpCardProperties>/listFlavor:bar">
+            <Text   
+                    id="DataField"
+                    class="sapOvpBarListDataField sapOvpOverflowEllipsisDataField sapOvpBarListTitle"
+                    text="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataFieldValue'}"
+                    build:metadata="#pattern:GenericCard>CondensedBarList;prop::ItemFirstAttribute:\{lineItem>/0/Value\};"/>
+            <HBox class="sapOvpBarListHBox sapOvpBarStandardList">
+                <micro:ComparisonMicroChart 
+                                            id= "BarChartDataPoint"
+                                            class="sapOvpBarListComparisonMicroChartAlignment" width="100%"
+                                            shrinkable="true"
+                                            colorPalette="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.colorPaletteForComparisonMicroChart'}"
+                                            minValue="{minMaxModel>/minValue}"
+                                            maxValue="{minMaxModel>/maxValue}"> 
+                    <micro:data> 
+                        <micro:ComparisonMicroChartData displayValue=" "
+                                                        value="{= '{path: \'' + ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.getFirstDataPointValue'} + '\', formatter: \'.returnBarChartValue\'}' }"
+                                                        color="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointColor'}">
+
+                        </micro:ComparisonMicroChartData>
+
+                    </micro:data>
+
+                </micro:ComparisonMicroChart>
+                <template:if test="{= ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.getDataPointsCount'} > 0}" >
+                    <template:if test="{= ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.isFirstDataPointPercentageUnit'}}" >
+                        <template:then>
+                            <ObjectNumber
+                                    id="DataPoint1"
+                                    class="sapOvpBarListObjectNumber sapOvpBarListSubDataField sapOvpBarListObjectNumberPercentage"
+                                    textAlign="End"
+                                    number="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointValue'}"/>
+                        </template:then>
+                        <template:else>
+                            <ObjectNumber
+                                    id="DataPoint1"
+                                    class="sapOvpBarListObjectNumber sapOvpBarListSubDataField"
+                                    textAlign="End"
+                                    number="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointValue'}"/>
+                        </template:else>
+                    </template:if>
+                </template:if>
+
+                <template:if test="{= ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.getDataPointsCount'} > 1}" >
+                    <ObjectNumber
+                            id="DataPoint2"
+                            class="{= ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointState'} === 'None' ?
+                                            'sapOvpBarListObjectNumber sapOvpBarListSubDataField' : 'sapOvpBarListObjectNumber sapOvpBarListSubDataField sapOvpBarListObjectNumberWithoutState'}"
+                            textAlign="End"
+                            number="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatSecondDataPointValue'}"
+                            state="{= ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointState'} === 'None' ?
+                                            ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatSecondDataPointState'} : 'None'}"
+                            Unit="M"
+                            build:metadata="#pattern:GenericCard>CondensedBarList;prop::ItemSecondNumberAttribute:\{lineItem>/2/Target@@Value\};prop::ItemSecondAttributeToleranceRangeLowValue:\{lineItem>/2/Target@@CriticalityCalculation/ToleranceRangeLowValue\};prop::ItemSecondAttributeDeviationRangeLowValue:\{lineItem>/2/Target@@CriticalityCalculation/DeviationRangeLowValue\}"/>
+                </template:if>
+            </HBox>
+        </CustomListItem>
+    </items>
+
+</core:FragmentDefinition>

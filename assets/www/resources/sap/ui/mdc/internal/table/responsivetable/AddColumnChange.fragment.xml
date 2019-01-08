@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<!-- this is a fake fragment that contains both the column and the item for a responsive table column.
+	     it is used in case an addColumn-change for a responsive table needs to be applied to use only one
+	     pre-processor. It's afterwards split and added as a column and as an item -->
+
+	<!-- we can't create a standalone column therefore we put it into a table. this is only a test and workaround -->
+	<Table>
+		<columns>
+			<core:Fragment fragmentName="sap.ui.mdc.internal.table.responsivetable.ResponsiveTableColumn" type="XML"/>
+		</columns>
+	</Table>
+
+	<core:Fragment fragmentName="sap.ui.mdc.internal.field.Field" type="XML"/>
+
+</core:FragmentDefinition>

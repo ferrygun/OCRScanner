@@ -1,0 +1,64 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:build="sap.build"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+    <template:if test="{ovpCardProperties>/title} || {ovpCardProperties>/dataPointAnnotationPath}">
+        <HBox>
+            <template:if test="{ovpCardProperties>/title}">
+                <template:then>
+            <FlexBox class="ovpHeaderContainer sapOvpCardHeaderTitleWidth">
+                <Text
+                        id= "ovpHeaderTitle" maxLines="3"
+                        text="{ovpCardProperties>/title}"
+                        class="sapOvpCardTitle tabindex-1"
+                        build:metadata="#pattern:GenericCard;prop:text:Title">
+                    <customData>
+                        <ovp:CustomData key="aria-label" value="{ovpCardProperties>/title}"
+                                        writeToDom="true"/>
+                        <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+                        <ovp:CustomData key="aria-level" value="3" writeToDom="true"/>
+                    </customData>
+                </Text>
+            </FlexBox>
+                </template:then>
+                <template:else>
+                    <template:if test="{= ${ovpCardProperties>/state} !== 'Loading' &amp;&amp; ${ovpCardProperties>/dataPointAnnotationPath}}">
+                        <template:then>
+                            <template:with path='ovpCardProperties>/dataPointAnnotationPath'
+                                           helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath"
+                                           var='dataPoint'>
+                                <template:if test="{dataPoint>Title}">
+                                    <FlexBox items="{parts:[{path:'entitySet>'}, {path:'dataPoint>'}], formatter: 'sap.ovp.cards.AnnotationHelper.getAggregateNumber'}" class="ovpHeaderContainer sapOvpCardHeaderTitleWidth">
+                                        <Text
+                                                id="ovpHeaderTitle" maxLines="3"
+                                                text="{path: 'dataPoint>Title', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                class="sapOvpCardTitle tabindex-1"
+                                                build:metadata="#pattern:GenericCard;prop:text:Title">
+                                            <customData>
+                                                <ovp:CustomData key="aria-label" value="{path: 'dataPoint>Title', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                                writeToDom="true"/>
+                                                <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+                                                <ovp:CustomData key="aria-level" value="3" writeToDom="true"/>
+                                            </customData>
+                                        </Text>
+                                    </FlexBox>
+                                </template:if>
+                            </template:with>
+                        </template:then>
+                    </template:if>
+                </template:else>
+            </template:if>
+            <template:if
+                    test="{= ${ovpCardProperties>/contentFragment} === 'sap.ovp.cards.list.List' || ${ovpCardProperties>/contentFragment} === 'sap.ovp.cards.table.Table'}">
+                <template:if test="{ovpCardProperties>/countHeaderFragment}">
+                    <core:Fragment fragmentName="{ovpCardProperties>/countHeaderFragment}"
+                                       type="XML"/>
+                </template:if>
+            </template:if>
+        </HBox>
+    </template:if>
+
+</core:FragmentDefinition>

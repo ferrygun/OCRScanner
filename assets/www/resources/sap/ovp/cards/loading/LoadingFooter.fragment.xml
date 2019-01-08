@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+        xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui">
+    <VBox id="ovpCardLoadingFooter">
+        <Text id="ovpLoadingFooter" width="100%" busy="false" class="sapOvpCardFooter">
+            <customData>
+                <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>errorCard}" writeToDom="true"/>
+                <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+            </customData>
+        </Text>
+    </VBox>
+</core:FragmentDefinition>

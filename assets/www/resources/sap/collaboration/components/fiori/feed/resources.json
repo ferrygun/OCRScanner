@@ -1,0 +1,89 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "app/App-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "app/App-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "app/App.controller.js"
+		},
+		{
+			"name": "app/App.view.js"
+		},
+		{
+			"name": "commons/Detail-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "commons/Detail-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "commons/Detail.controller.js"
+		},
+		{
+			"name": "commons/Detail.view.js"
+		},
+		{
+			"name": "dialog/Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "dialog/Component.js"
+		},
+		{
+			"name": "splitApp/FeedTypeMaster-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "splitApp/FeedTypeMaster-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "splitApp/FeedTypeMaster.controller.js"
+		},
+		{
+			"name": "splitApp/FeedTypeMaster.view.js"
+		},
+		{
+			"name": "splitApp/GroupMaster-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "splitApp/GroupMaster-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "splitApp/GroupMaster.controller.js"
+		},
+		{
+			"name": "splitApp/GroupMaster.view.js"
+		},
+		{
+			"name": "splitApp/SplitApp-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "splitApp/SplitApp-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "splitApp/SplitApp.controller.js"
+		},
+		{
+			"name": "splitApp/SplitApp.view.js"
+		}
+	]
+}

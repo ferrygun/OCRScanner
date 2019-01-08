@@ -1,0 +1,596 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "base"
+		},
+		{
+			"name": "AboutDialog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ActionItem.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ActionMode.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "AddBookmarkButton.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "AnchorItem.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "AnchorNavigationBar.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "AppearanceView.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ApplicationContainer.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Catalog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Cloning.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ContactSupport.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Dashboard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DynamicTile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "EndUserFeedback.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Factsheet.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Fiori2LoadingDialog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "FloatingContainer.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "FlpSettings.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "GroupList.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "GroupListItem.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "HeaderTile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "HideGroupsButton.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "IconFonts.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ImageTile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "LoadingDialog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "MeArea.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "NavTree.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "NotificationSettings.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Notifications.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "PictureTile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "PictureViewe.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "PlusTile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "RightFloatingContainerItem.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Search.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchBarChart.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchFacet.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchFacetDialog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchFacetTabBar.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchFieldGroup.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchPieChart.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchResultListItem.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchResultMap.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SearchTileContainer.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ShellFloatingAction.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ShellFloatingActions.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ShellHeader.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ShellLayout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SplitContainer.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "StaticTile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TargetMappingConfiguration.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Tile.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TileBase.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TileContainer.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TilePlaceholder.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TileState.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ToolAreaItem.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "UsageAnalyticsPopUp.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "UsageAnalyticsSelector.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "UserPreferencesButton.css",
+			"theme": "base"
+		},
+		{
+			"name": "UserSettings.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "UserStatus.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ViewPortContainer.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "flower-standalone.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "fonts/BusinessSuiteInAppSymbols.eot",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/BusinessSuiteInAppSymbols.ttf",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SAP-icons.eot",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SAP-icons.ttf",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SmileIconFont.ttf",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/sap-fiori-inapp-icons.eot",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/sap-fiori-inapp-icons.ttf",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/sap-icons-TNT.eot",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/sap-icons-TNT.ttf",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/sap-launch-icons.eot",
+			"theme": "base"
+		},
+		{
+			"name": "fonts/sap-launch-icons.ttf",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/Bar_horizontal.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/Bar_horizontal_hover.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/List.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/List_hover.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/Pie_chart.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/Pie_chart_hover.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/flower_anim.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/grid.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/launchicons/114_iPhone-Retina_Web_Clip.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/launchicons/144_iPad_Retina_Web_Clip.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/launchicons/57_iPhone_Desktop_Launch.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/launchicons/72_iPad_Desktop_Launch.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/launchpadDefaultIcon.jpg",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/sap_50x26_belize.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/sap_55x27.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/1024_x_748.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/1536_x_2008.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/2048_x_1496.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/320_x_460.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/640_x_1096.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/640_x_920.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/splashscreen/768_x_1004.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/trashcan.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/Bar_horizontal.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/Bar_horizontal_hover.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/List.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/List_hover.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/Pie_chart.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/Pie_chart_hover.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/flower_anim.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img/grid.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/launchicons/114_iPhone-Retina_Web_Clip.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/launchicons/144_iPad_Retina_Web_Clip.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/launchicons/57_iPhone_Desktop_Launch.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/launchicons/72_iPad_Desktop_Launch.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/launchpadDefaultIcon.jpg",
+			"theme": "base"
+		},
+		{
+			"name": "img/launchpad_favicon.ico",
+			"theme": "base"
+		},
+		{
+			"name": "img/sap_50x26_belize.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/sap_55x27.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/1024_x_748.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/1536_x_2008.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/2048_x_1496.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/320_x_460.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/640_x_1096.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/640_x_920.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/splashscreen/768_x_1004.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/test.html",
+			"theme": "base"
+		},
+		{
+			"name": "img/trashcan.png",
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "shared.less",
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

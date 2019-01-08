@@ -1,0 +1,98 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:u="sap.ui.unified"
+						 xmlns:core="sap.ui.core"
+						 xmlns:mdc="sap.ui.mdc.experimental"
+>
+	<!--
+        /**
+         * This fragment renders a DataField
+         * @param dataField context to the DataField
+         * @param attributes context to the Attributes model of the field
+         * @param fieldContext context for the field - form, gridTable, responsiveTable - currently solved by sap.fe.controls._Field.FieldAnnotationHelper.getFieldContext
+         * @returns
+         */
+    -->
+
+	<template:with path="property>$Path@com.sap.vocabularies.Common.v1.Text@com.sap.vocabularies.UI.v1.TextArrangement" var="textArrangement">
+
+		<mdc:Field editMode="Display"
+				   value="{= ${property>@@.MODEL.value} || '{' + ${dataField>@sapui.name} + '}'}"
+				   dataType="{property>$Path/$Type}"
+				   width="100%"
+				   dataTypeConstraints="{= '{ precision: ' + (${property>$Path/$Precision} || 0)+ ' }' }"
+				   dataTypeFormatOptions="{= ((${property>$Path/$Type} === 'Edm.Date' || ${property>$Path/$Type} === 'Edm.DateTimeOffset') ? '{ style : \'medium\' }' : '') }"
+				   additionalValue="{property>$Path@com.sap.vocabularies.Common.v1.Text@@.MODEL.value}"
+				   display="{= ${property>$Path@com.sap.vocabularies.Common.v1.Text} ? ( (${textArrangement>$EnumMember} === 'com.sap.vocabularies.UI.v1.TextArrangementType/TextOnly') ? 'Description' : (${textArrangement>$EnumMember} === 'com.sap.vocabularies.UI.v1.TextArrangementType/TextFirst') ? 'DescriptionValue' : 'ValueDescription') : 'Value'}">
+
+			<template:if test="{= ${dataField>$Type} === 'com.sap.vocabularies.UI.v1.DataFieldWithIntentBasedNavigation'}">
+				<template:then>
+					<Link text="{$field>/@custom/formattedValue}"
+						  press="onDataFieldWithIntentBasedNavigationPressed">
+						<customData>
+							<core:CustomData key="SemanticObject"
+											 value="{dataField>SemanticObject}" />
+							<core:CustomData key="Action" value="{dataField>Action}" />
+						</customData>
+					</Link>
+				</template:then>
+
+				<template:elseif test="{= ${dataField>$Type} === 'com.sap.vocabularies.UI.v1.DataFieldWithUrl'}">
+					<Link text="{$field>/@custom/formattedValue}"
+						  href="{dataField>Url@@.MODEL.value}"/>
+				</template:elseif>
+
+				<template:else>
+					<!-- in case of semantic key render object identifier -->
+					<template:if test="{path: 'property>', formatter: '.FIELD.isSemanticKey'}">
+						<template:if test="{= ${this>type} === 'ResponsiveTable' }">
+							<template:if
+									test="{= ${path: 'property>', formatter: '.FIELD.getFieldContext'} === 'responsiveTable' }">
+								<!-- parameter fieldContext should be used here instead of the formatter -->
+								<VBox>
+									<ObjectIdentifier
+											title="{= ${property>$Path@com.sap.vocabularies.Common.v1.Text} ? ${property>$Path@com.sap.vocabularies.Common.v1.Text@@.MODEL.value} : (${property>@@.MODEL.value} || '{' + ${dataField>@sapui.name} + '}') }"
+											text="{= ${property>$Path@com.sap.vocabularies.Common.v1.Text} ? (${property>@@.MODEL.value} || '{' + ${dataField>@sapui.name} + '}') : ''}"/>
+									<template:if test="{entitySet>@com.sap.vocabularies.Common.v1.DraftRoot}">
+										<ObjectMarker
+												type="{= %{DraftAdministrativeData/DraftUUID} ? (!%{IsActiveEntity} ? 'Draft' : (%{HasDraftEntity} ? (%{DraftAdministrativeData/InProcessByUser} ? 'Locked' : 'Unsaved') : 'Flagged')) : 'Flagged'}"
+												visibility="{= (%{DraftAdministrativeData/DraftUUID} &amp;&amp; !%{IsActiveEntity}) ? 'TextOnly' : 'IconAndText' }"
+												class="sapUiTinyMarginBottom"
+												press="onDraftLinkPressed"
+												visible="{= %{DraftAdministrativeData/DraftUUID} ? true : false}"
+												additionalInfo="{parts: [{path: 'DraftAdministrativeData/DraftUUID', targetType: 'any'}, {path: 'DraftAdministrativeData/InProcessByUser'}, {path: 'DraftAdministrativeData/InProcessByUserDescription'}, {path: 'DraftAdministrativeData/LastChangedByUser'}, {path: 'DraftAdministrativeData/LastChangedByUserDescription'}, {path: 'HasDraftEntity', targetType: 'any'}],
+										formatter: '.FIELD.formatDraftOwner'}"/>
+									</template:if>
+								</VBox>
+							</template:if>
+						</template:if>
+					</template:if>
+
+					<!-- Unit/Currency is not yet supported by MDC control therefore we add it as inner control -->
+					<template:if test="{property>$Path@Org.OData.Measures.V1.Unit}">
+						<ObjectNumber number="{path:'$field>value'}" emphasized="false" textAlign="End"
+									  unit="{property>$Path@Org.OData.Measures.V1.Unit@@.MODEL.value}"/>
+					</template:if>
+					<template:if test="{property>$Path@Org.OData.Measures.V1.ISOCurrency}">
+						<!-- should work with "{path:'$field>value'}", but this is limited to type String -->
+						<u:Currency value="{= ${property>@@.MODEL.value} || '{' + ${dataField>@sapui.name} + '}'}"
+									currency="{property>$Path@Org.OData.Measures.V1.ISOCurrency@@.MODEL.value}"
+									useSymbol="false"/>
+					</template:if>
+					<!-- Object Status -->
+					<template:if test="{path: 'dataField>Criticality/$Path'}">
+						<HBox>
+							<ObjectStatus
+									icon="{=(${dataField>CriticalityRepresentation/$EnumMember} === 'com.sap.vocabularies.UI.v1.CriticalityRepresentationType/WithoutIcon') ? '' : ${path: 'dataField>Criticality/$Path', formatter: '.FIELD.buildExpressionForCriticalityIcon'}}"
+									state="{path: 'dataField>Criticality/$Path', formatter: '.FIELD.buildExpressionForCriticalityColor'}"
+									text="{= ${property>$Path@com.sap.vocabularies.Common.v1.Text} ? ${property>$Path@com.sap.vocabularies.Common.v1.Text@@.MODEL.value} : ${property>@@.MODEL.value} }"/>
+						</HBox>
+					</template:if>
+				</template:else>
+			</template:if>
+
+		</mdc:Field>
+
+	</template:with>
+
+</core:FragmentDefinition>

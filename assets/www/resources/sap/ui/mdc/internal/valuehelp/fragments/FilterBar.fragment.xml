@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:mdc="sap.ui.mdc"
+						 xmlns:core="sap.ui.core">
+
+	<VBox id="FilterBarContent" width="100%">
+		<items>
+			<HBox width="100%" justifyContent="End">
+				<core:Icon id="template::CloseAdvancedFilter" src="sap-icon://decline" press="handleFilter" class="sapUiSmallMarginTopBottom"/>
+			</HBox>
+			<template:repeat list="{entitySet>$Type}" var="filterItem">
+				<!-- TODO: move helpers to common -->
+				<template:if test="{= (${filterItem>$kind} === 'Property') &amp;&amp; ${path: 'filterItem>', formatter: 'sap.ui.mdc.FilterBar._helper.isPropertyFilterable'} }">
+					<mdc:FilterField conditionModelName="vltcm" metadataContexts="{ model: 'entitySet', path:'',  name: 'entitySet'}, { model: 'filterItem', path:'',  name: 'property'}"></mdc:FilterField>
+				</template:if>
+			</template:repeat>
+		</items>
+	</VBox>
+</core:FragmentDefinition>

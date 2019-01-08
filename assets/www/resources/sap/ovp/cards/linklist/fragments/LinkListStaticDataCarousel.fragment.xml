@@ -1,0 +1,87 @@
+<core:FragmentDefinition xmlns:build="sap.build" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+	<VBox>
+		<Carousel id="pictureCarousel" loop="true" class="sapOvpCardLinkListCarousel cardType" arrowsPlacement="PageIndicator">
+            <customData>
+                <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>linkListCarouselType}" writeToDom="true" />
+            </customData>
+			<pages>
+				<template:repeat list="{ovpCardProperties>/staticContent}" var="contentRow">
+					<VBox class="sapMCrslItemTableCell">
+						<template:if test="{= ${contentRow>title} || ${contentRow>subTitle}}">
+							<VBox
+								class="{= ${contentRow>title} || ${contentRow>subTitle} ? 'sapOvpCarouselContentHeader' : 'sapOvpCarouselContentHeader sapOvpCarouselHideContentHeader' }">
+								<template:if test="{contentRow>dataAction}">
+									<template:then>
+										<Link id="linkListTitleLabel--{contentRow>id}" class="sapOvpCardLinkListTitle" text="{contentRow>title}" press="onLinkListActionPressLocalData"
+											app:dataAction="{contentRow>dataAction}">
+
+                                            <customData>
+                                                <ovp:CustomData key="aria-label" value="{contentRow>title}" writeToDom="true"/>
+                                                <ovp:CustomData key="role" value="link" writeToDom="true" />
+                                            </customData>
+
+                                        </Link>
+									</template:then>
+									<template:else>
+										<Link id="linkListTitleLabel--{contentRow>id}" class="sapOvpCardLinkListTitle" text="{contentRow>title}" press="onLinkListItemPressLocalData"
+											app:targetUri="{contentRow>targetUri}" app:openInNewWindow="{contentRow>openInNewWindow}">
+
+                                            <customData>
+                                                <ovp:CustomData key="aria-label" value="{contentRow>title}" writeToDom="true" />
+                                                <ovp:CustomData key="role" value="link" writeToDom="true" />
+                                            </customData>
+
+                                        </Link>
+									</template:else>
+								</template:if>
+								<Text id="linkListSubTitleLabel--{contentRow>id}" class="sapOvpCardLinkListSubTitle" text="{contentRow>subTitle}">
+
+                                    <customData>
+                                        <ovp:CustomData key="aria-label" value="{contentRow>subTitle}" writeToDom="true" />
+                                        <ovp:CustomData key="role" value="text" writeToDom="true" />
+                                    </customData>
+
+                                </Text>
+							</VBox>
+						</template:if>
+						<template:if test="{contentRow>dataAction}">
+							<template:then>
+								<template:if test="{path: 'contentRow>imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isImageUrlStaticData'}">
+									<template:then>
+                                        <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                            <Image id="linkListImage--{contentRow>id}" alt="{contentRow>imageAltText}" tooltip="{contentRow>toolTip}" press="onLinkListActionPressLocalData" app:dataAction="{contentRow>dataAction}" densityAware="true"
+                                                src="{path: 'contentRow>imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatUrl'}"></Image>
+                                        </HBox>
+									</template:then>
+									<template:else>
+										<core:Icon id="linkListIcon--{contentRow>id}" size="128px" src="{contentRow>imageUri}" tooltip="{contentRow>toolTip}" useIconTooltip="false" press="onLinkListActionPressLocalData" app:dataAction="{contentRow>dataAction}"/>
+									</template:else>
+								</template:if>
+							</template:then>
+							<template:else>
+								<template:if test="{path: 'contentRow>imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isImageUrlStaticData'}">
+									<template:then>
+                                        <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                            <Image id="linkListImage--{contentRow>id}" alt="{contentRow>imageAltText}" tooltip="{contentRow>toolTip}" app:targetUri="{contentRow>targetUri}" app:openInNewWindow="{contentRow>openInNewWindow}"
+                                                densityAware="true" press="onLinkListItemPressLocalData"
+                                                src="{path: 'contentRow>imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatUrl'}"></Image>
+                                        </HBox>
+									</template:then>
+									<template:else>
+										<core:Icon id="linkListIcon--{contentRow>id}" size="128px" src="{contentRow>imageUri}" tooltip="{contentRow>toolTip}" useIconTooltip="false" press="onLinkListItemPressLocalData" app:targetUri="{contentRow>targetUri}"
+											app:openInNewWindow="{contentRow>openInNewWindow}"/>
+									</template:else>
+								</template:if>
+							</template:else>
+						</template:if>
+					</VBox>
+				</template:repeat>
+			</pages>
+            <customData>
+                <ovp:CustomData key="aria-live" value="assertive" writeToDom="true" />
+            </customData>
+		</Carousel>
+	</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.demo.scanner" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FirebasePlugin">
+        <param name="android-package" value="org.apache.cordova.firebase.FirebasePlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <name>Scanner</name>
+    <description />
+    <author email="dev@sap.com" href="http://www.sap.com">SAP Product and Innovation</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="res/icon/icon_512.png" />
+    <icon density="ldpi" src="res/icon/icon_android_36.png" />
+    <icon density="mdpi" src="res/icon/icon_android_48.png" />
+    <icon density="hdpi" src="res/icon/icon_android_72.png" />
+    <icon density="xhdpi" src="res/icon/icon_android_96.png" />
+    <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" />
+    <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
+    <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" />
+    <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
+    <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" />
+    <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
+    <splash density="land-xhdpi" src="res/screen/android/splash-land-xhdpi.png" />
+    <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
+    <preference name="UrlScheme" value="" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="sap-development-version" value="0.0.1" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="Orientation" value="default" />
+    <preference name="ShowTitle" value="false" />
+    <preference name="LogLevel" value="VERBOSE" />
+    <preference name="LoadUrlTimeout" value="80000" />
+    <preference name="android-minSdkVersion" value="16" />
+    <feature name="Mltext">
+        <param name="android-package" value="com.neutrinos.mltextplugin.Mltext" />
+    </feature>
+</widget>

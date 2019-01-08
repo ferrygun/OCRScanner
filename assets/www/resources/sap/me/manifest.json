@@ -1,0 +1,57 @@
+{
+  "_version": "1.9.0",
+  "sap.app": {
+    "id": "sap.me",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.52.4"
+    },
+    "title": "SAPUI5 library with controls specialized for mobile devices (extension).",
+    "description": "SAPUI5 library with controls specialized for mobile devices (extension).",
+    "ach": "MOB-UIA-LIB-CC",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_belize",
+      "sap_belize_plus",
+      "sap_bluecrystal",
+      "sap_hcb"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.52",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.52.4"
+        }
+      }
+    },
+    "library": {
+      "i18n": false,
+      "content": {
+        "controls": [
+          "sap.me.Calendar",
+          "sap.me.CalendarLegend",
+          "sap.me.OverlapCalendar",
+          "sap.me.ProgressIndicator",
+          "sap.me.TabContainer"
+        ],
+        "elements": [
+          "sap.me.OverlapCalendarEvent"
+        ],
+        "types": [
+          "sap.me.CalendarDesign",
+          "sap.me.CalendarEventType",
+          "sap.me.CalendarSelectionMode"
+        ],
+        "interfaces": []
+      }
+    }
+  }
+}

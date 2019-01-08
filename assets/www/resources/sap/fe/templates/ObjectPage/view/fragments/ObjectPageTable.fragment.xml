@@ -1,0 +1,13 @@
+<core:FragmentDefinition
+		xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		xmlns="sap.m"
+		xmlns:fe="sap.fe"
+		xmlns:core="sap.ui.core">
+	<template:with path="facet>Target/$AnnotationPath" var="lineItemContext">
+		<fe:Table type="ResponsiveTable"
+				  growingScrollToLoad="false"
+				  growingThreshold="10"
+				  metadataContexts="{ model: 'entitySet', path:'/SOLineItemList',  name: 'entitySet'}"
+				  enabled="true"/>
+	</template:with>
+</core:FragmentDefinition>

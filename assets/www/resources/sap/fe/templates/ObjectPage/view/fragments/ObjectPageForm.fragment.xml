@@ -1,0 +1,60 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m" xmlns:fe="sap.fe" xmlns:core="sap.ui.core">
+	<HBox class="sapUiSmallMargin">
+		<template:if test="{= ${facet>$Type} === 'com.sap.vocabularies.UI.v1.ReferenceFacet'}">
+			<template:then>
+				<template:if
+						test="{= ${facet>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.FieldGroup') > -1}">
+					<template:then>
+							<fe:Form
+									id="{path: 'facet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::Form"
+									metadataContexts="{ model: 'facet', path:'Target/$AnnotationPath/Data', name: 'dataFieldCollection'}"
+									formTitle="{facet>@@.MODEL.label}"/>
+					</template:then>
+					<template:elseif
+							test="{= ${facet>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.Identification') > -1}">
+							<fe:Form
+									id="{path: 'facet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::Form"
+									metadataContexts="{ model: 'facet', path:'Target/$AnnotationPath/', name: 'dataFieldCollection'}"
+									formTitle="{facet>@@.MODEL.label}"/>
+					</template:elseif>
+				</template:if>
+			</template:then>
+			<template:elseif test="{= ${facet>$Type} === 'com.sap.vocabularies.UI.v1.CollectionFacet'}">
+				<template:repeat list="{facet>Facets}" var="facetInCollection">
+					<template:if
+							test="{= (${blockFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} === ${facetInCollection>@com.sap.vocabularies.UI.v1.PartOfPreview})
+							|| (${facetInCollection>@com.sap.vocabularies.UI.v1.PartOfPreview} === true &amp;&amp; ${blockFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} === undefined)
+							|| (${blockFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} === true &amp;&amp; ${facetInCollection>@com.sap.vocabularies.UI.v1.PartOfPreview} === undefined)}">
+						<template:then>
+							<template:if
+									test="{=  ${facetInCollection>$Type} === 'com.sap.vocabularies.UI.v1.ReferenceFacet'}">
+								<template:then>
+									<template:if
+											test="{= ${facetInCollection>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.FieldGroup') > -1}">
+										<template:then>
+												<fe:Form
+														id="{path: 'facetInCollection>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::Form"
+														metadataContexts="{ model: 'facetInCollection', path:'Target/$AnnotationPath/Data', name: 'dataFieldCollection'}"
+														formTitle="{facetInCollection>@@.MODEL.label}"/>
+										</template:then>
+										<template:elseif
+												test="{= ${facetInCollection>Target/$AnnotationPath}.indexOf('com.sap.vocabularies.UI.v1.Identification') > -1}">
+												<fe:Form
+														id="{path: 'facetInCollection>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::Form"
+														metadataContexts="{ model: 'facetInCollection', path:'Target/$AnnotationPath', name: 'dataFieldCollection'}"
+														formTitle="{facetInCollection>@@.MODEL.label}"/>
+										</template:elseif>
+										<template:else>
+											<Text text="Form other annotation types not yet supported like Address, Bagde etc.."></Text>
+										</template:else>
+									</template:if>
+								</template:then>
+							</template:if>
+						</template:then>
+					</template:if>
+				</template:repeat>
+			</template:elseif>
+		</template:if>
+	</HBox>
+</core:FragmentDefinition>

@@ -1,0 +1,76 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "BarListCard.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Card.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "DashboardLayout.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "LinkListCard.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "OVPApp.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ObjectStream.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		}
+	]
+}

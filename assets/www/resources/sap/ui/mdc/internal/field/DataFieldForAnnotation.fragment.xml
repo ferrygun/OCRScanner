@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:core="sap.ui.core">
+	<!--
+        /**
+         * This fragment renders a DataFieldForAnnotation, e.g. Datapoint or Contact
+         * @param annotationPath context to the target of a annotation path
+         * @returns
+         */
+    -->
+
+	<template:if test="{= ${annotationPath>}.indexOf('com.sap.vocabularies.UI.v1.DataPoint') >= 0}">
+		<template:then>
+			<template:if test="{= ${annotationPath>Visualization}}">
+				<template:then>
+					<template:if test="{= ${annotationPath>Visualization/$EnumMember} === 'com.sap.vocabularies.UI.v1.VisualizationType/Rating'}">
+						<template:then>
+							<RatingIndicator enabled="false"
+											 maxValue="{annotationPath>TargetValue@@.MODEL.value}"
+											 value="{annotationPath>Value@@.MODEL.value}"/>
+						</template:then>
+						<template:elseif test="{= ${annotationPath>Visualization/$EnumMember} === 'com.sap.vocabularies.UI.v1.VisualizationType/Progress'}">
+							<ProgressIndicator enabled="false"
+											   percentValue="{annotationPath>Value@@.MODEL.value}"/>
+						</template:elseif>
+					</template:if>
+				</template:then>
+			</template:if>
+		</template:then>
+		<template:elseif test="{= ${annotationPath>}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+			<!-- handle contact annotations -->
+			<VBox>
+				<core:Fragment fragmentName="sap.ui.mdc.internal.field.ContactDetails" type="XML"/>
+				<Link text="{= '{' + (${annotationPath>@@.MODEL.getNavigationPath} ? ${annotationPath>@@.MODEL.getNavigationPath} + '/' : '') + ${annotationPath>fn/$Path} + '}' }"
+					  press="onContactDetails">
+					<customData>
+						<core:CustomData key="Location" value="SmartTable"/>
+					</customData>
+				</Link>
+			</VBox>
+		</template:elseif>
+	</template:if>
+
+</core:FragmentDefinition>

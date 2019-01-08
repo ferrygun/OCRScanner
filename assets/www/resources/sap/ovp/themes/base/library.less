@@ -1,0 +1,2539 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+@import "../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../sap/ui/core/themes/base/global.less";
+
+/* START "BarListCard.less" */
+  .sapOvpBarListDataField {
+    font-family: @sapUiFontFamily;
+    font-weight: normal;
+  }
+
+
+  .sapOvpBarListHBox {
+    .sapOvpBarListSubDataField {
+      //Applies to all sub data field in bar list card
+      color: @sapUiContentLabelColor;
+    }
+    & > .sapOvpBarListVBoxLeft {
+      min-width: 60% !important;
+      flex: 0;
+    }
+
+    & > .sapOvpBarListVBoxRight {
+      min-width: 35%;
+      padding-left: 1rem;
+    }
+  }
+
+  .sapOvpOverflowEllipsisDataField {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .sapOvpListEmptyField {
+    display: none;
+  }
+  //Common for both extended and condensed bar list card
+  .sapOvpBarListComparisonMicroChartAlignment {
+    .sapSuiteCpMCChartItem {
+      //Needs to be important because SAP UI5 has given height as 23px on element level
+      height: 1rem !important;
+      min-height: 1rem !important;
+      & > .sapSuiteCpMCChartItemHeader {
+        display: none;
+      }
+      & > .sapSuiteCpMCChartBar {
+        margin: 0;
+        position: relative;
+        height: 0.625rem;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+      }
+    }
+  }
+  //Condensed bar list
+  .sapOvpBarList.sapOvpBarCondensedList {
+    padding: 0.65rem 1rem 0.75rem;
+    .sapOvpBarListTitle {
+      line-height: 1.125rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .sapOvpBarListHBox {
+      & > .sapMFlexItem {
+        &:first-child {
+          flex-grow: 1 !important;
+          //Width:auto gets applied in IE at element level for this element hence to override it.
+          width: 30% !important;
+        }
+        &:not(:first-child) {
+          padding-left: 1rem;
+          //Width:auto gets applied in IE at element level for this element hence to override it.
+          width: ~'-moz-calc(35% - 1rem)' !important;
+          width: ~'-webkit-calc(35% - 1rem)' !important;
+          width: ~'calc(35% - 1rem)' !important;
+        }
+      }
+    }
+  }
+
+//CSS changes for Resizable card layout list cards for relative width of the content upon resizing
+  .easyScanLayoutItemWrapper {
+    &.sapOvpDashboardLayoutItem {
+      .sapOvpBarListHBox {
+        .sapMFlexItem {
+          &.sapMVBox {
+            width: 29%;
+          }
+        }
+      }
+      .sapOvpBarListHBox {
+        &.sapOvpBarStandardList {
+          .sapMFlexItem {
+            width: 27%;
+
+            text-align: right;
+          }
+        }
+      }
+      .sapOvpBarListObjectNumber {
+        width: auto;
+      }
+    }
+  }
+
+  //To all the Data point Numbers in extended and condensed Bar list
+  .sapOvpBarListObjectNumber {
+    font-family: @sapUiFontFamily;
+    font-weight: normal;
+    height: 1rem;
+    .sapMObjectNumberUnit:empty {
+      display: none; // Empty 'Inline-Block' Span was taking Vertical Height Hence made it 'none'
+    }
+    & > .sapMObjectNumberText {
+      vertical-align: baseline;
+    }
+    & > .sapMObjectNumberUnit {
+      vertical-align: baseline;
+    }
+  }
+
+  //Extended bar list css
+  .sapOvpExtendedBarListHBox {
+    &.sapOvpBarListHBox {
+      padding: 0.875rem 1rem 1rem;
+    }
+    .sapOvpBarListVBoxLeft , .sapOvpBarListVBoxRight {
+      & > .sapMFlexItem {
+        height: 1rem;
+      }
+      & > .sapMFlexItem:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .sapOvpExtendedBarListBlock {
+      display: block;
+    }
+  }
+
+  .sapOvpExtendedBarListFirstDataField {
+    font-family: @sapUiFontFamily;
+    font-weight: normal;
+    vertical-align: baseline;
+  }
+
+/* END "BarListCard.less" */
+
+/* START "Card.less" */
+@lines-to-show: 3;
+@lines-to-show-in-title: 2;
+@lines-to-show-in-table: 2;
+@lines-to-show-in-title-counter-header: 3;
+@height-of-lines-to-show-in-titleIE: (@lines-to-show-in-title * 1.4em);
+
+.overFlowAuto
+{
+  overflow: auto;
+}
+
+.sapOvpITH > .sapMITH {
+  box-shadow: none !important;
+  background: none !important;
+  border-bottom: none !important;
+}
+
+.sapOvpITH > .sapMITH > .sapMITBScrollContainer > .sapMITBHead {
+  margin-left: 40%;
+}
+
+.ovpCountHeaderVBox
+{
+  width: 50%;
+  height: 5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.ovpHeaderContainer
+{
+  float: left;
+}
+
+.ovpKPIAdditionalInfo
+{
+  margin-top: 0.5rem;
+  padding-right: 1rem;
+}
+
+.sapOvpBaseCard {
+  border-radius: 0.25rem;
+  /*  margin: 0.5rem 0.5rem 0.5rem 0.5rem; */
+  text-align: left; //for IE
+  text-align: start;
+  overflow: hidden;
+  position: relative;
+  z-index:1;
+}
+//fix for ie .sapOvpBaseCard does not support text-align: start
+html[data-sap-ui-browser^=ie][dir=rtl] .sapOvpBaseCard {text-align: right}
+
+.sapOvpLimitedHeightCard {
+  max-height: 28.75rem;
+}
+
+html[data-sap-ui-browser^=ie] {
+  .sapOvpCardContentContainer, .sapOvpStackCardContent{
+    height:100%; /* to solve double height of image card in IE*/
+  }
+  .sapOvpCardHeader:focus{
+    outline: none;
+    &:after {content: ""; border: #000479 dotted 0.125rem; position: absolute; top:0; left: 0; bottom: 0; right: 0;}
+  }
+  .sapOvpStackCardHeader:focus{
+    outline: none;
+    &:after {content: ""; border: #000479 dotted 0.125rem; position: absolute; top:0; left: 0; bottom: 0; right: 0;}
+  }
+}
+
+.sapOvpBaseCard img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.dialogCardVBox {
+  z-index: 0 !important;
+}
+
+.dialogCardOverlay::after {
+  z-index:2;
+  content:"";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.dialogContainerOverlay::after {
+  z-index:3;
+  content:"";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: progress;
+}
+
+.sapOvpCardNavigable, .sapOvpCardNavigable .sapOvpCardHeader {
+  cursor: pointer;
+  .sapOvpCardCategory, .sapOvpCardTitle, .sapOvpCardSubtitle, .sapOvpCardViewAll {
+    cursor: pointer;
+    outline: 0;
+  }
+}
+
+.sapOvpCardNavigable .sapOvpCardViewAll .sapMText {
+  cursor: pointer;
+}
+
+.dialogCardOverlay .sapUiLocalBusyIndicator {
+  z-index : 130;
+}
+
+.sapOvpCardHeader {
+  .ovpHeaderContainer.sapOvpCardHeaderTitleWidth {
+    max-width: ~'-moz-calc(100% - 3rem)';
+    max-width: ~'-webkit-calc(100% - 3rem)';
+    max-width: ~'calc(100% - 3rem)';
+  }
+}
+
+//to add blank space if subtitle is not provided
+.sapOvpCardEmptySubtitle {
+  height: 1.5rem;
+}
+
+.noDataSubtitle{
+  display: none;
+}
+
+// IE subtitle should be maximum of 2 lines
+[data-sap-ui-browser=ie11] .sapOvpCardHeader {
+  .sapOvpCardSubtitle {
+    max-height: 2.08rem;
+  }
+}
+
+// edge subtitle should be maximum of 3 lines
+@supports (-ms-ime-align:auto) {
+  .sapOvpCardHeader {
+    .sapOvpCardSubtitle {
+      max-height: 3.125rem;
+    }
+  }
+}
+
+// firefox subtitle should be maximum of 2 lines
+[data-sap-ui-browser^=ff] .sapOvpCardHeader {
+  .sapOvpCardSubtitle {
+    max-height: 2.08rem;
+  }
+}
+
+.sapOvpCardHeader {
+  background-color: @sapTile_Background;
+  padding-top: 1.2rem;
+  padding-bottom: 1rem;
+  /*cursor:pointer;*/
+  &:focus {outline: #000479 dotted 0.125rem;}
+  outline-offset: -0.125rem;
+
+  .sapOvpCardCategory, .sapOvpCardTitle, .sapOvpCardSubtitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    outline: 0;
+    /*cursor:pointer;*/
+  }
+
+  &:hover {
+    background: fade(@sapUiShellHoverBackground, 4);
+    transition: 200ms;
+  }
+
+  &:active {
+    background: fade(@sapUiShellActiveBackground, 8);
+  }
+
+  .sapOvpCardCategory, .sapOvpCardSubtitle {
+   /* line-height: 0.875rem;*/
+   /* max-height: 1.25rem;*/
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    color: lighten(@sapGroup_TitleTextColor, 20) (666);
+    font-size: @sapMFontHeader6Size;
+
+    /* required for ellipsis */
+    width: 100%;
+    //white-space: nowrap;
+    //display: block;
+    /*----scale factor changes---*/
+    -webkit-line-clamp: @lines-to-show-in-title;
+    white-space: normal;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+
+  /* only child in header should look like title */
+  .sapOvpCardTitle, &>div:only-child .sapOvpCardSubtitle, &>div:only-child .sapOvpCardCategory {
+    line-height: 1.425rem;
+    max-height: 4.275rem;
+    -webkit-line-clamp: @lines-to-show;
+    padding: 0 1rem;
+    /*margin-bottom: 0.5rem;*/
+    white-space: normal;
+    display: -webkit-box;
+    font-size :1.125rem;
+    outline: 0;
+  }
+
+  .sapOvpCardTitle {
+    -webkit-line-clamp: @lines-to-show-in-title-counter-header;
+    color: @sapGroup_TitleTextColor (333);
+    font-size: @sapMFontHeader4Size;
+    outline: 0;
+    /*line-height: 1.125rem !important;*//*line-height: 1.125rem !important;*/
+  }
+
+  /* fix for header elements to be size restricted for ellipsis to work */
+  .sapMFlexItem {
+    position: relative;
+    max-width: 100%;
+    //min-width: 100%;
+  }
+}
+
+.easyScanLayoutItemWrapper > .sapUiComponentContainer{
+  width: 100%;
+  height: 100%;
+}
+
+.easyScanLayoutItemWrapper > .sapUiComponentContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.sapOvpDashboardLayoutItem {
+  padding: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  overflow-x: hidden;
+  border-radius: 12px;
+}
+
+.sapOvpLoadingCardsSVG {
+  background-color: transparent;
+  z-index: 1;
+}
+
+
+.sapOvpLoadingCardsCanvas {
+  position: absolute;
+  z-index: -1;
+}
+
+
+.sapOvpCardFooter {
+  margin: 1rem;
+  &:focus {outline: #000479 dotted 0.125rem;}
+}
+
+.sapOvpCardFooterBorder {
+border-top: 1px solid #e5e5e5;
+}
+
+.sapOvpLoadingHeaderVBox {
+    border-bottom: 0.1rem solid #f7f7f6;
+  height: 9rem;
+}
+
+.sapOvpLoadingFooterVBox {
+  border-bottom: 0.1rem solid #f7f7f6;
+    margin-top: 1.6rem;
+    margin-right: 6.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.sapOvpLoadingFooterFlex {
+    background-color: #e4e2de;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 6.25rem;
+    margin-bottom: 1rem;
+}
+
+.sapOvpLoadingHeaderSubtitleFlex {
+    background-color: #e4e2de;
+    margin-left: 1rem;
+    margin-top: 0.625rem;
+    margin-right: 1rem;
+}
+
+.sapOvpLoadingFooter {
+    background-color: grey;
+    margin-top: 0.625rem;
+    margin-left: 1rem;
+    margin-bottom: 0.625rem;
+    margin-right: 11.25rem;
+}
+
+.sapOvpLoadingFlex {
+    background-color: #efeeec;
+    margin-left: 1rem;
+    margin-top: 1.21rem;
+}
+
+.sapOvpTableRight{
+	background-color: #efeeec;
+    margin-left: 1rem;
+    margin-top: 1.21rem;
+	margin-right: 1rem;
+}
+
+.sapOvpLoadingVBox {
+    height: 3.125rem;
+    padding-top: 0.625rem;
+}
+
+.sapOvpLoadingColumnList {
+    height: 3.125rem;
+}
+
+
+.sapOvpLoadingFooterCutOuts {
+-webkit-clip-path: polygon(
+        0% 0%, 0% 100%,
+        7% 100%, 7% 40%,
+        50% 40%, 50% 60%,
+        7% 60%, 7% 100%,
+        100% 100%, 100% 0%);
+}
+
+.sapOvpLoadingHeaderCutOuts {
+  -webkit-clip-path: polygon(
+          0% 0%, 0% 100%,
+          7% 100%, 7% 10%,
+          70% 10%, 70% 20%,
+          7% 20%, 7% 40%,
+          90% 40%, 90% 50%,
+          7% 50%, 7% 55%,
+          90% 55%, 90% 65%,
+          7% 65%, 7% 100%,
+          100% 100%, 100% 0%);
+}
+
+.sapOvpLoadingStackCutOuts {
+  -webkit-clip-path:polygon(
+          0% 0%, 0% 100%,
+          7% 100%,
+          7% 10%, 70% 10%,
+          70% 20%, 7% 20%,
+          7% 33%, 90% 33%,
+          90% 43%, 7% 43%,
+          7% 48%, 90% 48%,
+          90% 58%, 7% 58%,
+          7% 85%, 90% 85%,
+          90% 95%, 7% 95%,
+          7% 100%, 100% 100%, 100% 0%);
+}
+
+
+.sapOvpLoadingStackHBox {
+//    width: 20rem;
+    height: 11rem;
+}
+
+.sapOvpLoadingStackVBoxLeft {
+  background-color: transparent;
+    width: 80%;
+    height: 11rem;
+}
+
+.sapOvpLoadingStackVBoxRight {
+    background-color: #eceae9;
+    width: 20%;
+}
+
+.sapOvpLoadingStackCardTitle {
+    background-color: grey;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3.125rem;
+    margin-bottom: 0.625rem;
+}
+
+.sapOvpLoadingStackCardSubtitle {
+    background-color: grey;
+    margin-left: 1rem;
+    margin-top: 0.625rem;
+    margin-right: 1rem;
+}
+
+.sapOvpLoadingStackCardFooter {
+    background-color: grey;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2.5rem;
+}
+
+.sapOvpLoadingListTitleFlex {
+    background-color: #efeeec;
+    margin-left: 1rem;
+    margin-top: 0.625rem;
+    margin-right: 10rem;
+}
+
+.sapOvpLoadingBar1{
+    background-color: #e4e2de;
+    margin-left: 1rem;
+    margin-top: 2.4rem;
+    margin-bottom: 0rem;
+}
+
+
+.sapOvpLoadingBar2{
+    background-color: #f0efed;
+    margin-top: 2.4rem;
+    margin-bottom: 0rem;
+}
+
+.sapOvpLoadingListContentFlex {
+    background-color: #efeeec;
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+    margin-right: 5rem;
+    margin-bottom: 0.625rem;
+}
+
+.sapOvpLoadingListVBox {
+    border-bottom: 0.1rem solid #eae8e6;
+}
+
+.sapOvpLoadingTableVBox {
+    border-bottom: 0.1rem solid #eceae9;
+    background-color: #ffffff;
+}
+
+.colorVBox{
+	background-color: #ffffff;
+}
+
+.contentOfError{
+	height: 30rem;
+	.sapMMessagePageDescription {
+		font-size: 14px;
+		color: #9f9e9b !important;
+		padding-left: 3.5rem;
+		padding-right: 3.5rem;
+	}
+	.sapMMessagePageMainText {
+		font-size: 1.09375rem !important;
+	}
+}
+
+.stackContentOfError{
+	height: 15rem;
+	.sapMPage section::before {
+		height:0% !important;
+	}
+	.sapMMessagePageDescription {
+		font-size: 12px;
+		color: #9f9e9b !important;
+		padding-left: 4.5rem;
+		padding-right: 4.5rem;
+		margin-top: 0px !important;
+	}
+	.sapMMessagePageMainText {
+	font-size: 15.5px !important;
+	margin-top: 0px !important;
+	}
+}
+
+
+/*.sapOvpCardRightContent:hover {
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.4);
+}*/
+
+.sapOvpCardContentRightHeader{
+  min-width: 0 !important; //fixes flex shrink bug
+  .sapOvpCardHeader {
+    width: 100%;
+  }
+  &:hover {background: fade(@sapUiShellHoverBackground, 4);}
+}
+
+/*.sapOvpCardSubtitleContainer{
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
+}*/
+
+.sapOvpCardViewAllContainer{
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+}
+
+.sapOvpCardNavigable .sapOvpCardContent{
+  cursor: pointer !important;
+  &> .sapMFlexItem, .sapMLabel {
+    cursor: pointer !important;
+  }
+}
+
+.sapOvpStackCardContent{
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+  min-height: 10.5rem;
+  min-width: 4rem;
+  max-width: 5rem;
+  position: relative;
+  /*cursor: pointer;*/
+  &> .sapMFlexItem, .sapMLabel {
+    font-size: 2.25rem;
+    text-align: center;
+    line-height: 3rem;
+    /*cursor: pointer;*/
+  }
+  &:focus {outline: #000479 dotted 0.125rem; outline-offset: -0.125rem;}
+}
+
+/*fix for StackCard ie11 only*/
+[data-sap-ui-browser=ie11] .sapOvpStackCardContent {
+  &> .sapMFlexItem + .sapMFlexItem {position: absolute; bottom: 1rem; width: 100%}
+  &:focus{
+    outline: none;
+    &:after {content: ""; border: #000479 dotted 0.125rem; position: absolute; top:0; left: 0; bottom: 0; right: 0;}
+  }
+}
+
+.sapOvpBaseCard .sapMObjLNumber {
+  padding-top: 0.2rem;
+}
+
+.sapOvpBaseCard .sapMObjectNumberEmph:not(.sapOvpBarListObjectNumberPercentage)>.sapMObjectNumberText{
+  font-weight: normal;
+}
+
+.sapOvpBarListObjectNumberPercentage {
+  font-weight: bold;
+}
+
+/* forcing analytical card in ObjectStream to have dynamic height */
+.sapOvpStackedCardPopup .sapOvpCardContentContainer > .sapVizFrame {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: auto !important;
+}
+
+
+/* forcing the table card items to have pointer and background */
+.sapOvpCardNavigable .sapOvpBaseCard tr {
+  cursor:pointer;
+  &.sapMListTblHeader {
+    cursor:default;
+  }
+}
+.sapOvpCardNavigable .sapOvpStackCardIcon{
+  cursor: pointer;
+}
+
+.sapOvpStackCardIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  /*cursor: pointer;*/
+}
+
+.warningIcon{
+margin-top: 4rem;
+margin-right: 4.5rem;
+margin-left: 4.5rem;
+margin-bottom: 1.75rem;
+}
+
+.warningIconStack{
+margin-top: .7rem;
+margin-right: 5rem;
+margin-left: 5rem;
+margin-bottom: 1rem;
+}
+
+.sapOvpErrorCard{
+background-color:#f7fafb;
+}
+
+.sapOvpCardWrapper {
+  margin-bottom: 1rem;
+}
+
+.sapMListShowSeparatorsAll .sapMListTblSubRow:last-child>td, .sapMListShowSeparatorsAll .sapMLIBShowSeparator:last-child>td {
+  border-bottom: 0px;
+}
+
+.sapOvpActionFooter:focus {
+  outline: #000479 dotted 0.125rem;
+  outline-offset: -0.125rem;
+}
+
+.quickViewResponsivePopover:focus {
+  outline: #000479 dotted 0.125rem;
+}
+
+.mapPopoverHeader:focus {
+  outline: #000479 dotted 0.125rem;
+  outline-offset: -0.2rem;
+}
+
+/* Fix for IE only as IE doesn't have outline-offset property */
+html[data-sap-ui-browser^=ie] {
+.sapOvpActionFooter:focus{
+  outline: #000479 dotted 0.125rem;
+  margin: 0.125rem;
+}
+}
+
+#ovpCardActionDialog .sapUiFormEdit .sapMText {
+  min-height: inherit;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+
+/* KPI Header style Class */
+
+.sapOvpCardHeader .sapOvpKPIHeaderUnitOfMeasureStyle {
+  /*font-size: 0.875rem;*/
+  padding: 0 1rem;
+  outline: 0;
+}
+
+
+.sapOvpCardHeader .sapOvpKPIHeaderUnitOfMeasureStyle, .sapOvpKPIHeaderTrendPercentStyle, .KpiDeviationText, .KpiTargetText{
+  font-size:@sapMFontSmallSize !important;
+  outline: 0;
+  }
+
+/*.sapOvpCardHeader .sapOVPKpiHeaderVbox {
+  top: -0.25rem;
+}*/
+
+.sapOvpCardNavigable .sapOvpCardHeader .sapOVPKpiHeaderVbox .sapMText{
+  cursor:pointer;
+  outline: 0;
+}
+
+.sapOvpCardHeader .numericContentHbox {
+  width: 100%;
+  text-align: right;
+  text-align: end;
+  min-width: 0;
+  padding: 0 1rem;
+  height: 2.2rem;
+  /*margin-bottom: 0.5rem;*/
+  margin-top: 1rem;
+}
+
+.sapOvpCardHeader .numericContentHbox .sapMNCInner {
+  padding-top: 0;
+  height: 2.5rem;
+}
+
+html[data-sap-ui-browser^=ie][dir=rtl] .sapOvpCardHeader .numericContentHbox {text-align: left;}
+
+.sapOvpCardHeader .numericContentHbox>div {
+  width: 100%;
+}
+
+.sapOvpCardHeader .innerNumericContentHbox{
+  height:2.5rem;
+}
+
+.sapOvpCardHeader .innerNumericContentHbox .sapMFlexItem {
+  min-width: 0%;
+}
+
+.sapOvpCardHeader .percentageIndicator {
+  width: inherit;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderTrendPercentStyle {
+  /*margin-bottom: 1.195rem;*/
+  /*margin-right: 1rem;*/
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderTitleStyle {
+  padding: 0rem 1rem 0.6rem 1rem;
+}
+
+.sapOvpCardHeader .KpiPreVarFlex{
+  line-height: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderDimensionStyle {
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.sapOvpCardHeader .KpiSelVarFlex{
+  line-height: 0.75rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderFilterStyle {
+  padding-right: 0.25rem;
+}
+/*
+.sapOvpCardHeader .sapOvpKPIHeaderNumberValueStyle {
+  margin: 0 0.375rem 0rem 1rem;
+}*/
+
+//to show more than 3 char in NumericContent control
+.sapOvpCardHeader .innerNumericContentHbox .sapMNCIndScale{
+  max-width: 3.1rem;
+  margin-left: 0.1rem;
+}
+
+.sapOvpCardHeader .innerNumericContentHbox, .sapMNCValue .WithoutMargin, .sapMNCValueScr{
+  height: 2.5rem !important;
+}
+
+/*.sapOvpKPIHeaderNumberValueStyle :hover {
+  background: fade(@sapUiShellHoverBackground, 4);
+  transition: 200ms;
+}
+
+.sapOvpKPIHeaderNumberValueStyle :active {
+  background: fade(@sapUiShellActiveBackground, 8);
+}*/
+
+.sapMNCValueScr{
+  overflow: visible;
+}
+
+.TargetDeviationFlexbox{
+  line-height: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.sapMNCValue{
+  line-height: 2.5rem !important;
+}
+
+.UOMFlexbox{
+  line-height: 0.75rem !important;
+  margin-top: 0.5rem;
+  min-height: 13.6px;
+  /*padding-bottom: 1rem;*/
+}
+/*-- to show ellipses in IE if line crossing more than 1 line ---*/
+html[data-sap-ui-browser^=ie] {
+  .UOMFlexbox > div, .KpiPreVarFlex > div{
+    width: 100% !important;
+  }
+}
+
+.sapMNCIndScale{
+  height: 2rem !important;
+  padding-top: 0.25rem !important;
+}
+
+.sapOvpKPIHeaderTrendPercentStyle, .KpiTargetText, .KpiDeviationText{
+  color: lighten(@sapGroup_TitleTextColor, 20);
+}
+
+html[data-sap-ui-browser^=ie] {
+  .sapOvpHeaderCounter {
+    margin-right: 1rem;
+  }
+}
+.sapOvpHeaderCounter {
+  color :@sapUiTileTextColor;
+  font-family: @sapUiFontFamily;
+  font-size: @sapMFontSmallSize;
+  padding-right: 1rem;
+}
+
+.sapOvpHeaderCountMainDiv {
+  margin-left: auto;
+}
+
+.sapMNCIconImage{
+  font-size: 1rem !important;
+  padding-right: 0.25rem !important;
+  width: 1rem !important;
+  margin-top: 0.75rem !important;
+  color: inherit;
+}
+
+.sapOvpCardNavigable .sapMNCIconImage{
+  cursor: pointer;
+}
+
+.KpiTargetContainer, .KpiDeviationContainer{
+  padding-left: 0.5rem;
+}
+
+.sapOvpCardContentContainer .noDataSection {
+  height: 5rem;
+}
+
+/*---- Select Drop Down Css----*/
+
+.sapOvpDropDown {
+  padding:0rem 1rem;
+  background-color: @sapTile_Background;
+  height: 3rem !important;
+  border-bottom: 1px solid @sapToolbar_SeparatorColor;
+  cursor: default;
+}
+
+.sapOvpDropDown .sapMBarChild {
+  margin-left: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 3.5px !important;
+}
+
+.sapOvpDropDownPadding {
+  /*height: 4rem;*/
+}
+
+.ovpChartTitle {
+  font-family: @sapUiFontHeaderFamily !important;
+  font-size: @sapMFontHeader6Size !important;
+  font-weight: @sapUiFontHeaderWeight !important;
+  margin-top: 0.25rem !important;
+  margin-left: 0rem !important;
+}
+
+.ovpChartTitleVBox {
+    padding-top: 0.875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+}
+
+.ovpChartTitleText {
+    margin-right: 1rem;
+    width: 80%;
+}
+
+.ovpChartTitleScaleText {
+    width: 20%;
+    align-items: flex-end;
+}
+
+.ovpViz {
+    margin-top: 1rem;
+
+}
+
+.sapOvpCardHeaderBorder {
+  border-bottom: 1px solid @sapUiToolbarSeparatorColor;
+}
+
+.ovpChartFooter {
+  color: @sapUiTileTextColor;
+  font-family: @sapUiFontFamily;
+  font-size: @sapMFontMediumSize;
+  line-height: 1.4;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.sapOvpStackCardHeader .sapOvpCardTitle {
+  color: @sapGroup_TitleTextColor (333);
+  font-family: @sapUiFontHeaderFamily;
+  font-size: @sapMFontHeader4Size;
+  font-width: @sapUiFontHeaderWeight;
+  outline: 0;
+}
+
+.sapOvpStackCardHeader .sapOvpCardSubtitle, .sapOvpStackCardHeader .sapOvpCardCategory {
+  color: lighten(@sapGroup_TitleTextColor, 20)(666);
+  font-family: @sapUiFontHeaderFamily;
+  font-size: @sapMFontHeader6Size;
+  font-width: @sapUiFontHeaderWeight;
+}
+
+.sapOvpStackCardHeader .sapOvpCardViewAll {
+  font-weight: normal;
+  font-family: @sapUiFontFamily;
+  font-size: @sapMFontMediumSize;
+  color: @sapUiLink;
+}
+
+.sapOvpStackCardSize {
+  text-align: center;
+  font-size: 2.25rem;
+  color: @sapUiHighlight;
+}
+
+.sapOvpStackCardTotalSize {
+  column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  text-align: center;
+  font-size: 0.875rem !important;
+  line-height: 1rem;
+  color: @sapUiHighlight;
+  display: inline;
+}
+
+//.sapMLIBActionable, .sapMLIBActionable .sapMText {
+//  cursor : default;
+//}
+
+.sapOvpCardNavigable .sapMLIBActionable, .sapOvpCardNavigable .sapMLIBActionable .sapMText {
+  cursor: pointer !important;
+}
+
+.sapOvpStackCardContent .sapMFlexItem:nth-child(2) {
+  line-height: 0rem;
+  top: -1rem;
+}
+
+.sapOvpStackCardContent .sapMFlexItem:nth-child(3){
+  top: 0.4rem;
+}
+
+html[data-sap-ui-browser^=ie] {
+  .sapOvpStackCardContent {
+    .sapMFlexItem:nth-child(2) {
+      top: 3.6rem;
+    }
+
+    .sapMFlexItem:nth-child(3) {
+      top: 6.7rem;
+    }
+  }
+}
+
+.sapOvpCardNavigable .sapOvpStackCardContent > .sapMFlexItem, .sapOvpCardNavigable .sapOvpStackCardContent .sapMLabel, .sapOvpCardNavigable .sapOvpStackCardContent .sapMText, .sapOvpCardNavigable .sapOvpCardContentContainer, .sapOvpCardNavigable .sapOvpCardTitle {
+  cursor: pointer !important;
+  outline: 0;
+}
+
+.textAlignLeft{
+  text-align: left !important;
+}
+
+.textAlignRight {
+  text-align: right !important;
+}
+
+.textAlignCenter {
+  text-align: center !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.displayBlock{
+  display: block;
+}
+
+.sapTableColumnHide {
+  display: none;
+}
+
+.sapTableColumnShow {
+  display: table-cell;
+}
+
+.sapTableDataRow {
+  display: -webkit-box; /* For webkit browsers */
+  -webkit-line-clamp: @lines-to-show-in-table;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  word-wrap: break-word
+}
+
+.sapMLIBActive .sapMLnk {
+  text-decoration: none; /* Text Decoration is added to smart link when line item is clicked, this css removes it. */
+}
+
+.sapTableDataRowIE {
+  display: block; /* fallback for IE*/
+  max-width: 100%;
+  max-height: @height-of-lines-to-show-in-titleIE;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.ovpTableClass.sapMList {
+  .sapMListTblRow {
+    height: 3.875rem;
+  }
+}
+
+.sapOvpCardContentContainer {
+  overflow: hidden;
+}
+
+.ovpResizeRubberBand {
+  position: absolute;
+  border: 2px dashed;
+  border-color: @sapUiShellTextColor;
+  opacity: 0.5;
+}
+
+// to remove the navigation properties from the object stream header
+.sapOvpStackedCardPopup .sapOvpObjectStream .sapOvpObjectStreamHeader:not(.sapOvpCardNavigable) {
+  cursor: default;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// to remove the navigation effect from the stack card left container
+.sapOvpCardRightContent .sapOvpCardContentRightHeader:not(.sapOvpCardNavigable):hover{
+  cursor: default;
+  background: none;
+  & .sapOvpStackCardHeader {
+    background: none;
+  }
+}
+
+.sapOvpCardContentContainer:not(.sapOvpCardNavigable) > .sapOvpStackCardContent {
+  &:hover,:active {
+    cursor: default;
+    background: none;
+  }
+}
+
+// to remove the navigation effect from the line items when the navigation is not available
+.ovpNonNavigableItem {
+
+  .sapOvpCardHeader {
+    cursor: default;
+    background: none;
+    
+    * {
+      cursor: default;
+    }
+  }
+
+  .sapOvpBaseCard tr.sapMLIBTypeInactive {
+    background: none;
+  }
+
+  .sapMLIBTypeInactive *:not(a) {
+    cursor: default;
+  }
+
+}
+/* END "Card.less" */
+
+/* START "EasyScanLayout.less" */
+.sapUshellEasyScanLayout {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  height: 100%;
+  overflow-y: auto;
+  .sapUshellEasyScanLayoutInner {position: relative;}
+  .sapUshellEasyScanLayoutInner:focus {outline: none;}
+  .easyScanLayoutColumn { display: inline-block; vertical-align: top; padding-bottom: 1.25rem; padding-top: 0.5rem; margin-right: 1rem;
+    transition: width 0.5s ease-out; -webkit-transition: width 0.5s ease-out;}
+  .easyScanLayoutColumn:first-child {margin-left: 0.5rem;}
+  .easyScanLayoutColumn:last-child {margin-right: 0.5rem;}
+  .easyScanLayoutItemWrapper {margin-bottom: 1rem;
+                              transition: top .3s, left .3s;}
+  .easyScanLayoutItemWrapper:focus {outline: #000479 dotted 0.125rem;}
+  .easyScanLayoutItemWrapper-placeHolder {
+    border: 2px dashed @sapUiShellTextColor;
+    opacity: 0.5;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    .sapUiComponentContainer {
+      opacity: 0;
+    }
+  }
+  
+  .easyScanLayoutItemWrapper-placeHolder .sapMCrslActive {
+      visibility: hidden;
+  }
+  
+  &.columns-blank .easyScanLayoutColumn{display: none;}
+  &.columns-block .easyScanLayoutColumn:first-child {margin-left: 1rem;}
+  &.columns-block .easyScanLayoutColumn:last-child {margin-right: 1rem;}
+  &.columns-block .easyScanLayoutColumn{display: block;}
+  &.columns-narrow .easyScanLayoutColumn {width: 20rem;}
+  &.columns-wide .easyScanLayoutColumn {width: 25rem;}
+
+  &.dragAndDropMode {
+    .easyScanLayoutItemWrapper {
+      &.dragHovered {opacity: 0.6;}
+    }
+  }
+}
+/* END "EasyScanLayout.less" */
+
+/* START "ImageCard.less" */
+.ovpImageContainer {
+  >div {
+    width:100%;
+  }
+}
+/* END "ImageCard.less" */
+
+/* START "ObjectStream.less" */
+.sap-desktop .sapOvpObjectStreamCont::-webkit-scrollbar {
+  display: none;
+}
+.sapOvpObjectStreamItem {
+  padding: 0.125rem 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+  .sapMNav > div.sapMScrollCont {transform: none;} //fix for iPad mini object stream cards
+  &:focus {
+    outline: none;
+    > * {outline: #000479 dotted 0.125rem;}
+  }
+}
+
+.bluredLayout {-webkit-filter: blur(0); filter: blur(0); transition: -webkit-filter 0.5s;}
+
+ /* Footer height in phone was not uniform so changed minimum height */
+ html.sap-phone {
+	.sapOvpStackedCardPopup .sapOvpBaseCard .sapOvpCardContentContainer .sapOvpCardContent {
+		min-height: 31.28rem;
+  }
+  }
+
+/* To enable scrolling for QuickView Cards in IE, since scrolling works by default on Chrome */
+html[data-sap-ui-browser="ie11"] {
+	.sapOvpStackedCardPopup .sapOvpBaseCard .sapOvpCardContentContainer .sapOvpCardContent .sapMNav {
+			overflow-y: auto;
+	}
+}
+
+/* To enable scrolling for QuickView Cards in edge, since scrolling works by default on Chrome */
+@supports (-ms-ime-align:auto) {
+  .sapOvpStackedCardPopup .sapOvpBaseCard .sapOvpCardContentContainer .sapOvpCardContent .sapMNav {
+    overflow-y: auto;
+  }
+}
+
+html[data-sap-ui-browser^="ff"] {
+    .sapOvpStackedCardPopup .sapOvpBaseCard .sapOvpCardContentContainer .sapOvpCardContent .sapMNav {
+            overflow-y: scroll;
+  }
+}
+
+/*To fix the scrolling issue in iPhone in Landscape mode*/
+html.sap-phone {
+  .sapOvpStackedCardPopup .sapOvpBaseCard .sapOvpCardContentContainer {
+    overflow: auto;
+  }
+}
+html.sap-phone {
+	.sapOvpStackedCardPopup {
+		/* QuickView Card not completely visible on mobile so removed top margin */
+		.sapOvpObjectStreamHeader, .sapOvpObjectStreamClose {
+			margin-top: 0rem;
+		}
+	}
+}
+
+.sapOvpStackedCardPopup {
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.4);
+  border: none;
+  max-width: 100% !important;
+  width: 100% !important;
+  &>.sapMDialogSection {overflow: hidden !important;}
+  .sapOvpObjectStreamCont {overflow:hidden; overflow-x: scroll; overflow-y: hidden; overflow:-moz-scrollbars-none; -ms-overflow-style: none;}
+  .sapOvpBaseCardWrapper, .sapOvpBaseCard, .sapOvpObjectStreamItem .sapUiView {height: 100%}
+  .sapOvpCardContentContainer {-webkit-flex-grow:1;-webkit-flex-shrink:20; flex-grow: 1; border-bottom: 1px solid #e2e2e2;}
+  .sapMPanelContent:not(.sapMPanelBGTransparent) { border-bottom: none;}
+  .sapOvpObjectStreamScroll {padding: 0rem 1rem 1rem 1rem; white-space: nowrap; display: inline-block;}
+  .sapOvpObjectStreamHeader {height: 3rem;  line-height: 3rem; padding-left: 1.5rem; text-decoration: underline;}
+  .sapOvpObjectStreamClose {
+        position: absolute; right: 1.25rem; height: 3rem; line-height: 3rem; margin-top: 0.2rem; top: 0;  cursor: pointer;
+    &:hover {
+            right:0.75rem; top: 0.2rem;
+            .sapUiIcon {line-height: 0.74; padding: 0.4rem; border-radius: 50%; border: 0.13rem solid;
+      }
+    }
+    &:focus{outline: #00004F dotted 0.125rem;}
+  }
+  .sapOvpOSEdgeLeft, .sapOvpOSEdgeRight {
+    position: absolute; top: 3rem; bottom: 0; width: 4rem; opacity: 0; transition: opacity 250ms linear; z-index: 1;
+    &> span {position: absolute; top: 50%; margin-top: -1rem; height: 2.2rem; width: 2.2rem; display: inline-block;
+      line-height: 2rem; border-radius: 50%; font-size: 16px; font-weight: bold; box-sizing: border-box; border: 0.13rem solid;
+    }
+    &> span.sapUiIconMirrorInRTL {padding: 0;}
+    &:hover > span {box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.4);}
+  }
+  .sapOvpOSEdgeLeft {
+    left: 0;
+    &> span {padding-right: 0.15rem; left: 0.5rem;}
+  }
+  .sapOvpOSEdgeRight {
+    right: 0;
+    &> span {padding-left: 0.15rem; right: 0.5rem;}
+  }
+
+  .sapOvpBaseCard .sapOvpCardContentContainer {
+    overflow: hidden;
+    -ms-overflow-style: scrollbar;
+    position: relative;
+    .sapOvpCardContent {
+      min-height: 22.4rem;
+    }
+  }
+
+
+}
+
+.objectStreamNoBackground {
+  position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+html[data-sap-ui-browser=ie10] {
+  .sapOvpObjectStream .sapOvpCardContentContainer {flex-shrink: 20;}
+}
+
+html.sap-phone {
+  .sapOvpObjectStream {height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: -webkit-flex; display: flex; -webkit-flex-direction:column; flex-direction: column;}
+  .sapOvpObjectStreamCont {-webkit-flex-grow:1; -webkit-flex-shrink:20; flex-grow: 1}
+  .sapOvpStackedCardPopup {
+    .sapOvpObjectStreamHeader {padding-left: 1rem; padding-right: 2rem; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+    .sapOvpObjectStreamScroll {padding: 0rem 0.5rem 1rem 0.5rem;}
+	.sapUiIcon {width: 38px; height: 38px;}
+	.sapOvpObjectStreamClose {
+		right: 0.75rem;
+		&:hover {
+			.sapUiIcon {line-height: 2.375rem; width: 2.375rem; padding: 0;}
+		}
+	}
+  }
+}
+
+/* this is temporary for demo*/
+.sapOvpStackedCardPopup .sapOvpCardContentContainer {display: -webkit-flex; display: flex; -webkit-flex-direction:column; flex-direction: column;
+}
+
+/* END "ObjectStream.less" */
+
+/* START "OVPApp.less" */
+/* clearing the header's inherited Dark background, so we will benefit the light text from the header's dark design
+and in addition see our background and not the original dark design header background image*/
+.ovpApplication .ovpPageHeader, .ovpApplication .sapUxAPObjectPageHeader {
+  background-size: 0 !important;
+  background-color: transparent;
+}
+
+
+.ovpDescription {
+  display: block;
+}
+
+.ovpWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.ovpApplication {
+  position: relative;
+  .sapFDynamicPageContent {
+    background: transparent !important;
+    overflow: initial;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .sapFDynamicPageTitle {
+    padding-left: 16px !important;
+    box-shadow: none;
+    visibility: hidden;
+  }
+
+  .sapUiSizeCompact .sapFDynamicPageHeader, .sapFDynamicPage-Std-Tablet .sapFDynamicPageHeader{
+    padding-left: 16px !important;
+  }
+  
+  
+  .sapFDynamicPageTitleWrapper.sapFDynamicPageTitleSnapped {
+	>.sapFDynamicPageTitle {
+		box-shadow: inset 0 -0.125rem @sapUiPageHeaderBorderColor !important;
+	}
+  }
+  .sapFDynamicPageTitleWrapper.sapFDynamicPageTitleSnapped > .sapFDynamicPageTitle, .sapFDynamicPageTitleWrapper.sapFDynamicPageTitleOnly>.sapFDynamicPageTitle  {
+    box-shadow: inset 0 -0.125rem @sapUiPageHeaderBorderColor !important;
+  }
+	  
+
+  .sapFDynamicPageHeader {
+    overflow: visible;
+    padding-left: 16px !important;
+    box-shadow: inset 0 -0.125rem @sapUiPageHeaderBorderColor !important;
+    visibility: hidden;
+  }
+  
+  & > .sapUiFixFlexFixed > .sapMVBox, & > .sapUiFixFlexFlexible {
+    transition: transform 250ms linear;
+    -webkit-transition: -webkit-transform 250ms linear;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+  & > .sapUiFixFlexFlexible {
+    overflow: visible
+  }
+
+  /* It's just temporary till bug with white background will be fixed */
+  .showFilterButton .sapMBtnDefault {
+    background: transparent;
+    border: none;
+  }
+
+  .sapFDynamicPageContentFitContainer {
+    padding: 2rem 0 0 0;
+  }
+
+}
+
+.sapOVPBusyDialog {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  .sapMDialogSection {
+    background: transparent;
+    .sapMBusyDialogLabel {
+      color: @sapUiWhite;
+    }
+  }
+}
+
+.ovpApplication {
+  .ovpGlobalFilterWrapper {
+    border-bottom: 1px solid;
+    transition: height 0.25s linear;
+    overflow: hidden;
+  }
+  .sapUiCompFilterBar {
+    background-color: unset;
+    position: relative;
+    transition: top 0.25s linear;
+  }
+}
+
+.ovpApplication .ovpSmartFilterBar label, .ovpApplication .ovpSmartFilterBar button span.sapMBtnContent, .ovpApplication .ovpSmartFilterBar button .sapMBtnIcon {
+  text-shadow: none !important;
+}
+
+.ovpApplication .ovpSmartFilterBar {
+  background-color: transparent;
+}
+
+/* Object Page Header - remove background color and mimic dark font color - since the dark loads an unnecessary image  */
+.ovpPageHeader {
+  .sapUxAPObjectPageHeaderIdentifier {
+    background-color: unset;
+    background-color: transparent;
+  }
+}
+
+/* Object Page Header - make sure that image visible*/
+.sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderObjectImageContainer .sapMImg{
+  opacity: 1;
+}
+
+.sapOVPDisableUserSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sapOVPDisableImageDrag img{
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.sapOVPCardsVisibilityDialog {
+
+  #sapOVPHideCardsTable table>tbody>tr>td {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 2.94rem;
+
+    > div {
+      padding: 0.375rem 0 0.375rem 0;
+    }
+  }
+}
+
+.ovpLayoutElement {
+  transition: opacity 2500ms;
+  opacity: 0;
+  overflow-y: visible;
+  &.ovpLayoutElementShow {
+    opacity: 1;
+  }
+}
+/* END "OVPApp.less" */
+
+/* START "StackPlaceHolder.less" */
+.sapOvpStackPlaceHolder {
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.sapOvpStackPlaceHolderIcon{
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  /*margin-top: 9.125rem;*/
+  cursor: pointer;
+}
+
+.sapOvpStackPlaceHolderIconContainer{
+  position: relative;
+  top: 35%;
+}
+
+.sapOvpStackPlaceHolderTextLine{
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
+
+.sapOvpStackPlaceHolderLabelsContainer{
+  cursor: pointer;
+  position: relative;
+  top: 35%;
+  &:focus {outline: #000479 dotted 0.125rem;}
+}
+/* END "StackPlaceHolder.less" */
+
+/* START "LinkListCard.less" */
+.sapOvpLinkListItem{
+	width: 100%;
+	line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sapOvpLinkListItem:first-child{
+	width:100%;
+  //margin-left: 16px;
+  padding: 0rem 1rem 0rem 1rem;
+	line-height: 40px;
+  justify-content: center;
+}
+
+.sapOvpLinkListItem.sapUiSmallMarginBegin{
+	width:56px;
+	line-height: 40px;
+}
+
+.sapOvpCardLinkListTitle {
+  font-family: @sapUiFontFamily;
+  line-height: 22px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  text-align: left;
+  vertical-align: middle;
+    width: 100%;
+    display: block;
+  color: @sapUiListTextColor;
+  text-decoration: none !important;
+}
+
+.sapOvpCardLinkListTitleOnly {
+    line-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+  font-family: @sapUiFontFamily;
+  font-size: @sapMFontLargeSize;
+  color:@sapUiListTextColor;
+  text-align: left;
+  color: @sapUiListTextColor;
+  text-decoration: none !important;
+}
+
+.sapOvpCardLinkListSubTitle {
+  font-family: @sapUiFontFamily;
+  color: @sapUiContentLabelColor;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+}
+
+.smartLinkVbox {
+  &:nth-child(2) {
+    height: 20px;
+    line-height: 20px;
+  }
+}
+
+.smartLinkSubtitle {
+  color: @sapUiListTextColor !important;
+  text-decoration: none !important;
+  width: 100%;
+}
+
+/*** GRID CLASSES EXPERIMENTAL ONLY ***/
+/* Two Column */
+.sapOvpCardLinkListGridColSpan1 .sapMCLI {
+    float: left;
+    width: 50%;
+    padding: 0.1em;
+}
+
+/* Four Column */
+.sapOvpCardLinkListGridColSpan2 .sapMCLI {
+    float: left;
+    width: 25%;
+    padding: 0.1em;
+}
+
+/* Six Column */
+.sapOvpCardLinkListGridColSpan3 .sapMCLI {
+    float: left;
+    width: 16.666666666%;
+    padding: 0.1em;
+}
+
+/* Eight Column */
+.sapOvpCardLinkListGridColSpan4 .sapMCLI {
+    float: left;
+    width: 12.5%;
+    padding: 0.1em;
+}
+
+/* Ten Column */
+.sapOvpCardLinkListGridColSpan5 .sapMCLI {
+    float: left;
+    width: 10%;
+    padding: 0.1em;
+}
+/*** GRID CLASSES EXPERIMENTAL ONLY ***/
+
+.sapOvpLinkListImageCenter {
+    background-position: center;
+  color: @sapUiContentNonInteractiveIconColor;
+  cursor: inherit;
+}
+
+.sapOvpMarginBeginCompact {
+    margin-left: 10px;
+}
+
+.sapOvpMarginEndCompact {
+    margin-right: 10px;
+}
+
+.sapOvpMarginBeginEndCompact {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sapOvpMarginTopCompact {
+    margin-top: 10px;
+}
+
+.sapOvpMarginBottomCompact {
+    margin-bottom: 10px;
+}
+
+.sapOvpLinkListStandardPaddingCozy {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  .sapMLIB{
+  padding: 0rem;
+  }
+}
+
+.sapOvpLinkListStandardPaddingCompact {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  li > .sapMLIBContent{
+    width: 100%;
+  }
+  .sapMLIB{
+  padding: 0rem;
+  }
+}
+
+/*Carousel Content Header */
+.sapOvpCarouselContentHeader {
+  background-color: #ffffff;
+  padding: 16px;
+}
+
+.sapMCrsl:focus {
+    outline: 1px auto #000479;
+}
+
+.sapOvpCardLinkListCarousel {
+  .sapMImg:focus{
+    outline-color: black;
+    outline: solid;
+    outline-offset: -1px;
+    outline-style: dotted;
+  }
+}
+
+.sapOvpLinkListItemIconCozy{
+  width: 3.5rem !important;
+}
+
+.sapOvpLinkListItemImageCozy{
+  width: 4.5rem !important;
+}
+
+.sapOvpLinkListItemImageCompact {
+  width: 4.5rem !important;
+}
+
+.sapOvpLinkListItemIconCompact {
+  width: 3.5rem !important;
+}
+
+.sapOvpLinkListStandardPaddingCozy, .sapOvpLinkListStandardPaddingCompact {
+  .sapMCLI.sapMLIBTypeActive{
+    &:hover {
+      background-color: @sapUiListHoverBackground;
+    }
+  }
+}
+
+.sapOvpLinkListStandardPaddingCozy, .sapOvpLinkListStandardPaddingCompact {
+  .sapMCLI.sapMLIBTypeActive{
+    &:active{
+      background-color: @sapUiListActiveBackground;
+      color:@sapUiListActiveTextColor;
+      & .sapOvpLinkListImageCenter {
+        color:@sapUiListActiveTextColor;
+      }
+      & .sapOvpCardLinkListTitleOnly{
+        color: @sapUiListActiveTextColor;
+      }
+      & .sapOvpCardLinkListTitle{
+        color: @sapUiListActiveTextColor;
+      }
+      & .sapOvpCardLinkListSubTitle{
+        color: @sapUiListActiveTextColor;
+      }
+    }
+  }
+}
+
+.sapOvpCozyTitle {
+  height: 29px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+  width: 100%;
+}
+
+.sapOvpCompactTitle {
+  width: 100%;
+  height: 21px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+}
+
+.sapOvpCozyTitleIcon {
+  align-items: center;
+  height: 30px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  & .sapOvpLinkListItem{
+    width: ~"calc(100% - 72px)";
+  }
+}
+
+.sapOvpCompactTitleIcon {
+  height: 22px;
+  width: 100%;
+  align-items: center;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  & .sapOvpLinkListItem{
+    width: ~"calc(100% - 72px)";
+  }
+}
+
+.sapOvpCozyTitleImage {
+  margin-top: 5.5px;
+  margin-bottom: 5.5px;
+  align-items: center;
+  height: 44px;
+
+}
+
+.sapOvpCompactTitleImage {
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  margin-top: 3.5px;
+  margin-bottom: 3.5px;
+  & .sapOvpLinkListItem:first-child{
+    width:4.25rem;
+  }
+  & .sapOvpLinkListItemImageCompact{
+    padding-top: 4px;
+  }
+}
+
+.sapOvpCozyTitleSubtitle {
+  height: 53px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+}
+
+.sapOvpCompactTitleSubtitle {
+  width: 100%;
+  height: 41px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+}
+
+.sapOvpCozyTitleIconSubtitle {
+  height: 41px;
+  margin-top: 15.5px;
+  margin-bottom: 15.5px;
+  & .sapOvpLinkListItem{
+    width: ~"calc(100% - 72px)";
+  }
+}
+
+.sapOvpCompactTitleIconSubtitle {
+  width: 100%;
+  height: 41px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+  & .sapOvpLinkListItem{
+    width: ~"calc(100% - 72px)";
+  }
+}
+
+.sapOvpCozyTitleImageSubtitle {
+  height: 44px;
+  margin-top: 13.5px;
+  margin-bottom: 13.5px;
+  & .sapOvpCardLinkListTitle {
+    width: ~"calc(100% - 16px)";
+  }
+  & .sapOvpCardLinkListSubTitle {
+    width: ~"calc(100% - 16px)";
+  }
+}
+
+.sapOvpCompactTitleImageSubtitle {
+  width: 100%;
+  height: 40px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+  & .sapOvpCardLinkListSubTitle {
+    width: ~"calc(100% - 16px)";
+  }
+  & .sapOvpCardLinkListTitle {
+    width: ~"calc(100% - 16px)";
+  }
+  & .sapOvpLinkListItem:first-child{
+    width:4.25rem;
+  }
+  & .sapOvpLinkListItemImageCompact{
+    padding-top: 2px;
+  }
+}
+
+.sapMCrslItemTableCell.sapOVPCarouselImageContainer div {
+  max-height: 100%;
+}
+/* END "LinkListCard.less" */
+
+/* START "DashboardLayout.less" */
+.sapOvpDashboardLayoutItem {
+  z-index: -1;
+  > .sapUiComponentContainer {
+    background-color: @sapUiTileBackground;
+    border-radius: 0.25rem; //same value as .sapOvpBaseCard border-radius
+  }
+  //CSS applicable while resizing the card (Both normal and show only header mode)
+  &.sapOvpCardResize {
+    .sapOvpBaseCard {
+      box-shadow: none;
+    }
+    .sapUiComponentContainer {
+      overflow: hidden;
+      box-shadow: @sapUiShadowLevel1;
+    }
+  }
+  //CSS applicable while the card is in show only header mode(No drag and resize is happening)
+  &.sapOvpMinHeightContainer {
+    .sapUiComponentContainer {
+      box-shadow: @sapUiShadowLevel0;
+    }
+    .sapOvpBaseCard {
+      box-shadow: none;
+    }
+  }
+  //CSS applicable while dragging a card which is in normal state
+  &.easyScanLayoutItemWrapperClone {
+    * {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+    .sapUiComponentContainer {
+      box-shadow: @sapUiShadowLevel1;
+    }
+    //Only for stack card
+    .sapOvpBaseCard.sapOvpCardRightContent{
+      box-shadow: none;
+    }
+    //CSS applicable while dragging a card which is in show only header mode
+    &.sapOvpMinHeightContainer {
+      .sapUiComponentContainer {
+        box-shadow: @sapUiShadowLevel1;
+      }
+      .sapOvpBaseCard {
+        box-shadow: none;
+      }
+    }
+  }
+  .sapOvpCardLinkListCarousel {
+    min-width: auto;
+  }
+}
+
+/*for drag and drop enabled touch devices cursor icon for different portion of card*/
+.sapOvpDashboardLayoutItem:not(.sapOvpDashboardLayoutItemNoDragIcon) {
+  .sapOvpBaseCard:hover:before {
+    font-family: SAP-icons;
+    font-size: 1rem;
+    line-height: 1rem;
+    content: "\e24f";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
+    z-index: 2;
+    color: @sapUiButtonIconColor;
+    padding: 0 1px 1px 0;
+  }
+  &.sapOvpCardResize {
+    .sapOvpBaseCard:hover:before {
+      content: "";
+    }
+    .sapUiComponentContainer:before {
+      font-family: SAP-icons;
+      font-size: 1rem;
+      line-height: 1rem;
+      content: "\e24f";
+      position: absolute;
+      bottom: 6px;
+      right: 8px;
+      cursor: nwse-resize;
+      z-index: 2;
+      color: @sapUiButtonIconColor;
+      padding: 0 1px 2px 0;
+    }
+  }
+  &.sapOvpMinHeightContainer {
+    .sapOvpBaseCard:hover:before {
+      content: "";
+    }
+    .sapUiComponentContainer:hover {
+      background-color: #F7F9FA; //Temporary fix
+      transition: 200ms;
+      &:before {
+        font-family: SAP-icons;
+        font-size: 1rem;
+        line-height: 1rem;
+        content: "\e24f";
+        position: absolute;
+        bottom: 6px;
+        right: 8px;
+        cursor: nwse-resize;
+        z-index: 2;
+        color: @sapUiButtonIconColor;
+        padding: 0 1px 2px 0;
+      }
+    }
+  }
+  .sapOvpCardOverlayContainer {
+    cursor: ns-resize;
+    height: 1rem;
+    position: absolute;
+    z-index: 5;
+  }
+  .sapOvpCardBottomOverlayCursor {
+    right: 1rem;
+    bottom: 0rem;
+    left: 0.5rem;
+  }
+  .sapOvpCardOverlaySideContainer {
+    cursor: ew-resize;
+    position: absolute;
+    width: 1rem;
+    z-index: 5;
+  }
+  .sapOvpCardRightOverlayCursor {
+    top: 0.5rem;
+    right: 0rem;
+    bottom: 1rem;
+  }
+  &.sapOvpMinHeightContainer {
+    .sapOvpCardOverlayContainer {
+      cursor: s-resize;
+    }
+    .sapOvpCardOverlaySideContainer {
+      cursor: e-resize;
+    }
+    > .sapOvpBaseCard:hover:before {
+      cursor: se-resize;
+    }
+    .sapUiComponentContainer {
+      border-top: none;
+    }
+    .sapOvpCardContentContainer {
+      border-top: none;
+      &.sapOvpContentHidden {
+        display: none;
+      }
+    }
+  }
+  &.sapOvpNotResizableLeftRight {
+    .sapOvpBaseCard:hover:before {
+      cursor: auto;
+    }
+    .sapOvpCardOverlaySideContainer {
+      cursor: auto;
+    }
+  }
+  &.sapOvpNotResizableRight {
+    .sapOvpBaseCard:hover:before {
+      cursor: nw-resize;
+    }
+    .sapOvpCardOverlaySideContainer {
+      cursor: w-resize;
+    }
+  }
+  &.sapOvpNotResizableDown {
+    .sapOvpBaseCard:hover:before {
+      cursor: nw-resize;
+    }
+    .sapOvpCardOverlayContainer {
+      cursor: n-resize;
+    }
+  }
+}
+
+.sapOvpDashboardDragAndDrop .sapOvpStackCardContent{
+	min-height: 11rem;
+}
+
+li:last-child {
+  border-bottom: 0px;
+}
+
+#ovpDashboardLayoutMarker {
+  border: 2px dashed;
+  border-color: @sapUiShellTextColor;
+  opacity: 0.5;
+  position: absolute;
+}
+.sapOvpDashboardLayoutItem.dashboardLayoutItemWrapper-placeHolder {
+  .sapUiComponentContainer {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    opacity: 0;
+  }
+}
+.sapUshellEasyScanLayout .easyScanLayoutItemWrapper.sapOvpDashboardLayoutItem {
+  margin-bottom: 0;
+}
+
+#sapOvpOverlayDivForCursor {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+/* END "DashboardLayout.less" */
+
+/* START "ListCard.less" */
+.sapOvpObjectListItem {
+  &.sapOvpListFragment {
+    padding: 0.875rem 1rem 1rem;
+    .sapMObjectNumberText {
+      font-size: 0.875rem;
+    }
+  }
+  .sapMObjLTopRow {
+    &>.sapMObjLNumberDiv {
+      &>.sapMObjLNumber {
+        padding-top: 0;
+      }
+      padding-left: 2rem;
+      max-width: 50%;
+      box-sizing: border-box;
+    }
+    .sapMTextLineClamp {
+      -webkit-line-clamp: 1 !important;
+    }
+    .sapMObjLTitle {
+      display: block;
+    }
+    .sapMTextMaxLine {
+      line-height: 1.125rem;
+      word-break: break-all;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .sapMObjLBottomRow {
+    margin-top: 0.5rem;
+    .sapMObjLAttrRow {
+      display: flex;
+      height: 1rem;
+      padding-top: 0;
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+      .sapMText, .sapMObjStatusText {
+        color: @sapUiContentLabelColor;
+      }
+      .sapMObjLAttrDiv {
+        width: auto;
+        flex: auto;
+        overflow: hidden;
+      }
+      .sapMObjLStatusDiv {
+        padding-left: 2rem;
+        width: auto;
+        flex: none;
+        max-width: 50%;
+      }
+      .sapMObjLStatusDiv:only-child {
+        margin-left: 50%;
+      }
+    }
+  }
+}
+
+//For IE browser text height is extended to 1.125rem instead of 1rem and
+//the padding is reduced to keep the line height same
+html[data-sap-ui-browser^=ie] {
+  .sapOvpObjectListItem {
+    &.sapOvpListFragment {
+      padding: 0.75rem 1rem 0.875rem;
+      .sapMObjLBottomRow {
+        .sapMObjLAttrRow {
+          height: 1.125rem;
+        }
+      }
+    }
+  }
+}
+
+.sapOvpObjectListItem.sapMLIBTypeActive {
+    &:active{
+      background-color: @sapUiListActiveBackground;
+      color:@sapUiListActiveTextColor;
+      & .sapMLIBContent {
+        & .sapMText {
+          color: @sapUiListActiveTextColor;
+        }
+        & .sapMObjStatusText {
+          color: @sapUiListActiveTextColor;
+        }
+        & .sapMObjectNumberText {
+          color: @sapUiListActiveTextColor;
+        }
+        & .sapMObjectNumberUnit {
+          color: @sapUiListActiveTextColor;
+        }
+      }
+    }
+  }
+
+.sapMLIB.sapMLIBTypeActive {
+  &:active{
+  & .sapOvpExtendedBarListHBox {
+    background-color: @sapUiListActiveBackground;
+    color:@sapUiListActiveTextColor;
+      & .sapOvpBarListSubDataField {
+        color: @sapUiListActiveTextColor;
+        }
+      & .sapMObjectNumberText {
+        color: @sapUiListActiveTextColor;
+        }
+      & .sapMText {
+        color: @sapUiListActiveTextColor;
+        }	
+    }
+  }
+}
+
+.sapOvpListWithImageNoDescCompact {
+  height: 3rem !important;
+}
+
+.sapOvpListWithImageNoDescCozy {
+  height: 4.5rem !important;
+}
+
+.sapOvpListWithIconNoDescCompact {
+  height: 2.5rem !important;
+}
+
+.sapOvpListWithIconNoDescCozy {
+  height: 3rem !important;
+}
+
+.sapOvpListWithImageIconCompact {
+  height: 3.75rem !important;
+}
+
+.sapOvpListWithImageIconCozy {
+  height: 4.5rem !important;
+}
+
+.sapOvpIconPlaceHolder {
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  background-color:  @sapUiAccent7;
+  font-size: 0.75rem;
+  color: @sapUiContentContrastTextColor;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-left: 1rem;
+}
+
+.sapOvpImagePlaceHolder {
+  min-height: 2.25rem;
+  min-width: 2.25rem;
+  background-color:  @sapUiAccent7;
+  font-size: 1rem;
+  color: @sapUiContentContrastTextColor;
+  text-align: center;
+  line-height: 2.5rem;
+  margin-left: 1rem;
+}
+
+.sapOvpListImageCompact {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.sapOvpListImageCozy {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.sapOvpImageCozy {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+.sapOvpImagePlaceHolder>.sapMLIBContent {
+  padding: 0;
+}
+
+.sapOvpStandardListItem.sapOvpStandardListItemImagesIcons {
+
+  padding: 0;
+
+  .sapMLIBContent {
+    padding: 0.625rem 0rem 0.625rem 0rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .sapOvpPaddingBottom {
+    padding-bottom: 0.5rem !important;
+  }
+  .sapMSLIImgThumb {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1rem;
+  }
+  .sapMSLIImgThumbIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding-right: 0.25rem;
+    font-size: 1.375rem;
+    color: @sapUiContentNonInteractiveIconColor;
+  }
+
+  .sapOvpImageListItem {
+    .sapMSLITitleOnly {
+      font-size: @sapMFontLargeSize;
+      line-height: 1.4rem;
+      padding-right: 1rem;
+    }
+
+    .sapMSLIInfo {
+      line-height: 1.4rem;
+    }
+
+    .sapMSLITitle {
+      line-height: 1.4rem;
+    }
+
+    .sapMSLIDescription {
+      line-height: 1.4rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .sapOvpIconListItem {
+    .sapMSLITitleOnly {
+      font-size: @sapMFontLargeSize;
+      line-height: 1.25rem;
+      padding-right: 1rem;
+    }
+
+    .sapMSLIInfo {
+      line-height: 1.25rem;
+    }
+
+    .sapMSLITitle {
+      line-height: 1.25rem;
+    }
+
+    .sapMSLIDescription {
+      line-height: 1.25rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .sapMSLIInfo {
+    max-width: 50%;
+  }
+
+  .sapMSLIDescriptionDiv {
+    &>.sapMSLIInfo {
+      margin-left: 0;
+      padding-left: 1rem;
+      box-sizing: border-box;
+    }
+  }
+
+  .sapMSLIDescriptionDiv {
+    margin-top: 0rem;
+  }
+
+}
+
+.sapOvpStandardListItem {
+  padding: 0.625rem 1rem 0.75rem;
+  .sapMSLITitleDiv {
+    &>.sapMSLITitle {;
+      padding-bottom: 0;
+    }
+  }
+  .sapMSLIDescriptionDiv {
+    margin-top: 0.5rem;
+    &>.sapMSLIInfo {
+      max-width: 50%;
+      margin-left: 0;
+      padding-left: 2rem;
+      box-sizing: border-box;
+    }
+  }
+}
+/* END "ListCard.less" */
+
+/* START "Map.less" */
+.vbi-detail.vbi-detail-border
+{
+			    visibility: hidden !important;
+			    width: 0;
+			    height: 0;
+			    padding: 0;
+			    margin: 0;
+			    border: 0;
+			    overflow: hidden;
+}
+
+.widthObjectHeader {
+	width:20rem;
+}
+
+.mapQuickViewHeader {
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.mapQuickViewHeaderText {
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.sapMDialogScrollCont .mapQuickViewCardFooter {
+	position: absolute;
+	bottom: 0;
+	border-top: 1px solid #ebebeb;
+}
+
+.quickViewResponsivePopover .sapMDialogScrollCont .sapOvpCardContent {
+	border-bottom: none;
+}
+
+// If the map popover header text is too long,
+// we are going to use ellipsis.
+.mapPopoverHeader .sapMFlexItem {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sapOvpBaseCard .vbi-geoscenecanvas {
+	-ms-touch-action: initial;
+	touch-action: initial;
+}
+/* END "Map.less" */
+
+/* START "SettingsDialog.less" */
+.sapOvpSettingsDialogBox {
+  max-width: 900px;
+  width: 90%;
+}
+
+.sapOvpSettingsMiniMarginBeginEnd {
+  margin-left: 0.25rem!important;
+  margin-right: 0.25rem!important;
+}
+
+.sapOvpScrollContainer {
+  outline: none;
+}
+
+.sapOvpSettingsDialogBox .sapMIBar .sapMBtn.sapOvpSettingsMessagePopOverBtn {
+  left: 0;
+  position: absolute;
+}
+/* END "SettingsDialog.less" */

@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<Popover showHeader="false" placement="Bottom">
+		<ActionSheet id="shareSheet">
+			<buttons>
+				<Button id="shareEmailButton"  icon="sap-icon://email" press="shareEmailPressed" 
+					text="{share>/emailButtonText}" class="sapMFlexBox"/>
+				<Button id="shareJamButton"  icon="sap-icon://share-2" press="shareJamPressed" 
+					text="{share>/jamButtonText}" visible="{share>/jamVisible}" class="sapMFlexBox" />
+				<footerbar:AddBookmarkButton id="bookmarkButton"  title="{i18n>PAGEHEADER}"
+					tileIcon="{_templPriv>/listReport/share/bookmarkIcon}"
+					customUrl="{_templPriv>/listReport/share/bookmarkCustomUrl}"
+					serviceUrl="{_templPriv>/listReport/share/bookmarkServiceUrl}"
+					class="sapMFlexBox"/>
+			</buttons>
+		</ActionSheet>
+	</Popover>
+</core:FragmentDefinition>

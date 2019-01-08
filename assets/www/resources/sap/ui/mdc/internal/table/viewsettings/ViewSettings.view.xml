@@ -1,0 +1,56 @@
+<core:View xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		   xmlns="sap.m"
+		   xmlns:core="sap.ui.core"
+		   controllerName="sap.ui.mdc.internal.table.viewsettings.ViewSettings">
+	<ViewSettingsDialog
+			id="viewSettingsDialog"
+			confirm="onConfirm"
+			cancel="onCancel"
+			sortDescending="{propertiesModel>/sortDesecending}"
+			groupDescending="{propertiesModel>/groupDescending}">
+		<sortItems>
+			<template:if test="{dialogProperties>/showSortPanel}">
+				<template:repeat list="{propertiesModel>/sortPanelItems}" var="sortItem">
+					<ViewSettingsItem text="{sortItem>name}" key="{sortItem>columnKey}" selected="{sortItem>selected}"/>
+				</template:repeat>
+			</template:if>
+		</sortItems>
+		<groupItems>
+			<template:if test="{dialogProperties>/showGroupPanel}">
+				<template:repeat list="{propertiesModel>/groupPanelItems}" var="groupItem">
+					<ViewSettingsItem text="{groupItem>name}" key="{groupItem>columnKey}" selected="{groupItem>selected}"/>
+				</template:repeat>
+			</template:if>
+		</groupItems>
+		<!-- Need to check with UX if Filter items has to be implemented here-->
+		<!--<filterItems>
+			<template:repeat list="{propertiesModel>/properties}" var="property">
+				<ViewSettingsFilterItem text="{property>name}" key="{property>name}">
+				</ViewSettingsFilterItem>
+			</template:repeat>
+		</filterItems>-->
+		<!--Will be implemented later -->
+		<!--<customTabs>
+			<template:if test="{dialogProperties>/showColumnPanel}">
+				<ViewSettingsCustomTab id="columns" icon="sap-icon://action-settings" title="Columns"
+									tooltip="{$i18n>table.VIEWSETTINGS_COLUMN_TABTOOLTIP}">
+					<content>
+							<CheckBox id="selectAllCheckBox" text="{propertiesModel>/selectAllText}" select="onColumnListSelectAll"/>
+							<List 	id="ColumnsList"
+									mode="MultiSelect"
+									includeItemInSelection="true"
+									selectionChange="onColumnListChange">
+								<template:repeat list="{propertiesModel>/columnPanelItems}" var="columnItem">
+									<StandardListItem title="{columnItem>name}" selected="{columnItem>selected}">
+										<customData>
+											<core:CustomData key="columnKey" value="{columnItem>columnKey}"/>
+										</customData>
+									</StandardListItem>
+								</template:repeat>
+							</List>
+					</content>
+				</ViewSettingsCustomTab>
+			</template:if>
+		</customTabs>-->
+	</ViewSettingsDialog>
+</core:View>

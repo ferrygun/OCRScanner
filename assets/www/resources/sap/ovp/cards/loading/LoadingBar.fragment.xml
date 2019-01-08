@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:ovp="sap.ovp.ui"
+	xmlns:sfi="sap.ui.comp.smartfield"
+	xmlns:template="http://schemas.sap.com/sapui3.5/extension/sap.ui.core.template/1"
+	controllerName="sap.m.sample.Table.Table" xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<VBox class="colorVBox" height="3.91875rem">
+		<HBox>
+			<FlexBox class="sapOvpLoadingBar1" height="1rem" width="200px"></FlexBox>
+			<FlexBox class="sapOvpLoadingBar2" height="1rem" width="0px"></FlexBox>
+		</HBox>
+	</VBox>
+	<VBox class="colorVBox" height="3.91875rem">
+		<HBox>
+			<FlexBox class="sapOvpLoadingBar1" height="1rem" width="150px"></FlexBox>
+			<FlexBox class="sapOvpLoadingBar2" height="1rem" width="50px"></FlexBox>
+		</HBox>
+	</VBox>
+	<VBox class="colorVBox" height="3.91875rem">
+		<HBox>
+			<FlexBox class="sapOvpLoadingBar1" height="1rem" width="100px"></FlexBox>
+			<FlexBox class="sapOvpLoadingBar2" height="1rem" width="100px"></FlexBox>
+		</HBox>
+	</VBox>
+	<VBox class="colorVBox" height="6.11875rem">
+		<HBox>
+			<FlexBox class="sapOvpLoadingBar1" height="1rem" width="50px"></FlexBox>
+			<FlexBox class="sapOvpLoadingBar2" height="1rem" width="150px"></FlexBox>
+		</HBox>
+	</VBox>
+
+</core:FragmentDefinition> 

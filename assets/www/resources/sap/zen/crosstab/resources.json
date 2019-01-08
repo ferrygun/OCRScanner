@@ -1,0 +1,1400 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library"
+		},
+		{
+			"name": ".theming"
+		},
+		{
+			"name": "BaseArea-dbg.js",
+			"module": "sap/zen/crosstab/BaseArea.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/DataModel.js",
+				"sap/zen/crosstab/rendering/RenderEngine.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "BaseArea.js",
+			"module": "sap/zen/crosstab/BaseArea.js",
+			"required": [
+				"sap/zen/crosstab/rendering/DataModel.js",
+				"sap/zen/crosstab/rendering/RenderEngine.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "CellStyleHandler-dbg.js",
+			"module": "sap/zen/crosstab/CellStyleHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "CellStyleHandler.js",
+			"module": "sap/zen/crosstab/CellStyleHandler.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "ColResizer-dbg.js",
+			"module": "sap/zen/crosstab/ColResizer.js",
+			"isDebug": true
+		},
+		{
+			"name": "ColResizer.js",
+			"module": "sap/zen/crosstab/ColResizer.js"
+		},
+		{
+			"name": "ColumnHeaderArea-dbg.js",
+			"module": "sap/zen/crosstab/ColumnHeaderArea.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "ColumnHeaderArea.js",
+			"module": "sap/zen/crosstab/ColumnHeaderArea.js",
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "Crosstab-dbg.js",
+			"module": "sap/zen/crosstab/Crosstab.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/ColumnHeaderArea.js",
+				"sap/zen/crosstab/CrosstabCellApi.js",
+				"sap/zen/crosstab/CrosstabContextMenu.js",
+				"sap/zen/crosstab/CrosstabHeaderInfo.js",
+				"sap/zen/crosstab/CrosstabTestProxy.js",
+				"sap/zen/crosstab/DataArea.js",
+				"sap/zen/crosstab/DimensionHeaderArea.js",
+				"sap/zen/crosstab/EventHandler.js",
+				"sap/zen/crosstab/PropertyBag.js",
+				"sap/zen/crosstab/RowHeaderArea.js",
+				"sap/zen/crosstab/SelectionHandler.js",
+				"sap/zen/crosstab/dragdrop/DragDropHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/paging/PageManager.js",
+				"sap/zen/crosstab/rendering/RenderEngine.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "Crosstab.control",
+			"designtime": true
+		},
+		{
+			"name": "Crosstab.js",
+			"module": "sap/zen/crosstab/Crosstab.js",
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/ColumnHeaderArea.js",
+				"sap/zen/crosstab/CrosstabCellApi.js",
+				"sap/zen/crosstab/CrosstabContextMenu.js",
+				"sap/zen/crosstab/CrosstabHeaderInfo.js",
+				"sap/zen/crosstab/CrosstabTestProxy.js",
+				"sap/zen/crosstab/DataArea.js",
+				"sap/zen/crosstab/DimensionHeaderArea.js",
+				"sap/zen/crosstab/EventHandler.js",
+				"sap/zen/crosstab/PropertyBag.js",
+				"sap/zen/crosstab/RowHeaderArea.js",
+				"sap/zen/crosstab/SelectionHandler.js",
+				"sap/zen/crosstab/dragdrop/DragDropHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/paging/PageManager.js",
+				"sap/zen/crosstab/rendering/RenderEngine.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "CrosstabCellApi-dbg.js",
+			"module": "sap/zen/crosstab/CrosstabCellApi.js",
+			"isDebug": true
+		},
+		{
+			"name": "CrosstabCellApi.js",
+			"module": "sap/zen/crosstab/CrosstabCellApi.js"
+		},
+		{
+			"name": "CrosstabContextMenu-dbg.js",
+			"module": "sap/zen/crosstab/CrosstabContextMenu.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "CrosstabContextMenu.js",
+			"module": "sap/zen/crosstab/CrosstabContextMenu.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "CrosstabHeaderInfo-dbg.js",
+			"module": "sap/zen/crosstab/CrosstabHeaderInfo.js",
+			"isDebug": true
+		},
+		{
+			"name": "CrosstabHeaderInfo.js",
+			"module": "sap/zen/crosstab/CrosstabHeaderInfo.js"
+		},
+		{
+			"name": "CrosstabRenderer-dbg.js",
+			"module": "sap/zen/crosstab/CrosstabRenderer.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "CrosstabRenderer.js",
+			"module": "sap/zen/crosstab/CrosstabRenderer.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "CrosstabTestProxy-dbg.js",
+			"module": "sap/zen/crosstab/CrosstabTestProxy.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/ColResizer.js"
+			]
+		},
+		{
+			"name": "CrosstabTestProxy.js",
+			"module": "sap/zen/crosstab/CrosstabTestProxy.js",
+			"required": [
+				"sap/zen/crosstab/ColResizer.js"
+			]
+		},
+		{
+			"name": "DataArea-dbg.js",
+			"module": "sap/zen/crosstab/DataArea.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "DataArea.js",
+			"module": "sap/zen/crosstab/DataArea.js",
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "DataCell-dbg.js",
+			"module": "sap/zen/crosstab/DataCell.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "DataCell.control",
+			"designtime": true
+		},
+		{
+			"name": "DataCell.js",
+			"module": "sap/zen/crosstab/DataCell.js",
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "DataCellRenderer-dbg.js",
+			"module": "sap/zen/crosstab/DataCellRenderer.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/IDataCell.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "DataCellRenderer.js",
+			"module": "sap/zen/crosstab/DataCellRenderer.js",
+			"required": [
+				"sap/zen/crosstab/IDataCell.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "DimensionHeaderArea-dbg.js",
+			"module": "sap/zen/crosstab/DimensionHeaderArea.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "DimensionHeaderArea.js",
+			"module": "sap/zen/crosstab/DimensionHeaderArea.js",
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "EventHandler-dbg.js",
+			"module": "sap/zen/crosstab/EventHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/ColResizer.js",
+				"sap/zen/crosstab/HeaderResizer.js",
+				"sap/zen/crosstab/SelectionHandler.js",
+				"sap/zen/crosstab/TouchHandler.js",
+				"sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "EventHandler.js",
+			"module": "sap/zen/crosstab/EventHandler.js",
+			"required": [
+				"sap/zen/crosstab/ColResizer.js",
+				"sap/zen/crosstab/HeaderResizer.js",
+				"sap/zen/crosstab/SelectionHandler.js",
+				"sap/zen/crosstab/TouchHandler.js",
+				"sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "HeaderCell-dbg.js",
+			"module": "sap/zen/crosstab/HeaderCell.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "HeaderCell.control",
+			"designtime": true
+		},
+		{
+			"name": "HeaderCell.js",
+			"module": "sap/zen/crosstab/HeaderCell.js",
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "HeaderCellRenderer-dbg.js",
+			"module": "sap/zen/crosstab/HeaderCellRenderer.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/IHeaderCell.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "HeaderCellRenderer.js",
+			"module": "sap/zen/crosstab/HeaderCellRenderer.js",
+			"required": [
+				"sap/zen/crosstab/IHeaderCell.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "HeaderResizer-dbg.js",
+			"module": "sap/zen/crosstab/HeaderResizer.js",
+			"isDebug": true
+		},
+		{
+			"name": "HeaderResizer.js",
+			"module": "sap/zen/crosstab/HeaderResizer.js"
+		},
+		{
+			"name": "IDataCell-dbg.js",
+			"module": "sap/zen/crosstab/IDataCell.js",
+			"isDebug": true
+		},
+		{
+			"name": "IDataCell.js",
+			"module": "sap/zen/crosstab/IDataCell.js"
+		},
+		{
+			"name": "IHeaderCell-dbg.js",
+			"module": "sap/zen/crosstab/IHeaderCell.js",
+			"isDebug": true
+		},
+		{
+			"name": "IHeaderCell.js",
+			"module": "sap/zen/crosstab/IHeaderCell.js"
+		},
+		{
+			"name": "PropertyBag-dbg.js",
+			"module": "sap/zen/crosstab/PropertyBag.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "PropertyBag.js",
+			"module": "sap/zen/crosstab/PropertyBag.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "RowHeaderArea-dbg.js",
+			"module": "sap/zen/crosstab/RowHeaderArea.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "RowHeaderArea.js",
+			"module": "sap/zen/crosstab/RowHeaderArea.js",
+			"required": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "SelectionHandler-dbg.js",
+			"module": "sap/zen/crosstab/SelectionHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/TouchHandler.js",
+				"sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "SelectionHandler.js",
+			"module": "sap/zen/crosstab/SelectionHandler.js",
+			"required": [
+				"sap/zen/crosstab/TouchHandler.js",
+				"sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "TextConstants-dbg.js",
+			"module": "sap/zen/crosstab/TextConstants.js",
+			"isDebug": true
+		},
+		{
+			"name": "TextConstants.js",
+			"module": "sap/zen/crosstab/TextConstants.js"
+		},
+		{
+			"name": "TouchHandler-dbg.js",
+			"module": "sap/zen/crosstab/TouchHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/utils/Utils.js"
+			],
+			"condRequired": [
+				"sap/ui/unified/Menu.js"
+			]
+		},
+		{
+			"name": "TouchHandler.js",
+			"module": "sap/zen/crosstab/TouchHandler.js",
+			"required": [
+				"sap/zen/crosstab/utils/Utils.js"
+			],
+			"condRequired": [
+				"sap/ui/unified/Menu.js"
+			]
+		},
+		{
+			"name": "datahandler/JsonDataHandler-dbg.js",
+			"module": "sap/zen/crosstab/datahandler/JsonDataHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/CrosstabCellApi.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "datahandler/JsonDataHandler.js",
+			"module": "sap/zen/crosstab/datahandler/JsonDataHandler.js",
+			"required": [
+				"sap/zen/crosstab/CrosstabCellApi.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "dragdrop/DragDropAreaRenderer-dbg.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+			"isDebug": true
+		},
+		{
+			"name": "dragdrop/DragDropAreaRenderer.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js"
+		},
+		{
+			"name": "dragdrop/DragDropHandler-dbg.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+				"sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+				"sap/zen/crosstab/dragdrop/DragDropUtils.js",
+				"sap/zen/crosstab/dragdrop/MemberDragDropHandler.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "dragdrop/DragDropHandler.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropHandler.js",
+			"required": [
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+				"sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+				"sap/zen/crosstab/dragdrop/DragDropUtils.js",
+				"sap/zen/crosstab/dragdrop/MemberDragDropHandler.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "dragdrop/DragDropHoverManager-dbg.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+			"isDebug": true
+		},
+		{
+			"name": "dragdrop/DragDropHoverManager.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropHoverManager.js"
+		},
+		{
+			"name": "dragdrop/DragDropUtils-dbg.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropUtils.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "dragdrop/DragDropUtils.js",
+			"module": "sap/zen/crosstab/dragdrop/DragDropUtils.js",
+			"required": [
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "dragdrop/MemberDragDropHandler-dbg.js",
+			"module": "sap/zen/crosstab/dragdrop/MemberDragDropHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+				"sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+				"sap/zen/crosstab/dragdrop/DragDropUtils.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "dragdrop/MemberDragDropHandler.js",
+			"module": "sap/zen/crosstab/dragdrop/MemberDragDropHandler.js",
+			"required": [
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+				"sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+				"sap/zen/crosstab/dragdrop/DragDropUtils.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "keyboard/CrosstabKeyboardNavHandler-dbg.js",
+			"module": "sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "keyboard/CrosstabKeyboardNavHandler.js",
+			"module": "sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "library-all-dbg.js",
+			"isDebug": true,
+			"merged": true
+		},
+		{
+			"name": "library-all.js",
+			"merged": true
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/zen/crosstab/library.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/zen/crosstab/library-preload.js",
+			"merged": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/OpenState.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/library.js"
+			],
+			"condRequired": [
+				"sap/ui/unified/Menu.js"
+			],
+			"included": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/ColResizer.js",
+				"sap/zen/crosstab/ColumnHeaderArea.js",
+				"sap/zen/crosstab/Crosstab.js",
+				"sap/zen/crosstab/CrosstabCellApi.js",
+				"sap/zen/crosstab/CrosstabContextMenu.js",
+				"sap/zen/crosstab/CrosstabHeaderInfo.js",
+				"sap/zen/crosstab/CrosstabRenderer.js",
+				"sap/zen/crosstab/CrosstabTestProxy.js",
+				"sap/zen/crosstab/DataArea.js",
+				"sap/zen/crosstab/DataCell.js",
+				"sap/zen/crosstab/DataCellRenderer.js",
+				"sap/zen/crosstab/DimensionHeaderArea.js",
+				"sap/zen/crosstab/EventHandler.js",
+				"sap/zen/crosstab/HeaderCell.js",
+				"sap/zen/crosstab/HeaderCellRenderer.js",
+				"sap/zen/crosstab/HeaderResizer.js",
+				"sap/zen/crosstab/IDataCell.js",
+				"sap/zen/crosstab/IHeaderCell.js",
+				"sap/zen/crosstab/PropertyBag.js",
+				"sap/zen/crosstab/RowHeaderArea.js",
+				"sap/zen/crosstab/SelectionHandler.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/TouchHandler.js",
+				"sap/zen/crosstab/datahandler/JsonDataHandler.js",
+				"sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+				"sap/zen/crosstab/dragdrop/DragDropHandler.js",
+				"sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+				"sap/zen/crosstab/dragdrop/DragDropUtils.js",
+				"sap/zen/crosstab/dragdrop/MemberDragDropHandler.js",
+				"sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/manifest.json",
+				"sap/zen/crosstab/nonphx/logic.js",
+				"sap/zen/crosstab/paging/CellMerger.js",
+				"sap/zen/crosstab/paging/Page.js",
+				"sap/zen/crosstab/paging/PageManager.js",
+				"sap/zen/crosstab/paging/PagingConstants.js",
+				"sap/zen/crosstab/paging/RequestHandler.js",
+				"sap/zen/crosstab/paging/RequestStack.js",
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/DataModel.js",
+				"sap/zen/crosstab/rendering/DomElementProvider.js",
+				"sap/zen/crosstab/rendering/HeaderScrollManager.js",
+				"sap/zen/crosstab/rendering/PixelScrollManager.js",
+				"sap/zen/crosstab/rendering/RenderEngine.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/rendering/ScrollManager.js",
+				"sap/zen/crosstab/rendering/ScrollbarRenderer.js",
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.json",
+			"module": "sap/zen/crosstab/library-preload.json",
+			"merged": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/OpenState.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/library-preload.json",
+				"sap/ui/core/library.js"
+			],
+			"condRequired": [
+				"sap/ui/unified/Menu.js"
+			],
+			"included": [
+				"sap/zen/crosstab/BaseArea.js",
+				"sap/zen/crosstab/CellStyleHandler.js",
+				"sap/zen/crosstab/ColResizer.js",
+				"sap/zen/crosstab/ColumnHeaderArea.js",
+				"sap/zen/crosstab/Crosstab.js",
+				"sap/zen/crosstab/CrosstabCellApi.js",
+				"sap/zen/crosstab/CrosstabContextMenu.js",
+				"sap/zen/crosstab/CrosstabHeaderInfo.js",
+				"sap/zen/crosstab/CrosstabRenderer.js",
+				"sap/zen/crosstab/CrosstabTestProxy.js",
+				"sap/zen/crosstab/DataArea.js",
+				"sap/zen/crosstab/DataCell.js",
+				"sap/zen/crosstab/DataCellRenderer.js",
+				"sap/zen/crosstab/DimensionHeaderArea.js",
+				"sap/zen/crosstab/EventHandler.js",
+				"sap/zen/crosstab/HeaderCell.js",
+				"sap/zen/crosstab/HeaderCellRenderer.js",
+				"sap/zen/crosstab/HeaderResizer.js",
+				"sap/zen/crosstab/IDataCell.js",
+				"sap/zen/crosstab/IHeaderCell.js",
+				"sap/zen/crosstab/PropertyBag.js",
+				"sap/zen/crosstab/RowHeaderArea.js",
+				"sap/zen/crosstab/SelectionHandler.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/TouchHandler.js",
+				"sap/zen/crosstab/datahandler/JsonDataHandler.js",
+				"sap/zen/crosstab/dragdrop/DragDropAreaRenderer.js",
+				"sap/zen/crosstab/dragdrop/DragDropHandler.js",
+				"sap/zen/crosstab/dragdrop/DragDropHoverManager.js",
+				"sap/zen/crosstab/dragdrop/DragDropUtils.js",
+				"sap/zen/crosstab/dragdrop/MemberDragDropHandler.js",
+				"sap/zen/crosstab/keyboard/CrosstabKeyboardNavHandler.js",
+				"sap/zen/crosstab/library.js",
+				"sap/zen/crosstab/manifest.json",
+				"sap/zen/crosstab/nonphx/logic.js",
+				"sap/zen/crosstab/paging/CellMerger.js",
+				"sap/zen/crosstab/paging/Page.js",
+				"sap/zen/crosstab/paging/PageManager.js",
+				"sap/zen/crosstab/paging/PagingConstants.js",
+				"sap/zen/crosstab/paging/RequestHandler.js",
+				"sap/zen/crosstab/paging/RequestStack.js",
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/DataModel.js",
+				"sap/zen/crosstab/rendering/DomElementProvider.js",
+				"sap/zen/crosstab/rendering/HeaderScrollManager.js",
+				"sap/zen/crosstab/rendering/PixelScrollManager.js",
+				"sap/zen/crosstab/rendering/RenderEngine.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/rendering/ScrollManager.js",
+				"sap/zen/crosstab/rendering/ScrollbarRenderer.js",
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "library.dependencies.json",
+			"designtime": true
+		},
+		{
+			"name": "library.dependencies.xml",
+			"designtime": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/zen/crosstab/library.js",
+			"required": [
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "library.properties",
+			"module": "sap/zen/crosstab/library.properties"
+		},
+		{
+			"name": "library.templates.xml",
+			"designtime": true
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/zen/crosstab/manifest.json"
+		},
+		{
+			"name": "nonphx/logic-dbg.js",
+			"module": "sap/zen/crosstab/nonphx/logic.js",
+			"isDebug": true
+		},
+		{
+			"name": "nonphx/logic.js",
+			"module": "sap/zen/crosstab/nonphx/logic.js"
+		},
+		{
+			"name": "paging/CellMerger-dbg.js",
+			"module": "sap/zen/crosstab/paging/CellMerger.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/paging/PagingConstants.js"
+			]
+		},
+		{
+			"name": "paging/CellMerger.js",
+			"module": "sap/zen/crosstab/paging/CellMerger.js",
+			"required": [
+				"sap/zen/crosstab/paging/PagingConstants.js"
+			]
+		},
+		{
+			"name": "paging/Page-dbg.js",
+			"module": "sap/zen/crosstab/paging/Page.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/paging/PagingConstants.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "paging/Page.js",
+			"module": "sap/zen/crosstab/paging/Page.js",
+			"required": [
+				"sap/zen/crosstab/paging/PagingConstants.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "paging/PageManager-dbg.js",
+			"module": "sap/zen/crosstab/paging/PageManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/datahandler/JsonDataHandler.js",
+				"sap/zen/crosstab/paging/CellMerger.js",
+				"sap/zen/crosstab/paging/Page.js",
+				"sap/zen/crosstab/paging/PagingConstants.js",
+				"sap/zen/crosstab/paging/RequestHandler.js"
+			]
+		},
+		{
+			"name": "paging/PageManager.js",
+			"module": "sap/zen/crosstab/paging/PageManager.js",
+			"required": [
+				"sap/zen/crosstab/datahandler/JsonDataHandler.js",
+				"sap/zen/crosstab/paging/CellMerger.js",
+				"sap/zen/crosstab/paging/Page.js",
+				"sap/zen/crosstab/paging/PagingConstants.js",
+				"sap/zen/crosstab/paging/RequestHandler.js"
+			]
+		},
+		{
+			"name": "paging/PagingConstants-dbg.js",
+			"module": "sap/zen/crosstab/paging/PagingConstants.js",
+			"isDebug": true
+		},
+		{
+			"name": "paging/PagingConstants.js",
+			"module": "sap/zen/crosstab/paging/PagingConstants.js"
+		},
+		{
+			"name": "paging/RequestHandler-dbg.js",
+			"module": "sap/zen/crosstab/paging/RequestHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/paging/RequestStack.js"
+			]
+		},
+		{
+			"name": "paging/RequestHandler.js",
+			"module": "sap/zen/crosstab/paging/RequestHandler.js",
+			"required": [
+				"sap/zen/crosstab/paging/RequestStack.js"
+			]
+		},
+		{
+			"name": "paging/RequestStack-dbg.js",
+			"module": "sap/zen/crosstab/paging/RequestStack.js",
+			"isDebug": true
+		},
+		{
+			"name": "paging/RequestStack.js",
+			"module": "sap/zen/crosstab/paging/RequestStack.js"
+		},
+		{
+			"name": "rendering/CrossRequestManager-dbg.js",
+			"module": "sap/zen/crosstab/rendering/CrossRequestManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/HeaderScrollManager.js",
+				"sap/zen/crosstab/rendering/PixelScrollManager.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/rendering/ScrollManager.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/CrossRequestManager.js",
+			"module": "sap/zen/crosstab/rendering/CrossRequestManager.js",
+			"required": [
+				"sap/zen/crosstab/rendering/HeaderScrollManager.js",
+				"sap/zen/crosstab/rendering/PixelScrollManager.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/rendering/ScrollManager.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/DataModel-dbg.js",
+			"module": "sap/zen/crosstab/rendering/DataModel.js",
+			"isDebug": true
+		},
+		{
+			"name": "rendering/DataModel.js",
+			"module": "sap/zen/crosstab/rendering/DataModel.js"
+		},
+		{
+			"name": "rendering/DomElementProvider-dbg.js",
+			"module": "sap/zen/crosstab/rendering/DomElementProvider.js",
+			"isDebug": true
+		},
+		{
+			"name": "rendering/DomElementProvider.js",
+			"module": "sap/zen/crosstab/rendering/DomElementProvider.js"
+		},
+		{
+			"name": "rendering/HeaderScrollManager-dbg.js",
+			"module": "sap/zen/crosstab/rendering/HeaderScrollManager.js",
+			"isDebug": true
+		},
+		{
+			"name": "rendering/HeaderScrollManager.js",
+			"module": "sap/zen/crosstab/rendering/HeaderScrollManager.js"
+		},
+		{
+			"name": "rendering/PixelScrollManager-dbg.js",
+			"module": "sap/zen/crosstab/rendering/PixelScrollManager.js",
+			"isDebug": true
+		},
+		{
+			"name": "rendering/PixelScrollManager.js",
+			"module": "sap/zen/crosstab/rendering/PixelScrollManager.js"
+		},
+		{
+			"name": "rendering/RenderEngine-dbg.js",
+			"module": "sap/zen/crosstab/rendering/RenderEngine.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/DomElementProvider.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/rendering/ScrollManager.js",
+				"sap/zen/crosstab/rendering/ScrollbarRenderer.js",
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/RenderEngine.js",
+			"module": "sap/zen/crosstab/rendering/RenderEngine.js",
+			"required": [
+				"sap/zen/crosstab/rendering/CrossRequestManager.js",
+				"sap/zen/crosstab/rendering/DomElementProvider.js",
+				"sap/zen/crosstab/rendering/RenderingConstants.js",
+				"sap/zen/crosstab/rendering/ScrollManager.js",
+				"sap/zen/crosstab/rendering/ScrollbarRenderer.js",
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/RenderingConstants-dbg.js",
+			"module": "sap/zen/crosstab/rendering/RenderingConstants.js",
+			"isDebug": true
+		},
+		{
+			"name": "rendering/RenderingConstants.js",
+			"module": "sap/zen/crosstab/rendering/RenderingConstants.js"
+		},
+		{
+			"name": "rendering/ScrollManager-dbg.js",
+			"module": "sap/zen/crosstab/rendering/ScrollManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/OpenState.js",
+				"sap/ui/core/Popup.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/ScrollManager.js",
+			"module": "sap/zen/crosstab/rendering/ScrollManager.js",
+			"required": [
+				"sap/ui/core/OpenState.js",
+				"sap/ui/core/Popup.js",
+				"sap/zen/crosstab/TextConstants.js",
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/ScrollbarRenderer-dbg.js",
+			"module": "sap/zen/crosstab/rendering/ScrollbarRenderer.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "rendering/ScrollbarRenderer.js",
+			"module": "sap/zen/crosstab/rendering/ScrollbarRenderer.js",
+			"required": [
+				"sap/zen/crosstab/utils/Measuring.js",
+				"sap/zen/crosstab/utils/Utils.js"
+			]
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "themes/base/.theming",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Chart.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ChartTypeSwitch.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Crosstab.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/FilterBar.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/FilterPanel-Navigation.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/FilterPanel.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Footerbar.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/InfoChart.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/InfoFeeding.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/NavigationPanel.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/chartconfig.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/CornerTornEffect.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/HTornEffect.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/HTornEffectData.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/HTornEffectHeader.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/VTornEffect.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/loading.gif",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/loading_comp.gif",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/CornerTornEffect.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/HTornEffect.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/HTornEffectData.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/HTornEffectHeader.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/VTornEffect.png",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/loading.gif",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/loading_comp.gif",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/zen.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_belize/.theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize_hcb/.theming",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-RTL.css",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-parameters.json",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.css",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcw/.theming",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-RTL.css",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-parameters.json",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.css",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_plus/.theming",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL.css",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-parameters.json",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.css",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_bluecrystal/.theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_hcb/.theming",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/Chart.css",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/ChartTypeSwitch.css",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/InfoFeeding.css",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-RTL.css",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-parameters.json",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.css",
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.less",
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.source.less",
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "utils/Measuring-dbg.js",
+			"module": "sap/zen/crosstab/utils/Measuring.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "utils/Measuring.js",
+			"module": "sap/zen/crosstab/utils/Measuring.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "utils/Utils-dbg.js",
+			"module": "sap/zen/crosstab/utils/Utils.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		},
+		{
+			"name": "utils/Utils.js",
+			"module": "sap/zen/crosstab/utils/Utils.js",
+			"required": [
+				"sap/zen/crosstab/rendering/RenderingConstants.js"
+			]
+		}
+	]
+}

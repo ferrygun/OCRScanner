@@ -1,0 +1,54 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+    xmlns:l="sap.ui.layout"
+	controllerName="sap.ovp.cards.rta.SettingsDialog">
+    <HBox visible="{visibility>/viewSwitchEnabled}" justifyContent="Center" class="sapUiSmallMarginTopBottom">
+        <VBox>
+            <Select enabled="{visibility>/showViewSwitch}"
+                    items="{
+                                path: '/aViews'
+                            }"
+                    selectedKey="{/selectedKey}" change="selectViewSwitch">
+                <core:Item key="{key}" text="{text}"/>
+            </Select>
+        </VBox>
+        <VBox class="sapUiTinyMarginBegin">
+            <Button id="addView" icon="sap-icon://add" press="addView" type="Transparent"/>
+        </VBox>
+        <VBox class="sapUiTinyMarginBegin">
+            <Button id="deleteView" enabled="{visibility>/showViewName}" type="Transparent" icon="sap-icon://delete" press="deleteView"/>
+        </VBox>
+    </HBox>
+    <template:if test="{= ${deviceSystemProperties>/phone}}" >
+        <template:then>
+            <Carousel>
+                <pages>
+                    <l:VerticalLayout>
+                        <core:Fragment fragmentName="sap.ovp.cards.rta.SettingsDialogCardPreview" type="XML"/>
+                    </l:VerticalLayout>
+                    <l:VerticalLayout>
+                        <core:Fragment fragmentName="sap.ovp.cards.rta.SettingsDialogForm" type="XML"/>
+                    </l:VerticalLayout>
+                </pages>
+            </Carousel>
+        </template:then>
+        <template:else>
+            <HBox id="dialogContainer">
+                <VBox id="dialogCardVBox">
+                    <core:Fragment fragmentName="sap.ovp.cards.rta.SettingsDialogCardPreview" type="XML"/>
+                </VBox>
+                <VBox id="sapOvpSettingsForm">
+                    <ScrollContainer
+                            id="SettingsDialogScrollContainerForForm"
+                            class="sapOvpScrollContainer"
+                            width="100%"
+                            horizontal="false"
+                            vertical="true"
+                            focusable="true">
+                        <core:Fragment fragmentName="sap.ovp.cards.rta.SettingsDialogForm" type="XML"/>
+                    </ScrollContainer>
+                </VBox>
+            </HBox>
+        </template:else>
+    </template:if>
+</mvc:View>

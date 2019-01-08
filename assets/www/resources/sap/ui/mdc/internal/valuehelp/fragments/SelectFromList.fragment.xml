@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:core="sap.ui.core">
+
+		<Toolbar id="template::SelectFromListToolbar" width="100%">
+			<!-- <HBox>
+				<items>
+					<Label text="{valueList>/title}"></Label>
+					<Button icon="sap-icon://arrow-down" type="Transparent" class="sapMBtnTransparent"></Button>
+				</items>
+			</HBox> -->
+			<ToolbarSpacer/>
+			<template:if test="{= !(${entitySet>@Org.OData.Capabilities.V1.SearchRestrictions/Searchable/Bool} === 'false') }">
+				<SearchField id="template::ValueHelpTableSearchField" value="{path: 'FilterLayoutFlag>/sSearchFieldValue'}" width="30%" search="handleSearch"/>
+			</template:if>
+			<ToggleButton id="template::AdvancedFilter" icon="sap-icon://filter" pressed="{= (${path: 'FilterLayoutFlag>/visible'} === 'HideMode' ? false : true)}" type="Transparent" press="handleFilter"
+					class="sapMBtnTransparent"></ToggleButton>
+			<ToggleButton  icon="sap-icon://multiselect-all" type="Transparent" press="showSelected"
+					 class="sapMBtnTransparent"></ToggleButton>
+
+			<!-- <SegmentedButton>
+				<buttons>
+					<Button id="template::TableView" icon="sap-icon://table-chart" press="handleToggleButton"></Button>
+					<Button id="template::ListView" icon="sap-icon://list" press="handleToggleButton"></Button>
+				</buttons>
+			</SegmentedButton> -->
+
+		</Toolbar>
+
+		<SplitApp id="SplitCont" mode="{path: 'FilterLayoutFlag>/visible'}" class="sapFEValueHelpDialogContainer">
+			<detailPages>
+				<Page showHeader="false">
+					<core:Fragment fragmentName="sap.ui.mdc.internal.valuehelp.fragments.SelectFromListTable" type="XML"/>
+				</Page>
+			</detailPages>
+			<masterPages>
+				<Page class="sapUiContentPadding" showHeader="false">
+					<core:Fragment fragmentName="sap.ui.mdc.internal.valuehelp.fragments.FilterBar" type="XML"/>
+				</Page>
+			</masterPages>
+		</SplitApp>
+
+
+
+</core:FragmentDefinition>

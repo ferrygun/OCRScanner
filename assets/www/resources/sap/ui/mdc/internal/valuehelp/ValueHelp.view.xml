@@ -1,0 +1,20 @@
+<core:View xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		   xmlns="sap.m"
+		   xmlns:core="sap.ui.core"
+		   xmlns:l="sap.ui.layout"
+		   xmlns:u="sap.ui.unified"
+		   template:require="sap.ui.mdc.internal.valuehelp.ValueHelpAnnotationHelper"
+		   controllerName="sap.ui.mdc.internal.valuehelp.ValueHelp">
+
+	<template:alias name=".MODEL" value="sap.ui.model.odata.v4.AnnotationHelper">
+		<!-- currently there can be only one value list - collective search is not yet supported -->
+		<template:with path="valueList>"
+					   helper="sap.ui.mdc.internal.valuehelp.ValueHelpAnnotationHelper.getCollectionEntitySet"
+					   var="entitySet">
+
+				<core:Fragment fragmentName="sap.ui.mdc.internal.valuehelp.fragments.SelectFromList" type="XML"/>
+
+		</template:with>
+	</template:alias>
+
+</core:View>

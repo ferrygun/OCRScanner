@@ -1,0 +1,2202 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".gitignore"
+		},
+		{
+			"name": ".library"
+		},
+		{
+			"name": ".theming"
+		},
+		{
+			"name": "AnalyticGrid-dbg.js",
+			"module": "sap/zen/dsh/AnalyticGrid.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/URI.js",
+				"sap/zen/dsh/library.js"
+			],
+			"condRequired": [
+				"sap/zen/dsh/rt/all.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/jszip.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/xlsx.js"
+			]
+		},
+		{
+			"name": "AnalyticGrid.control",
+			"designtime": true
+		},
+		{
+			"name": "AnalyticGrid.js",
+			"module": "sap/zen/dsh/AnalyticGrid.js",
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/URI.js",
+				"sap/zen/dsh/library.js"
+			],
+			"condRequired": [
+				"sap/zen/dsh/rt/all.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/jszip.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/xlsx.js"
+			]
+		},
+		{
+			"name": "AnalyticGridRenderer-dbg.js",
+			"module": "sap/zen/dsh/AnalyticGridRenderer.js",
+			"isDebug": true,
+			"required": [
+				"sap/zen/dsh/DshRenderer.js"
+			]
+		},
+		{
+			"name": "AnalyticGridRenderer.js",
+			"module": "sap/zen/dsh/AnalyticGridRenderer.js",
+			"required": [
+				"sap/zen/dsh/DshRenderer.js"
+			]
+		},
+		{
+			"name": "DS.bitype"
+		},
+		{
+			"name": "Dsh-dbg.js",
+			"module": "sap/zen/dsh/Dsh.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/URI.js",
+				"sap/zen/dsh/library.js"
+			],
+			"condRequired": [
+				"sap/zen/dsh/rt/all.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/jszip.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/xlsx.js"
+			]
+		},
+		{
+			"name": "Dsh.control",
+			"designtime": true
+		},
+		{
+			"name": "Dsh.js",
+			"module": "sap/zen/dsh/Dsh.js",
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/URI.js",
+				"sap/zen/dsh/library.js"
+			],
+			"condRequired": [
+				"sap/zen/dsh/rt/all.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/jszip.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/xlsx.js"
+			]
+		},
+		{
+			"name": "DshRenderer-dbg.js",
+			"module": "sap/zen/dsh/DshRenderer.js",
+			"isDebug": true
+		},
+		{
+			"name": "DshRenderer.js",
+			"module": "sap/zen/dsh/DshRenderer.js"
+		},
+		{
+			"name": "applications/0ANALYSIS/content.xml"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization.properties",
+			"locale": "",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ar.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ar.properties",
+			"locale": "ar",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_bg.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_bg.properties",
+			"locale": "bg",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ca.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ca.properties",
+			"locale": "ca",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_cs.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_cs.properties",
+			"locale": "cs",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_da.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_da.properties",
+			"locale": "da",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_de.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_de.properties",
+			"locale": "de",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_el.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_el.properties",
+			"locale": "el",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_en.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_en.properties",
+			"locale": "en",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_en_US_sappsd.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_en_US_saptrc.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_es.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_es.properties",
+			"locale": "es",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_et.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_et.properties",
+			"locale": "et",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_fi.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_fi.properties",
+			"locale": "fi",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_fr.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_fr.properties",
+			"locale": "fr",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_hi.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_hi.properties",
+			"locale": "hi",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_hr.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_hr.properties",
+			"locale": "hr",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_hu.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_hu.properties",
+			"locale": "hu",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_it.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_it.properties",
+			"locale": "it",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_iw.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_iw.properties",
+			"locale": "iw",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ja.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ja.properties",
+			"locale": "ja",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_kk.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_kk.properties",
+			"locale": "kk",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ko.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ko.properties",
+			"locale": "ko",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_lt.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_lt.properties",
+			"locale": "lt",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_lv.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_lv.properties",
+			"locale": "lv",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ms.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ms.properties",
+			"locale": "ms",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_nl.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_nl.properties",
+			"locale": "nl",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_no.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_no.properties",
+			"locale": "no",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_pl.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_pl.properties",
+			"locale": "pl",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_pt.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_pt.properties",
+			"locale": "pt",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ro.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ro.properties",
+			"locale": "ro",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_ru.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_ru.properties",
+			"locale": "ru",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_sh.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_sh.properties",
+			"locale": "sh",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_sk.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_sk.properties",
+			"locale": "sk",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_sl.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_sl.properties",
+			"locale": "sl",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_sv.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_sv.properties",
+			"locale": "sv",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_th.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_th.properties",
+			"locale": "th",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_tr.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_tr.properties",
+			"locale": "tr",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_uk.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_uk.properties",
+			"locale": "uk",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_vi.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_vi.properties",
+			"locale": "vi",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_zh_CN.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYSIS/localization_zh_TW.properties",
+			"module": "sap/zen/dsh/applications/0ANALYSIS/localization_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "applications/0ANALYSIS/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/content.xml"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization.properties",
+			"locale": "",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ar.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ar.properties",
+			"locale": "ar",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_bg.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_bg.properties",
+			"locale": "bg",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ca.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ca.properties",
+			"locale": "ca",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_cs.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_cs.properties",
+			"locale": "cs",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_da.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_da.properties",
+			"locale": "da",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_de.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_de.properties",
+			"locale": "de",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_el.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_el.properties",
+			"locale": "el",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_en.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_en.properties",
+			"locale": "en",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_en_US_sappsd.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_en_US_saptrc.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_es.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_es.properties",
+			"locale": "es",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_et.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_et.properties",
+			"locale": "et",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_fi.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_fi.properties",
+			"locale": "fi",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_fr.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_fr.properties",
+			"locale": "fr",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_hi.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_hi.properties",
+			"locale": "hi",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_hr.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_hr.properties",
+			"locale": "hr",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_hu.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_hu.properties",
+			"locale": "hu",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_it.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_it.properties",
+			"locale": "it",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_iw.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_iw.properties",
+			"locale": "iw",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ja.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ja.properties",
+			"locale": "ja",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_kk.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_kk.properties",
+			"locale": "kk",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ko.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ko.properties",
+			"locale": "ko",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_lt.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_lt.properties",
+			"locale": "lt",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_lv.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_lv.properties",
+			"locale": "lv",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ms.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ms.properties",
+			"locale": "ms",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_nl.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_nl.properties",
+			"locale": "nl",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_no.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_no.properties",
+			"locale": "no",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_pl.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_pl.properties",
+			"locale": "pl",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_pt.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_pt.properties",
+			"locale": "pt",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ro.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ro.properties",
+			"locale": "ro",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_ru.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_ru.properties",
+			"locale": "ru",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_sh.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_sh.properties",
+			"locale": "sh",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_sk.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_sk.properties",
+			"locale": "sk",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_sl.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_sl.properties",
+			"locale": "sl",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_sv.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_sv.properties",
+			"locale": "sv",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_th.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_th.properties",
+			"locale": "th",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_tr.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_tr.properties",
+			"locale": "tr",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_uk.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_uk.properties",
+			"locale": "uk",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_vi.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_vi.properties",
+			"locale": "vi",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_zh_CN.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "applications/0ANALYTIC_GRID/localization_zh_TW.properties",
+			"module": "sap/zen/dsh/applications/0ANALYTIC_GRID/localization_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "applications/0ANALYTIC_GRID/localization.properties"
+		},
+		{
+			"name": "fioriwrapper/Component-dbg.js",
+			"module": "sap/zen/dsh/fioriwrapper/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/UIComponent.js"
+			],
+			"condRequired": [
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/zen/dsh/Dsh.js"
+			]
+		},
+		{
+			"name": "fioriwrapper/Component.js",
+			"module": "sap/zen/dsh/fioriwrapper/Component.js",
+			"required": [
+				"sap/ui/core/UIComponent.js"
+			],
+			"condRequired": [
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/zen/dsh/Dsh.js"
+			]
+		},
+		{
+			"name": "fioriwrapper/manifest.json",
+			"module": "sap/zen/dsh/fioriwrapper/manifest.json"
+		},
+		{
+			"name": "library-all-dbg.js",
+			"isDebug": true,
+			"merged": true
+		},
+		{
+			"name": "library-all.js",
+			"merged": true
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/zen/dsh/library.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js",
+				"sap/ui/layout/library.js",
+				"sap/ui/table/library.js",
+				"sap/zen/commons/library.js",
+				"sap/zen/crosstab/library.js"
+			]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/zen/dsh/library-preload.js",
+			"merged": true,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/library.js",
+				"sap/ui/layout/library.js",
+				"sap/ui/table/library.js",
+				"sap/ui/thirdparty/URI.js",
+				"sap/zen/commons/library.js",
+				"sap/zen/crosstab/library.js"
+			],
+			"condRequired": [
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/zen/dsh/rt/all.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/jszip.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/xlsx.js"
+			],
+			"included": [
+				"sap/zen/dsh/AnalyticGrid.js",
+				"sap/zen/dsh/AnalyticGridRenderer.js",
+				"sap/zen/dsh/Dsh.js",
+				"sap/zen/dsh/DshRenderer.js",
+				"sap/zen/dsh/fioriwrapper/Component.js",
+				"sap/zen/dsh/fioriwrapper/manifest.json",
+				"sap/zen/dsh/library.js",
+				"sap/zen/dsh/manifest.json"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.json",
+			"module": "sap/zen/dsh/library-preload.json",
+			"merged": true,
+			"required": [
+				"sap/m/library-preload.json",
+				"sap/m/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/library-preload.json",
+				"sap/ui/core/library.js",
+				"sap/ui/layout/library-preload.json",
+				"sap/ui/layout/library.js",
+				"sap/ui/table/library-preload.json",
+				"sap/ui/table/library.js",
+				"sap/ui/thirdparty/URI.js",
+				"sap/zen/commons/library-preload.json",
+				"sap/zen/commons/library.js",
+				"sap/zen/crosstab/library-preload.json",
+				"sap/zen/crosstab/library.js"
+			],
+			"condRequired": [
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/zen/dsh/rt/all.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/jszip.js",
+				"sap/zen/dsh/rt/zen_rt_firefly/js/xlsx.js"
+			],
+			"included": [
+				"sap/zen/dsh/AnalyticGrid.js",
+				"sap/zen/dsh/AnalyticGridRenderer.js",
+				"sap/zen/dsh/Dsh.js",
+				"sap/zen/dsh/DshRenderer.js",
+				"sap/zen/dsh/fioriwrapper/Component.js",
+				"sap/zen/dsh/fioriwrapper/manifest.json",
+				"sap/zen/dsh/library.js",
+				"sap/zen/dsh/manifest.json"
+			]
+		},
+		{
+			"name": "library.dependencies.json",
+			"designtime": true
+		},
+		{
+			"name": "library.dependencies.xml",
+			"designtime": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/zen/dsh/library.js",
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js",
+				"sap/ui/layout/library.js",
+				"sap/ui/table/library.js",
+				"sap/zen/commons/library.js",
+				"sap/zen/crosstab/library.js"
+			]
+		},
+		{
+			"name": "library.properties",
+			"module": "sap/zen/dsh/library.properties"
+		},
+		{
+			"name": "library.templates.xml",
+			"designtime": true
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/zen/dsh/manifest.json"
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "rt/all-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "rt/all.js"
+		},
+		{
+			"name": "rt/icons/component.gif"
+		},
+		{
+			"name": "rt/localization/localization.properties",
+			"locale": "",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ar.properties",
+			"locale": "ar",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_bg.properties",
+			"locale": "bg",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ca.properties",
+			"locale": "ca",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_cs.properties",
+			"locale": "cs",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_da.properties",
+			"locale": "da",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_de.properties",
+			"locale": "de",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_el.properties",
+			"locale": "el",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_en.properties",
+			"locale": "en",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_es.properties",
+			"locale": "es",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_et.properties",
+			"locale": "et",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_fi.properties",
+			"locale": "fi",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_fr.properties",
+			"locale": "fr",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_hi.properties",
+			"locale": "hi",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_hr.properties",
+			"locale": "hr",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_hu.properties",
+			"locale": "hu",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_it.properties",
+			"locale": "it",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_iw.properties",
+			"locale": "iw",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ja.properties",
+			"locale": "ja",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_kk.properties",
+			"locale": "kk",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ko.properties",
+			"locale": "ko",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_lt.properties",
+			"locale": "lt",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_lv.properties",
+			"locale": "lv",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ms.properties",
+			"locale": "ms",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_nl.properties",
+			"locale": "nl",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_no.properties",
+			"locale": "no",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_pl.properties",
+			"locale": "pl",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_pt.properties",
+			"locale": "pt",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ro.properties",
+			"locale": "ro",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_ru.properties",
+			"locale": "ru",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_sh.properties",
+			"locale": "sh",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_sk.properties",
+			"locale": "sk",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_sl.properties",
+			"locale": "sl",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_sv.properties",
+			"locale": "sv",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_th.properties",
+			"locale": "th",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_tr.properties",
+			"locale": "tr",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_uk.properties",
+			"locale": "uk",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_vi.properties",
+			"locale": "vi",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/localization/localization_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "rt/localization/localization.properties"
+		},
+		{
+			"name": "rt/web_scripting/resources/external/require.js"
+		},
+		{
+			"name": "rt/web_scripting/resources/external/underscore.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/img/collapse14_14.png"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/img/error.png"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/img/expand14_14.png"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/img/remove26_26.png"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/img/transparent.png"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/img/warning.png"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/absolutelayout_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/button_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/gridlayout_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/hana_application_properties_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/messageview_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/messageview_m_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components/resources/js/statisticspanel_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_actionsheet/resources/js/actionsheet_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_checkbox/resources/js/checkbox_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_clickpane/resources/js/clickpane_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_contextmenu/resources/js/contextmenu_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_crosstab/resources/js/crosstab_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_datefield/resources/js/datefield_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_dialog/resources/js/conditionsdialog_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_dialog/resources/js/zendialog_m_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_dialogm/resources/js/dialog_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_filterbar/resources/js/filterbar_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_filterpanel/resources/js/ItemsCollection.js"
+		},
+		{
+			"name": "rt/zen_rt_components_filterpanel/resources/js/ValueHelpDialog.js"
+		},
+		{
+			"name": "rt/zen_rt_components_filterpanel/resources/js/emptyComponent.js"
+		},
+		{
+			"name": "rt/zen_rt_components_filterpanel/resources/js/filterpanel_m_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_filterpanel/resources/js/navigationpanel_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_fiorihelper/resources/js/fiorihelper_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_footerbar/resources/js/footerbar_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/contribution.xml"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/contribution.ztl"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/contribution.ztl.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/css/component.css"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/infochart.png"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/info_ctrl.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/info_vizframe.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/align_charts.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/hichert_data_factory.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_binding_service.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_chart_exception.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_chart_locale.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_conditional_format_mapper.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_data_mapper.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_dataseries_helper.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_default_data.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_error_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_error_lookup.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_id_utils.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_legacy_binding_service.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/info_property_builder.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/sdk_data.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/js/utils/waterfall_data_factory.js"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization.properties",
+			"locale": "",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_ar.properties",
+			"locale": "ar",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_cs.properties",
+			"locale": "cs",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_de.properties",
+			"locale": "de",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_en.properties",
+			"locale": "en",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_es.properties",
+			"locale": "es",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_fr.properties",
+			"locale": "fr",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_hu.properties",
+			"locale": "hu",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_it.properties",
+			"locale": "it",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_iw.properties",
+			"locale": "iw",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_ja.properties",
+			"locale": "ja",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_kk.properties",
+			"locale": "kk",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_pl.properties",
+			"locale": "pl",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_pt.properties",
+			"locale": "pt",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_ru.properties",
+			"locale": "ru",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_tr.properties",
+			"locale": "tr",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_uk.properties",
+			"locale": "uk",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_infochart/langs/localization_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "rt/zen_rt_components_infochart/langs/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_inputfield/resources/js/inputfield_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_pagebook/resources/js/pagebook_m_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_panel/resources/js/panel_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_popup/resources/css/component.css"
+		},
+		{
+			"name": "rt/zen_rt_components_popup/resources/js/popup_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_popup/resources/js/popupm_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_popup/resources/js/transitionhandler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/SDKModel.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/component.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/databuffer.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/datasource.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/sdk_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/sdk_propertysheets_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/sdkcontrol.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/sdkdatasource_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_sdk/resources/js/sdkui5_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_selection/resources/js/checkboxgroup_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_selection/resources/js/combobox_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_selection/resources/js/dropdown_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_selection/resources/js/listbox_m_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_selection/resources/js/radiobuttongroup_m_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_splitter/resources/js/splitter_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_tabstrip/resources/js/tabstrip_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_textfield/resources/js/textfield_handler.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/contribution.xml"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/contribution.ztl"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/contribution.ztl.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/css/datasourcebrowser.css"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties",
+			"locale": "",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_ar.properties",
+			"locale": "ar",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_cs.properties",
+			"locale": "cs",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_de.properties",
+			"locale": "de",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_en.properties",
+			"locale": "en",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_es.properties",
+			"locale": "es",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_fr.properties",
+			"locale": "fr",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_hu.properties",
+			"locale": "hu",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_it.properties",
+			"locale": "it",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_iw.properties",
+			"locale": "iw",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_ja.properties",
+			"locale": "ja",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_kk.properties",
+			"locale": "kk",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_pl.properties",
+			"locale": "pl",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_pt.properties",
+			"locale": "pt",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_ru.properties",
+			"locale": "ru",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_tr.properties",
+			"locale": "tr",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_uk.properties",
+			"locale": "uk",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "rt/zen_rt_components_ui5/datasourcebrowser/i18n/localization.properties"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/images/cube.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/images/folder.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/images/query.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/images/queryview.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/js/datasourcebrowser.controller.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/js/datasourcebrowser.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/js/dsb.view.xml"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/datasourcebrowser/js/dsb_m.view.xml"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/formattedtextview.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/formattedtextview/css/component.css"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/formattedtextview/js/component_m.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/css/fonts/SAP-icons.eot"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/css/fonts/SAP-icons.ttf"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/css/fragmentgallery.css"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__bar_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__bubble.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_boxplot.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_column_3d.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_donut.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_network.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_numericpoint.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_pie_3d.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_scatter_matrix.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_tagcloud.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__chart_treemap2.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__column_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__datefield.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__dual_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__dual_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__dual_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__dual_horizontal_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__dual_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__horizontal_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__horizontal_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__horizontal_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__horizontal_stacked_100_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__horizontal_stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__horizontal_waterfall.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__multipie.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__multiradar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__pie.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__radar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__scatter.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__stacked_waterfall.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__surface.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__vertical_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__vertical_stacked_100_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__vertical_stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_heatmap.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_treemap.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_trellis_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_trellis_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_trellis_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_trellis_horizontal_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_trellis_horizontal_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__viz_trellis_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/charts/icon__waterfall.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/combination/icon__filter_chart.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/combination/icon__filter_chart_table.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/combination/icon__filter_table.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/combination/icon__table_chart.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__actionlist.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__actionsheet.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__button.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__chart.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__checkbox.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__checkboxgroup.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__combobox.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__crosstab.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__datefield.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__dimensionfilter.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__dropdown.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__feeding.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__feedingpanel.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__filterline.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__filterpanel.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__formattedtextview.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__geo.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__grid.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__icon.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__image.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__inputfield.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__label.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__listbox.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__object.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__page.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__pagebook.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__panel.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__popup.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__radiobutton.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__radiobuttongroup.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__rangeslider.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__scorecard.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__sdk.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__segmentedbutton.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__spreadsheet.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__styledtablefuture.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__tab.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__text.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__togglebutton.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/components/icon__tree.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/delete/delete_hover.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/delete/delete_normal.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/delete/noirimg.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/fragmentgallery_icon.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__100_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__100_dual_stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__100_dual_stacked_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__100_stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__100_stacked_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__bar_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__bubble.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__bullet.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__donut.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_horizontal_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_horizontal_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_horizontal_stacked_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_stacked_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__dual_stacked_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__heatmap.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_line_vertical.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_stacked_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__hichert_variance_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__horizontal_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__horizontal_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__horizontal_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__horizontal_stacked_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__horizontal_waterfall.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__multi_pie.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__multi_radar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__pie.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__radar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__scatter.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__stacked_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__stacked_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__stacked_combination.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__stacked_waterfall.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__timeseries_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__treemap.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__trellis_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__trellis_bar.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__trellis_column.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__trellis_horizontal_area.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__trellis_horizontal_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__trellis_line.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__vertical_bullet.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/infocharts/icon__waterfall.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/misc/_error.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/misc/_multiple.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/images/misc/_unknown.svg"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/fragmentgallery/js/fragmentgallery.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/icon/css/icon_component.css"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/icon/icon.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/icon/js/icon_component.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/icon/js/opentype.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/js/DSHImpl.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/link/js/component.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/progress/js/component.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/progress/progressindicator.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/segmentedButton/css/segmentedButton.css"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/segmentedButton/images/segmentedButton.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/segmentedButton/js/component_m.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/selecttable/component.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/selecttable/icon.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/switch/icon.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/switch/js/component.js"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/textarea/css/component.css"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/textarea/icon.png"
+		},
+		{
+			"name": "rt/zen_rt_components_ui5/textarea/js/component.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_00_language_native/combined/___00_language.native.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_02_core/combined/___02_core.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_04_core_native/combined/___04_core.native.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_06_core_ext/combined/___06_core.ext.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_17_io/combined/___17_io.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_18_io_native/combined/___18_io.native.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_20_runtime/combined/___20_runtime.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_29_commons/combined/___29_commons.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_30_olap_api/combined/___30_olap.api.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_30_olap_ext/combined/___30_olap.ext.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_30_olap_impl/combined/___30_olap.impl.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_32_olap_providers/combined/___32_olap.providers.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_69_buddhautils/combined/___69_buddhautils.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_70_buddha/combined/___70_buddha.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/javascript/_70_landscape_utils/combined/___70_landscape_utils.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/js/jszip.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/js/sdkinitializer.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/js/staticMimeUrlCreate.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/js/wrapper.js"
+		},
+		{
+			"name": "rt/zen_rt_firefly/js/xlsx.js"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/css/DlgClose.gif"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/css/DlgGrip_GreyBG.gif"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/css/favicon.ico"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/css/loadingIndicator.css"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/js/DSHqueue.js"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/js/bi_command_util.js"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/js/bi_common.js"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/js/bi_mobile_util.js"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/js/bi_phx.js"
+		},
+		{
+			"name": "rt/zen_rt_framework/resources/js/dispatcher.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/LegacyInitialViewFeeding.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/sap_viz/CrossTableDataSet.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_html5charts/charts/helpers/DualDataSeriesHelper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/SDKhtml5chart_util.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/ChartException.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKArea.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKBar.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKBarCombination.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKBarDualAxis.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKBaseChart.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKBubble.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKColumn.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKColumnCombinationDualAxis.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKColumnDualAxis.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKComb.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKGenericViz.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKHorizontalArea.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKHorizontalCombinationDualAxis.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKHorizontalLine.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKHorizontalWaterfall.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKLine.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKLineDualAxis.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKMultiPie.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKMultiRadar.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKPie.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKRadar.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKScatter.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKStacked100Bar.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKStacked100Col.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKStackedBar.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKStackedColumn.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKStackedWaterfall.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/SDKWaterfall.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/charts/helpers/SDKChartDataFeedingHelper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/SDKChartDataMapper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/SDKGenericDataMapper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/SDKMultiPieDataMapper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/SDKPieDataMapper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/SDKStackedWaterfallDataMapper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/SDKWaterfallDataMapper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/helpers/SDKChartTypeHelper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/dataMappers/helpers/SDKDataMapperHelper.js"
+		},
+		{
+			"name": "rt/zen_rt_uiframework/legacyfeeding/zen_rt_components_sdkhtml5chart/utilities/SDKUtilsHelper.js"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+.ui5-viz-controls-app {
+	margin: 0px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.ui5-viz-controls-viz-frame {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ui5-viz-controls-viz-builder {
+	position: absolute;
+	width: 260px;
+}
+
+.ui5-viz-controls-switch-bar {
+	position: absolute;
+	margin: 0px auto;
+	padding-top: 9px;
+}
+
+.ui5-viz-controls-vertical-splitter {
+	position: absolute;
+	width: 8px;
+	background: linear-gradient(to left, rgba(242, 242, 242, 0),
+		rgba(0, 0, 0, 0.1));
+}

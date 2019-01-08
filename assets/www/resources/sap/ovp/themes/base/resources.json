@@ -1,0 +1,101 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "base"
+		},
+		{
+			"name": "BarListCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Card.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DashboardLayout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "EasyScanLayout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ImageCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "LinkListCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ListCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Map.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "OVPApp.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectStream.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SettingsDialog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

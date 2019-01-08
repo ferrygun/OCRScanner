@@ -1,0 +1,43 @@
+<core:FragmentDefinition
+        controllerName="sap.ovp.cards.generic.Card"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+	<ovp:Card id="ovpCardControl">
+		<VBox class="sapOvpBaseCard">
+	        <template:if test="{ovpCardProperties>/headerFragment}">
+	            <core:Fragment fragmentName="{ovpCardProperties>/headerFragment}" type="XML"/>
+	        </template:if>
+	        <ovp:CardContentContainer id="ovpCardContentContainer" class="{= ${ovpCardProperties>/cardLayout/containerLayout} === 'resizable' &amp;&amp; ${ovpCardProperties>/cardLayout/showOnlyHeader} === true ? 'sapOvpWrapper sapOvpContentHidden' :  'sapOvpWrapper'}">
+	            <template:if test="{= ${ovpCardProperties>/state} !== 'Loading' || ${ovpCardProperties>/state} === 'undefined'}" >
+	                <template:if test="{ovpCardProperties>/tabs}">
+	                    <Toolbar id="toolbar" class="sapOvpDropDown {= ${ovpCardProperties>/densityStyle} === 'compact' ? 'sapUiSizeCompact dropDrownCompact' : 'sapUiSizeCozy sapOvpDropDownPadding dropDrownCozy' }">
+	                        <Select id="ovp_card_dropdown" selectedKey="1" change="changeSelection">
+	                            <template:repeat list="{ovpCardProperties>/tabs}" var="tab">
+	                                <core:Item
+	                                        id ="{parts: [{path: 'ovpCardProperties>/tabs'}, {path: 'tab>'}], formatter: 'sap.ovp.cards.CommonUtils.createKeyForCB'}"
+	                                        key="{parts: [{path: 'ovpCardProperties>/tabs'}, {path: 'tab>'}], formatter: 'sap.ovp.cards.CommonUtils.createKeyForCB'}"
+	                                        text="{tab>value}">
+	                                </core:Item>
+	                            </template:repeat>
+	                        </Select>
+	                    </Toolbar>
+	                </template:if>
+	                <template:if test="{ovpCardProperties>/contentFragment}">
+	                    <core:Fragment fragmentName="{ovpCardProperties>/contentFragment}" type="XML"/>
+	                </template:if>
+	            </template:if>
+	        </ovp:CardContentContainer>
+	        <template:if
+	                test="{= ${ovpCardProperties>/contentFragment} === 'sap.ovp.cards.quickview.Quickview' || ${ovpCardProperties>/layoutDetail} !== 'resizable' || ${ovpCardProperties>/state} === 'Loading'}">
+	            <template:if test="{ovpCardProperties>/footerFragment}">
+	                <core:Fragment fragmentName="{ovpCardProperties>/footerFragment}" type="XML"/>
+	            </template:if>
+	        </template:if>
+    	</VBox>
+	</ovp:Card>
+
+</core:FragmentDefinition>

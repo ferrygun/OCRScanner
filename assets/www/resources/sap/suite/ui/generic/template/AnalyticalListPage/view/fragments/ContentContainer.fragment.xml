@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:l="sap.ui.layout">
+	<VBox class="sapSmartTemplatesAnalyticalListPageInheritHeight sapSmartTemplatesAnalyticalListPageContentContainer sapUiResponsiveContentPadding">
+		<template:if test="{= ${parameter>/manifest/sap.ui5/extends/extensions/sap.ui.viewExtensions/sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage/AnalyticalListPageMasterExtension} !== undefined }">
+			<template:then>
+				<VBox class="sapSmartTemplatesAnalyticalListPageInheritHeight sapSmartTemplatesAnalyticalListPageMasterExtension sapSmartTemplatesAnalyticalListPageChartContainer" visible="{= (${_templPriv>/alp/contentView} === 'chart' || ${_templPriv>/alp/contentView} === 'charttable') }">
+					<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.MasterExtension" type="XML" />
+				</VBox>
+			</template:then>
+			<template:else>
+				<VBox class="sapSmartTemplatesAnalyticalListPageInheritHeight sapSmartTemplatesAnalyticalListPageChartContainer" visible="{= (${_templPriv>/alp/contentView} === 'chart' || ${_templPriv>/alp/contentView} === 'charttable') }">
+					<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.SmartChart" type="XML" />
+				</VBox>
+			</template:else>
+		</template:if>
+		<VBox class="sapSmartTemplatesAnalyticalListPageInheritHeight sapSmartTemplatesAnalyticalListPageTableContainer" visible="{= (${_templPriv>/alp/contentView} === 'table' || ${_templPriv>/alp/contentView} === 'charttable') }">
+			<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.DetailSmartTable" type="XML" />
+		</VBox>
+		<template:if test="{= ${parameter>/manifest/sap.ui5/extends/extensions/sap.ui.viewExtensions/sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage/AnalyticalListPageContentViewExtension} !== undefined }">
+			<template:then>
+				<VBox class="sapSmartTemplatesAnalyticalListPageInheritHeight sapSmartTemplatesAnalyticalListPageMasterExtension" visible="{= (${_templPriv>/alp/contentView} === 'customview') }">
+					<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.ContentAreaExtension" type="XML" />
+				</VBox>
+			</template:then>
+		</template:if>
+	</VBox>
+</core:FragmentDefinition>

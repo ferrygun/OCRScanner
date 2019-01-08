@@ -1,0 +1,172 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 template:require="sap.suite.ui.generic.template.js.AnnotationHelperMultipleViews"
+						 xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartlink="sap.ui.comp.navpopover"
+						 xmlns:smarttable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table"
+						 xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+						 xmlns:build="sap.build">
+
+	<template:with path="entityType>com.sap.vocabularies.UI.v1.HeaderInfo" var="header">
+	<template:with path="entitySet>dummy" var="facet">
+	<template:with path="entityType>" helper="sap.suite.ui.generic.template.js.AnnotationHelper.searchForFirstSemKey_Title_Description" var="targetColumn">
+		<smarttable:SmartTable id="listReport{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+							 	smartFilterId="{= ${parameter>/settings/quickVariantSelectionX} ? '' : 'listReportFilter'}"
+							 	visible="{path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelperMultipleViews.getVisibleForTableTabs'}"
+								initialise="._templateEventHandlers.onTableInit"
+							   persistencyKey="{= ${path: 'parameter>/settings/routeConfig/', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getPersistencyKeyForSmartTable'} }{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+							   header="{= !${parameter>/settings/quickVariantSelection/showCounts} ? ${path: 'header>TypeNamePlural', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} : '' }"
+							   beforeRebindTable="._templateEventHandlers.onBeforeRebindTable"
+							   dataReceived="._templateEventHandlers.onDataReceived"
+							   dataRequested="._templateEventHandlers.onDataRequested"
+							   useVariantManagement="{= !${parameter>/settings/isWorklist} &amp;&amp; (!${parameter>/settings/hideTableVariantManagement} || ${parameter>/settings/smartVariantManagement})}"
+							   afterVariantSave="._templateEventHandlers.onAfterTableVariantSave"
+							   afterVariantApply="._templateEventHandlers.onAfterApplyTableVariant"
+							   entitySet="{parameter>/entitySet}"
+							   demandPopin="{= (!(${entityType>sap:semantics} === 'aggregate') &amp;&amp; !${parameter>/settings/gridTable}) || ${device>/system/phone} ? 'true' : 'false'}"
+							   useExportToExcel="false"
+							   smartVariant="{= ${parameter>/settings/smartVariantManagement} ? 'template::PageVariant' : null }"
+							   customData:p13nDialogSettings="{= ${parameter>/settings/smartVariantManagement} ? '{filter:{visible:false}}' : '{filter:{visible:true}}'}"
+							   build:metadata="#pattern:Table;staticProp:header:Title"
+							   tableBindingPath="{parameter>/settings/routeConfig/navigationProperty}"
+							   showTablePersonalisation="{=${parameter>/settings/isWorklist} ? false : true}"
+							   enableAutoBinding="false">
+			<smarttable:customData>
+				<core:CustomData key="enableInResultForLineItem" value="true"/>
+				<core:CustomData key="dateFormatSettings" value='\{"UTC":true,"style":"medium"\}'/>
+				<template:if test="{parts: [{path: 'entityType>'}, {path: 'tabItem>annotationPath'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.tabItemHasPresentationVariant'}">
+					<template:then>
+						<!-- PresentationVariant for table tab -->
+						<core:CustomData key="lineItemQualifier"
+										value="{parts: [{path: 'entityType>'}, {path: 'tabItem>annotationPath'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getPresentationVariantVisualisation'}" />
+						<core:CustomData key="TemplateSortOrder"
+										value="{parts: [{path: 'entityType>'}, {path: 'tabItem>annotationPath'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getPresentationVariantSortOrder'}" />
+					</template:then>
+					<template:else>
+						<template:with path="entityType>com.sap.vocabularies.UI.v1.PresentationVariant" var="variant">
+							<template:if test="{= ${variant>SortOrder}}">
+								<core:CustomData key="TemplateSortOrder"
+												 value="{path: 'variant>SortOrder', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSortOrder'}"/>
+							</template:if>
+						</template:with>
+					</template:else>
+				</template:if>
+				<core:CustomData key="variantAnnotationPath" value="{tabItem>annotationPath}"/>
+				<core:CustomData key="iconTabFilterKey" value="{path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getIconTabFilterKey'}"/>
+				<core:CustomData key="text" value="{path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getIconTabFilterText'}"/>
+			</smarttable:customData>
+			<smarttable:layoutData>
+				<FlexItemData growFactor="1"/>
+			</smarttable:layoutData>
+			<smarttable:semanticObjectController>
+				<smartlink:SemanticObjectController beforePopoverOpens="._templateEventHandlers.onBeforeSemanticObjectLinkPopoverOpens"
+													navigate="._templateEventHandlers.onSemanticObjectLinkPopoverLinkPressed"
+													navigationTargetsObtained="._templateEventHandlers.onSemanticObjectLinkNavigationTargetObtained"/>
+			</smarttable:semanticObjectController>
+			<smarttable:customToolbar>
+				<core:Fragment fragmentName="sap.suite.ui.generic.template.ListReport.view.fragments.SmartTableToolbar"
+							   type="XML"/>
+			</smarttable:customToolbar>
+			<template:if test="{= (${parameter>/settings/tableType} === 'AnalyticalTable' || (${parameter>/settings/tableType} !== 'GridTable' &amp;&amp; ${parameter>/settings/tableType} !== 'ResponsiveTable' &amp;&amp; ${parameter>/settings/tableType} !== 'TreeTable' &amp;&amp; ${entityType>sap:semantics} === 'aggregate' &amp;&amp; !${parameter>/settings/treeTable})) &amp;&amp; !${device>/system/phone}}">
+				<template:then>
+					<table:AnalyticalTable id="analyticalTable{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+										visibleRowCountMode="Auto"
+										class="{path: 'parameter>/settings/condensedTableLayout', formatter: 'sap.suite.ui.generic.template.ListReport.AnnotationHelper.setSizeCondensedCssClass'}"
+										   enableColumnReordering="true" showColumnVisibilityMenu="false"
+										   selectionMode="{= (${path: 'workingContext>lineItem', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+																|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+																) ?	( ${parameter>/settings/multiSelect} === true ? 'MultiToggle' : 'Single' ) : 'Single'
+														}"
+										   rowSelectionChange="._templateEventHandlers.onSelectionChange" enableColumnFreeze="true" enableCellFilter="true" rowActionCount="{parts: [{path: 'entitySet>'}, {path: 'parameter>/settings/subPages/'}, {path: 'parameter>/manifest/'},{path: 'parameter>/settings/'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getRowActionCountForListReport'}">
+						<template:with path="entitySet>" var="listEntitySet">
+							<table:rowSettingsTemplate>
+								<table:RowSettings highlight="{= ${parts: [{path: 'IsActiveEntity'}, {path: 'HasActiveEntity'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.setInfoHighlight'}}"/>
+							</table:rowSettingsTemplate>
+							<table:columns>
+								<core:ExtensionPoint name="AnalyticalTableColumnsExtension|{entitySet>name}"/>
+								<template:with path="workingContext>lineItemPath" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.resolveMetaModelPath" var="collection">
+									<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.AnalyticalTableColumns" type="XML"/>
+								</template:with>
+							</table:columns>
+							<table:rowActionTemplate>
+								<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.RowActions" type="XML"/>
+							</table:rowActionTemplate>
+						</template:with>
+					</table:AnalyticalTable>
+				</template:then>
+				<!--Tree table implementation: Begins-->
+				<template:elseif test="{= (${parameter>/settings/tableType} === 'TreeTable' || (${parameter>/settings/tableType} !== 'GridTable' &amp;&amp; ${parameter>/settings/tableType} !== 'ResponsiveTable' &amp;&amp; ${parameter>/settings/treeTable})) &amp;&amp; !${device>/system/phone} }">
+					<table:TreeTable id="TreeTable{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+									 rootLevel="0"
+									 selectionMode="{= (${path: 'workingContext>lineItem', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+																|| (!(${entitySet>Org.OData.Capabilities.V1.DeleteRestrictions/Deletable/Bool} === 'false'))
+																|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+																) ?
+																( ${parameter>/settings/multiSelect} === true ? 'MultiToggle' : 'Single' ) : 'None' }"
+									 visibleRowCountMode="Auto"
+									 expandFirstLevel="true"
+									 rowSelectionChange="._templateEventHandlers.onSelectionChange"
+									 rowActionCount="{= (!${_templPriv>/listReport/isLeaf} ? 1 : 0 )}">
+						<template:with path="entitySet>" var="listEntitySet">
+							<table:rowSettingsTemplate>
+								<table:RowSettings highlight="{= ${parts: [{path: 'IsActiveEntity'}, {path: 'HasActiveEntity'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.setInfoHighlight'}}"/>
+							</table:rowSettingsTemplate>
+							<table:columns>
+								<core:ExtensionPoint name="TreeTableColumnsExtension|{entitySet>name}"/>
+								<template:with path="workingContext>lineItemPath" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.resolveMetaModelPath" var="collection">
+									<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.TreeTableColumns" type="XML"/>
+								</template:with>
+							</table:columns>
+							<table:rowActionTemplate>
+								<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.RowActions" type="XML"/>
+							</table:rowActionTemplate>
+						</template:with>
+					</table:TreeTable>
+				</template:elseif>
+				<!--Tree table implementation: Ends-->
+				<template:elseif test="{= (${parameter>/settings/tableType} === 'GridTable' || (${parameter>/settings/tableType} !== 'ResponsiveTable' &amp;&amp; ${parameter>/settings/gridTable})) &amp;&amp; !${device>/system/phone}}" build:metadata="#ignore">				
+					<table:Table id="GridTable{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+								 visibleRowCountMode="Auto"
+								 enableColumnReordering="true" showColumnVisibilityMenu="false"
+								 selectionMode="{= (${path: 'workingContext>lineItem', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+													|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+													) ?
+													( ${parameter>/settings/multiSelect} === true ? 'MultiToggle' : 'Single' ) : '{= ${_templPriv>/listReport/isLeaf} ? \'None\' : \'Single\' }' }"
+								 rowSelectionChange="._templateEventHandlers.onSelectionChange" enableColumnFreeze="true" enableCellFilter="true" rowActionCount="{parts: [{path: 'entitySet>'}, {path: 'parameter>/settings/subPages/'}, {path: 'parameter>/manifest/'},{path: 'parameter>/settings/'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getRowActionCountForListReport'}">
+						<template:with path="entitySet>" var="listEntitySet">
+							<table:rowSettingsTemplate>
+								<table:RowSettings highlight="{= ${parts: [{path: 'IsActiveEntity'}, {path: 'HasActiveEntity'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.setInfoHighlight'}}"/>
+							</table:rowSettingsTemplate>
+							<table:columns>
+								<core:ExtensionPoint name="GridTableColumnsExtension|{entitySet>name}"/>
+								<template:with path="workingContext>lineItemPath" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.resolveMetaModelPath" var="collection">
+									<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.GridTableColumns" type="XML"/>
+								</template:with>
+							</table:columns>
+							<table:rowActionTemplate>
+								<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.RowActions" type="XML"/>
+							</table:rowActionTemplate>
+						</template:with>
+					</table:Table>
+				</template:elseif>
+				<template:else build:metadata="#ignore">
+					<Table id="responsiveTable{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+						   fixedLayout="{=${parameter>/settings/isWorklist} ? true : false}" growing="true" growingScrollToLoad="true"
+						   growingThreshold="25"
+						   mode="{= (${path: 'workingContext>lineItem', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+													|| (!(${entitySet>Org.OData.Capabilities.V1.DeleteRestrictions/Deletable/Bool} === 'false'))
+													|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+													) ?
+													( ${parameter>/settings/multiSelect} === true ? 'MultiSelect' : 'SingleSelectLeft' ) : 'None' }"
+						   selectionChange="._templateEventHandlers.onSelectionChange">
+					       <template:with path="entitySet>" var="listEntitySet">
+							<template:with path="workingContext>lineItemPath" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.resolveMetaModelPath" var="collection">
+								<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.TableColumns" type="XML"/>
+							</template:with>
+						</template:with>
+					</Table>
+				</template:else>
+			</template:if>
+		</smarttable:SmartTable>
+		</template:with>
+		</template:with>
+	</template:with>
+</core:FragmentDefinition>

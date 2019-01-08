@@ -1,0 +1,89 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "annotations/Metadata-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "annotations/Metadata.js"
+		},
+		{
+			"name": "annotations/MetadataException-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "annotations/MetadataException.js"
+		},
+		{
+			"name": "annotations/TimelineTermsUtility-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "annotations/TimelineTermsUtility.js"
+		},
+		{
+			"name": "controls/TimelineItemEmbedded-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/TimelineItemEmbedded.js"
+		},
+		{
+			"name": "controls/TimelineItemEmbeddedRenderer-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "controls/TimelineItemEmbeddedRenderer.js"
+		},
+		{
+			"name": "datahandlers/JamDataHandler-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "datahandlers/JamDataHandler.js"
+		},
+		{
+			"name": "datahandlers/SMIntegrationDataHandler-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "datahandlers/SMIntegrationDataHandler.js"
+		},
+		{
+			"name": "datahandlers/ServiceDataHandler-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "datahandlers/ServiceDataHandler.js"
+		},
+		{
+			"name": "datahandlers/TimelineDataHandler-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "datahandlers/TimelineDataHandler.js"
+		},
+		{
+			"name": "filter/FilterType-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "filter/FilterType.js"
+		},
+		{
+			"name": "validation/InputValidator-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "validation/InputValidator.js"
+		}
+	]
+}

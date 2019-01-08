@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+						 xmlns:mdcx="sap.ui.mdc.experimental">
+	<!--
+        /**
+         * This fragment renders a DataPoint
+         * @param dataPoint context to the target of a annotation path
+         * @returns
+         */
+    -->
+
+	<mdcx:Action text="{dataFieldForAction>Label}" mode="Inline" callAction="handleCallAction" actionName="{dataFieldForAction>Action}"/>
+
+</core:FragmentDefinition>

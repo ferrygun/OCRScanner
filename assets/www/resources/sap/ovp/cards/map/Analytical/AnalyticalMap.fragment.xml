@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+	xmlns:build="sap.build"
+	xmlns:core="sap.ui.core"
+	xmlns:lib="sap.ovp.cards.map.Analytical.AnalyticalMap"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m"
+	xmlns:vbm="sap.ui.vbm"
+	xmlns:ovp="sap.ovp.ui">
+
+<template:with path='ovpCardProperties>/dynamicSubtitleAnnotationPath'
+                               helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var="header">
+	<template:with path="ovpCardProperties>/dataPointAnnotationPath"
+		helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var="datapoint">
+			<template:if test="{entitySet>name}">
+				<vbm:AnalyticMap id="vbi" width="100%" height="25rem" regions="{= ${entitySet>name} ? '{/' + ${entitySet>name} + '}' : '' }" disableZoom="true" disablePan="true" class = "cardType">
+					   	<vbm:regions>
+						<vbm:Region code="{path: 'datapoint>', formatter: 'sap.ovp.cards.AnnotationHelper.analyticRegions'}"
+									labelText="{= ${header>Title/Value} ? ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} :  '' }"
+									click="regionClick"
+									/>
+						</vbm:regions>
+                        <vbm:customData>
+                            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>mapCardType}" writeToDom="true"/>
+                        </vbm:customData>
+				</vbm:AnalyticMap>
+			</template:if>
+	</template:with>
+</template:with>
+</core:FragmentDefinition>

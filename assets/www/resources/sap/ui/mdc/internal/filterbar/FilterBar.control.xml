@@ -1,0 +1,63 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:mdc="sap.ui.mdc"
+						 xmlns:core="sap.ui.core"
+						 xmlns:l="sap.ui.layout">
+
+	<template:alias name=".FILTERBAR" value="sap.ui.mdc.FilterBar._helper">
+		<l:AlignedFlowLayout>
+			<l:content>
+				<template:if
+						test="{= !(${entitySet>@Org.OData.Capabilities.V1.SearchRestrictions/Searchable/Bool} === 'false') }">
+					<VBox class="sapUiSmallMarginEnd" id="template::Search">
+						<!-- TODO: other filterFields have two dashes instead of one - shall we do the same here? -->
+						<Label labelFor="template::Search-__searchField"
+							   text="{$i18n>filterbar.SEARCH}:"/>
+						<SearchField id="template::Search-__searchField"
+									 search="handleSearch"
+									 liveChange="handleSearchChange"/>
+					</VBox>
+				</template:if>
+
+				<template:if test="{= (${entitySet>@com.sap.vocabularies.Common.v1.DraftRoot} ||
+								   ${entitySet>@com.sap.vocabularies.Common.v1.DraftNode}) &amp;&amp;
+								  ${path: 'entitySet>./DraftAdministrativeData', formatter: '.FILTERBAR.isNavPropertyFilterable'} }">
+
+					<VBox class="sapUiSmallMarginEnd" id="template::DraftEditingStatus">
+						<!-- TODO: other filterFields have two dashes instead of one - shall we do the same here? -->
+						<Label labelFor="template::DraftEditingStatus-__comboBox"
+							   text="{$i18n>filterbar.EDITING_STATUS}:"/>
+						<ComboBox id="template::DraftEditingStatus-__comboBox"
+								  selectedKey="{= '{$draft>/entitySets/' + ${entitySet>@sapui.name} + '/editState}' }"
+								  items="{path: '$draft>/editStates'}"
+								  selectionChange="handleChange"
+								  width="100%">
+							<core:Item key="{$draft>id}" text="{$draft>name}"/>
+						</ComboBox>
+					</VBox>
+				</template:if>
+
+				<template:with path="entitySet>./@com.sap.vocabularies.UI.v1.SelectionFields" var="selectionFields">
+					<template:repeat list="{selectionFields>}" var="selectionField">
+						<template:with path="selectionField>$PropertyPath" var="property">
+							<template:if
+									test="{path: 'property>', formatter: '.FILTERBAR.isPropertyFilterable'}">
+								<mdc:FilterField id="template::FilterField::{property>@@.FILTERBAR.replaceSpecialCharsInId}"
+										conditionModelName="{this>conditionModelName}" metadataContexts="{ model: 'entitySet', path:'',  name: 'entitySet'}, { model: 'property', path:'',  name: 'property'}"/>
+							</template:if>
+						</template:with>
+					</template:repeat>
+				</template:with>
+			</l:content>
+
+			<l:endContent>
+				<template:if test="{= ${this>liveUpdate} === false }">
+					<Button id="template::Filterbar::GoButton" text="{$i18n>filterbar.GO}"
+							type="Emphasized" press="handleGo"></Button>
+				</template:if>
+			</l:endContent>
+
+		</l:AlignedFlowLayout>
+	</template:alias>
+
+</core:FragmentDefinition>

@@ -1,0 +1,250 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+@import "../base/library.less";
+@import "../../../../../Base/baseLib/sap_bluecrystal/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/sap_bluecrystal/base.less" */
+
+@import "../../../../sap/ui/core/themes/sap_bluecrystal/global.less";
+
+/* START "BarListCard.less" */
+.sapOvpBarListDataField {
+  color: @sapUiDarkText;
+  font-size: @sapMFontMediumSize;
+}
+
+.sapOvpBarListObjectNumberWithoutState {
+  color: @sapUiDarkText;
+  font-size: @sapMFontMediumSize;
+}
+
+.sapOvpExtendedBarListFirstDataField {
+  color: @sapUiDarkText;
+  font-size: @sapMFontHeader5Size;
+}
+
+.sapOvpBarListObjectNumber {
+  font-size: @sapMFontMediumSize;
+}
+
+
+/* END "BarListCard.less" */
+
+/* START "Card.less" */
+.sapOvpBaseCard {
+  background-color: @sapUiButtonStandardBG;
+}
+.sapOvpCardHeader {
+  color : @sapUiLightText;
+  font-size: @sapMFontHeader3Size;
+}
+
+/*Carousel Content Header */
+.sapOvpCarouselContentHeader {
+  color : @sapUiLightText;
+  font-size: @sapMFontHeader3Size;
+}
+.sapOvpCardFooter {
+  color: @sapUiLightText;
+  font-size: @sapMFontHeader5Size;
+}
+
+.sapOvpCardContentRightHeader{
+  background-color: @sapUiLightestBG;
+}
+
+.sapOvpCardContent{
+  background-color: @sapUiLightestBG;
+}
+
+.sapOvpBaseCard tr {
+  &:active {
+    background: @sapUiListActiveBackground;
+  } 
+}
+
+.sapOvpStackCardIcon {
+  background-color: fade(@sapUiLightestBG, 20%);;
+}
+
+.sapMListShowSeparatorsAll .sapMListTblSubRow:last-child>td, .sapMListShowSeparatorsAll .sapMLIBShowSeparator:last-child>td {
+  border-bottom-color: @sapUiLightBG;
+}
+
+.sapOvpStackCardContent{
+  background-color: @sapUiSegmentedButtonBackground;
+  &> .sapMFlexItem, .sapMLabel {
+    color: @sapUiHighlight;
+  }
+  &:hover {
+    background-color: @sapUiSegmentedButtonHoverBackground;
+  }
+}
+
+.sapOvpCardCategory {
+  font-size: @sapMFontHeader5Size;
+}
+
+.sapOvpCardSubtitle {
+  font-size : @sapMFontSmallSize;
+}
+
+.sapOvpCarouselContentSubtitle {
+  font-size : @sapMFontSmallSize;
+}
+
+/* Align on card items text sizes */
+.sapOvpBaseCard .sapMText.sapMObjLTitle{
+  font-size: @sapMFontHeader5Size;
+  font-weight: normal;
+}
+
+.sapOvpBaseCard .sapMObjLNumber {
+  font-size: @sapMFontHeader6Size;
+}
+
+/* KPI Header Style Class */
+
+
+.sapOvpCardHeader .sapOvpKPIHeaderTitleStyle {
+  color: @sapUiLightText;
+  font-size: @sapMFontHeader5Size;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderDimensionStyle {
+  color: @sapUiLightText;
+  font-size: @sapMFontSmallSize;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderFilterStyle {
+  color: @sapUiLightText;
+  font-size: @sapMFontSmallSize;
+}
+
+.sapOvpCardHeader .sapOvpKPIHeaderTrendPercentStyle {
+  font-size: @sapMFontHeader6Size;
+
+}
+
+/* END "Card.less" */
+
+/* START "ObjectStream.less" */
+.sapOvpStackedCardPopup {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  .sapMDialogSection {
+    background-color: transparent;
+  }
+  .sapOvpObjectStreamHeader {
+    color: @sapUiInvertedElement !important;
+    font-size: @sapMFontHeader2Size
+  }
+  .sapOvpObjectStreamClose {
+    color: @sapUiInvertedElement;
+    &:hover {
+      .sapUiIcon {
+        background-color: @sapUiBrand;
+        border-color: @sapUiInvertedElement;
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+.sapOvpOSEdgeLeft, .sapOvpOSEdgeRight {
+  & > span {
+    background-color: @sapUiButtonEmphasizedBG;
+    color: @sapUiInvertedElement;
+    border-color: @sapUiInvertedElement;
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+  }
+  &:hover > span {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.4);
+    background-color: @sapUiBrand;
+  }
+}
+
+.sapOvpBaseCard .sapOvpCardContentContainer .sapMQuickViewCard{
+  &::after {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
+.sapOvpStackedCardPopup {
+  .sapOvpObjectStreamHeader {
+    font-size: @sapMFontHeader2Size;
+  }
+  .sapOvpObjectStreamClose {
+    font-size: @sapMFontHeader5Size;
+  }
+}
+
+.sapMQuickViewPage .sapMQuickViewThumbnail {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* END "ObjectStream.less" */
+
+/* START "OVPApp.less" */
+.ovpApplication {
+  .ovpGlobalFilterWrapper {
+    border-bottom-color: @sapUiInvertedElement;
+  }
+}
+.ovpApplication .ovpSmartFilterBar label, .ovpApplication .ovpSmartFilterBar button span.sapMBtnContent, .ovpApplication .ovpSmartFilterBar button .sapMBtnIcon {
+  color: @sapUiInvertedElement !important;
+}
+
+/* Object Page Header - remove background color and mimic dark font color - since the dark loads an unnecessary image  */
+.ovpPageHeader {
+  .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierContainer {
+    .sapUxAPObjectPageHeaderIdentifierTitle, .sapUxAPObjectPageHeaderIdentifierDescription {
+      color: @sapUiInvertedElement;
+    }
+  }
+
+  .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierActions {
+    .sapMBtnIcon, .sapMBtnTransparent, .sapMBtnTransparent > .sapMBtnIcon, .sapMBtnIcon, .sapMBtnTransparent, .sapMBtnTransparent > .sapMBtnIcon {
+      color: @sapUiInvertedElement;
+    }
+  }
+}
+
+#sapOVPHideCardsTable.sapOVPHideCardsTable {
+
+  .sapOVPHideCardsTableItem{
+    background-color: @sapUiLightBG;
+  }
+  .sapOVPHideCardsDisabledCell{
+    color: darken(@sapUiDarkBorder, 20%);
+
+  }
+
+}
+
+
+/* END "OVPApp.less" */
+
+/* START "StackPlaceHolder.less" */
+.sapOvpStackPlaceHolder {
+    background-color: @sapUiButtonStandardBG;
+}
+.sapOvpStackPlaceHolderIcon{
+  color: @sapUiContentNonInteractiveIconColor;
+}
+
+.sapOvpStackPlaceHolderTextLine{
+  color: @sapUiLink;
+}
+/* END "StackPlaceHolder.less" */
+
+/* START "DashboardLayout.less" */
+
+/* END "DashboardLayout.less" */
+
+/* START "LinkListCard.less" */
+.sapOvpLinkListStandardHBox {
+    background-color: @sapUiTileBackground
+}
+/* END "LinkListCard.less" */

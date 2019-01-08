@@ -1,0 +1,69 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+           xmlns:f="sap.ui.layout.form"
+           xmlns:l="sap.ui.layout"
+           controllerName="sap.ovp.cards.rta.AppSettingsDialog">
+    <VBox class="sapOvpScrollContainer" height="38rem">
+        <f:Form editable="true">
+            <f:layout>
+                <f:ResponsiveGridLayout
+                        labelSpanXL="6" labelSpanL="6" labelSpanM="6" labelSpanS="6" adjustLabelSpan="false"
+                        emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0"
+                        singleContainerFullSize="false" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement label="Show Global Filters">
+                            <f:fields>
+                                <Switch state="{/showGlobalFilters}" type="Default" change="onChange" class="sapUiSmallMarginBottom"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Global Filter Entity Type" visible="{/showGlobalFilters}">
+                            <f:fields>
+                                <Select items="{path: '/allEntityTypes'}"
+                                        selectedKey= "{/globalFilterEntityType}"
+                                        forceSelection="false"
+                                        change="onChange" class="sapUiSmallMarginBottom">
+                                    <core:Item key="{name}" text="{name}"/>
+                                </Select>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Live Filter" visible="{/showGlobalFilters}">
+                            <f:fields>
+                                <Switch state="{/enableLiveFilter}"  change="onChange" type="Default" class="sapUiSmallMarginBottom" />
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Smart Variant" visible="{/showGlobalFilters}">
+                            <f:fields>
+                                <Switch state="{/smartVariantRequired}"  change="onChange" type="Default" class="sapUiSmallMarginBottom" />
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Container Layout">
+                            <f:fields>
+                                <SegmentedButton selectedKey="{/containerLayout}" select="onChange" class="sapUiSmallMarginBottom">
+                                    <items>
+                                        <SegmentedButtonItem key="fixed"
+                                                             text="fixed" />
+                                        <SegmentedButtonItem key="resizable"
+                                                             text="resizable" />
+                                    </items>
+                                </SegmentedButton>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Date Range Type" visible="{/showGlobalFilters}">
+                            <f:fields>
+                                <Switch state="{/useDateRangeType}"  change="onChange" type="Default" class="sapUiSmallMarginBottom" />
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="Date In Relative Format">
+                            <f:fields>
+                                <Switch state="{/showDateInRelativeFormat}"  change="onChange" type="Default" class="sapUiSmallMarginBottom" />
+                            </f:fields>
+                        </f:FormElement>
+
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+    </VBox>
+</mvc:View>

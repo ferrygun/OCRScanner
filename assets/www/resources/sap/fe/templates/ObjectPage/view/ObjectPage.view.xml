@@ -1,0 +1,31 @@
+<core:View xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		   xmlns:core="sap.ui.core"
+		   xmlns:uxap="sap.uxap"
+		   controllerName="sap.fe.templates.ObjectPage.controller.ObjectPage"
+		   template:require="sap.ui.model.odata.v4.AnnotationHelper">
+	<template:alias name=".MODEL" value="sap.ui.model.odata.v4.AnnotationHelper">
+		<template:alias name=".FE" value="sap.fe.core.AnnotationHelper">
+			<template:with path="entitySet>$Type" var="entityType">
+				<uxap:ObjectPageLayout id="objectPage" flexEnabled="true"
+									   showHeaderContent="true"
+									   showFooter="false"
+									   upperCaseAnchorBar="false">
+					<uxap:headerTitle>
+						<uxap:ObjectPageHeader
+								id="objectPageHeader"
+								objectTitle="{entityType>@com.sap.vocabularies.UI.v1.HeaderInfo/Title/Value/@@.MODEL.value}"
+								objectSubtitle="{entityType>@com.sap.vocabularies.UI.v1.HeaderInfo/Description/Value/@@.MODEL.value}"
+								showPlaceholder="false">
+						</uxap:ObjectPageHeader>
+					</uxap:headerTitle>
+					<uxap:headerContent>
+						<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.HeaderContent" type="XML"/>
+					</uxap:headerContent>
+					<uxap:sections>
+						<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Section" type="XML"/>
+					</uxap:sections>
+				</uxap:ObjectPageLayout>
+			</template:with>
+		</template:alias>
+	</template:alias>
+</core:View>

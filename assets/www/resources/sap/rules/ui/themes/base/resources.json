@@ -1,0 +1,84 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "base"
+		},
+		{
+			"name": "DecisionTable.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DecisionTableCell.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DecisionTableSettings.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ExpressionAdvanced.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ExpressionBasic.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "RuleBuilder.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TextRule.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/curlyunderline.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img/curlyunderline.gif",
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

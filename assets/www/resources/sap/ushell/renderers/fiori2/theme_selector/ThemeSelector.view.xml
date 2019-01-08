@@ -1,0 +1,121 @@
+<View
+        controllerName="sap.ushell.renderers.fiori2.theme_selector.ThemeSelector"
+        height="100%"
+        width="100%"
+        xmlns="sap.uxap"
+        xmlns:t="sap.ui.table"
+        xmlns:m="sap.m"
+        xmlns:core="sap.ui.core">
+
+    <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" subSectionLayout="3"
+                      useTwoColumnsForLargeScreen="false">
+        <sections>
+            <ObjectPageSection title="{i18n>AppearanceThemeMenu}">
+                <subSections>
+                    <ObjectPageSubSection title="{i18n>AppearanceThemeMenu}" class="sapUshellAppearanceSubSectionList">
+                        <blocks>
+                            <m:List items="{path: '/options'}"
+                                    includeItemInSelection="true"
+                                    mode="SingleSelectMaster"
+                                    selectionChange="onSelectHandler"
+                                    id="themeList"
+                            >
+
+                                <m:items>
+                                    <m:CustomListItem selected="{isSelected}" class="sapUshellAppearanceCustomListItem">
+                                        <m:customData>
+                                            <core:CustomData key="themeid" value="{id}" writeToDom="true"/>
+                                        </m:customData>
+                                        <m:HBox>
+                                            <m:HBox class="sapUshellAppearanceItemViewLeft">
+                                                <core:Icon src="{parts:[{path:'id'}], formatter:'.getIconFormatter'}"
+                                                           color="{config>/sapUiContentIconColor}"
+                                                           size="1.75rem"
+                                                           class="sapUshellAppearanceIcon"
+                                                >
+                                                </core:Icon>
+                                                <m:Text text="{name}" class="sapUshellAppearanceItemText">
+                                                    <m:layoutData>
+                                                        <m:FlexItemData styleClass="sapUshellAppearanceFlexItemText"/>
+                                                    </m:layoutData>
+                                                </m:Text>
+                                            </m:HBox>
+                                            <m:HBox class="sapUshellAppearanceItemViewRight">
+                                                <core:Icon src="sap-icon://sys-enter-2"
+                                                           visible="{isSelected}"
+                                                           color="{config>/sapUiContentIconColor}"
+                                                           size="1.375rem"/>
+                                            </m:HBox>
+
+                                        </m:HBox>
+                                    </m:CustomListItem>
+                                </m:items>
+                            </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="{i18n>AppearanceLayoutAndBehaviorMenu}"
+                               class="sapUshellAppearanceDisplaySettingSection">
+
+                <subSections>
+                    <ObjectPageSubSection title="{i18n>AppearanceLayoutAndBehaviorMenu}">
+                        <blocks>
+                            <m:Table class="sapUshellAppearanceTable" showSeparators="None">
+                              <m:columns>
+                                <m:Column hAlign="End" vAlign="Top"></m:Column>
+                                <m:Column></m:Column>
+                            </m:columns>
+                            <m:items>
+                               <m:ColumnListItem>
+                                   <m:cells>
+                                       <m:Label text="{i18n>AppearanceContentDensityLabel}:"
+                                                class="sapUshellAppearanceLabel"
+                                                width="{config>/labelWidth}"
+                                                textAlign="{config>/textAlign}">
+                                       </m:Label>
+                                       <m:VBox alignItems="baseline" class="sapUshellAppearanceContentDensityText">
+                                           <m:Switch type="sap.m.SwitchType.Default" id="contentDensitySwitch"
+                                                     class="sapUshellAppearanceSwitchButton"
+                                                     tooltip="{i18n>AppearanceContentDensityTooltip}"
+                                                     change="setCurrentContentDensity"
+                                                     state="{config>/isCozyContentMode}"
+                                                     enabled="{config>/isContentDensitySwitchEnable}"/>
+                                           <m:Text text="{i18n>appearanceCompactCozyDescriptionText}"
+                                                   class="sapUshellFlpSettingsDescription"/>
+                                       </m:VBox>
+                                   </m:cells>
+                               </m:ColumnListItem>
+                               <m:ColumnListItem>
+                                   <m:cells>
+                                       <m:Label text="{i18n>AppearanceAnimationLabel}:"
+                                                class="sapUshellAppearanceLabel"
+                                                width="{config>/labelWidth}"
+                                                textAlign="{config>/textAlign}"
+                                                id="sapUshellAppearanceAnimationLabel">
+                                       </m:Label>
+                                       <m:VBox class="sapUshellAppearanceAnimationText">
+                                           <m:Select type="sap.m.SwitchType.Default" id="animationModeCombo"
+                                                     class="sapUshellAppearanceComboBox"
+                                                     change="setCurrentAnimationMode"
+                                                     selectedKey="{config>/animationMode}"
+                                                     ariaLabelledBy="sapUshellAppearanceAnimationLabel">
+                                               <core:Item key="full" text="{i18n>AppearanceAnimationFull}"/>
+                                               <core:Item key="minimal" text="{i18n>AppearanceAnimationMinimal}"/>
+                                           </m:Select>
+                                           <m:Text text="{i18n>appearanceAnimationDescriptionText}"
+                                                   class="sapUshellFlpSettingsDescription"/>
+                                       </m:VBox>
+                                   </m:cells>
+                               </m:ColumnListItem>
+                            </m:items>
+                        </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+
+    </ObjectPageLayout>
+</View>

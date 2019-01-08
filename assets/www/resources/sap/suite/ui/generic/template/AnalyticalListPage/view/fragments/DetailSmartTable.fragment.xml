@@ -1,0 +1,135 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartlink="sap.ui.comp.navpopover"
+	xmlns:smarttable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:build="sap.build">
+
+	<template:with path="entityType>com.sap.vocabularies.UI.v1.HeaderInfo" var="header">
+		<template:with path="workingContext>lineItemPath" helper=".ALPHelper.resolveMetaModelPath" var="collection">
+			<template:with path="entitySet>dummy" var="facet">
+			<template:with path="entitySet>dummy" var="tabItem">
+			<template:with path="entitySet>dummy" var="chartItem">
+				<smarttable:SmartTable id="table" smartFilterId="template::SmartFilterBar"
+					smartVariant="{= (${parameter>/settings/smartVariantManagement} || ${parameter>/settings/smartVariantManagement} === undefined) ? 'template::PageVariant' : null }"
+					persistencyKey="tablePersistencyKey"
+					header="{path: 'header>TypeNamePlural', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+					dataReceived="._templateEventHandlers.onDataReceived"
+					afterVariantSave="._templateEventHandlers.onAfterTableVariantSave"
+					afterVariantApply="._templateEventHandlers.onAfterApplyTableVariant"
+					entitySet="{parameter>/entitySet}"
+					demandPopin="{= (!(${entityType>sap:semantics} === 'aggregate') &amp;&amp; !${parameter>/settings/gridTable}) || ${device>/system/phone} ? 'true' : 'false' || ${parameter>/settings/tableType} === 'ResponsiveTable' ? 'true' : 'false'}"
+					useExportToExcel="false"
+					customData:p13nDialogSettings="{filter:{visible:false}}"
+					build:metadata="#pattern:Table;staticProp:header:Title"
+					tableBindingPath="{parameter>/settings/routeConfig/navigationProperty}"
+					showFullScreenButton="true"
+					fullScreenToggled="._templateEventHandlers.onFullScreenToggled">
+					<smarttable:customData>
+						<core:CustomData key="dateFormatSettings" value='\{"UTC":true,"style":"medium"\}'/>
+						<template:if test="{workingContext>presentationVariantQualifier}">
+							<template:then>
+								<core:CustomData key="presentationVariantQualifier" value='{workingContext>presentationVariantQualifier}'/>
+							</template:then>
+						</template:if>
+						<template:if test="{workingContext>lineItemQualifier}">
+							<template:then>
+								<core:CustomData key="lineItemQualifier" value='{workingContext>lineItemQualifier}'/>
+							</template:then>
+						</template:if>
+						<template:with path="workingContext>presentationVariantPath" helper=".ALPHelper.resolveMetaModelPath" var="variant" >
+							<template:if test="{= ${variant>} &amp;&amp; ${variant>SortOrder}}">
+								<core:CustomData key="TemplateSortOrder"
+									value="{path: 'variant>SortOrder', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSortOrder'}"/>
+								</template:if>
+							</template:with>
+						</smarttable:customData>
+						<smarttable:layoutData>
+							<FlexItemData growFactor="1"/>
+						</smarttable:layoutData>
+						<smarttable:semanticObjectController>
+							<smartlink:SemanticObjectController beforePopoverOpens="._templateEventHandlers.onBeforeSemanticObjectLinkPopoverOpens"
+								navigate="._templateEventHandlers.onSemanticObjectLinkPopoverLinkPressed"
+								navigationTargetsObtained="._templateEventHandlers.onSemanticObjectLinkNavigationTargetObtained"/>
+							</smarttable:semanticObjectController>
+							<smarttable:customToolbar>
+								<!-- TODO RC Using the toolbar fragment causing this issue -->
+								<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.SmartTableToolbar"
+									type="XML"/>
+								</smarttable:customToolbar>
+								<!-- Condition to check if the table type property is defined.
+								tableType property takes more precedence than gridtable property.
+								Here, we could have checked for tableType || (tableType === undefined and aggregate)
+								but, checked the for !Responsive and !gridTable and aggregate to ensure if there's any
+								typo in defining tableType property it falls back to previous old approach.
+								We have not handled the scenario of tableType is Analytical & it's not aggregate semantics.User has to ensure it.-->
+								<template:if test="{= ((${parameter>/settings/tableType} === 'AnalyticalTable') || (${parameter>/settings/tableType} !== 'GridTable' &amp;&amp; ${parameter>/settings/tableType} !== 'ResponsiveTable' &amp;&amp; ${entityType>sap:semantics} === 'aggregate')) &amp;&amp; !${device>/system/phone} }">
+									<template:then>
+										<table:AnalyticalTable visibleRowCountMode="Auto"
+											enableColumnReordering="true" showColumnVisibilityMenu="false"
+											selectionMode="{= (${path: 'collection>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+											|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+											) ?
+											( ${parameter>/settings/multiSelect} === true ? 'MultiToggle' : 'Single' ) : 'Single' }"
+											enableColumnFreeze="true" enableCellFilter="true" rowActionCount="{= (!${_templPriv>/listReport/isLeaf} ? 1 : 0 )}" rowSelectionChange="._templateEventHandlers.onRowSelectionChange">
+											<!-- Analytical table -->
+											<table:columns>
+												<core:ExtensionPoint name="AnalyticalTableColumnsExtension|{entitySet>name}"/>
+												<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.AnalyticalTableColumns" type="XML"/>
+											</table:columns>
+											<template:with path="entitySet>" var="listEntitySet">
+												<table:rowActionTemplate>
+													<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.RowActions" type="XML"/>
+												</table:rowActionTemplate>
+											</template:with>
+										</table:AnalyticalTable>
+									</template:then>
+									<!-- condition to check if table type property is grid table
+									check if the table type property is defined.
+									tableType property takes more precedence than gridtable property.
+									Here, we could have checked for tableType || (tableType === undefined and gridTable)
+									but, checked the for !Responsive and gridTable to ensure if there's any
+									typo in defining tableType property it falls back to previous old approach.  -->
+									<template:elseif test="{= ((${parameter>/settings/tableType} === 'GridTable') || (${parameter>/settings/tableType} !== 'ResponsiveTable' &amp;&amp; ${parameter>/settings/gridTable})) &amp;&amp; !${device>/system/phone}}"
+										build:metadata="#ignore">
+										<table:Table visibleRowCountMode="Auto"
+											enableColumnReordering="true" showColumnVisibilityMenu="false"
+											selectionMode="{= (${path: 'collection>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+											|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+											) ?
+											( ${parameter>/settings/multiSelect} === true ? 'MultiToggle' : 'Single' ) : '{= ${_templPriv>/listReport/isLeaf} ? \'None\' : \'Single\' }' }"
+											enableColumnFreeze="true" enableCellFilter="true" rowActionCount="{= (!${_templPriv>/listReport/isLeaf} ? 1 : 0 )}" rowSelectionChange="._templateEventHandlers.onRowSelectionChange">
+											<!-- Grid -->
+											<table:columns>
+												<core:ExtensionPoint name="GridTableColumnsExtension|{entitySet>name}"/>
+												<core:Fragment fragmentName="sap.suite.ui.generic.template.AnalyticalListPage.view.fragments.GridTableColumns" type="XML"/>
+											</table:columns>
+											<template:with path="entitySet>" var="listEntitySet">
+												<table:rowActionTemplate>
+													<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.RowActions" type="XML"/>
+												</table:rowActionTemplate>
+											</template:with>
+										</table:Table>
+									</template:elseif>
+									<!-- On failing all the above conditions or if the display mode is anything but desktop
+									i.e tablet or phone or any other device it falls back to responsive -->
+									<template:else build:metadata="#ignore">
+										<Table fixedLayout="false" growing="true" growingScrollToLoad="true"
+											growingThreshold="25"
+											mode="{= (${path: 'collection>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasActions'}
+											|| ${parts: [{path: 'parameter>/settings/routeConfig'}, {path: 'parameter>/entitySet'}, {path: 'parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions/sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage/sap.ui.generic.app'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.hasCustomActions'}
+											) ?
+											( ${parameter>/settings/multiSelect} === true ? 'MultiSelect' : 'SingleSelectLeft' ) : 'None' }" selectionChange="._templateEventHandlers.onRowSelectionChange">
+											<template:with path="entitySet>" var="listEntitySet">
+												<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.TableColumns" type="XML"/>
+											</template:with>
+											<!-- Responsive -->
+										</Table>
+									</template:else>
+								</template:if>
+							</smarttable:SmartTable>
+						</template:with>
+					</template:with>
+					</template:with>
+					</template:with>
+				</template:with>
+			</core:FragmentDefinition>

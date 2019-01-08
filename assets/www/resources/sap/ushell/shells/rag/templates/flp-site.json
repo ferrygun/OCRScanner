@@ -1,0 +1,15 @@
+{
+  "site": {
+    "_version": "1.0",
+    "identification": {
+      "entityType": "site"
+    },
+    "payload": {
+      "groupsOrder": []
+    }
+  },
+  "systemAliases": {},
+  "applications": {{include "../roles/[?1]/flp-apps$localeUnderscore.json" ?1="../../user/env/roles.txt" merge="jsonmap" default="%7B%7D"}},
+  "groups": {{include "../roles/[?1]/groups$localeUnderscore.json" ?1="../../user/env/roles.txt" merge="jsonmap" default="%7B%7D"}},
+  "catalogs": {{include "../roles/[?1]/catalogs$localeUnderscore.json" ?1="../../user/env/roles.txt" merge="jsonmap" default="%7B%7D"}}
+}

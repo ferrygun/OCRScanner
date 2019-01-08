@@ -1,0 +1,37 @@
+<View controllerName="sap.ushell.components.flp.settings.FlpSettings"
+      width="100%"
+      xmlns:m="sap.m">
+
+    <m:VBox visible="true" class="sapUiSmallMargin">
+        <m:items>
+            <m:HBox>
+                <m:items>
+                    <m:Label text="{i18n>AnchorBarLabel}:"
+                             class="sapUshellFlpSettingsLabel"
+                             width="{config>/labelWidth}"
+                             textAlign="{config>/textAlign}"/>
+
+                    <m:VBox>
+                        <m:items>
+                            <m:RadioButtonGroup selectedIndex="{config>/displayMode}">
+                                <m:buttons>
+                                    <m:RadioButton text="{i18n>anchorBarScrollMode}" class="sapUshellAnchorBarScrollMode"/>
+                                    <m:RadioButton text="{i18n>anchorBarTabMode}" class="sapUshellAnchorBarTabsMode"/>
+                                </m:buttons>
+                            </m:RadioButtonGroup>
+                            <m:VBox class ="sapUshellFlpSettingsDescriptionBorder">
+                                <m:items>
+                                    <m:Text text="{i18n>homePageGroupDisplayDescriptionText}" class="sapUshellFlpSettingsDescription" />
+                                    <!-- second paragraph will be shown only if the user has edit option for his dashboard -->
+                                    <m:Text text="{i18n>homePageGroupDisplayDescriptionText_secondParagraph}"
+                                            class="sapUshellFlpSettingsDescription"
+                                            visible="false"/>
+                                </m:items>
+                            </m:VBox>
+                        </m:items>
+                    </m:VBox>
+                </m:items>
+            </m:HBox>
+        </m:items>
+    </m:VBox>
+</View>

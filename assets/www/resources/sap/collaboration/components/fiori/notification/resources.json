@@ -1,0 +1,33 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "Notification-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "Notification-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "Notification.controller.js"
+		},
+		{
+			"name": "Notification.view.js"
+		},
+		{
+			"name": "NotificationContainer-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "NotificationContainer.js"
+		}
+	]
+}

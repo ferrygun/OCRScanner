@@ -1,0 +1,1837 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *
+ * (c) Copyright 2009-2018 SAP SE. All rights reserved
+ */
+
+@import "../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../sap/ui/core/themes/base/global.less";
+
+/* START "Chart.css" */
+.zenControl .v-m-tooltip {
+	z-index: 1;
+	pointer-events: none;
+}
+
+.zenControl .html5chart svg {
+	overflow: hidden;
+}
+/* END "Chart.css" */
+
+/* START "chartconfig.css" */
+.zenControl .chartconfigchartpicker {
+	min-width: 490px !important;
+	padding: 5px !important;
+	border: 1px solid #96A8C3;
+	overflow: hidden !important;
+}
+
+.zenControl .chartconfigchartpreview {
+	border: 1px solid #96A8C3 !important;
+	min-width: 500px !important;
+}
+
+.zenControl .chartconfigfeedingpanel {
+	border: none !important;
+	background: none !important;
+}
+/* END "chartconfig.css" */
+
+/* START "ChartTypeSwitch.css" */
+/* ======================================================================== */
+/* Base CSS for control sap.ui.commons/ChartTypeSwitch.control              */
+/*                                                                          */
+/* ======================================================================== */
+
+/* fix for switcher positioning */
+.zenControl .viz-controls-switchbar-chart, .zenControl .viz-controls-switchbar-chart-selected
+	{
+	float: left !important;
+	left: auto !important;
+	right: auto !important;
+	top: auto !important;
+	position: relative !important;
+	margin-right: 10px !important;
+	margin-bottom: 10px !important;
+}
+
+html[dir="rtl"] .zenControl .viz-controls-switchbar-chart, html[dir="rtl"] .zenControl .viz-controls-switchbar-chart-selected
+	{
+	float: left !important;
+	left: auto !important;
+	right: auto !important;
+}
+
+.zenControl .viz-controls-switchbar-view {
+	min-width: 60px !important;
+}
+
+.zenControl .viz-controls-switchbar-chart-icon {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	transform: none;
+	transform-origin: none;
+}
+/* END "ChartTypeSwitch.css" */
+
+/* START "Crosstab.css" */
+/* shared CSS */
+
+.sapzencrosstab-Crosstab .sapzencrosstab-HeaderCellContentDiv{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.sapzencrosstab-colResizeRuler {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	cursor: e-resize;
+	width: 0px;
+	border-left-width: 1px;
+	border-left-style: dashed;
+}	
+
+/* ======================================================  */
+/* CSS for Crosstab	Component							   */
+/*                                                    */
+/* ======================================================  */
+
+
+/*******************************************/
+/* Base styles                             */
+/*******************************************/
+.sapzencrosstab-Crosstab {
+	border-spacing: 0;
+	font-family: @sapUiFontFamily;
+	border-collapse: separate;
+	line-height: normal;
+}
+
+.sapzencrosstab-ResizeDiv {
+	background-color: @sapUiListBorderColor;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 1px;
+	position: absolute;
+}
+
+.sapzencrosstab-RenderSizeDiv {
+	position: absolute;
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 0px 1px 1px 0px;
+	overflow: hidden;
+}
+
+/* We need this separately applied with the TableDiv style because the resize visualization must not
+   have a background color. Otherwise, the resize visualization will be opaque */
+.sapzencrosstab-TableDivBackground {
+	background-color: @sapUiListBackground;
+}
+
+.sapzencrosstab-TableDiv {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.sapzencrosstab-MobileHeaderSeparator
+	{
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	border-color: @sapUiListBorderColor;
+}
+.sapzencrosstab-DimensionHeaderArea,.sapzencrosstab-ColumnHeaderArea {
+	font-weight: bold;
+}
+
+.sapzencrosstab-DimensionHeaderArea,.sapzencrosstab-RowHeaderArea,.sapzencrosstab-ColumnHeaderArea,.sapzencrosstab-DataArea
+	{
+	border-spacing: 0;
+	border-collapse: separate;
+}
+
+.sapzencrosstab-DimensionHeaderArea, .sapzencrosstab-ColumnHeaderArea 
+{
+	color: @sapUiPageHeaderTextColor;
+}
+
+.sapzencrosstab-DataArea, .sapzencrosstab-RowHeaderArea 
+{
+	color: @sapUiListTextColor;
+}
+
+/**********************************/
+/* Crosstab Loading Visualization */
+/**********************************/
+.sapzencrosstab-TableDivLoading {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+.sapzencrosstab-loadingAnimationDiv {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+	background-color: lightgray;
+	vertical-align: middle;
+	horizontal-align: center;
+}
+
+.sapzencrosstab-loadingAnimation {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-image: url("../base/img/loading.gif");
+	width: 100%;
+	height: 100%;
+}
+
+/*******************************************/
+/* Cell styles                             */
+/*******************************************/
+
+.sapzencrosstab-FontSize-MainMode {
+	font-size: 0.875rem;
+}
+
+/* IE support RTL */
+.sapzencrosstab-DataArea .sapzencrosstab-TextAlignmentIE {
+	text-align: right;
+}
+
+.sapzencrosstab-DataArea .sapzencrosstab-TextAlignmentIE_RTL {
+	text-align: left;
+}
+
+.sapzencrosstab-DimensionHeaderArea .sapzencrosstab-TextAlignmentIE, .sapzenCrosstab.ColumnHeaderArea .sapzencrosstab-TextAlignmentIE, .sapzenCrosstab.RowHeaderArea .sapzencrosstab-TextAlignmentIE {
+	text-align: left;
+}
+
+.sapzencrosstab-DimensionHeaderArea .sapzencrosstab-TextAlignmentIE_RTL, .sapzenCrosstab.ColumnHeaderArea .sapzencrosstab-TextAlignmentIE_RTL, .sapzenCrosstab.RowHeaderArea .sapzencrosstab-TextAlignmentIE_RTL {
+	text-align: right;
+}
+
+.sapzencrosstab-HeaderCellCozy {
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	height: 3rem;
+	overflow: hidden;
+	padding: 0 1rem;
+	text-align: start;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	
+	background-color: @sapUiListHeaderBackground !important; 
+	border-bottom-color: @sapUiListBorderColor !important; 
+	border-bottom-style: solid !important;
+	border-left-color: @sapUiListBorderColor !important;  
+	border-left-style: none !important;
+	border-right-color: @sapUiListBorderColor !important; 
+	border-bottom-width: 1px !important; 
+}
+
+.sapzencrosstab-DataCellCozy {
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	height: 3rem;
+	overflow: hidden;
+	padding: 0 1rem;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	
+	background-color: transparent !important; 
+	border-bottom-color: @sapUiListBorderColor !important; 
+	border-bottom-style: solid !important;
+	border-left-color: @sapUiListBorderColor !important;  
+	border-left-style: none !important;
+	border-right-color: @sapUiListBorderColor !important; 
+	border-bottom-width: 1px !important; 
+}
+
+.sapzencrosstab-DataCellDefault {
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	height: 22px;
+	overflow: hidden;
+	padding: 0 8px;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	
+	background-color: transparent !important; 
+	border-bottom-color: @sapUiListBorderColor !important; 
+	border-bottom-style: solid !important;
+	border-left-color: @sapUiListBorderColor !important;  
+	border-left-style: none !important;
+	border-right-color: @sapUiListBorderColor !important; 
+	border-bottom-width: 1px !important; 
+}
+
+.sapzencrosstab-HeaderCellDefault {
+	border-color: @sapUiListBorderColor;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	height: 22px;
+	overflow: hidden;
+	padding: 0 8px;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	border-color: @sapUiMediumLine;
+	border-width: 0 1px 1px 0; /* nicht aendern! */
+	text-align: start;
+	
+	background-color: @sapUiListHeaderBackground; 	
+	border-bottom-color: @sapUiListBorderColor !important; 
+	border-bottom-style: solid !important;
+	border-left-color: @sapUiListBorderColor !important;  
+	border-left-style: none !important;
+	border-right-color: @sapUiListBorderColor !important; 
+	border-bottom-width: 1px !important; 
+}
+
+.sapzencrosstab-DataCellTotal,.sapzencrosstab-HeaderCellTotal {
+	font-weight: bold;
+	color: @sapUiPageHeaderTextColor;
+}
+
+.sapzencrosstab-DataCellEmphasized,.sapzencrosstab-HeaderCellEmphasized {
+	font-weight: bold;
+	color: @sapUiPageHeaderTextColor;
+}
+
+.sapzencrosstab-DimensionHeaderArea .sapzencrosstab-HeaderCellDefault,.sapzencrosstab-ColumnHeaderArea .sapzencrosstab-HeaderCellDefault
+	{
+	background-color: @sapUiListHeaderBackground; /* Old browsers */
+ }
+
+.sapzencrosstab-DimensionHeaderArea .sapzencrosstab-HeaderCellFirstInCol,.sapzencrosstab-ColumnHeaderArea .sapzencrosstab-HeaderCellFirstInCol
+	{
+	background-color: @sapUiListHeaderBackground; /* Old browsers */  
+ }
+
+
+.sapzencrosstab-DataCellFirstInRow
+	{
+	border-left-width: 1px;
+	border-left-color: transparent;
+}
+
+.sapzencrosstab-HeaderCellFirstInRow
+	{
+	border-left-width: 1px;
+	border-left-color: transparent;
+	background-color: @sapUiListHeaderBackground;  
+}
+
+.sapzencrosstab-DataArea .sapzencrosstab-DataCellLastInRow,.sapzencrosstab-HeaderCellLastInRow
+	{
+	border-right-color: transparent !important;
+}
+
+.sapzencrosstab-HeaderCellLastInCol { 
+	border-left-style: none !important;
+	border-right-color: @sapUiListBorderColor !important; 
+	border-bottom-width: 0px !important; 
+}
+
+.sapzencrosstab-DataCellLastInCol {
+	background-color: transparent !important;  
+	border-left-style: none !important;
+	border-right-color: @sapUiListBorderColor !important; 
+	border-bottom-width: 0px !important; 
+}
+
+.sapzencrosstab-HeaderCellFirstInCol {
+	border-top-width: 1px;
+	border-top-color: transparent;
+	background-color: @sapUiListHeaderBackground;  
+}
+
+/* Alternation in DataArea */
+.sapzencrosstab-DataCellAlternating {
+	background-color: @sapUiExtraLightBG !important;
+}
+
+/* Alternation in RowHeader*/
+.sapzencrosstab-RowHeaderArea .sapzencrosstab-HeaderCellAlternating {
+	background-color: @sapUiListHoverBackground !important;
+
+}
+
+.sapzencrosstab-LoadingCellContentDiv {
+	width: 50px;
+}
+
+.sapzencrosstab-DataCellContentDiv,.sapzencrosstab-HeaderCellContentDiv
+	{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	vertical-align: middle;
+}
+
+/*******************************************/
+/* Scrolling                               */
+/*******************************************/
+.sapzencrosstab-LowerMiddleScrollPad {
+	background-color: @sapBackgroundColor;
+	overflow: hidden;
+}
+
+.sapzencrosstab-upperScrollHeaderSeparator {
+	border-right-style: solid;
+	border-right-color: @sapUiListBorderColor;
+	border-right-width: 1px;
+}
+
+.sapzencrosstab-lowerScrollHeaderSeparator {
+	border-right-style: solid;
+	border-right-color: @sapUiListBorderColor;
+	border-right-width: 1px;
+}
+
+.sapzencrosstab-removeRightBorder {
+	border-right-width: 0px !important;
+}
+
+.sapzencrosstab-HScrollCellWithHeaderScrollRightBorder {
+	border-right-style: solid;
+	border-right-color: @sapUiListBorderColor;
+	border-right-width: 1px;
+}
+
+.sapzencrosstab-UpperRightScrollPad {
+	background-color: @sapBackgroundColor;
+	overflow: hidden;
+}
+
+.sapzencrosstab-VScrollTable {
+	border-collapse: collapse;
+	border-color: @sapUiListBorderColor;
+	border-spacing: 0;
+	border-style: solid;
+	border-width: 0 0 0 1px;
+	margin: 0;
+	padding: 0;
+}
+
+.sapzencrosstab-VScrollCell {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.sapzencrosstab-LowerLeftScrollPad {
+	background-color: @sapUiGlobalBackgroundColor;
+	overflow: hidden;
+}
+
+.sapzencrosstab-LowerRightScrollPad {
+	background-color: @sapUiGlobalBackgroundColor;
+	overflow: hidden;
+}
+
+.sapzencrosstab-HScrollTable {
+	border-collapse: collapse;
+	border-color: @sapUiListBorderColor;
+	border-spacing: 0;
+	border-style: solid;
+	border-width: 1px 0 0 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.sapzencrosstab-HScrollCell {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.sapzencrosstab-ScrollPopup {
+	margin-top: 2px;
+	padding: 5px;
+	background-color: @sapUiBaseColor;
+	border: 1px solid @sapUiContentForegroundBorderColor;
+	font-family: @sapUiFontFamily;
+	font-size: @sapUiFontSmallSize;
+}
+
+.sapzencrosstab-VerticalCutOff-RowHeaderArea {
+	background-repeat: repeat-x;
+	background-image: url("../base/img/VTornEffect.png");
+}
+
+.sapzencrosstab-VerticalCutOff-DataArea {
+	background-repeat: repeat-x;
+	background-image: url("../base/img/VTornEffect.png");
+}
+
+.sapzencrosstab-HorizontalCutOff-DataArea {
+	background-repeat: repeat-y;
+	background-image: url("../base/img/HTornEffectData.png");
+}
+
+.sapzencrosstab-HorizontalCutOff-ColumnHeaderArea {
+	background-repeat: repeat-y;
+	background-image: url("../base/img/HTornEffectData.png");
+}
+
+.sapzencrosstab-VerticalCutOffSpacer {
+	height: 40px;
+}
+
+.sapzencrosstab-HorizontalCutOffSpacer {
+	width: 40px;
+}
+
+.sapzencrosstab-CutOffCorner {
+	background-repeat: no-repeat;
+	background-image: url("../base/img/CornerTornEffect.png");
+}
+
+/*******************************************/
+/* Sorting                                 */
+/*******************************************/
+
+.sapzencrosstab-HeaderCellDivSortable {
+	height: 12px;
+	width: 12px;
+	padding-left: 3px;
+	cursor: pointer;
+}
+
+.sapzencrosstab-HeaderCellDivSortable::before {
+	font-family: "SAP-icons";
+	font-size: 0.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+.sapzencrosstab-HeaderCellSortAsc::before {
+	content: "\e1fd";
+}
+
+.sapzencrosstab-HeaderCellSortDesc::before {
+	content: "\e1fc";
+}
+
+.sapzencrosstab-HeaderCellSortNone::before {
+	content: "\e1fc\e1fd";
+}
+
+/*******************************************/
+/* Hierarchies                             */
+/*******************************************/
+.sapzencrosstab-HeaderCellDivHierarchy {
+	height: 0.875rem;
+	width: 12px;
+}
+
+.sapzencrosstab-HeaderCellDivHierarchy::before {
+	font-family: "SAP-icons";
+	font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.sapzencrosstab-PointerCursor {
+	cursor: pointer;
+}
+
+.sapzencrosstab-ExpandNode::before {
+	content: "\e066";
+}
+
+.sapzencrosstab-CollapseNode::before {
+	content: "\e1e2";
+}
+
+.sapzencrosstab-CollapseNode.sapzencrosstab-BottomNode::before {
+	content: "\e1e1";
+}
+
+.sapzencrosstab-HierarchyIndent {
+	width: 10px;
+	height: 22px;
+}
+
+.sapzencrosstab-HierarchyIndentCozy {
+	width: 0.5rem;
+	height: 3rem;
+}
+
+
+/*******************************************/
+/* Resize of Columns                       */
+/*******************************************/
+.sapzencrosstab-columnResizeHandle, .sapzencrosstab-columnResizeHandleWithSort {
+	position: absolute;
+	top: -5000px;
+	right: -8px;
+	width: 5px;
+	height: 10000px;
+}
+
+.sapzencrosstab-columnResizeHandle:hover, .sapzencrosstab-columnResizeHandleWithSort:hover {
+	cursor: pointer;
+	background-color: @sapUiListBorderColor;
+}
+
+.sapzencrosstab-cellLayoutDiv {
+	position: relative;
+	width: 100%;
+	display: block;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+/*******************************************/
+/* Hovering and Selection                  */
+/*******************************************/
+
+
+.sapzencrosstab-HeaderCellDefault.sapzencrosstab-HoverRowHeaderCell,
+.sapzencrosstab-RowHeaderArea .sapzencrosstab-HeaderCellAlternating.sapzencrosstab-HoverRowHeaderCell,
+.sapzencrosstab-HoverDataCell,
+/*multi hover */
+.sapzencrosstab-HeaderCellHoverRow, .sapzencrosstab-HeaderCellAlternating.sapzencrosstab-HeaderCellHoverRow,
+.sapzencrosstab-HeaderCellHoverCol, .sapzencrosstab-HeaderCellAlternating.sapzencrosstab-HeaderCellHoverCol,
+.sapzencrosstab-HeaderCellHoverCol.sapzencrosstab-HeaderCellDefault{	
+	background-color: @sapUiListHoverBackground !important; 
+}
+
+.sapzencrosstab-HeaderCellDefault.sapzencrosstab-SelectRowHeaderCell,
+.sapzencrosstab-RowHeaderArea .sapzencrosstab-HeaderCellAlternating.sapzencrosstab-SelectRowHeaderCell,
+.sapzencrosstab-SelectDataCell,
+/*multi select */
+.sapzencrosstab-HeaderCellSelectRow, .sapzencrosstab-HeaderCellAlternating.sapzencrosstab-HeaderCellSelectRow,
+.sapzencrosstab-HeaderCellSelectCol, .sapzencrosstab-HeaderCellAlternating.sapzencrosstab-HeaderCellSelectCol,
+.sapzencrosstab-HeaderCellSelectCol.sapzencrosstab-HeaderCellDefault,
+.sapzencrosstab-DataCellSelectData, .sapzencrosstab-DataCellAlternating.sapzencrosstab-DataCellSelectData
+{
+	background-color: @sapUiListSelectionBackgroundColor !important;
+}
+
+.sapzencrosstab-ColumnHeaderArea .sapzencrosstab-HoverColHeaderCell {
+	background: @sapUiListHoverBackground; /* Old browsers */
+}
+
+.sapzencrosstab-ColumnHeaderArea .sapzencrosstab-SelectColHeaderCellOrig {
+background: @sapUiListSelectionBackgroundColor; /* Old browsers */
+ }
+
+.sapzencrosstab-ColumnHeaderArea .sapzencrosstab-SelectColHeaderCell {
+background: @sapUiListSelectionBackgroundColor; /* Old browsers */
+ }
+
+.sapzencrosstab-ToolbarDiv {
+	background-color: @sapUiBaseColor;
+	width: 100%;
+	height: 25px;
+}
+
+/*******************************************/
+/* Planning					                       */
+/*******************************************/
+
+.sapzencrosstab-DataCellEntryEnabled-MainMode, .sapzencrosstab-HeaderCellEntryEnabled-MainMode {
+	cursor: text;
+}
+
+.sapzencrosstab-DataCellEntryEnabled-MainMode > .sapzencrosstab-DataCellContentDiv,.sapzencrosstab-HeaderCellEntryEnabled-MainMode  > .sapzencrosstab-cellLayoutDiv  .sapzencrosstab-HeaderCellContentDiv {
+	border: 1px solid @sapUiFieldBorderColor;
+	height: 16px;
+	background-color: @sapUiFieldBackground;
+	font-size: 0.875rem;
+}
+.sapzencrosstab-DataCellInvalidValue > .sapzencrosstab-DataCellContentDiv,.sapzencrosstab-HeaderCellInvalidValue .sapzencrosstab-HeaderCellContentDiv {
+	border-color: @sapUiFieldInvalidColor !important;
+	background-color: @sapUiFieldInvalidBackground !important;
+}
+
+.sapzencrosstab-EntryEnabledInput {
+	width:95%;
+	height:95%;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: end;
+	border: 0px;
+}
+
+.sapzencrosstab-EntryEnabledInput-MainMode {
+	width:95%;
+	height:95%;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 0.875rem;
+	text-align: end;
+	border: 0px;
+}
+
+.sapzencrosstab-HeaderCellDivValueHelp-MainMode {
+	height: 16px;
+	width: 16px;
+	padding-left: 5px;
+	cursor: pointer;
+}
+
+
+.sapzencrosstab-HeaderCellValueHelp::before {
+	content: "\e1f3";
+	font-family: "SAP-icons";
+	font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+.sapzencrosstab-DataCellLocked::before {
+  content: "\e153";
+	font-family: "SAP-icons";
+	font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 2rem;
+  font-weight: normal;
+  left: 8px;
+}
+
+/*******************************************/
+/* Keyboard navigation stuff
+/*******************************************/
+.sapzencrosstab-CellFocus {
+	background-color: @sapUiListSelectionBackgroundColor !important;
+}
+
+/******************************************/
+/* Moveable header separator
+/******************************************/
+.sapzencrosstab-headerResizeHandleWidth {
+	width: 5px;
+}
+
+.sapzencrosstab-headerResizeHandleActive {
+	cursor: col-resize;
+	background-color: @sapUiListBorderColor;
+}	
+
+/******************************************/
+/* DragDrop classes
+/******************************************/
+
+.sapzencrosstab-Trashcan {
+		height: 24px;
+		width: 20px;
+}
+
+.sapzencrosstab-Trashcan::before {
+	content: "\e03d";
+	font-family: "SAP-icons";
+	font-size: 0.875rem;
+  position: absolute;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+.sapzencrosstab-DropHeaderCell {
+	background: @sapUiDragAndDropActiveBackground !important;
+}	
+
+.sapzencrosstab-DragHeaderCell {
+	border-color: @sapUiListBorderColor !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+	background-color: transparent !important; 
+}	
+
+.sapzencrosstab-columnBeforeCellDropArea {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 5px;
+}
+
+.sapzencrosstab-columnAfterCellDropArea, .sapzencrosstab-columnAfterCellDropAreaWithSort {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 5px;
+}
+
+.sapzencrosstab-columnBeforeCellDropAreaActive, .sapzencrosstab-columnAfterCellDropAreaActive, .sapzencrosstab-columnAfterCellDropAreaWithSortActive {
+	background-color: @sapUiDragAndDropActiveColor !important;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+.sapzencrosstab-rowAboveCellDropArea {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 5px;
+}
+
+.sapzencrosstab-rowBelowCellDropArea {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 5px;
+}
+
+.sapzencrosstab-rowAboveCellDropAreaActive, .sapzencrosstab-rowBelowCellDropAreaActive {
+	background-color: @sapUiDragAndDropActiveColor !important;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+.sapzencrosstab-pivotCellRowsDimDragArea {
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+	border-bottom-color: @sapUiListBorderColor;
+	border-bottom-style: solid;
+}
+
+.sapzencrosstab-pivotCellColsDimDragArea {
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+	border-top-color: @sapUiBlackBG;
+	border-top-style: solid;
+}
+
+/* Member drag/drop styles */
+.sapzencrosstab-DropMemberCell {
+	background: @sapUiDragAndDropActiveBackground !important;
+}	
+
+.sapzencrosstab-DragMemberCell {
+	border-color: @sapUiListBorderColor !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+	background-color: transparent !important; 
+}	
+
+.sapzencrosstab-columnBeforeCellMemberDropArea {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 5px;
+}
+
+.sapzencrosstab-columnAfterCellMemberDropArea {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 5px;
+}
+
+.sapzencrosstab-columnBeforeCellMemberDropAreaActive, .sapzencrosstab-columnAfterCellMemberDropAreaActive {
+	background-color: @sapUiDragAndDropActiveColor !important;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+.sapzencrosstab-rowAboveCellMemberDropArea {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 5px;
+}
+
+.sapzencrosstab-rowBelowCellMemberDropArea {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 5px;
+}
+
+.sapzencrosstab-rowAboveCellMemberDropAreaActive, .sapzencrosstab-rowBelowCellMemberDropAreaActive {
+	background-color: @sapUiDragAndDropActiveColor !important;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+/* END "Crosstab.css" */
+
+/* START "FilterBar.css" */
+/*Make the "page" inside a filterbar have a transparent background.  This is a workaround
+to an issue introduced by UI5 changes to sapMPage background.*/
+.zenFilterBarMFilter .sapzenfilterpanelM-mainpage.sapMPage {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/****** Hide Standard variant ********/
+.zenVariantSelectionDialogOpened [data-sap-ui*="item-standard"] {
+	display:none;
+}
+
+.zenVariantManageDialogOpened [data-sap-ui*="managementTable"]>table>tbody>tr:FIRST-CHILD {
+	display:none;
+} 
+
+.zenFilterBarMHidden {
+	display:none;
+}
+
+.zenFilterBarM {
+	width:auto!important;
+	padding:0rem 0 0rem 1rem!important	
+}
+
+.zenHideFilterBar {
+	display:none;
+}
+
+.zenFilterBarM.sapUiCompFilterBar {
+	overflow:visible;
+}
+
+.zenControl.zenFilterBarMFilter.sapMNav {
+	overflow:visible;
+}
+
+.zenControl.zenFilterBarM .sapUiCompFilterBarBasicArea.sapUiCompFilterBarWidth100 {
+	height:80px;
+	padding:0;
+	display:block;
+	white-space:nowrap;
+	padding-bottom:2rem;
+}
+
+.zenControl.zenFilterBarM.zenCustomExpand .sapUiCompFilterBarBasicArea.sapUiCompFilterBarWidth100 {
+	overflow:visible;
+	height:auto;
+	white-space:pre-line;
+	padding-bottom:2rem;
+}
+
+.sapUiSizeCompact .zenControl.zenFilterBarM .sapUiCompFilterBarBasicArea.sapUiCompFilterBarWidth100 {
+	padding-bottom:1rem;	
+}
+
+.sapUiSizeCompact .zenControl.zenFilterBarM.customExpand .sapUiCompFilterBarBasicArea.sapUiCompFilterBarWidth100 {
+	padding-bottom:1rem;
+}
+
+
+.zenFilterBarMFilter.sapzendimensionfilterM .sapzenfilterpanelM-ListItem>.sapMLIBContent>.sapUiContentPadding {
+	
+	padding:0px!important;
+}
+
+.zenFilterBarM.sapUiRespGrid.sapUiRespGridHSpace1>div {
+	width:100%;
+	overflow:visible;
+}
+
+.zenFilterBarMFilter.sapzendimensionfilterM .sapzenfilterpanelM-ListItem {
+	border-bottom:none;
+	background-color:transparent!important;
+}
+
+.zenFilterBarM .sapUiCompFilterBarToolbar {
+	height:50px;
+	padding-right:2rem;
+}
+
+/****************************************************/ 
+/* Fix clipping of dimensionfilter menu             */
+/****************************************************/ 
+
+.zenFilterBarM .sapUiCompFilterBarBasicArea>div {
+	overflow:visible;
+}
+
+/*********************************************************/ 
+/* Fix clipping of dimensionfilter menu in Filter Dialog */
+/*********************************************************/ 
+ 
+.zenFilterBarDialogOpened .sapUiCompFilterBarDialog .sapUiCompFilterBarGroupTitle .sapUiFormResGridMain>div,
+.zenFilterBarDialogOpened .sapUiCompFilterBarDialog .sapUiCompFilterBarGroupTitle .sapUiRGLContainerCont>.sapUiFormResGridCont>div {
+	overflow:visible;
+}
+
+/****************************************************/ 
+/* Visually simulate disable state BEGIN            */
+/****************************************************/ 
+
+.zenFilterBarM.sapUiLocalBusy .sapUiLocalBusyIndicator {
+	background-color:transparent;
+}
+
+.zenFilterBarM.sapUiLocalBusy .sapUiCompFilterBarToolbar > button {
+	opacity:0.7;
+} 
+
+.zenFilterBarM.sapUiLocalBusy .sapUiLocalBusyIndicatorAnimation {
+	display:none;
+} 
+
+.zenFilterBarM.sapUiLocalBusy .sapMMultiInputBorder {
+	background-color:rgb(235, 235, 228);
+}
+
+/****************************************************/ 
+/* Visually simulate disable state END              */
+/****************************************************/ 
+
+/************************************************************/ 
+/* Temporary solution to hide Header in Filter Dialog BEGIN */ 
+/************************************************************/
+
+.zenFilterBarDialogOpened .sapUiCompFilterBarDialog .sapUiCompFilterBarGroupTitle .sapUiFormTitle {
+	visibility:hidden;
+	height:0px;
+}
+
+.zenFilterBarDialogOpened .sapUiCompFilterBarDialog .sapUiCompFilterBarGroupTitle .sapUiCompFilterBarAddFilterLabel {
+	top:4rem!important;
+	right:1rem!important;
+	position:absolute!important;
+}
+
+/************************************************************/ 
+/* Temporary solution to hide Header in Filter Dialog END   */ 
+/************************************************************/
+
+/****************************************************************/ 
+/* Hide filters that don't fit on the first row when collapsed */ 
+/****************************************************************/
+.zenControl.zenFilterBarM .sapUiCompFilterBarBasicArea.sapUiCompFilterBarWidth100>div.zenFBIhidden {
+	display:none;
+}
+
+.zenControl.zenFilterBarM.zenCustomExpand .sapUiCompFilterBarBasicArea.sapUiCompFilterBarWidth100>div.zenFBIhidden {
+	display:inline-block;
+}
+
+/****************************************************************/ 
+/* Move the "show More" button to bottom right */ 
+/****************************************************************/
+.zenCustomExpandButton {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+/* END "FilterBar.css" */
+
+/* START "FilterPanel-Navigation.css" */
+/* ====================================================================  */
+/* CSS for control sap.ui.commons/FilterPanel.control  - Navigation mode */
+/* blue crystal                                            							 */
+/* ====================================================================  */
+
+/* for m mode */
+.sapzenfilterpanelM * .sapMPanelContent {
+	border-left: 0;
+	border-right: 0;
+	border-bottom-width: 0.25rem;
+	border-bottom: @sapUiListHeaderBackground;
+} 
+
+.sapzenfilterpanelM-NavigationLayout>.sapUiVltCell.sapuiVltCell {
+	border: 0;
+}
+
+.sapzenfilterpanelM .sapMBtnInner * .sapMBtnDefault, .sapzenfilterpanelM .sapMBtnCustomIcon,
+	.sapzenfilterpanelM .sapMBtnIcon, .sapzenfilterpanelM .sapMBtnInner * .sapUiIcon,
+	.sapzenfilterpanelM .sapMBtnInner * .sapUiIconMirrorInRTL {
+  font-size: 1rem;
+	line-height: 1.7rem;
+}
+
+.sapzenfilterpanelM-NavigationLayout .sapMBtnInner * .sapMBtnDefault, .sapzenfilterpanelM-NavigationLayout .sapMBtnHoverable, 
+.sapzenfilterpanelM-NavigationLayout .sapMBtnInner, .sapzenfilterpanelM-NavigationLayout .sapMFocusable, .sapzenfilterpanelM-NavigationLayout .sapMToggleBtnPressed {
+	height: 1.8rem;
+}
+	
+.sapzenfilterpanelM .sapMBtnIconsapMBtnCustomIcon * .sapMBtnIcon, .sapzenfilterpanelM .sapUiIcon,
+	.sapzenfilterpanelM .sapUiIconMirrorInRTL {
+	width: 1.5rem;
+}
+	
+.sapzenfilterpanelM .sapUiBody * .sapMListNoDataText {
+	font-size: 0.875rem;
+}
+	
+.sapzenfilterpanelM * .sapMPanel * .sapMTitleStyleAuto {
+	padding-left: 0.5rem;
+}
+
+.sapzenfilterpanelM * .sapMPanel *.sapMLabel.sapMLabelTBHeader {
+	font-size: 0.875rem;
+	margin-top: 0.5rem;
+}
+
+.sapzenfilterpanelM * .sapMPanel * .sapMTB-Solid-CTX,
+	.sapzenfilterpanelM * .sapMPanel *.sapMTB {
+  height: 2.2em	
+}
+
+.sapzenfilterpanelM .sapMPanel .sapMTB {
+	border-left: 1px solid  @sapUiGroupTitleBorderColor;
+	border-right: 1px solid  @sapUiGroupTitleBorderColor;
+}
+
+.sapzenfilterpanelM * .sapUiVlt.sapUiContentPadding {
+	padding: 0.5rem;
+}
+
+.sapzenfilterpanelM-ListItem * .sapMTB {
+	height: 2rem;
+}
+
+.sapzenfilterpanelM * .sapMPanel, .sapzenfilterpanelM * .sapMPanelContent,
+	.sapzenfilterpanelM * .sapUiVlt {
+	overflow: visible;
+}
+/* END "FilterPanel-Navigation.css" */
+
+/* START "FilterPanel.css" */
+/* ================================================== */
+/* CSS for control sap.ui.commons/Filterpanel.control */
+/* Platinum                                           */
+/* ================================================== */
+
+/* for m mode */
+.sapzendimensionfilterM>.sapzenfilterpanelM-mainpage>section {
+	overflow: visible !important;
+}
+
+.sapzendimensionfilterM, .sapzenfilterpanelM .sapMList {
+	overflow: visible;
+}
+
+.sapzenfilterpanelM .sapMTitleStyleAuto {
+	font-size: 0.875rem;
+}
+
+.sapzenfilterpanelM .sapMList {
+	border-left: 1px solid @sapUiGroupTitleBorderColor;
+	border-right: 1px solid @sapUiGroupTitleBorderColor;
+}
+
+.sapzendimensionfilterM .sapMList {
+	border-left: none;
+	border-right: none;
+}
+/* END "FilterPanel.css" */
+
+/* START "Footerbar.css" */
+.zenFooterbarFixedPanel {
+	/* overriding sapMPageFooter z-index setting to make sure 
+	the message viewer stays on top of the footer bar. 
+	*/
+	z-index: auto!important;
+}
+
+.zenFooterbarInvisibleButton {
+	opacity: .2;
+}
+
+/* END "Footerbar.css" */
+
+/* START "InfoChart.less" */
+.sapzeninfochart {
+	@infoChartMessageFontSize: 23px;
+	@infoChartMessageBackgroundColor: gray;
+	@infoChartInfoIcon: '\e024';
+	@infoChartWarnIcon: '\e201';
+	@infoChartErrorIcon: '\e1c7';
+
+	background-color: @sapUiListBackground; 
+	
+	& ~ .componentLoadingState {
+		background-color: @infoChartMessageBackgroundColor;
+		opacity: 0.1;
+	}
+
+	& ~ .componentLoadingStateMessage, & ~ .componentLoadingStateBox {
+		font-size: @infoChartMessageFontSize;
+		color: gray;
+		width: 100%;
+		left: 0;
+		text-align: center;
+		margin-left: 0;
+		padding-left: 10;
+		padding-right: 10;
+		display: none;
+	}
+
+	& ~ .componentLoadingStateBox {
+		@componentLoadingStateMarginTop: -45px;
+		margin-top: @componentLoadingStateMarginTop - @infoChartMessageFontSize - 2px;
+		/* Not so nice */
+		background-color: transparent !important;
+		opacity: 1;
+
+		&:before {
+			content: @infoChartErrorIcon;
+			font-family: "SAP-icons";
+		}
+	}
+
+	&.state-info ~ .componentLoadingStateBox:before {
+		content: @infoChartInfoIcon;
+	}
+
+	&.state-warn ~ .componentLoadingStateBox:before {
+		content: @infoChartWarnIcon;
+	}
+
+	&.ghost {
+		opacity: 0.3;
+		& ~ .componentLoadingStateMessage, & ~ .componentLoadingStateBox {
+			display: block;
+		}
+		& ~ .componentLoadingStateMessage {
+			// Just display the first message
+			~ .componentLoadingStateMessage {
+				display: none;
+			}
+		}
+		& ~ .componentLoadingStateBox {
+			// Just display the first message
+			~ .componentLoadingStateBox {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.sapzeninfochart text {
+	fill: @sapUiListTextColor
+}
+/* END "InfoChart.less" */
+
+/* START "InfoFeeding.css" */
+
+/* ================================================== */
+/* Base CSS for infocharts feeding panel 							*/
+/*                                                    */
+/* ================================================== */
+
+.sapzeninfofeedingM  {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;  
+  border: 1px solid #96a8c3;
+  border-radius: 3px;
+  background-color: #DBE5EC;
+  text-overflow: ellipsis;  
+  margin: 0px;
+}
+
+.sapzeninfofeedingM * {
+  box-sizing: border-box !important;
+  margin: 0px  !important;
+}
+
+.sapzeninfofeedingM .feedingContainer
+ {
+  position: relative;
+  padding: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.sapzeninfofeedingM .innerFeedingContainer
+{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.sapzeninfofeedingM  .feedTypeContainer{	
+  	position: absolute;
+  	height: 50%;
+		top: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	right: 0px;
+}
+
+.sapzeninfofeedingM .feedTypeContainer + .feedTypeContainer{		
+	top: 50%;
+}
+
+.sapzeninfofeedingM .feedContainer
+ {		
+ 	position: absolute;
+ 	bottom: 0px;
+ 	left: 0px;
+ 	right: 0px;
+	border-color: #96a8c3;
+	background-color: #FFF;
+	border: 1px solid #96a8c3;
+	overflow:auto;
+}
+
+.sapzeninfofeedingM  .feedTypeTitle
+{
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.sapzeninfofeedingM .bucketContainer
+{
+	padding: 5px;	
+	background-color: #fff;
+}
+
+.sapzeninfofeedingM  .bucketContainer + .bucketContainer{
+	border-top: 1px solid #96a8c3;
+}
+
+/* Sortable items */
+
+.sapzeninfofeedingM .feeding-sortable-list{
+	list-style: none;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;	
+}
+
+.feeding-sortable-item.bucketElement.ui-sortable-helper
+{
+	list-style: none;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;	
+}
+
+.sapzeninfofeedingM .feeding-sortable-item  {
+	cursor: move;
+	display: block;
+	font-weight: normal;
+	margin-bottom: 5px;
+	/* position: absolute; */
+}
+
+.sapzeninfofeedingM .bucket  {
+	width: 100%;
+}
+
+.sapzeninfofeedingM .feeding-id-label {
+	direction: inherit;
+	text-align: left;
+	line-height: 20px;
+}
+
+/* Item placeholder (visual helper) */
+.sapzeninfofeedingM  .placeholder
+{
+		height: 23px;
+}
+
+/* END "InfoFeeding.css" */
+
+/* START "NavigationPanel.css" */
+/* ====================================================================  */
+/* CSS for control sap.ui.commons/NavigationPanel.control  							 */
+/* ====================================================================  */
+
+/* for m mode */
+.zenNavigationPanelM {
+	border: 1px solid @sapUiGroupTitleBorderColor;
+	box-sizing: border-box;
+	background-color: @sapUiFieldBackground;
+}
+
+.zenNavigationPanel-SubHeader > .sapMTitle {
+	font-weight: bold;
+	margin-left: 0.5rem;
+}
+
+.zenNavigationPanel-SubHeader .sapMTitle {
+	font-weight: bold;
+}
+
+.zenNavigationPanelM .zenNavigationPanel-SubHeader > .sapUiIcon {
+	margin-left: 0.5rem;
+}
+
+.zenNavigationPanelM .sapUiLoSplitterH>.sapUiLoSplitterBar {
+	height: 100% !important;
+}
+
+.zenNavigationPanelM .sapMLIB {
+	border: none;
+}
+
+.zenNavigationPanelM .sapMLIB {
+	padding-left: 0.5rem; 
+	padding-top: 0.25rem;
+}
+
+.zenNavigationPanelM .sapMTitle, div.zenDnDHelper {
+	font-size: 0.875rem;
+}
+
+.zenNavigationPanelM .sapUiMlt {
+	font-size: 0.75rem;
+}
+
+.zenNavigationPanelM .zenMeasure > td {
+	padding-top: 0.25rem;
+}
+
+.zenNavigationPanelM .sapUiIcon {
+	width: 1.2rem;
+}
+
+.zenNavigationPanelM .zenNavigationPanel-MeasuresPanel .sapMLIB {
+	padding-top: 0.5rem;
+}
+
+.zenNavigationPanelM .zenNavigationPanel-MeasuresPanel > section {
+	padding-top: 0.25rem;
+}
+
+.zenNavigationPanelM .sapUiLoSplitter>.sapUiLoSplitterBar {
+	background-color: @sapUiListBorderColor;
+}
+
+.zenNavigationPanelM .sapMPageSubHeader {
+	background-color: @sapUiGlobalBackgroundColor;
+	border-bottom-color: @sapUiListBorderColor;
+}
+
+.zenNavigationPanelM .sapMSFF {
+	border-color: @sapUiListBorderColor;
+}
+
+.zenNavigationPanelM .zenNavigationPanel-MeasuresPanel .sapMListBGSolid .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover) {
+	background-color: @sapUiGlobalBackgroundColor;
+}
+
+.zenNavigationPanelM .sapMPage .sapMPageWithSubHeader {
+    background-color: @sapUiListBackground;
+}
+
+.zenNavigationPanelM li.zenNavDropHighlight {
+	border: 1px solid @sapUiDragAndDropActiveBorderColor;
+	background-color: @sapUiDragAndDropActiveBackground;
+}
+/* END "NavigationPanel.css" */
+
+/* START "zen.css" */
+#sapbi_snippet_ROOT,#sapbi_snippet_ROOT_DIALOG,html,body {
+	height: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#sapbi_snippet_ROOT_DIALOG {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+div.zenborder{
+	overflow: visible !important;
+}
+
+.sapzenfilterbar .sapzenfilterpanel-HasLabelOnTop{
+	margin-top:20px;
+}
+
+button.zenSapMBtnFixHeight{
+	padding-top:0px;
+}
+
+button.zenSapMBtnFixHeight .sapMBtnContent{
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateX(0%) translateY(-50%);
+    -ms-transform: translateX(0%) translateY(-50%); /* IE 9 */
+    -webkit-transform: translateX(0%) translateY(-50%); /* Chrome, Safari, Opera */
+    right: 0.75rem;
+}
+
+button.zenSapMBtnFixHeight .sapMBtnInner{
+	height:100%;
+	width:100%;
+}
+ 
+.sapUiSizeCompact button.zenSapMBtnFixHeight{
+	padding-top:0px;
+}
+
+
+.zenMessageWithOpacity {
+	background: @sapUiFieldReadOnlyBackground;
+}
+
+.hideLoadingStateClass{
+	visibility: hidden;
+}
+.hideLoadingStateClassIcon{
+	visibility: hidden;
+}
+.componentLoadingState{
+	background-color: @sapUiMediumBG;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+}
+
+.zenHideFilterPanel {
+	display: none;
+}
+
+.zenLoadingStateOpacity{
+		opacity:0.5;
+}
+.zenLoadingStateFilter{
+		filter: alpha(opacity=50);
+}
+
+.zenLoadingStateOpacity75{
+		opacity:0.75;
+}
+.zenLoadingStateFilter75{
+		filter: alpha(opacity=75);
+}
+
+.componentLoadingStateMessage{
+	
+	font: 10.5pt, arial;
+	
+	position:absolute;	
+	
+	text-align: center;
+	text-vertical-align: middle;
+	
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 43px;
+	
+	margin-top: -45px;
+	margin-left: -100px;
+	
+	left: 50%;
+	top: 50%;
+	
+	width: 200px;
+	height: 90px;		
+	
+	background-color: transparent !important;
+	
+	white-space: nowrap;
+	overflow: hidden  !important;
+	text-overflow: ellipsis ;
+	
+	color: @sapUiBase;
+}
+
+.componentLoadingStateMessageWithIcon{
+	
+	font: 10.5pt, arial;
+	
+	position:absolute;	
+	
+	text-align: center;
+	text-vertical-align: middle;
+	
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 50px;
+	
+	margin-top: -45px;
+	margin-left: -100px;
+	
+	left: 50%;
+	top: 50%;
+	
+	width: 200px;
+	height: 90px;		
+	
+	background-color: transparent !important;
+	
+	white-space: nowrap;
+	overflow: hidden  !important;
+	text-overflow: ellipsis ;
+	
+}
+
+
+.componentLoadingStateBox {
+	
+	font-size: 10.5pt;
+	
+	position:absolute;	
+	
+	text-align: center;
+	text-vertical-align: middle;
+	
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	
+	padding-top: 43px;
+	padding-left: 13px;
+	padding-right: 13px;
+	
+	margin-top: -45px;
+	margin-left: -100px;
+	
+	left: 50%;
+	top: 50%;
+	
+	width: 200px;
+	height: 90px;
+	
+	background-color: @sapUiWhite !important;
+	
+}
+.componentLoadingStateBox.componentLoadingStateBoxNoText.componentLoadingStateBoxNoIcon {
+	display:none;
+	}
+
+
+.componentLoadingStateMessageDT{	
+background-color:white;
+}
+
+.componentLoadingStateIcon{
+	background-image: url("../base/img/loading_comp.gif");
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 65px;
+	height: 19px;
+	margin-top: -20px;
+	margin-left: -35px;
+	opacity:1 !important;
+}
+
+.componentLoadingStateBoxNoText + .componentLoadingStateIcon{
+		background-image: url("../base/img/loading_comp.gif");
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 65px;
+	height: 19px;
+	margin-top: -5px;
+	margin-left: -35px;
+	opacity:1 !important;
+}
+
+
+.hideLoadingStateClass + .componentLoadingStateIcon{
+	background-image: url("../base/img/loading_comp.gif");
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 65px;
+	height: 19px;
+	margin-top: -7px;
+	margin-left: -34px;
+	opacity:1 !important;
+}
+
+.sapDataboundComponentLoadingIndicator{
+	margin: -20px 0px 0px -100px;
+}
+
+.sapFixIEBugThatMakesImageControlTwoPixelsTooHigh {
+	margin-bottom: -2px;
+}
+
+.zenClickable {
+cursor: pointer;
+}
+
+.customGlasspaneZenClass {
+	position: fixed;
+	top: 0px;
+  left: 0px;
+	width: 100%;
+	height: 99%;
+	z-index: 9999;
+	vertical-align: middle;
+	text-align: center;
+	cursor: wait;
+	background-color: @sapUiBase;
+	display: block;
+}
+
+.zenGlasspaneOpacity{
+		opacity:0.3;
+}
+
+.zenGlasspaneFilter{
+	filter: alpha(opacity=50);
+}
+
+.zenPixelClass{
+	width:100%; height:100%;
+}
+
+/* Begin of Dialog styles */
+
+.zenDialogMatrixLayout {
+    overflow: hidden;
+    padding: 0px;   
+}
+
+/* BUTTONS *********************************/
+.zenDialogButtonArea {
+    padding: 0 5px 0px 5px !important;
+    height: 21px;
+}
+
+.zenDialogButtonRow {
+	height: 21px;
+}
+
+/* CONTENT *********************************/
+.zenDialogContentArea {
+    padding: 5px !important;
+    height: auto;
+}
+
+.zenDialogContentRow {
+	height: auto;
+}
+
+
+.zenChartImage {
+	position: absolute;
+	opacity:0.50;
+}
+
+
+.bookmarkOpenButton{
+	padding-left:10px;
+}
+
+.shareBookmarkDialogContainer .sapUiDlgCont{
+	padding:14px;
+}
+
+.shareBookmarkDialogContainer .sapUiTf{
+	margin-right: 4px;
+	margin-bottom: 5px;
+}
+/* End of Dialog styles */
+
+/***Dialog**********************************/
+.uidialogzentitle{
+	position: absolute;
+	height: 2.5rem !important;
+	top: 0;
+  background-color: #f2f2f2;
+  filter: none;
+  background-image: none;
+  font-size: 1rem;
+  color: #666;
+  text-shadow: 0 0.0625rem 0 rgba(255,255,255,0.5);
+  -webkit-box-shadow: inset 0 -0.0625rem #dddddd;
+  box-shadow: inset 0 -0.0625rem #dddddd;
+}
+
+.uidialogzenfooter{
+	position: absolute;
+	height: 2.5rem !important;
+	bottom: 0;
+	background-color: rgba(54,62,67,0.96);
+	color: #ffffff;
+  text-shadow: 0 0.0625em 0 rgba(0,0,0,0.5);
+  background-color: rgba(54,62,67,0.96);
+  background-image: none;
+  border-top: 0.0625rem solid rgba(229,229,229,0.2);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.uidialogzencontent{
+	position: absolute;
+	padding-top: 2.5rem;
+	padding-bottom:2.5rem;
+	background: #fafafa;
+}
+
+.uidialogzenroot{
+		border: 1px solid #CCC;
+}
+
+.uidialogzenroot  > .sapUiLayoutAbsPos:not(:nth-child(2)){
+	height: auto !important;
+}
+.uidialogzenroot  > .sapUiLayoutAbsPos:nth-child(2){
+	height: calc(100% - 5rem) !important;
+}
+
+.uidialogzentitle > .sapUiLayoutAbsPos{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.uidialogzentitle > .sapUiLayoutAbsPos > span{
+  text-align: center !important;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+/***done Dialog**********************************/
+
+
+/* END "zen.css" */
+

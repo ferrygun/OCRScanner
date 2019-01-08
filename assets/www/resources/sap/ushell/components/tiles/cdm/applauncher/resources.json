@@ -1,0 +1,88 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/Component.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component-preload-dbg.js",
+			"module": "Component-preload.js",
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/components/tiles/utils.js",
+				"sap/ushell/components/tiles/utilsRT.js"
+			],
+			"included": [
+				"sap/ushell/components/tiles/cdm/applauncher/Component.js",
+				"sap/ushell/components/tiles/cdm/applauncher/StaticTile.controller.js",
+				"sap/ushell/components/tiles/cdm/applauncher/StaticTile.view.js",
+				"sap/ushell/components/tiles/cdm/applauncher/i18n/i18n.properties",
+				"sap/ushell/components/tiles/cdm/applauncher/manifest.json"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "Component-preload.js",
+			"merged": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/components/tiles/utils.js",
+				"sap/ushell/components/tiles/utilsRT.js"
+			],
+			"included": [
+				"sap/ushell/components/tiles/cdm/applauncher/Component.js",
+				"sap/ushell/components/tiles/cdm/applauncher/StaticTile.controller.js",
+				"sap/ushell/components/tiles/cdm/applauncher/StaticTile.view.js",
+				"sap/ushell/components/tiles/cdm/applauncher/i18n/i18n.properties",
+				"sap/ushell/components/tiles/cdm/applauncher/manifest.json"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/Component.js"
+		},
+		{
+			"name": "StaticTile-dbg.controller.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/StaticTile.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/components/tiles/utils.js",
+				"sap/ushell/components/tiles/utilsRT.js"
+			]
+		},
+		{
+			"name": "StaticTile-dbg.view.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/StaticTile.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "StaticTile.controller.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/StaticTile.controller.js",
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/components/tiles/utils.js",
+				"sap/ushell/components/tiles/utilsRT.js"
+			]
+		},
+		{
+			"name": "StaticTile.view.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/StaticTile.view.js"
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/i18n/i18n.properties"
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/ushell/components/tiles/cdm/applauncher/manifest.json"
+		},
+		{
+			"name": "resources.json"
+		}
+	]
+}

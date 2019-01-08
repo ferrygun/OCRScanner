@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2009-2017 SAP SE, All Rights Reserved -->
+<View
+  controllerName="sap.ushell.components.tiles.action.ActionTile"
+  height="100%"
+  width="100%"
+  xmlns="sap.ui.core"
+  xmlns:ushell="sap.ushell.ui.tile"
+>
+
+<ushell:TileBase
+    id="actionTile"
+    title="{i18n>tile.display.action_chip}"
+    subtitle="{/displayText}"
+    icon="sap-icon://action"
+    press="onPress"
+  >
+</ushell:TileBase>
+
+</View>

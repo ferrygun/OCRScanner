@@ -1,0 +1,264 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+
+@import "../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../sap/ui/core/themes/base/global.less";
+/* START "shared.css" */
+/* This CSS shares it rules with all other CSS of this library */
+
+/* END "shared.css" */
+
+
+/* START "Calendar.css" */
+
+.sapMeCalendar{
+	position: relative;
+	margin: auto;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.sapMeCalendar > .sapMeCalendarPrevious{
+	position: absolute;
+	left:0;
+	z-index: 1;
+}
+
+.sapMeCalendar > .sapMeCalendarNext{
+	position: absolute;
+	right:0;
+	z-index: 1;
+}
+
+.sapMeCalendar > .sapMeCalendarMonth{
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+}
+
+.sapMeCalendar > .sapMeCalendarMonth > div.sapMeCalendarMonthName{
+	text-align: center;
+	font-size:1em;
+    line-height:1.2em;
+    padding:0.7em 0 0.4em 0;
+    font-weight:700;
+    height: 44px; /* the height of the prevBtn & nextBtn */
+}
+
+
+.sapMeCalendar > .sapMeCalendarMonth > div > .sapMeCalendarMonthDay{
+	text-align: center;
+	display: inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+
+.sapMeCalendar > .sapMeCalendarMonth > div.sapMeCalendarMonthDays > .sapMeCalendarMonthDay{	
+    padding: 15px 0px;
+}
+.sapMeCalendar > .sapMeCalendarMonth > div.sapMeCalendarMonthDays > .sapMeCalendarMonthDay > *{
+	pointer-events: none; /* to avoid tap events inside --> best practice is do a Day control */	
+}
+
+/* END "Calendar.css" */
+
+/* START "CalendarLegend.css" */
+/* ============================================= */
+/* CSS for control sap.me/CalendarLegend.control */
+/* ============================================= */
+.sapMeCalendarLegend {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.sapUIMeLegendOuterContainer {
+	min-height: 3rem;
+}
+
+.sapUIMeLegendIconContainer {
+}
+
+.sapUIMeCalendarLegendLabels {
+	display: inline-block;
+	margin-left: 0.75rem;
+	font-size: 0.875rem;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+    vertical-align: middle;
+}
+
+.sapMLabel.sapUIMeCalendarLegendLabels::after {
+	content: none;
+}
+
+.sapUIMeLegendMenuContainer {
+	margin-top: 0.8rem;
+	overflow: hidden;
+	height: auto;
+	margin-left: 0rem;
+}
+
+.sapUIMeLegendMenu {
+	display: inline-block;
+	overflow: hidden;
+	height: auto;
+	margin-left: 0rem;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.sapUIMeLegendColor {
+    height: .875rem;
+    width: .875rem;
+	display: inline-block;
+	margin-left: 1rem;
+	margin-top: .25rem;
+	margin-bottom: .25rem;
+	vertical-align: middle;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.sapUIMeLegendLine {
+	font-size: 0.875rem;
+	margin-top: 0rem;
+	vertical-align: middle;
+	height: 1.5rem;
+	display: inline-block;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.sapUIMeLegendIcon {
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.5rem;
+	float: left;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.sapUIMeLegendArrow {
+	display: inline-block;
+	float: right;
+}
+/* END "CalendarLegend.css" */
+
+/* START "OverlapCalendar.css" */
+.sapUIMeOverlapCalendar {
+}
+.sapMeOverlapCalendarGrid{
+	
+}
+.sapMeOverlapCalendarRow{
+	
+}
+.sapMeOverlapCalendarDay{
+	text-align: center;
+	display: inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	padding: 15px 0px;
+	border: 1px solid;
+}
+/* Overwriting calendar css */
+.sapMeOverlapCalendarCalendar > .sapMeCalendar > .sapMeCalendarMonth > div.sapMeCalendarMonthDayNames {
+	margin-top: .25rem;
+}
+
+.sapMeOverlapCalendarCalendar > .sapMeCalendar > .sapMeCalendarMonth > div.sapMeCalendarMonthDays {
+	margin-bottom: 0rem;
+}
+
+
+/* Overlap Calendar Grid */
+.sapMeOverlapCalendarGrid{
+	border-bottom : 0.0625rem solid;
+}
+
+.sapMeOverlapCalendarOverlapIndicator{
+	height:0.4375rem;
+	line-height:0px;
+	border-top : 0.0625rem solid;
+	border-bottom : 0.0625rem solid;
+}
+.sapMeOverlapCalendarOverlap{
+	height: 0.4375rem;
+	display:inline-block;
+	position: relative;
+}
+
+.sapMeOverlapCalendarDay{
+	text-align: center;
+	display: inline-block;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	box-sizing:border-box;
+	padding: 0.9375rem 0px;
+	border-bottom: 0.0625rem solid;
+	border-left: .0625rem solid;
+	border-right:none;
+	border-top:none;
+}
+.sapMeOverlapCalendarDay :nth-of-type(1){
+	border-left:none;
+}
+
+.sapMeOverlapCalendarDay.sapMeOverlapCalendarDayWithHalf {
+	padding : 0px;
+}
+
+.sapMeOverlapCalendarHalfDay {
+	position: absolute; /* half days are absolute because we need two of them to overlap in the parent div */
+	border-bottom: 0.0625rem solid;
+	border-left: 0.0625rem solid;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+
+
+.sapMeOverlapCalendarRowLabels{
+	position:absolute;
+	z-index:3;
+	width:100%;
+	display:inline;
+}
+
+.sapMeOverlapCalendarNameLbl{
+	font-face : "Open Sans Regular";
+	font-size : .875rem;
+	margin-left : 1rem;
+	top: .25rem;
+	position: relative;
+	z-index:3;
+}
+
+.sapMeOverlapCalendarTypeLbl {
+	position: absolute;
+	font-face: "Open Sans Regular";
+	font-size: .75rem;
+	top: 1.5rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* END "OverlapCalendar.css" */
+

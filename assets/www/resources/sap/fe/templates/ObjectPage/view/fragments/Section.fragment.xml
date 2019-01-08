@@ -1,0 +1,174 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:uxap="sap.uxap"
+		xmlns:core="sap.ui.core"
+		xmlns:layout="sap.ui.layout"
+		xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		xmlns:block="sap.fe.templates.ObjectPage.view.fragments"
+		template:require="sap.fe.templates.ObjectPage.AnnotationHelper">
+	<template:repeat list="{entityType>@com.sap.vocabularies.UI.v1.Facets}" var="firstLevelFacet">
+		<uxap:ObjectPageSection
+				title="{firstLevelFacet>@@.MODEL.label}">
+			<uxap:subSections>
+				<template:if
+						test="{path: 'firstLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.isHasDeepHierarchy'}">
+					<template:then>
+						<template:repeat list="{firstLevelFacet>Facets}" var="secondLevelFacet">
+							<uxap:ObjectPageSubSection
+									title="{firstLevelFacet>@@.MODEL.label}">
+								<uxap:customData>
+									<core:CustomData key="enableLazyLoading" value="true"/>
+								</uxap:customData>
+								<template:if
+										test="{path: 'secondLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.doesCollectionFacetOnlyContainForms'}">
+									<template:then>
+										<template:with path="secondLevelFacet>" var="facet">
+											<template:with path="secondLevelFacet>Facets"
+														   helper="sap.fe.templates.ObjectPage.AnnotationHelper.checkBlockContent"
+														   var="blockFacet">
+												<template:if
+														test="{= ${firstLevelFacet>Target/$AnnotationPath@@.MODEL.isMultiple} || ${blockFacet>$Type} === 'com.sap.vocabularies.UI.v1.ReferenceFacet') >= 0}">
+													<template:then>
+														<uxap:blocks>
+															<uxap:ObjectPageLazyLoader stashed="false"
+																					   id="{path: 'secondLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::SubSectionContent">
+																<layout:Grid defaultSpan="XL12 L12 M12 S12" hSpacing="0"
+																			 vSpacing="0"
+																			 class="sapSmartTemplatesObjectPageSubSectionGrid">
+																	<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Facet" type="XML"/>
+																</layout:Grid>
+															</uxap:ObjectPageLazyLoader>
+														</uxap:blocks>
+													</template:then>
+												</template:if>
+											</template:with>
+											<template:with path="secondLevelFacet>Facets"
+														   helper="sap.fe.templates.ObjectPage.AnnotationHelper.checkMoreBlockContent"
+														   var="blockFacet">
+												<template:if
+														test="{= ${blockFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} === false}">
+													<template:then>
+														<uxap:moreBlocks>
+															<uxap:ObjectPageLazyLoader stashed="false"
+																					   id="{path: 'secondLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::SubSectionMoreContent">
+																<block:DummyBlock columnLayout='4'
+																				  class="sapSmartTemplatesObjectPageSubSectionDummyBlock"/>
+																<layout:Grid defaultSpan="XL12 L12 M12 S12"
+																			 hSpacing="0"
+																			 vSpacing="0"
+																			 class="sapSmartTemplatesObjectPageSubSectionGrid">
+																	<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Facet" type="XML"/>
+																</layout:Grid>
+															</uxap:ObjectPageLazyLoader>
+														</uxap:moreBlocks>
+													</template:then>
+												</template:if>
+											</template:with>
+										</template:with>
+									</template:then>
+									<template:else>
+										<template:repeat list="{secondLevelFacet>Facets}" var="thirdLevelFacet">
+											<template:if test="{= !(${parts:[{path:'thirdLevelFacet>'}],
+																formatter:'sap.fe.templates.ObjectPage.AnnotationHelper.determineTableType'}==='TreeTable' ||
+																${parts:[{path:'thirdLevelFacet>'}],
+																formatter:'sap.fe.templates.ObjectPage.AnnotationHelper.determineTableType'}!=='GridTable' &amp;&amp;
+																${parts:[{path:'thirdLevelFacet>'}],
+																formatter:'sap.fe.templates.ObjectPage.AnnotationHelper.determineTableType'}!=='ResponsiveTable' &amp;&amp;
+																${parts:[{path:'thirdLevelFacet>'}], formatter:'sap.fe.templates.ObjectPage.AnnotationHelper.determineTableType'} === true
+																 &amp;&amp; ${device>/system/phone})}">
+												<template:then>
+													<template:with path="thirdLevelFacet>" var="facet">
+														<template:if
+																test="{= ${thirdLevelFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} == undefined || ${thirdLevelFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} === true}">
+															<template:then>
+																<uxap:blocks>
+																	<uxap:ObjectPageLazyLoader stashed="false"
+																							   id="{path: 'thirdLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::SubSectionContent">
+																		<layout:Grid defaultSpan="XL12 L12 M12 S12"
+																					 hSpacing="0" vSpacing="0"
+																					 class="sapSmartTemplatesObjectPageSubSectionGrid">
+																			<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Facet" type="XML"/>
+																		</layout:Grid>
+																	</uxap:ObjectPageLazyLoader>
+																</uxap:blocks>
+															</template:then>
+															<template:else>
+																<uxap:moreBlocks>
+																	<uxap:ObjectPageLazyLoader stashed="false"
+																							   id="{path: 'thirdLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::SubSectionMoreContent">
+																		<block:DummyBlock columnLayout='4'
+																						  class="sapSmartTemplatesObjectPageSubSectionDummyBlock"/>
+																		<layout:Grid defaultSpan="XL12 L12 M12 S12"
+																					 hSpacing="0" vSpacing="0"
+																					 class="sapSmartTemplatesObjectPageSubSectionGrid">
+																			<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Facet" type="XML"/>
+																		</layout:Grid>
+																	</uxap:ObjectPageLazyLoader>
+																</uxap:moreBlocks>
+															</template:else>
+														</template:if>
+													</template:with>
+												</template:then>
+											</template:if>
+										</template:repeat>
+									</template:else>
+								</template:if>
+							</uxap:ObjectPageSubSection>
+						</template:repeat>
+					</template:then>
+					<template:else>
+						<uxap:ObjectPageSubSection
+								title="{firstLevelFacet>@@.MODEL.label}">
+							<template:with path="firstLevelFacet>Facets"
+										   helper="sap.fe.templates.ObjectPage.AnnotationHelper.checkBlockContent"
+										   var="blockFacet">
+								<template:if
+										test="{= ${firstLevelFacet>Target/$AnnotationPath@@.MODEL.isMultiple} || ${blockFacet>$Type} === 'com.sap.vocabularies.UI.v1.ReferenceFacet'} || ${firstLevelFacet>$Type} === 'com.sap.vocabularies.UI.v1.ReferenceFacet'">
+									<template:then>
+										<uxap:blocks>
+											<uxap:ObjectPageLazyLoader stashed="false"
+																	   id="{path: 'firstLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::SubSectionContent">
+												<core:ExtensionPoint
+														name="ReplaceFacet|{entitySet>name}|{path: 'firstLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}">
+													<layout:Grid defaultSpan="XL12 L12 M12 S12" hSpacing="0"
+																 vSpacing="0"
+																 class="sapSmartTemplatesObjectPageSubSectionGrid">
+														<template:with path="firstLevelFacet>" var="facet">
+															<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Facet" type="XML"/>
+														</template:with>
+													</layout:Grid>
+												</core:ExtensionPoint>
+											</uxap:ObjectPageLazyLoader>
+										</uxap:blocks>
+									</template:then>
+								</template:if>
+							</template:with>
+							<template:with path="firstLevelFacet>Facets"
+										   helper="sap.fe.templates.ObjectPage.AnnotationHelper.checkMoreBlockContent"
+										   var="blockFacet">
+								<template:if
+										test="{= ${blockFacet>@com.sap.vocabularies.UI.v1.PartOfPreview} === false}">
+									<template:then>
+										<uxap:moreBlocks>
+											<uxap:ObjectPageLazyLoader stashed="false"
+																	   id="{path: 'firstLevelFacet>', formatter: 'sap.fe.templates.ObjectPage.AnnotationHelper.getStableIdPartFromFacet'}::SubSectionMoreContent">
+												<block:DummyBlock columnLayout='4'
+																  class="sapSmartTemplatesObjectPageSubSectionDummyBlock"/>
+												<layout:Grid defaultSpan="XL12 L12 M12 S12" hSpacing="0" vSpacing="0"
+															 class="sapSmartTemplatesObjectPageSubSectionGrid">
+													<template:with path="firstLevelFacet>" var="facet">
+														<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.Facet" type="XML"/>
+													</template:with>
+												</layout:Grid>
+											</uxap:ObjectPageLazyLoader>
+										</uxap:moreBlocks>
+									</template:then>
+								</template:if>
+							</template:with>
+						</uxap:ObjectPageSubSection>
+					</template:else>
+				</template:if>
+			</uxap:subSections>
+		</uxap:ObjectPageSection>
+	</template:repeat>
+</core:FragmentDefinition>

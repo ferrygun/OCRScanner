@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:mdc="sap.ui.mdc.base"
+						 xmlns:core="sap.ui.core">
+
+
+	<template:alias name=".MODEL" value="sap.ui.model.odata.v4.AnnotationHelper">
+		<template:alias name=".FILTERFIELD" value="sap.ui.mdc.FilterField._helper">
+			<VBox class="sapUiSmallMarginEnd">
+
+				<Label labelFor="__filterField"
+					   text="{= ${property>@com.sap.vocabularies.Common.v1.Label} ? ${property>@com.sap.vocabularies.Common.v1.Label} : '[' + ${property>@sapui.name} + ']' }:"></Label>
+
+				<mdc:FilterField
+						id="__filterField"
+						fieldPath="{parts : [{path: 'entitySet>@sapui.name'}, {path: 'property>'}], formatter: '.FILTERFIELD.getFieldPath'}"
+						dataType="{property>$Type}"
+						dataTypeConstraints="{property>@@.FILTERFIELD.typeConstraints}"
+						dataTypeFormatOptions="{property>@@.FILTERFIELD.typeFormatOptions}"
+						showValueHelp="{= ${property>@@sap.ui.model.odata.v4.AnnotationHelper.getValueListType} === 'None' ? 'false' : 'true' }"
+						valueHelpRequest="{= ${property>@@sap.ui.model.odata.v4.AnnotationHelper.getValueListType} === 'Standard' ? 'handleValueHelpRequest' : 'null' }"
+						required="{property>@@.FILTERFIELD.isRequiredInFilter}"
+						maxConditions="{= (${property>$Type} === 'Edm.Date' || ${property>$Type} === 'Edm.DateTimeOffset') ? 2 : undefined }"
+						conditions="{= '{' + ${this>conditionModelName} + '>/conditions}' }"
+						valueState="{parts : [{path: 'entitySet>@sapui.name'}, {path: 'property>'}], formatter: '.FILTERFIELD.getValueStatePath'}"
+						valueStateText="{parts : [{path: 'entitySet>@sapui.name'}, {path: 'property>'}], formatter: '.FILTERFIELD.getValueStateTextPath'}"
+						width="100%"
+				>
+
+					<mdc:customData>
+						<!-- JUST A WORKAROUND - FIXME -->
+						<core:CustomData key="valueListTitle"
+										 value="{= ${property>@com.sap.vocabularies.Common.v1.Label} ? ${property>@com.sap.vocabularies.Common.v1.Label} : '[' + ${property>} + ']' }"/>
+						<core:CustomData key="suggest"
+										 value="{= ${property>@@sap.ui.model.odata.v4.AnnotationHelper.getValueListType} === 'Standard' ? 'true' : 'false' }"/>
+						<core:CustomData key="fixedValues"
+										 value="{= ${property>@@sap.ui.model.odata.v4.AnnotationHelper.getValueListType} === 'Fixed' ? 'true' : 'false' }"/>
+
+
+						<!-- FIXME this is part of the metadataContects - currenctly we can't access them in the runtime control but this will be fixed -->
+						<core:CustomData key="entitySetName" value="{entitySet>@sapui.name}"/>
+					</mdc:customData>
+
+				</mdc:FilterField>
+
+			</VBox>
+		</template:alias>
+	</template:alias>
+</core:FragmentDefinition>

@@ -1,0 +1,73 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "Calendar.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "CalendarLegend.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "OverlapCalendar.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "ProgressIndicator.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "TabContainer.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "img-RTL/bg_white_transparent.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "img/bg_white_transparent.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "shared.css",
+			"theme": "sap_bluecrystal"
+		}
+	]
+}

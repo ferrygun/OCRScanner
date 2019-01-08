@@ -1,0 +1,75 @@
+<core:FragmentDefinition xmlns:build="sap.build" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
+	xmlns:ovp="sap.ovp.ui" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+
+	<List class="sapOvpCardLinkListGridColSpan{ovpCardProperties>/cardLayout/colSpan}" id="ovpLinkListGrid"
+		items="{parts:[{path:'entitySet>'}, {path:'ovpCardProperties>/annotationPath'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatItems'}"
+		showSeparators="None">
+		
+		<!-- Helper -->
+		<customData>
+			<core:CustomData id="idColSpan" key="keyColSpan" writeToDom="false"
+				value="{ovpCardProperties>/cardLayout/colSpan}"/>
+		</customData>		
+
+		<CustomListItem>
+			<VBox alignItems="Center" width="100%" class="sapUiMediumMarginTop">
+				
+				<template:if test="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+				<!--<template:if test="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isImageUrl'}">-->
+					<template:then>
+						<!--New Control in 1.37.0-Snapshot "ImageContent" is still InProgress -->
+						<Carousel>
+							<pages>
+								<VBox alignItems="Center">
+								<Image alt="no picture" densityAware="true"
+									src="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+									height="64px"></Image>
+								</VBox>
+							</pages>
+						</Carousel>						
+						
+					</template:then>
+					<template:else>
+						<core:Icon size="48px" width="64px" height="64px"
+							src="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+					</template:else>
+				</template:if>
+
+				<template:if test="{path: 'entityType>com.sap.vocabularies.UI.v1.Identification/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">	
+					<template:then>
+						<Link class="sapOvpCardLinkListTitle " press="onLinkNavigationSingleTarget"
+							text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+							textAlign="Center" width="128px" wrapping="false"/>
+					</template:then>
+					<template:elseif
+						test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+						<Link class="sapOvpCardTitle" press="onLinkListActionPress" app:dataAction="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+							text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+					</template:elseif>
+					<template:elseif test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">	
+						<Link class="sapOvpCardLinkListTitle" target="_blank"
+							href="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatString'}"
+							text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+							textAlign="Center" width="128px" wrapping="false"/>
+					</template:elseif>
+					<template:elseif test="{path: 'entityType>com.sap.vocabularies.Communication.v1.Contact', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">	
+						<Link class="sapOvpCardLinkListTitle" press="onLinkPopover" 
+							text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+							textAlign="Center" width="128px" wrapping="false"/>								
+					</template:elseif>
+					<template:else>	
+						<Text class="sapOvpCardLinkListTitle" 
+							text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+							textAlign="Center" width="128px" wrapping="false"/>								
+					</template:else>
+				</template:if>				
+				
+				<Label class="sapOvpCardLinkListSubTitle"
+					text="{path: 'entityType>com.sap.vocabularies.UI.v1.HeaderInfo/Description/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+					textAlign="Center" width="128px" wrapping="false"/>
+			</VBox>
+		</CustomListItem>
+	</List>
+
+</core:FragmentDefinition>

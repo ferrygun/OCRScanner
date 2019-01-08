@@ -1,0 +1,24 @@
+<core:FragmentDefinition template:require="sap.suite.ui.generic.template.js.AnnotationHelperReuseComponents" xmlns:build="sap.build"
+	xmlns:core="sap.ui.core" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" xmlns:uxap="sap.uxap" xmlns="sap.m">
+	<template:alias name=".AH" value="sap.suite.ui.generic.template.js.AnnotationHelperReuseComponents">
+		<template:if build:metadata="#ignore" test="{parameter>/settings/routeConfig/embeddedComponents}">
+			<template:repeat list="{parameter>/settings/routeConfig/embeddedComponents}" var="component">
+				<uxap:ObjectPageSection build:metadata="#pattern:Section;staticProp:title:Title" id="{path: 'component>', formatter: '.AH.formatIdComponentSection'}"
+					visible="{path: 'component>', formatter: '.AH.formatVisibleComponentSection'}"
+					title="{component>title}" titleUppercase="false">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection id="{path: 'component>', formatter: '.AH.formatIdComponentSubSection'}" class="sapSmartTemplatesObjectPageSubSection" title=" ">
+							<uxap:customData>
+								<core:CustomData key="strategyForVisibilityChange" value="reuseComponent"/>
+							</uxap:customData>							
+							<core:ComponentContainer id="{path: 'component>', formatter: '.AH.formatIdComponentContainer'}" binding="{= '{' + ( ${component>binding} || '' ) + '}' }" 
+								name="{component>componentName}" usage="{component>componentUsage}"
+								propagateModel="true"
+								settings="{parts: [{path: 'entitySet>'}, {path: 'component>'}, {path: 'parameter>/routingSpec'}], formatter: '.AH.formatComponentSettingsSubSection'}"/>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</template:repeat>
+		</template:if>
+	</template:alias>
+</core:FragmentDefinition>

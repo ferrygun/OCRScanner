@@ -1,0 +1,13 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	controllerName="sap.ca.scfld.md.view.App" displayBlock="true" height="100%">
+
+	<App id="app">
+		<pages>
+		</pages>
+	</App>
+</core:View>

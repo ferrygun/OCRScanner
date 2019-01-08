@@ -1,0 +1,133 @@
+- folder and file names should not contain space characters,
+- their length should be less than 32 characters,
+- only ASCII characters,
+- the name of the icon file in favicon determines the name of the folder in launchicon,
+- the names of the launchicons are the same for all the apps, their differ only by their parent folder's name.
+
+========================================
+========================================
+== PROCESSING with MINGW / linux
+========================================
+========================================
+1) delete the __MACOSX folder
+
+2) delete the mac "ds store" files
+find . -name "*.DS_Store" -delete
+
+3) Delete Android folders, we only use the iOS contents
+find . -type d -name Android -exec rm -rf {} \;
+
+4) KEEP all PNG files that start with "57", "72", "114" and "144". Delete the OTHERS.
+find . -regextype posix-extended -regex '.+\/(29|40|50|58|60|76|87|100|120|180|512|1024).+\.png' -delete
+
+5) Move all PNG files one folder up (out of their iOS folder)
+find . -type f -name *.png -exec sh -c 'mv -i "$1" "${1%/*}/.."' sh {} \;
+
+6) delete empty directories
+find . -type d -empty -delete
+
+7) Create a favicon folder, move all ICO files in it, directly under it
+
+8) Create a launchicon folder, move all folders whose name matches one of the ICO files in it.
+IMPORTANT: You now have a folder that contains 2 folders, favicon and launchicon.
+The following commands are to be executed from that parent folder.
+
+9) File names should be less than 32 characters long, should not contain spaces and only ASCII characters
+9a) Rename files and folders that have spaces in them, replace space by underscore
+for f in */*\ *; do mv "$f" "${f// /_}"; done
+
+9c) Find folders under launchicon that contain more than 32 characters
+find launchicon/* -type d -regextype posix-extended -regex '.*\/.{33,}' -print
+
+9d) Find files under favicon that contain more than 32 characters
+find favicon/* -type f -regextype posix-extended -regex '.*\/.{33,}' -print
+
+9d) Rename them, and make sure that the favicon name matches the launchicon.
+
+10) Make sure each ICO in favicon has a folder in launchicon
+#!
+files="favicon/*.ico"
+regex="favicon/(.*)\.ico"
+for f in $files
+do
+    [[ $f =~ $regex ]]
+    name="${BASH_REMATCH[1]}"
+    # echo "${name}"          # concatenate strings
+    name="${name}"    # same thing stored in a variable
+    if [ ! -d "launchicon/$name" ]
+    then
+        echo "$name NOT found."
+    fi
+done
+
+11) Make sure each folder in launchicon has an ICO in favicon
+#!
+folders="launchicon/*"
+regex="launchicon/(.*)"
+for f in $folders
+do
+    [[ $f =~ $regex ]]
+    name="${BASH_REMATCH[1]}"
+    name="${name}"    # same thing stored in a variable
+    if [ ! -f "favicon/$name.ico" ]
+    then
+        echo "$name.ico NOT found."
+    fi
+done
+
+12) Verify that each folder contains 4 png files
+#!
+find launchicon/* -type d -print0 | while read -d '' -r dir; do
+    files=("$dir"/*.png)
+    if [ "${#files[@]}" -ne 4 ]
+    then
+        # printf "%5d files in directory %s\n" "${#files[@]}" "$dir"
+        printf "%5d files in directory %s\n" "${#files[@]}" "$dir"
+    fi
+done
+
+13) Put the file in sap.ca and launch a build that performs the checks.
+
+
+========================================
+========================================
+== PROCESSING with DOS - DEPRECATED!
+== Use MINGW above
+== This is now incomplete.
+========================================
+========================================
+
+moveup.bat file
+===============
+Needs to be in c:\icons
+Needs to have the icons in c:\icons\launchicon
+==============================================
+@REM root folder
+pushd "C:\icons\launchicon"
+
+REM delete android folders
+
+REM remove spaces in folder/file names
+REM reduce name length to <32
+
+for /r %%a in (*.png) do (
+    @REM copy all the png found into their parent folder's parent
+    copy "%%a" "%%~dpa..\%%~nxa"
+)
+
+REM remove ios folders after copying of the files to their parent's folder
+
+REM remove unused sizes, keep only: 57, 72, 114, 144.
+erase /s 29*.png
+erase /s 40*.png
+erase /s 50*.png
+erase /s 58*.png
+erase /s 60*.png
+erase /s 76*.png
+erase /s 100*.png
+erase /s 120*.png
+erase /s 512*.png
+erase /s 1024*.png
+
+popd
+==============================================

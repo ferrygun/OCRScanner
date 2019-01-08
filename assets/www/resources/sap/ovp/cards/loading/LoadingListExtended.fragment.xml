@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:ovp="sap.ovp.ui"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<items>
+		<CustomListItem>
+			<VBox class="sapOvpLoadingListVBox" height="3.575rem">
+				<FlexBox class="sapOvpLoadingListTitleFlex" height="1rem"></FlexBox>
+				<FlexBox class="sapOvpLoadingListContentFlex" height="1rem"></FlexBox>
+			</VBox>
+			<VBox class="sapOvpLoadingListVBox" height="3.575rem">
+				<FlexBox class="sapOvpLoadingListTitleFlex" height="1rem"></FlexBox>
+				<FlexBox class="sapOvpLoadingListContentFlex" height="1rem"></FlexBox>
+			</VBox>
+			<VBox class="sapOvpLoadingListVBox" height="3.575rem">
+				<FlexBox class="sapOvpLoadingListTitleFlex" height="1rem"></FlexBox>
+				<FlexBox class="sapOvpLoadingListContentFlex" height="1rem"></FlexBox>
+			</VBox>
+			<VBox class="sapOvpLoadingListVBox" height="3.575rem">
+				<FlexBox class="sapOvpLoadingListTitleFlex" height="1rem"></FlexBox>
+				<FlexBox class="sapOvpLoadingListContentFlex" height="1rem"></FlexBox>
+			</VBox>
+			<VBox class="sapOvpLoadingListVBox" height="3.575rem">
+				<FlexBox class="sapOvpLoadingListTitleFlex" height="1rem"></FlexBox>
+				<FlexBox class="sapOvpLoadingListContentFlex" height="1rem"></FlexBox>
+			</VBox>
+		</CustomListItem>
+	</items>
+
+</core:FragmentDefinition>

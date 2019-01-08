@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+    xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+    xmlns="sap.m" xmlns:build="sap.build" xmlns:core="sap.ui.core">
+
+    <template:repeat list="{collection>}" var="dataField">
+        <template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAction' || ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation'}" build:metadata="#ignore">
+            <template:if test="{= ${dataField>Inline/Bool} !== 'true' &amp;&amp; ${dataField>Determining/Bool} !== 'true'}">
+                <template:then>
+                    <core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.ToolbarButton" type="XML"/>
+                </template:then>
+            </template:if>
+        </template:if>
+    </template:repeat>
+
+</core:FragmentDefinition>

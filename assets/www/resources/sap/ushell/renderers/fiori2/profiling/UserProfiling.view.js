@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";sap.ui.jsview("sap.ushell.renderers.fiori2.profiling.UserProfiling",{createContent:function(c){this.profilingContent=new sap.m.VBox().addStyleClass("sapUshellUserSettingDetailContent");return this.profilingContent;},getControllerName:function(){return"sap.ushell.renderers.fiori2.profiling.UserProfiling";}});},false);

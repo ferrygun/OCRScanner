@@ -1,0 +1,2723 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library"
+		},
+		{
+			"name": ".theming"
+		},
+		{
+			"name": "Field-dbg.js",
+			"module": "sap/ui/mdc/Field.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "Field.js",
+			"module": "sap/ui/mdc/Field.js",
+			"required": [
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "FilterBar-dbg.js",
+			"module": "sap/ui/mdc/FilterBar.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/SearchField.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/mdc/FilterField.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/base/ConditionModel.js",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "FilterBar.designtime-dbg.js",
+			"module": "sap/ui/mdc/FilterBar.designtime.js",
+			"isDebug": true
+		},
+		{
+			"name": "FilterBar.designtime.js",
+			"module": "sap/ui/mdc/FilterBar.designtime.js",
+			"designtime": true
+		},
+		{
+			"name": "FilterBar.js",
+			"module": "sap/ui/mdc/FilterBar.js",
+			"required": [
+				"sap/m/SearchField.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/mdc/FilterField.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/base/ConditionModel.js",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "FilterField-dbg.js",
+			"module": "sap/ui/mdc/FilterField.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/ValueHelpDialog.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/base/FixedValueListProvider.js",
+				"sap/ui/mdc/base/ODataSuggestProvider.js",
+				"sap/ui/mdc/base/OperatorSuggestProvider.js",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/v4/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "FilterField.js",
+			"module": "sap/ui/mdc/FilterField.js",
+			"required": [
+				"sap/ui/mdc/ValueHelpDialog.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/base/FixedValueListProvider.js",
+				"sap/ui/mdc/base/ODataSuggestProvider.js",
+				"sap/ui/mdc/base/OperatorSuggestProvider.js",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/v4/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "Table-dbg.js",
+			"module": "sap/ui/mdc/Table.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/ListMode.js",
+				"sap/ui/mdc/Field.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/internal/field/Field.controller.js",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.controller.js",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.controller.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/odata/v4/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "Table.designtime-dbg.js",
+			"module": "sap/ui/mdc/Table.designtime.js",
+			"isDebug": true
+		},
+		{
+			"name": "Table.designtime.js",
+			"module": "sap/ui/mdc/Table.designtime.js",
+			"designtime": true
+		},
+		{
+			"name": "Table.js",
+			"module": "sap/ui/mdc/Table.js",
+			"required": [
+				"sap/m/ListMode.js",
+				"sap/ui/mdc/Field.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/internal/field/Field.controller.js",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.controller.js",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.controller.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/odata/v4/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "ValueHelpDialog-dbg.js",
+			"module": "sap/ui/mdc/ValueHelpDialog.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/base/ValueHelpDialog.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "ValueHelpDialog.js",
+			"module": "sap/ui/mdc/ValueHelpDialog.js",
+			"required": [
+				"sap/ui/mdc/base/ValueHelpDialog.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "XMLComposite-dbg.js",
+			"module": "sap/ui/mdc/XMLComposite.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "XMLComposite.js",
+			"module": "sap/ui/mdc/XMLComposite.js",
+			"required": [
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "base/ConditionModel-dbg.js",
+			"module": "sap/ui/mdc/base/ConditionModel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/base/FilterOperatorConfig.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "base/ConditionModel.js",
+			"module": "sap/ui/mdc/base/ConditionModel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/base/FilterOperatorConfig.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "base/FilterField-dbg.js",
+			"module": "sap/ui/mdc/base/FilterField.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/MultiInput.js",
+				"sap/m/Token.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/mdc/base/FilterFieldRenderer.js",
+				"sap/ui/mdc/base/type/DateRange.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/base/ManagedObjectModel.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "base/FilterField.js",
+			"module": "sap/ui/mdc/base/FilterField.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/MultiInput.js",
+				"sap/m/Token.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/mdc/base/FilterFieldRenderer.js",
+				"sap/ui/mdc/base/type/DateRange.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/base/ManagedObjectModel.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "base/FilterFieldRenderer-dbg.js",
+			"module": "sap/ui/mdc/base/FilterFieldRenderer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/Renderer.js"
+			]
+		},
+		{
+			"name": "base/FilterFieldRenderer.js",
+			"module": "sap/ui/mdc/base/FilterFieldRenderer.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/Renderer.js"
+			]
+		},
+		{
+			"name": "base/FilterOperatorConfig-dbg.js",
+			"module": "sap/ui/mdc/base/FilterOperatorConfig.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "base/FilterOperatorConfig.js",
+			"module": "sap/ui/mdc/base/FilterOperatorConfig.js",
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "base/FilterToken-dbg.js",
+			"module": "sap/ui/mdc/base/FilterToken.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Token.js",
+				"sap/m/Tokenizer.js",
+				"sap/ui/base/ManagedObject.js"
+			]
+		},
+		{
+			"name": "base/FilterToken.js",
+			"module": "sap/ui/mdc/base/FilterToken.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Token.js",
+				"sap/m/Tokenizer.js",
+				"sap/ui/base/ManagedObject.js"
+			]
+		},
+		{
+			"name": "base/FilterTokenRenderer-dbg.js",
+			"module": "sap/ui/mdc/base/FilterTokenRenderer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/Renderer.js"
+			]
+		},
+		{
+			"name": "base/FilterTokenRenderer.js",
+			"module": "sap/ui/mdc/base/FilterTokenRenderer.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/Renderer.js"
+			]
+		},
+		{
+			"name": "base/FixedValueListProvider-dbg.js",
+			"module": "sap/ui/mdc/base/FixedValueListProvider.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "base/FixedValueListProvider.js",
+			"module": "sap/ui/mdc/base/FixedValueListProvider.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "base/ODataSuggestProvider-dbg.js",
+			"module": "sap/ui/mdc/base/ODataSuggestProvider.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "base/ODataSuggestProvider.js",
+			"module": "sap/ui/mdc/base/ODataSuggestProvider.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "base/OperatorSuggestProvider-dbg.js",
+			"module": "sap/ui/mdc/base/OperatorSuggestProvider.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "base/OperatorSuggestProvider.js",
+			"module": "sap/ui/mdc/base/OperatorSuggestProvider.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "base/ValueHelpDialog-dbg.js",
+			"module": "sap/ui/mdc/base/ValueHelpDialog.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/XMLComposite.js"
+			]
+		},
+		{
+			"name": "base/ValueHelpDialog.control.xml",
+			"module": "sap/ui/mdc/base/ValueHelpDialog.control.xml",
+			"required": [
+				"sap/m/Bar.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/ui/core/XMLComposite.js"
+			]
+		},
+		{
+			"name": "base/ValueHelpDialog.js",
+			"module": "sap/ui/mdc/base/ValueHelpDialog.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/XMLComposite.js"
+			]
+		},
+		{
+			"name": "base/type/DateRange-dbg.js",
+			"module": "sap/ui/mdc/base/type/DateRange.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/model/CompositeType.js",
+				"sap/ui/model/FormatException.js",
+				"sap/ui/model/ParseException.js"
+			]
+		},
+		{
+			"name": "base/type/DateRange.js",
+			"module": "sap/ui/mdc/base/type/DateRange.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/model/CompositeType.js",
+				"sap/ui/model/FormatException.js",
+				"sap/ui/model/ParseException.js"
+			]
+		},
+		{
+			"name": "experimental/Action-dbg.js",
+			"module": "sap/ui/mdc/experimental/Action.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/library.js"
+			]
+		},
+		{
+			"name": "experimental/Action.js",
+			"module": "sap/ui/mdc/experimental/Action.js",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/library.js"
+			]
+		},
+		{
+			"name": "experimental/ControlSelector-dbg.js",
+			"module": "sap/ui/mdc/experimental/ControlSelector.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "experimental/ControlSelector.js",
+			"module": "sap/ui/mdc/experimental/ControlSelector.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "experimental/CustomFieldHelp-dbg.js",
+			"module": "sap/ui/mdc/experimental/CustomFieldHelp.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/FieldHelpBase.js"
+			]
+		},
+		{
+			"name": "experimental/CustomFieldHelp.js",
+			"module": "sap/ui/mdc/experimental/CustomFieldHelp.js",
+			"required": [
+				"sap/ui/mdc/experimental/FieldHelpBase.js"
+			]
+		},
+		{
+			"name": "experimental/DataObject-dbg.js",
+			"module": "sap/ui/mdc/experimental/DataObject.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/EventProvider.js",
+				"sap/ui/mdc/experimental/DataObjectMetadata.js"
+			]
+		},
+		{
+			"name": "experimental/DataObject.js",
+			"module": "sap/ui/mdc/experimental/DataObject.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/EventProvider.js",
+				"sap/ui/mdc/experimental/DataObjectMetadata.js"
+			]
+		},
+		{
+			"name": "experimental/DataObjectMetadata-dbg.js",
+			"module": "sap/ui/mdc/experimental/DataObjectMetadata.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/DataType.js",
+				"sap/ui/base/Metadata.js"
+			]
+		},
+		{
+			"name": "experimental/DataObjectMetadata.js",
+			"module": "sap/ui/mdc/experimental/DataObjectMetadata.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/DataType.js",
+				"sap/ui/base/Metadata.js"
+			]
+		},
+		{
+			"name": "experimental/Field-dbg.js",
+			"module": "sap/ui/mdc/experimental/Field.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Input.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/BindingMode.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			],
+			"condRequired": [
+				"sap/m/DatePicker.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/TimePicker.js"
+			]
+		},
+		{
+			"name": "experimental/Field.js",
+			"module": "sap/ui/mdc/experimental/Field.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Input.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/BindingMode.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			],
+			"condRequired": [
+				"sap/m/DatePicker.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/TimePicker.js"
+			]
+		},
+		{
+			"name": "experimental/FieldHelpBase-dbg.js",
+			"module": "sap/ui/mdc/experimental/FieldHelpBase.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/Popover.js",
+				"sap/ui/core/Element.js"
+			]
+		},
+		{
+			"name": "experimental/FieldHelpBase.js",
+			"module": "sap/ui/mdc/experimental/FieldHelpBase.js",
+			"required": [
+				"sap/m/Popover.js",
+				"sap/ui/core/Element.js"
+			]
+		},
+		{
+			"name": "experimental/FieldRenderer-dbg.js",
+			"module": "sap/ui/mdc/experimental/FieldRenderer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/ValueState.js"
+			]
+		},
+		{
+			"name": "experimental/FieldRenderer.js",
+			"module": "sap/ui/mdc/experimental/FieldRenderer.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/ValueState.js"
+			]
+		},
+		{
+			"name": "experimental/LinkList-dbg.js",
+			"module": "sap/ui/mdc/experimental/LinkList.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/VBox.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			]
+		},
+		{
+			"name": "experimental/LinkList.js",
+			"module": "sap/ui/mdc/experimental/LinkList.js",
+			"required": [
+				"sap/m/VBox.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			]
+		},
+		{
+			"name": "experimental/ListFieldHelp-dbg.js",
+			"module": "sap/ui/mdc/experimental/ListFieldHelp.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/DisplayListItem.js",
+				"sap/m/List.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			]
+		},
+		{
+			"name": "experimental/ListFieldHelp.js",
+			"module": "sap/ui/mdc/experimental/ListFieldHelp.js",
+			"required": [
+				"sap/m/DisplayListItem.js",
+				"sap/m/List.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nColumnItem-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nColumnItem.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nColumnItem.js",
+			"module": "sap/ui/mdc/experimental/P13nColumnItem.js",
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nColumnPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nColumnPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nInternalModel.js",
+				"sap/ui/mdc/experimental/P13nPanel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nColumnPanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nColumnPanel.control.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/SearchField.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nColumnPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nColumnPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nInternalModel.js",
+				"sap/ui/mdc/experimental/P13nPanel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nFilterItem-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nFilterItem.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nFilterItem.js",
+			"module": "sap/ui/mdc/experimental/P13nFilterItem.js",
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nFilterPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nFilterPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nInternalModel.js",
+				"sap/ui/mdc/experimental/P13nPanel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nFilterPanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nFilterPanel.control.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Label.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/SearchField.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/AggregationProxy.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nFilterPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nFilterPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nInternalModel.js",
+				"sap/ui/mdc/experimental/P13nPanel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nInternalModel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nInternalModel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/comp/personalization/Util.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nInternalModel.js",
+			"module": "sap/ui/mdc/experimental/P13nInternalModel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/comp/personalization/Util.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nItem-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nItem.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Element.js"
+			]
+		},
+		{
+			"name": "experimental/P13nItem.js",
+			"module": "sap/ui/mdc/experimental/P13nItem.js",
+			"required": [
+				"sap/ui/core/Element.js"
+			]
+		},
+		{
+			"name": "experimental/P13nPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/mdc/experimental/P13nPanelFormatter.js",
+				"sap/ui/model/ChangeReason.js"
+			]
+		},
+		{
+			"name": "experimental/P13nPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/mdc/experimental/P13nPanelFormatter.js",
+				"sap/ui/model/ChangeReason.js"
+			]
+		},
+		{
+			"name": "experimental/P13nPanelFormatter-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nPanelFormatter.js",
+			"isDebug": true
+		},
+		{
+			"name": "experimental/P13nPanelFormatter.js",
+			"module": "sap/ui/mdc/experimental/P13nPanelFormatter.js"
+		},
+		{
+			"name": "experimental/P13nSelectionItem-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSelectionItem.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSelectionItem.js",
+			"module": "sap/ui/mdc/experimental/P13nSelectionItem.js",
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSelectionPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSelectionPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/P13nPanel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSelectionPanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nSelectionPanel.control.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Link.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/SearchField.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToggleButton.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSelectionPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nSelectionPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/P13nPanel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortItem-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSortItem.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortItem.js",
+			"module": "sap/ui/mdc/experimental/P13nSortItem.js",
+			"required": [
+				"sap/ui/mdc/experimental/P13nItem.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortModel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSortModel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/comp/personalization/Util.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortModel.js",
+			"module": "sap/ui/mdc/experimental/P13nSortModel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/comp/personalization/Util.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSortPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortPanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nSortPanel.control.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/SearchField.js",
+				"sap/m/Select.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nSortPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortQBGridPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSortQBGridPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortQBGridPanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nSortQBGridPanel.control.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/ComboBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Select.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortQBGridPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nSortQBGridPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortQBPanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSortQBPanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortQBPanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nSortQBPanel.control.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Select.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortQBPanel.js",
+			"module": "sap/ui/mdc/experimental/P13nSortQBPanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortSimplePanel-dbg.js",
+			"module": "sap/ui/mdc/experimental/P13nSortSimplePanel.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortSimplePanel.control.xml",
+			"module": "sap/ui/mdc/experimental/P13nSortSimplePanel.control.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Label.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "experimental/P13nSortSimplePanel.js",
+			"module": "sap/ui/mdc/experimental/P13nSortSimplePanel.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/library.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js"
+			]
+		},
+		{
+			"name": "experimental/TableFieldHelp-dbg.js",
+			"module": "sap/ui/mdc/experimental/TableFieldHelp.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/DisplayListItem.js",
+				"sap/m/List.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			]
+		},
+		{
+			"name": "experimental/TableFieldHelp.js",
+			"module": "sap/ui/mdc/experimental/TableFieldHelp.js",
+			"required": [
+				"sap/m/DisplayListItem.js",
+				"sap/m/List.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/model/base/ManagedObjectModel.js"
+			]
+		},
+		{
+			"name": "experimental/provider/ControlProvider-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/ControlProvider.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/BindingParser.js",
+				"sap/ui/base/ManagedObject.js"
+			]
+		},
+		{
+			"name": "experimental/provider/ControlProvider.js",
+			"module": "sap/ui/mdc/experimental/provider/ControlProvider.js",
+			"required": [
+				"sap/ui/base/BindingParser.js",
+				"sap/ui/base/ManagedObject.js"
+			]
+		},
+		{
+			"name": "experimental/provider/ProviderHook-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/ProviderHook.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/core/XMLTemplateProcessor.js",
+				"sap/ui/core/util/XMLPreprocessor.js",
+				"sap/ui/mdc/experimental/provider/registry/ControlRegistry.js"
+			]
+		},
+		{
+			"name": "experimental/provider/ProviderHook.js",
+			"module": "sap/ui/mdc/experimental/provider/ProviderHook.js",
+			"required": [
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/core/XMLTemplateProcessor.js",
+				"sap/ui/core/util/XMLPreprocessor.js",
+				"sap/ui/mdc/experimental/provider/registry/ControlRegistry.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/AdapterFactory-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/AdapterFactory.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataObjectAdapter.js",
+				"sap/ui/model/MetaModel.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/AdapterFactory.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/AdapterFactory.js",
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataObjectAdapter.js",
+				"sap/ui/model/MetaModel.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/ODataBaseAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/ODataBaseAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/ODataFieldAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/FieldAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/ODataFieldAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/FieldAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/ODataObjectAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/ODataObjectAdapter.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/ObjectAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/ODataObjectAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/ODataObjectAdapter.js",
+			"required": [
+				"sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/ObjectAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/BaseAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/BaseAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/CollectionAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/CollectionAdapter.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/CollectionAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/CollectionAdapter.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/FieldAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/FieldAdapter.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/FieldAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/FieldAdapter.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/ObjectAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/ObjectAdapter.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/adapter/base/ObjectAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/adapter/base/ObjectAdapter.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/model/ModelAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/model/ModelAdapter.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "experimental/provider/model/ModelAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/model/ModelAdapter.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "experimental/provider/model/ODataAdapter-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/model/ODataAdapter.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/provider/model/ModelAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/model/ODataAdapter.js",
+			"module": "sap/ui/mdc/experimental/provider/model/ODataAdapter.js",
+			"required": [
+				"sap/ui/mdc/experimental/provider/model/ModelAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/registry/ControlRegistry-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/registry/ControlRegistry.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/experimental/provider/ControlProvider.js",
+				"sap/ui/mdc/experimental/provider/adapter/AdapterFactory.js",
+				"sap/ui/mdc/experimental/provider/registry/Utils.js"
+			]
+		},
+		{
+			"name": "experimental/provider/registry/ControlRegistry.js",
+			"module": "sap/ui/mdc/experimental/provider/registry/ControlRegistry.js",
+			"required": [
+				"sap/ui/mdc/experimental/provider/ControlProvider.js",
+				"sap/ui/mdc/experimental/provider/adapter/AdapterFactory.js",
+				"sap/ui/mdc/experimental/provider/registry/Utils.js"
+			]
+		},
+		{
+			"name": "experimental/provider/registry/Utils-dbg.js",
+			"module": "sap/ui/mdc/experimental/provider/registry/Utils.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/mdc/experimental/provider/model/ModelAdapter.js"
+			]
+		},
+		{
+			"name": "experimental/provider/registry/Utils.js",
+			"module": "sap/ui/mdc/experimental/provider/registry/Utils.js",
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/mdc/experimental/provider/model/ModelAdapter.js"
+			]
+		},
+		{
+			"name": "internal/common/DraftInfoPopover.fragment.xml",
+			"module": "sap/ui/mdc/internal/common/DraftInfoPopover.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Popover.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "internal/common/Helper-dbg.js",
+			"module": "sap/ui/mdc/internal/common/Helper.js",
+			"isDebug": true
+		},
+		{
+			"name": "internal/common/Helper.js",
+			"module": "sap/ui/mdc/internal/common/Helper.js"
+		},
+		{
+			"name": "internal/field/ContactDetails.fragment.xml",
+			"module": "sap/ui/mdc/internal/field/ContactDetails.fragment.xml",
+			"required": [
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "internal/field/DataField.fragment.xml",
+			"module": "sap/ui/mdc/internal/field/DataField.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/experimental/Field.js"
+			],
+			"condRequired": [
+				"sap/m/HBox.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ObjectMarker.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/unified/Currency.js"
+			]
+		},
+		{
+			"name": "internal/field/DataFieldForAction.fragment.xml",
+			"module": "sap/ui/mdc/internal/field/DataFieldForAction.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/experimental/Action.js"
+			]
+		},
+		{
+			"name": "internal/field/DataFieldForAnnotation.fragment.xml",
+			"module": "sap/ui/mdc/internal/field/DataFieldForAnnotation.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Link.js",
+				"sap/m/ProgressIndicator.js",
+				"sap/m/RatingIndicator.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/mdc/internal/field/ContactDetails.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/field/Field-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/field/Field.controller.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/mdc/experimental/Action.js"
+			]
+		},
+		{
+			"name": "internal/field/Field.control.xml",
+			"module": "sap/ui/mdc/internal/field/Field.control.xml",
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/field/Field.controller.js",
+			"module": "sap/ui/mdc/internal/field/Field.controller.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/mdc/experimental/Action.js"
+			]
+		},
+		{
+			"name": "internal/field/Field.fragment.xml",
+			"module": "sap/ui/mdc/internal/field/Field.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Text.js",
+				"sap/ui/mdc/internal/field/DataField.fragment.xml",
+				"sap/ui/mdc/internal/field/DataFieldForAction.fragment.xml",
+				"sap/ui/mdc/internal/field/DataFieldForAnnotation.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/filterbar/FilterBar.control.xml",
+			"module": "sap/ui/mdc/internal/filterbar/FilterBar.control.xml",
+			"required": [
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/layout/AlignedFlowLayout.js"
+			],
+			"condRequired": [
+				"sap/m/Button.js",
+				"sap/m/ComboBox.js",
+				"sap/m/Label.js",
+				"sap/m/SearchField.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/mdc/FilterField.js"
+			]
+		},
+		{
+			"name": "internal/filterfield/FilterField.control.xml",
+			"module": "sap/ui/mdc/internal/filterfield/FilterField.control.xml",
+			"required": [
+				"sap/m/Label.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/mdc/base/FilterField.js"
+			]
+		},
+		{
+			"name": "internal/filterfield/SuggestionList.view.xml",
+			"module": "sap/ui/mdc/internal/filterfield/SuggestionList.view.xml",
+			"required": [
+				"sap/m/ColumnListItem.js",
+				"sap/m/Table.js",
+				"sap/ui/core/mvc/XMLView.js"
+			],
+			"condRequired": [
+				"sap/m/Column.js",
+				"sap/m/Label.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/Table-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/table/Table.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/mdc/experimental/Action.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/table/Table.control.xml",
+			"module": "sap/ui/mdc/internal/table/Table.control.xml",
+			"required": [
+				"sap/ui/core/XMLComposite.js"
+			],
+			"condRequired": [
+				"sap/m/MessageStrip.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/Table.controller.js",
+			"module": "sap/ui/mdc/internal/table/Table.controller.js",
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/mdc/experimental/Action.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/table/Table.flexibility-dbg.js",
+			"module": "sap/ui/mdc/internal/table/Table.flexibility.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/base/ConditionModel.js"
+			]
+		},
+		{
+			"name": "internal/table/Table.flexibility.js",
+			"module": "sap/ui/mdc/internal/table/Table.flexibility.js",
+			"required": [
+				"sap/ui/mdc/base/ConditionModel.js"
+			]
+		},
+		{
+			"name": "internal/table/TableToolbar.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/TableToolbar.fragment.xml",
+			"required": [
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ui/mdc/experimental/Action.js"
+			]
+		},
+		{
+			"name": "internal/table/gridtable/AddGridTableColumnChange.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/gridtable/AddGridTableColumnChange.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/table/gridtable/GridTableColumn.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/gridtable/GridTable-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/table/gridtable/GridTable.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/internal/table/Table.controller.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "internal/table/gridtable/GridTable.controller.js",
+			"module": "sap/ui/mdc/internal/table/gridtable/GridTable.controller.js",
+			"required": [
+				"sap/ui/mdc/internal/table/Table.controller.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "internal/table/gridtable/GridTable.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/gridtable/GridTable.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/table/TableToolbar.fragment.xml"
+			],
+			"condRequired": [
+				"sap/ui/mdc/internal/table/gridtable/GridTableColumn.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/gridtable/GridTableColumn.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/gridtable/GridTableColumn.fragment.xml",
+			"required": [
+				"sap/m/Label.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/p13nsettings/P13nSettings-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/table/p13nsettings/P13nSettings.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/table/p13nsettings/P13nSettings.controller.js",
+			"module": "sap/ui/mdc/internal/table/p13nsettings/P13nSettings.controller.js",
+			"required": [
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/table/p13nsettings/P13nSettings.view.xml",
+			"module": "sap/ui/mdc/internal/table/p13nsettings/P13nSettings.view.xml",
+			"required": [
+				"sap/m/P13nDialog.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/mdc/internal/table/p13nsettings/P13nSettings.controller.js"
+			],
+			"condRequired": [
+				"sap/m/P13nGroupItem.js",
+				"sap/m/P13nGroupPanel.js",
+				"sap/m/P13nItem.js",
+				"sap/m/P13nSortItem.js",
+				"sap/m/P13nSortPanel.js"
+			]
+		},
+		{
+			"name": "internal/table/responsivetable/AddColumnChange.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/responsivetable/AddColumnChange.fragment.xml",
+			"required": [
+				"sap/m/Table.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTableColumn.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/responsivetable/ResponsiveTable-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/internal/table/Table.controller.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "internal/table/responsivetable/ResponsiveTable.controller.js",
+			"module": "sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.controller.js",
+			"required": [
+				"sap/ui/mdc/internal/table/Table.controller.js",
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "internal/table/responsivetable/ResponsiveTable.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.fragment.xml",
+			"required": [
+				"sap/m/ColumnListItem.js",
+				"sap/m/Table.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/table/TableToolbar.fragment.xml"
+			],
+			"condRequired": [
+				"sap/ui/mdc/internal/field/Field.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTableColumn.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/table/responsivetable/ResponsiveTableColumn.fragment.xml",
+			"module": "sap/ui/mdc/internal/table/responsivetable/ResponsiveTableColumn.fragment.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/Label.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "internal/table/viewsettings/ViewSettings-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/table/viewsettings/ViewSettings.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/table/viewsettings/ViewSettings.controller.js",
+			"module": "sap/ui/mdc/internal/table/viewsettings/ViewSettings.controller.js",
+			"required": [
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/mdc/library.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/table/viewsettings/ViewSettings.view.xml",
+			"module": "sap/ui/mdc/internal/table/viewsettings/ViewSettings.view.xml",
+			"required": [
+				"sap/m/ViewSettingsDialog.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/mdc/internal/table/viewsettings/ViewSettings.controller.js"
+			],
+			"condRequired": [
+				"sap/m/ViewSettingsItem.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/ValueHelp-dbg.controller.js",
+			"module": "sap/ui/mdc/internal/valuehelp/ValueHelp.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/SearchField.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/mdc/base/ConditionModel.js",
+				"sap/ui/mdc/base/ODataSuggestProvider.js",
+				"sap/ui/mdc/base/OperatorSuggestProvider.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/ValueHelp.controller.js",
+			"module": "sap/ui/mdc/internal/valuehelp/ValueHelp.controller.js",
+			"required": [
+				"sap/m/SearchField.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/mdc/base/ConditionModel.js",
+				"sap/ui/mdc/base/ODataSuggestProvider.js",
+				"sap/ui/mdc/base/OperatorSuggestProvider.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/ValueHelp.view.xml",
+			"module": "sap/ui/mdc/internal/valuehelp/ValueHelp.view.xml",
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/mdc/internal/valuehelp/ValueHelp.controller.js",
+				"sap/ui/mdc/internal/valuehelp/fragments/SelectFromList.fragment.xml"
+			]
+		},
+		{
+			"name": "internal/valuehelp/ValueHelpAnnotationHelper-dbg.js",
+			"module": "sap/ui/mdc/internal/valuehelp/ValueHelpAnnotationHelper.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/ValueHelpAnnotationHelper.js",
+			"module": "sap/ui/mdc/internal/valuehelp/ValueHelpAnnotationHelper.js",
+			"required": [
+				"sap/ui/mdc/library.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/fragments/FilterBar.fragment.xml",
+			"module": "sap/ui/mdc/internal/valuehelp/fragments/FilterBar.fragment.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js"
+			],
+			"condRequired": [
+				"sap/ui/mdc/FilterField.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/fragments/IconTabConditionsView.fragment.xml",
+			"module": "sap/ui/mdc/internal/valuehelp/fragments/IconTabConditionsView.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/HBox.js",
+				"sap/m/Panel.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/Select.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/ListItem.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/fragments/SelectFromList.fragment.xml",
+			"module": "sap/ui/mdc/internal/valuehelp/fragments/SelectFromList.fragment.xml",
+			"required": [
+				"sap/m/Page.js",
+				"sap/m/SplitApp.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/mdc/internal/valuehelp/fragments/FilterBar.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/SelectFromListTable.fragment.xml"
+			],
+			"condRequired": [
+				"sap/m/SearchField.js"
+			]
+		},
+		{
+			"name": "internal/valuehelp/fragments/SelectFromListTable.fragment.xml",
+			"module": "sap/ui/mdc/internal/valuehelp/fragments/SelectFromListTable.fragment.xml",
+			"required": [
+				"sap/m/ColumnListItem.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/Table.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Column.js",
+				"sap/m/Label.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml"
+			]
+		},
+		{
+			"name": "library-all-dbg.js",
+			"isDebug": true,
+			"merged": true
+		},
+		{
+			"name": "library-all.js",
+			"merged": true
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/ui/mdc/library.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/core/util/XMLPreprocessor.js",
+				"sap/ui/mdc/experimental/provider/ProviderHook.js",
+				"sap/ui/mdc/model/GenericType.js"
+			]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/ui/mdc/library-preload.js",
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Bar.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/Dialog.js",
+				"sap/m/DisplayListItem.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/ListMode.js",
+				"sap/m/MultiInput.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/P13nDialog.js",
+				"sap/m/Page.js",
+				"sap/m/Panel.js",
+				"sap/m/Popover.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/SearchField.js",
+				"sap/m/Select.js",
+				"sap/m/SplitApp.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/Title.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/Token.js",
+				"sap/m/Tokenizer.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/m/ViewSettingsDialog.js",
+				"sap/m/library.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/BindingParser.js",
+				"sap/ui/base/DataType.js",
+				"sap/ui/base/EventProvider.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/base/Metadata.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/personalization/Util.js",
+				"sap/ui/core/AggregationProxy.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/ListItem.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/ValueState.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/core/XMLTemplateProcessor.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/util/XMLPreprocessor.js",
+				"sap/ui/layout/AlignedFlowLayout.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/model/BindingMode.js",
+				"sap/ui/model/ChangeReason.js",
+				"sap/ui/model/CompositeType.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/FormatException.js",
+				"sap/ui/model/MetaModel.js",
+				"sap/ui/model/ParseException.js",
+				"sap/ui/model/SimpleType.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/base/ManagedObjectModel.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/json/JSONPropertyBinding.js",
+				"sap/ui/model/odata/v4/AnnotationHelper.js"
+			],
+			"condRequired": [
+				"sap/m/DatePicker.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ObjectMarker.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/P13nGroupItem.js",
+				"sap/m/P13nGroupPanel.js",
+				"sap/m/P13nItem.js",
+				"sap/m/P13nSortItem.js",
+				"sap/m/P13nSortPanel.js",
+				"sap/m/ProgressIndicator.js",
+				"sap/m/RatingIndicator.js",
+				"sap/m/TimePicker.js",
+				"sap/m/ViewSettingsItem.js",
+				"sap/ui/unified/Currency.js"
+			],
+			"included": [
+				"sap/ui/mdc/Field.js",
+				"sap/ui/mdc/FilterBar.designtime.js",
+				"sap/ui/mdc/FilterBar.js",
+				"sap/ui/mdc/FilterField.js",
+				"sap/ui/mdc/Table.designtime.js",
+				"sap/ui/mdc/Table.js",
+				"sap/ui/mdc/ValueHelpDialog.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/base/ConditionModel.js",
+				"sap/ui/mdc/base/FilterField.js",
+				"sap/ui/mdc/base/FilterFieldRenderer.js",
+				"sap/ui/mdc/base/FilterOperatorConfig.js",
+				"sap/ui/mdc/base/FilterToken.js",
+				"sap/ui/mdc/base/FilterTokenRenderer.js",
+				"sap/ui/mdc/base/FixedValueListProvider.js",
+				"sap/ui/mdc/base/ODataSuggestProvider.js",
+				"sap/ui/mdc/base/OperatorSuggestProvider.js",
+				"sap/ui/mdc/base/ValueHelpDialog.control.xml",
+				"sap/ui/mdc/base/ValueHelpDialog.js",
+				"sap/ui/mdc/base/type/DateRange.js",
+				"sap/ui/mdc/experimental/Action.js",
+				"sap/ui/mdc/experimental/ControlSelector.js",
+				"sap/ui/mdc/experimental/CustomFieldHelp.js",
+				"sap/ui/mdc/experimental/DataObject.js",
+				"sap/ui/mdc/experimental/DataObjectMetadata.js",
+				"sap/ui/mdc/experimental/Field.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/mdc/experimental/FieldRenderer.js",
+				"sap/ui/mdc/experimental/LinkList.js",
+				"sap/ui/mdc/experimental/ListFieldHelp.js",
+				"sap/ui/mdc/experimental/P13nColumnItem.js",
+				"sap/ui/mdc/experimental/P13nColumnPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nColumnPanel.js",
+				"sap/ui/mdc/experimental/P13nFilterItem.js",
+				"sap/ui/mdc/experimental/P13nFilterPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nFilterPanel.js",
+				"sap/ui/mdc/experimental/P13nInternalModel.js",
+				"sap/ui/mdc/experimental/P13nItem.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nPanelFormatter.js",
+				"sap/ui/mdc/experimental/P13nSelectionItem.js",
+				"sap/ui/mdc/experimental/P13nSelectionPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSelectionPanel.js",
+				"sap/ui/mdc/experimental/P13nSortItem.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js",
+				"sap/ui/mdc/experimental/P13nSortPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortPanel.js",
+				"sap/ui/mdc/experimental/P13nSortQBGridPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortQBGridPanel.js",
+				"sap/ui/mdc/experimental/P13nSortQBPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortQBPanel.js",
+				"sap/ui/mdc/experimental/P13nSortSimplePanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortSimplePanel.js",
+				"sap/ui/mdc/experimental/TableFieldHelp.js",
+				"sap/ui/mdc/experimental/provider/ControlProvider.js",
+				"sap/ui/mdc/experimental/provider/ProviderHook.js",
+				"sap/ui/mdc/experimental/provider/adapter/AdapterFactory.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataObjectAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/CollectionAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/FieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/ObjectAdapter.js",
+				"sap/ui/mdc/experimental/provider/model/ModelAdapter.js",
+				"sap/ui/mdc/experimental/provider/model/ODataAdapter.js",
+				"sap/ui/mdc/experimental/provider/registry/ControlRegistry.js",
+				"sap/ui/mdc/experimental/provider/registry/Utils.js",
+				"sap/ui/mdc/internal/common/DraftInfoPopover.fragment.xml",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/internal/field/ContactDetails.fragment.xml",
+				"sap/ui/mdc/internal/field/DataField.fragment.xml",
+				"sap/ui/mdc/internal/field/DataFieldForAction.fragment.xml",
+				"sap/ui/mdc/internal/field/DataFieldForAnnotation.fragment.xml",
+				"sap/ui/mdc/internal/field/Field.control.xml",
+				"sap/ui/mdc/internal/field/Field.controller.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml",
+				"sap/ui/mdc/internal/filterbar/FilterBar.control.xml",
+				"sap/ui/mdc/internal/filterfield/FilterField.control.xml",
+				"sap/ui/mdc/internal/filterfield/SuggestionList.view.xml",
+				"sap/ui/mdc/internal/table/Table.control.xml",
+				"sap/ui/mdc/internal/table/Table.controller.js",
+				"sap/ui/mdc/internal/table/Table.flexibility.js",
+				"sap/ui/mdc/internal/table/TableToolbar.fragment.xml",
+				"sap/ui/mdc/internal/table/gridtable/AddGridTableColumnChange.fragment.xml",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.controller.js",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.fragment.xml",
+				"sap/ui/mdc/internal/table/gridtable/GridTableColumn.fragment.xml",
+				"sap/ui/mdc/internal/table/p13nsettings/P13nSettings.controller.js",
+				"sap/ui/mdc/internal/table/p13nsettings/P13nSettings.view.xml",
+				"sap/ui/mdc/internal/table/responsivetable/AddColumnChange.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.controller.js",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTableColumn.fragment.xml",
+				"sap/ui/mdc/internal/table/viewsettings/ViewSettings.controller.js",
+				"sap/ui/mdc/internal/table/viewsettings/ViewSettings.view.xml",
+				"sap/ui/mdc/internal/valuehelp/ValueHelp.controller.js",
+				"sap/ui/mdc/internal/valuehelp/ValueHelp.view.xml",
+				"sap/ui/mdc/internal/valuehelp/ValueHelpAnnotationHelper.js",
+				"sap/ui/mdc/internal/valuehelp/fragments/FilterBar.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/IconTabConditionsView.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/SelectFromList.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/SelectFromListTable.fragment.xml",
+				"sap/ui/mdc/library.js",
+				"sap/ui/mdc/manifest.json",
+				"sap/ui/mdc/model/GenericType.js"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.json",
+			"module": "sap/ui/mdc/library-preload.json",
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Bar.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/Dialog.js",
+				"sap/m/DisplayListItem.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/ListMode.js",
+				"sap/m/MultiInput.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/P13nDialog.js",
+				"sap/m/Page.js",
+				"sap/m/Panel.js",
+				"sap/m/Popover.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/SearchField.js",
+				"sap/m/Select.js",
+				"sap/m/SplitApp.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/Title.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/Token.js",
+				"sap/m/Tokenizer.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/m/ViewSettingsDialog.js",
+				"sap/m/library-preload.json",
+				"sap/m/library.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/BindingParser.js",
+				"sap/ui/base/DataType.js",
+				"sap/ui/base/EventProvider.js",
+				"sap/ui/base/ManagedObject.js",
+				"sap/ui/base/ManagedObjectObserver.js",
+				"sap/ui/base/Metadata.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/personalization/Util.js",
+				"sap/ui/core/AggregationProxy.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/ListItem.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/ValueState.js",
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/core/XMLTemplateProcessor.js",
+				"sap/ui/core/library-preload.json",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/util/XMLPreprocessor.js",
+				"sap/ui/layout/AlignedFlowLayout.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/model/BindingMode.js",
+				"sap/ui/model/ChangeReason.js",
+				"sap/ui/model/CompositeType.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/FormatException.js",
+				"sap/ui/model/MetaModel.js",
+				"sap/ui/model/ParseException.js",
+				"sap/ui/model/SimpleType.js",
+				"sap/ui/model/Sorter.js",
+				"sap/ui/model/base/ManagedObjectModel.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/json/JSONPropertyBinding.js",
+				"sap/ui/model/odata/v4/AnnotationHelper.js"
+			],
+			"condRequired": [
+				"sap/m/DatePicker.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ObjectMarker.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/P13nGroupItem.js",
+				"sap/m/P13nGroupPanel.js",
+				"sap/m/P13nItem.js",
+				"sap/m/P13nSortItem.js",
+				"sap/m/P13nSortPanel.js",
+				"sap/m/ProgressIndicator.js",
+				"sap/m/RatingIndicator.js",
+				"sap/m/TimePicker.js",
+				"sap/m/ViewSettingsItem.js",
+				"sap/ui/unified/Currency.js"
+			],
+			"included": [
+				"sap/ui/mdc/Field.js",
+				"sap/ui/mdc/FilterBar.designtime.js",
+				"sap/ui/mdc/FilterBar.js",
+				"sap/ui/mdc/FilterField.js",
+				"sap/ui/mdc/Table.designtime.js",
+				"sap/ui/mdc/Table.js",
+				"sap/ui/mdc/ValueHelpDialog.js",
+				"sap/ui/mdc/XMLComposite.js",
+				"sap/ui/mdc/base/ConditionModel.js",
+				"sap/ui/mdc/base/FilterField.js",
+				"sap/ui/mdc/base/FilterFieldRenderer.js",
+				"sap/ui/mdc/base/FilterOperatorConfig.js",
+				"sap/ui/mdc/base/FilterToken.js",
+				"sap/ui/mdc/base/FilterTokenRenderer.js",
+				"sap/ui/mdc/base/FixedValueListProvider.js",
+				"sap/ui/mdc/base/ODataSuggestProvider.js",
+				"sap/ui/mdc/base/OperatorSuggestProvider.js",
+				"sap/ui/mdc/base/ValueHelpDialog.control.xml",
+				"sap/ui/mdc/base/ValueHelpDialog.js",
+				"sap/ui/mdc/base/type/DateRange.js",
+				"sap/ui/mdc/experimental/Action.js",
+				"sap/ui/mdc/experimental/ControlSelector.js",
+				"sap/ui/mdc/experimental/CustomFieldHelp.js",
+				"sap/ui/mdc/experimental/DataObject.js",
+				"sap/ui/mdc/experimental/DataObjectMetadata.js",
+				"sap/ui/mdc/experimental/Field.js",
+				"sap/ui/mdc/experimental/FieldHelpBase.js",
+				"sap/ui/mdc/experimental/FieldRenderer.js",
+				"sap/ui/mdc/experimental/LinkList.js",
+				"sap/ui/mdc/experimental/ListFieldHelp.js",
+				"sap/ui/mdc/experimental/P13nColumnItem.js",
+				"sap/ui/mdc/experimental/P13nColumnPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nColumnPanel.js",
+				"sap/ui/mdc/experimental/P13nFilterItem.js",
+				"sap/ui/mdc/experimental/P13nFilterPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nFilterPanel.js",
+				"sap/ui/mdc/experimental/P13nInternalModel.js",
+				"sap/ui/mdc/experimental/P13nItem.js",
+				"sap/ui/mdc/experimental/P13nPanel.js",
+				"sap/ui/mdc/experimental/P13nPanelFormatter.js",
+				"sap/ui/mdc/experimental/P13nSelectionItem.js",
+				"sap/ui/mdc/experimental/P13nSelectionPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSelectionPanel.js",
+				"sap/ui/mdc/experimental/P13nSortItem.js",
+				"sap/ui/mdc/experimental/P13nSortModel.js",
+				"sap/ui/mdc/experimental/P13nSortPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortPanel.js",
+				"sap/ui/mdc/experimental/P13nSortQBGridPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortQBGridPanel.js",
+				"sap/ui/mdc/experimental/P13nSortQBPanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortQBPanel.js",
+				"sap/ui/mdc/experimental/P13nSortSimplePanel.control.xml",
+				"sap/ui/mdc/experimental/P13nSortSimplePanel.js",
+				"sap/ui/mdc/experimental/TableFieldHelp.js",
+				"sap/ui/mdc/experimental/provider/ControlProvider.js",
+				"sap/ui/mdc/experimental/provider/ProviderHook.js",
+				"sap/ui/mdc/experimental/provider/adapter/AdapterFactory.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataBaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataFieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/ODataObjectAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/BaseAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/CollectionAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/FieldAdapter.js",
+				"sap/ui/mdc/experimental/provider/adapter/base/ObjectAdapter.js",
+				"sap/ui/mdc/experimental/provider/model/ModelAdapter.js",
+				"sap/ui/mdc/experimental/provider/model/ODataAdapter.js",
+				"sap/ui/mdc/experimental/provider/registry/ControlRegistry.js",
+				"sap/ui/mdc/experimental/provider/registry/Utils.js",
+				"sap/ui/mdc/internal/common/DraftInfoPopover.fragment.xml",
+				"sap/ui/mdc/internal/common/Helper.js",
+				"sap/ui/mdc/internal/field/ContactDetails.fragment.xml",
+				"sap/ui/mdc/internal/field/DataField.fragment.xml",
+				"sap/ui/mdc/internal/field/DataFieldForAction.fragment.xml",
+				"sap/ui/mdc/internal/field/DataFieldForAnnotation.fragment.xml",
+				"sap/ui/mdc/internal/field/Field.control.xml",
+				"sap/ui/mdc/internal/field/Field.controller.js",
+				"sap/ui/mdc/internal/field/Field.fragment.xml",
+				"sap/ui/mdc/internal/filterbar/FilterBar.control.xml",
+				"sap/ui/mdc/internal/filterfield/FilterField.control.xml",
+				"sap/ui/mdc/internal/filterfield/SuggestionList.view.xml",
+				"sap/ui/mdc/internal/table/Table.control.xml",
+				"sap/ui/mdc/internal/table/Table.controller.js",
+				"sap/ui/mdc/internal/table/Table.flexibility.js",
+				"sap/ui/mdc/internal/table/TableToolbar.fragment.xml",
+				"sap/ui/mdc/internal/table/gridtable/AddGridTableColumnChange.fragment.xml",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.controller.js",
+				"sap/ui/mdc/internal/table/gridtable/GridTable.fragment.xml",
+				"sap/ui/mdc/internal/table/gridtable/GridTableColumn.fragment.xml",
+				"sap/ui/mdc/internal/table/p13nsettings/P13nSettings.controller.js",
+				"sap/ui/mdc/internal/table/p13nsettings/P13nSettings.view.xml",
+				"sap/ui/mdc/internal/table/responsivetable/AddColumnChange.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.controller.js",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTable.fragment.xml",
+				"sap/ui/mdc/internal/table/responsivetable/ResponsiveTableColumn.fragment.xml",
+				"sap/ui/mdc/internal/table/viewsettings/ViewSettings.controller.js",
+				"sap/ui/mdc/internal/table/viewsettings/ViewSettings.view.xml",
+				"sap/ui/mdc/internal/valuehelp/ValueHelp.controller.js",
+				"sap/ui/mdc/internal/valuehelp/ValueHelp.view.xml",
+				"sap/ui/mdc/internal/valuehelp/ValueHelpAnnotationHelper.js",
+				"sap/ui/mdc/internal/valuehelp/fragments/FilterBar.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/IconTabConditionsView.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/SelectFromList.fragment.xml",
+				"sap/ui/mdc/internal/valuehelp/fragments/SelectFromListTable.fragment.xml",
+				"sap/ui/mdc/library.js",
+				"sap/ui/mdc/manifest.json",
+				"sap/ui/mdc/model/GenericType.js"
+			]
+		},
+		{
+			"name": "library.dependencies.json",
+			"designtime": true
+		},
+		{
+			"name": "library.dependencies.xml",
+			"designtime": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/ui/mdc/library.js",
+			"required": [
+				"sap/ui/core/XMLComposite.js",
+				"sap/ui/core/util/XMLPreprocessor.js",
+				"sap/ui/mdc/experimental/provider/ProviderHook.js",
+				"sap/ui/mdc/model/GenericType.js"
+			]
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/ui/mdc/manifest.json"
+		},
+		{
+			"name": "messagebundle.properties",
+			"module": "sap/ui/mdc/messagebundle.properties",
+			"locale": "",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ar.properties",
+			"module": "sap/ui/mdc/messagebundle_ar.properties",
+			"locale": "ar",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_bg.properties",
+			"module": "sap/ui/mdc/messagebundle_bg.properties",
+			"locale": "bg",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ca.properties",
+			"module": "sap/ui/mdc/messagebundle_ca.properties",
+			"locale": "ca",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_cs.properties",
+			"module": "sap/ui/mdc/messagebundle_cs.properties",
+			"locale": "cs",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_da.properties",
+			"module": "sap/ui/mdc/messagebundle_da.properties",
+			"locale": "da",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_de.properties",
+			"module": "sap/ui/mdc/messagebundle_de.properties",
+			"locale": "de",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_el.properties",
+			"module": "sap/ui/mdc/messagebundle_el.properties",
+			"locale": "el",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en.properties",
+			"module": "sap/ui/mdc/messagebundle_en.properties",
+			"locale": "en",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_sappsd.properties",
+			"module": "sap/ui/mdc/messagebundle_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_saptrc.properties",
+			"module": "sap/ui/mdc/messagebundle_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_es.properties",
+			"module": "sap/ui/mdc/messagebundle_es.properties",
+			"locale": "es",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_et.properties",
+			"module": "sap/ui/mdc/messagebundle_et.properties",
+			"locale": "et",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fi.properties",
+			"module": "sap/ui/mdc/messagebundle_fi.properties",
+			"locale": "fi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fr.properties",
+			"module": "sap/ui/mdc/messagebundle_fr.properties",
+			"locale": "fr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hi.properties",
+			"module": "sap/ui/mdc/messagebundle_hi.properties",
+			"locale": "hi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hr.properties",
+			"module": "sap/ui/mdc/messagebundle_hr.properties",
+			"locale": "hr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hu.properties",
+			"module": "sap/ui/mdc/messagebundle_hu.properties",
+			"locale": "hu",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_it.properties",
+			"module": "sap/ui/mdc/messagebundle_it.properties",
+			"locale": "it",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_iw.properties",
+			"module": "sap/ui/mdc/messagebundle_iw.properties",
+			"locale": "iw",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ja.properties",
+			"module": "sap/ui/mdc/messagebundle_ja.properties",
+			"locale": "ja",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_kk.properties",
+			"module": "sap/ui/mdc/messagebundle_kk.properties",
+			"locale": "kk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ko.properties",
+			"module": "sap/ui/mdc/messagebundle_ko.properties",
+			"locale": "ko",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lt.properties",
+			"module": "sap/ui/mdc/messagebundle_lt.properties",
+			"locale": "lt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lv.properties",
+			"module": "sap/ui/mdc/messagebundle_lv.properties",
+			"locale": "lv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ms.properties",
+			"module": "sap/ui/mdc/messagebundle_ms.properties",
+			"locale": "ms",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_nl.properties",
+			"module": "sap/ui/mdc/messagebundle_nl.properties",
+			"locale": "nl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_no.properties",
+			"module": "sap/ui/mdc/messagebundle_no.properties",
+			"locale": "no",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pl.properties",
+			"module": "sap/ui/mdc/messagebundle_pl.properties",
+			"locale": "pl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pt.properties",
+			"module": "sap/ui/mdc/messagebundle_pt.properties",
+			"locale": "pt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ro.properties",
+			"module": "sap/ui/mdc/messagebundle_ro.properties",
+			"locale": "ro",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ru.properties",
+			"module": "sap/ui/mdc/messagebundle_ru.properties",
+			"locale": "ru",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sh.properties",
+			"module": "sap/ui/mdc/messagebundle_sh.properties",
+			"locale": "sh",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sk.properties",
+			"module": "sap/ui/mdc/messagebundle_sk.properties",
+			"locale": "sk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sl.properties",
+			"module": "sap/ui/mdc/messagebundle_sl.properties",
+			"locale": "sl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sv.properties",
+			"module": "sap/ui/mdc/messagebundle_sv.properties",
+			"locale": "sv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_th.properties",
+			"module": "sap/ui/mdc/messagebundle_th.properties",
+			"locale": "th",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_tr.properties",
+			"module": "sap/ui/mdc/messagebundle_tr.properties",
+			"locale": "tr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_uk.properties",
+			"module": "sap/ui/mdc/messagebundle_uk.properties",
+			"locale": "uk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_vi.properties",
+			"module": "sap/ui/mdc/messagebundle_vi.properties",
+			"locale": "vi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_CN.properties",
+			"module": "sap/ui/mdc/messagebundle_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_TW.properties",
+			"module": "sap/ui/mdc/messagebundle_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "model/GenericType-dbg.js",
+			"module": "sap/ui/mdc/model/GenericType.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/model/FormatException.js",
+				"sap/ui/model/ParseException.js",
+				"sap/ui/model/SimpleType.js",
+				"sap/ui/model/base/ManagedObjectModel.js",
+				"sap/ui/model/json/JSONPropertyBinding.js"
+			]
+		},
+		{
+			"name": "model/GenericType.js",
+			"module": "sap/ui/mdc/model/GenericType.js",
+			"required": [
+				"sap/ui/model/FormatException.js",
+				"sap/ui/model/ParseException.js",
+				"sap/ui/model/SimpleType.js",
+				"sap/ui/model/base/ManagedObjectModel.js",
+				"sap/ui/model/json/JSONPropertyBinding.js"
+			]
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "themes/base/.theming",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/BaseField.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/BaseFilterField.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/FilterToken.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_belize/.theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize_plus/.theming",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL.css",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-parameters.json",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.css",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_bluecrystal/.theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		}
+	]
+}

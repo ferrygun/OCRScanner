@@ -1,0 +1,73 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Calendar.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "CalendarLegend.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "OverlapCalendar.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ProgressIndicator.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "TabContainer.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "img-RTL/bg_white_transparent.png",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "img/bg_white_transparent.png",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "shared.css",
+			"theme": "sap_belize"
+		}
+	]
+}

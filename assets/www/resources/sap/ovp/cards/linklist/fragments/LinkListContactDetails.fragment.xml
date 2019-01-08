@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:ovp="sap.ovp.ui" xmlns:build="sap.build">
+	<QuickView placement="Auto">
+
+		<QuickViewPage header="{ovplibResourceBundle>CONTACT_INFO}"
+					   icon="{= ${contact>photo} ? ${path: 'contact>photo', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} : 'sap-icon://person-placeholder'}"
+					   title="{path: 'contact>fn', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+					   description="{path: 'contact>role', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">	
+					   
+			<QuickViewGroup heading="{ovplibResourceBundle>CONTACT_DETAILS}">
+
+				<QuickViewGroupElement  label="{ovplibResourceBundle>CONTACT_MOBILE}" type="{= (${device>/system/phone} || ${device>/system/tablet})  ? 'mobile'  : 'phone' }" 
+										value="{= ${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/cell\')>=0]/uri', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}.replace('tel:','') }"
+										visible="{= !!${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/cell\')>=0]/uri'} }"
+										build:metadata="#pattern:ContactList;prop:value:Mobile:{contact>tel/1/uri};set:contact>tel/1/type/EnumMember:cell"/>
+
+				<QuickViewGroupElement label="{ovplibResourceBundle>CONTACT_PHONE}" type="phone"
+									   value="{= ${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/work\')>=0]/uri', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}.replace('tel:','') }"
+									   visible="{= !!${path: 'contact>tel/[${type/EnumMember}.indexOf(\'PhoneType/work\')>=0]/uri'} }"
+									   build:metadata="#pattern:ContactList;prop:value:Phone:{contact>tel/0/uri};set:contact>tel/0/type/EnumMember:work"/>
+
+				<QuickViewGroupElement label="{ovplibResourceBundle>CONTACT_EMAIL}" type="email"
+									   value="{path: 'contact>email/[${type/EnumMember}.indexOf(\'ContactInformationType/work\')>=0]/address', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+									   visible="{= !!${path: 'contact>email/[${type/EnumMember}.indexOf(\'ContactInformationType/work\')>=0]/address', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} }"
+									   build:metadata="#pattern:ContactList;prop:value:Email:{contact>email/0/address};set:contact>email/0/type/EnumMember:work"/>
+
+			</QuickViewGroup>
+		</QuickViewPage>
+	</QuickView>
+</core:FragmentDefinition>

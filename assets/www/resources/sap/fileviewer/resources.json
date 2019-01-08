@@ -1,0 +1,844 @@
+{
+	"_version":"1.1.0",
+	"resources":[
+		{
+			"name": "FileViewer.js",
+			"module": "sap/fileviewer/FileViewer.js",
+			"required" : ["jquery.sap.global.js", "sap/fileviewer/FileViewerModuleLoader.js", "sap/fileviewer/library.js", "sap/ui/core/Control.js", "sap/ui/model/resource/ResourceModel.js"]
+		},
+		{
+			"name": "FileViewerModuleLoader.js",
+			"module": "sap/fileviewer/FileViewerModuleLoader.js",
+			"required" : ["sap/fileviewer/viewer/build/pdf.js", "sap/fileviewer/viewer/build/pdf.worker.js", "sap/fileviewer/viewer/sap-fpt/pdf2text/pdf2text.js", "sap/fileviewer/viewer/sap-fpt/suv/suv.js", "sap/fileviewer/viewer/sap-fpt/util/removeoperlaps.js", "sap/fileviewer/viewer/sap-fpt/viewer/pdfhighlighter.js", "sap/fileviewer/viewer/web/compatibility.js", "sap/fileviewer/viewer/web/l10n.js", "sap/fileviewer/viewer/web/pdf_viewer.js"]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/fileviewer/library-preload.js",
+			"required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/core/library.js", "sap/ui/model/resource/ResourceModel.js"],
+			"included" : ["sap/fileviewer/FileViewer.js", "sap/fileviewer/FileViewerModuleLoader.js", "sap/fileviewer/library.js", "sap/fileviewer/manifest.json", "sap/fileviewer/viewer/build/pdf.js", "sap/fileviewer/viewer/build/pdf.worker.js", "sap/fileviewer/viewer/sap-fpt/pdf2text/pdf2text.js", "sap/fileviewer/viewer/sap-fpt/suv/suv.js", "sap/fileviewer/viewer/sap-fpt/util/removeoperlaps.js", "sap/fileviewer/viewer/sap-fpt/viewer/pdfhighlighter.js", "sap/fileviewer/viewer/web/compatibility.js", "sap/fileviewer/viewer/web/debugger.js", "sap/fileviewer/viewer/web/l10n.js", "sap/fileviewer/viewer/web/pdf_viewer.js", "sap/fileviewer/viewer/web/viewer.js"]
+		},
+		{
+			"name": "library-preload.json",
+			"module": "sap/fileviewer/library-preload.json",
+			"required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/core/library-preload.json", "sap/ui/core/library.js", "sap/ui/model/resource/ResourceModel.js"],
+			"included" : ["sap/fileviewer/FileViewer.js", "sap/fileviewer/FileViewerModuleLoader.js", "sap/fileviewer/library.js", "sap/fileviewer/manifest.json", "sap/fileviewer/viewer/build/pdf.js", "sap/fileviewer/viewer/build/pdf.worker.js", "sap/fileviewer/viewer/sap-fpt/pdf2text/pdf2text.js", "sap/fileviewer/viewer/sap-fpt/suv/suv.js", "sap/fileviewer/viewer/sap-fpt/util/removeoperlaps.js", "sap/fileviewer/viewer/sap-fpt/viewer/pdfhighlighter.js", "sap/fileviewer/viewer/web/compatibility.js", "sap/fileviewer/viewer/web/debugger.js", "sap/fileviewer/viewer/web/l10n.js", "sap/fileviewer/viewer/web/pdf_viewer.js", "sap/fileviewer/viewer/web/viewer.js"]
+		},
+		{
+			"name": "library.js",
+			"module": "sap/fileviewer/library.js",
+			"required" : ["jquery.sap.global.js", "sap/ui/core/library.js"]
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/fileviewer/manifest.json"
+		},
+		{
+			"name": "resources/messagebundle.properties",
+			"module": "sap/fileviewer/resources/messagebundle.properties"
+		},
+		{
+			"name": "resources/messagebundle_ar.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ar.properties"
+		},
+		{
+			"name": "resources/messagebundle_bg.properties",
+			"module": "sap/fileviewer/resources/messagebundle_bg.properties"
+		},
+		{
+			"name": "resources/messagebundle_ca.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ca.properties"
+		},
+		{
+			"name": "resources/messagebundle_cs.properties",
+			"module": "sap/fileviewer/resources/messagebundle_cs.properties"
+		},
+		{
+			"name": "resources/messagebundle_da.properties",
+			"module": "sap/fileviewer/resources/messagebundle_da.properties"
+		},
+		{
+			"name": "resources/messagebundle_de.properties",
+			"module": "sap/fileviewer/resources/messagebundle_de.properties"
+		},
+		{
+			"name": "resources/messagebundle_el.properties",
+			"module": "sap/fileviewer/resources/messagebundle_el.properties"
+		},
+		{
+			"name": "resources/messagebundle_en.properties",
+			"module": "sap/fileviewer/resources/messagebundle_en.properties"
+		},
+		{
+			"name": "resources/messagebundle_en_US_sappsd.properties",
+			"module": "sap/fileviewer/resources/messagebundle_en_US_sappsd.properties"
+		},
+		{
+			"name": "resources/messagebundle_en_US_saptrc.properties",
+			"module": "sap/fileviewer/resources/messagebundle_en_US_saptrc.properties"
+		},
+		{
+			"name": "resources/messagebundle_es.properties",
+			"module": "sap/fileviewer/resources/messagebundle_es.properties"
+		},
+		{
+			"name": "resources/messagebundle_et.properties",
+			"module": "sap/fileviewer/resources/messagebundle_et.properties"
+		},
+		{
+			"name": "resources/messagebundle_fi.properties",
+			"module": "sap/fileviewer/resources/messagebundle_fi.properties"
+		},
+		{
+			"name": "resources/messagebundle_fr.properties",
+			"module": "sap/fileviewer/resources/messagebundle_fr.properties"
+		},
+		{
+			"name": "resources/messagebundle_hi.properties",
+			"module": "sap/fileviewer/resources/messagebundle_hi.properties"
+		},
+		{
+			"name": "resources/messagebundle_hr.properties",
+			"module": "sap/fileviewer/resources/messagebundle_hr.properties"
+		},
+		{
+			"name": "resources/messagebundle_hu.properties",
+			"module": "sap/fileviewer/resources/messagebundle_hu.properties"
+		},
+		{
+			"name": "resources/messagebundle_it.properties",
+			"module": "sap/fileviewer/resources/messagebundle_it.properties"
+		},
+		{
+			"name": "resources/messagebundle_iw.properties",
+			"module": "sap/fileviewer/resources/messagebundle_iw.properties"
+		},
+		{
+			"name": "resources/messagebundle_ja.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ja.properties"
+		},
+		{
+			"name": "resources/messagebundle_kk.properties",
+			"module": "sap/fileviewer/resources/messagebundle_kk.properties"
+		},
+		{
+			"name": "resources/messagebundle_ko.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ko.properties"
+		},
+		{
+			"name": "resources/messagebundle_lt.properties",
+			"module": "sap/fileviewer/resources/messagebundle_lt.properties"
+		},
+		{
+			"name": "resources/messagebundle_lv.properties",
+			"module": "sap/fileviewer/resources/messagebundle_lv.properties"
+		},
+		{
+			"name": "resources/messagebundle_ms.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ms.properties"
+		},
+		{
+			"name": "resources/messagebundle_nl.properties",
+			"module": "sap/fileviewer/resources/messagebundle_nl.properties"
+		},
+		{
+			"name": "resources/messagebundle_no.properties",
+			"module": "sap/fileviewer/resources/messagebundle_no.properties"
+		},
+		{
+			"name": "resources/messagebundle_pl.properties",
+			"module": "sap/fileviewer/resources/messagebundle_pl.properties"
+		},
+		{
+			"name": "resources/messagebundle_pt.properties",
+			"module": "sap/fileviewer/resources/messagebundle_pt.properties"
+		},
+		{
+			"name": "resources/messagebundle_ro.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ro.properties"
+		},
+		{
+			"name": "resources/messagebundle_ru.properties",
+			"module": "sap/fileviewer/resources/messagebundle_ru.properties"
+		},
+		{
+			"name": "resources/messagebundle_sh.properties",
+			"module": "sap/fileviewer/resources/messagebundle_sh.properties"
+		},
+		{
+			"name": "resources/messagebundle_sk.properties",
+			"module": "sap/fileviewer/resources/messagebundle_sk.properties"
+		},
+		{
+			"name": "resources/messagebundle_sl.properties",
+			"module": "sap/fileviewer/resources/messagebundle_sl.properties"
+		},
+		{
+			"name": "resources/messagebundle_sv.properties",
+			"module": "sap/fileviewer/resources/messagebundle_sv.properties"
+		},
+		{
+			"name": "resources/messagebundle_th.properties",
+			"module": "sap/fileviewer/resources/messagebundle_th.properties"
+		},
+		{
+			"name": "resources/messagebundle_tr.properties",
+			"module": "sap/fileviewer/resources/messagebundle_tr.properties"
+		},
+		{
+			"name": "resources/messagebundle_uk.properties",
+			"module": "sap/fileviewer/resources/messagebundle_uk.properties"
+		},
+		{
+			"name": "resources/messagebundle_vi.properties",
+			"module": "sap/fileviewer/resources/messagebundle_vi.properties"
+		},
+		{
+			"name": "resources/messagebundle_zh_CN.properties",
+			"module": "sap/fileviewer/resources/messagebundle_zh_CN.properties"
+		},
+		{
+			"name": "resources/messagebundle_zh_TW.properties",
+			"module": "sap/fileviewer/resources/messagebundle_zh_TW.properties"
+		},
+		{
+			"name": "viewer/build/pdf.js",
+			"module": "sap/fileviewer/viewer/build/pdf.js"
+		},
+		{
+			"name": "viewer/build/pdf.worker.js",
+			"module": "sap/fileviewer/viewer/build/pdf.worker.js"
+		},
+		{
+			"name": "viewer/sap-fpt/pdf2text/pdf2text.js",
+			"module": "sap/fileviewer/viewer/sap-fpt/pdf2text/pdf2text.js"
+		},
+		{
+			"name": "viewer/sap-fpt/suv/suv.js",
+			"module": "sap/fileviewer/viewer/sap-fpt/suv/suv.js"
+		},
+		{
+			"name": "viewer/sap-fpt/util/removeoperlaps.js",
+			"module": "sap/fileviewer/viewer/sap-fpt/util/removeoperlaps.js"
+		},
+		{
+			"name": "viewer/sap-fpt/viewer/pdfhighlighter.js",
+			"module": "sap/fileviewer/viewer/sap-fpt/viewer/pdfhighlighter.js"
+		},
+		{
+			"name": "viewer/web/compatibility.js",
+			"module": "sap/fileviewer/viewer/web/compatibility.js"
+		},
+		{
+			"name": "viewer/web/debugger.js",
+			"module": "sap/fileviewer/viewer/web/debugger.js"
+		},
+		{
+			"name": "viewer/web/l10n.js",
+			"module": "sap/fileviewer/viewer/web/l10n.js"
+		},
+		{
+			"name": "viewer/web/locale/ach/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ach/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/af/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/af/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ak/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ak/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/an/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/an/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ar/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ar/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/as/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/as/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ast/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ast/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/az/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/az/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/be/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/be/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/bg/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/bg/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/bn-BD/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/bn-BD/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/bn-IN/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/bn-IN/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/br/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/br/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/bs/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/bs/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ca/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ca/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/cs/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/cs/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/csb/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/csb/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/cy/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/cy/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/da/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/da/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/de/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/de/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/el/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/el/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/en-GB/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/en-GB/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/en-US/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/en-US/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/en-ZA/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/en-ZA/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/eo/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/eo/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/es-AR/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/es-AR/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/es-CL/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/es-CL/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/es-ES/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/es-ES/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/es-MX/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/es-MX/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/et/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/et/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/eu/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/eu/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/fa/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/fa/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ff/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ff/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/fi/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/fi/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/fr/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/fr/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/fy-NL/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/fy-NL/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ga-IE/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ga-IE/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/gd/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/gd/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/gl/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/gl/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/gu-IN/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/gu-IN/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/he/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/he/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/hi-IN/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/hi-IN/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/hr/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/hr/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/hu/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/hu/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/hy-AM/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/hy-AM/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/id/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/id/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/is/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/is/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/it/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/it/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ja/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ja/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ka/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ka/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/kk/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/kk/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/km/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/km/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/kn/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/kn/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ko/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ko/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ku/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ku/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/lg/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/lg/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/lij/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/lij/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/locale.properties",
+			"module": "sap/fileviewer/viewer/web/locale/locale.properties"
+		},
+		{
+			"name": "viewer/web/locale/lt/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/lt/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/lv/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/lv/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/mai/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/mai/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/mk/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/mk/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ml/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ml/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/mn/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/mn/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/mr/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/mr/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ms/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ms/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/my/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/my/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/nb-NO/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/nb-NO/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/nl/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/nl/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/nn-NO/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/nn-NO/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/nso/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/nso/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/oc/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/oc/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/or/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/or/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/pa-IN/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/pa-IN/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/pl/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/pl/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/pt-BR/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/pt-BR/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/pt-PT/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/pt-PT/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/rm/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/rm/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ro/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ro/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ru/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ru/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/rw/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/rw/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sah/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sah/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/si/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/si/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sk/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sk/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sl/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sl/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/son/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/son/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sq/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sq/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sr/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sr/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sv-SE/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sv-SE/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/sw/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/sw/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ta-LK/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ta-LK/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ta/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ta/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/te/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/te/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/th/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/th/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/tl/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/tl/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/tn/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/tn/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/tr/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/tr/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/uk/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/uk/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/ur/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/ur/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/vi/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/vi/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/wo/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/wo/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/xh/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/xh/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/zh-CN/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/zh-CN/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/zh-TW/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/zh-TW/viewer.properties"
+		},
+		{
+			"name": "viewer/web/locale/zu/viewer.properties",
+			"module": "sap/fileviewer/viewer/web/locale/zu/viewer.properties"
+		},
+		{
+			"name": "viewer/web/pdf_viewer.js",
+			"module": "sap/fileviewer/viewer/web/pdf_viewer.js"
+		},
+		{
+			"name": "viewer/web/resources/resources.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ar.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ar.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_bg.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_bg.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ca.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ca.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_cs.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_cs.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_da.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_da.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_de.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_de.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_el.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_el.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_en.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_en.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_en_GB.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_en_GB.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_en_US.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_en_US.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_en_US_sappsd.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_en_US_sappsd.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_en_US_saptrc.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_en_US_saptrc.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_es.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_es.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_et.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_et.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_fi.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_fi.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_fr.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_fr.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_hi.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_hi.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_hr.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_hr.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_hu.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_hu.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_it.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_it.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_iw.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_iw.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ja.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ja.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_kk.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_kk.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ko.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ko.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_lt.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_lt.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_lv.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_lv.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ms.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ms.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_nl.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_nl.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_no.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_no.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_pl.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_pl.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_pt.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_pt.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ro.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ro.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_ru.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_ru.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_sh.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_sh.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_sk.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_sk.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_sl.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_sl.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_sv.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_sv.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_th.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_th.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_tr.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_tr.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_uk.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_uk.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_vi.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_vi.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_zh_CN.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_zh_CN.properties"
+		},
+		{
+			"name": "viewer/web/resources/resources_zh_TW.properties",
+			"module": "sap/fileviewer/viewer/web/resources/resources_zh_TW.properties"
+		},
+		{
+			"name": "viewer/web/viewer.js",
+			"module": "sap/fileviewer/viewer/web/viewer.js"
+		}
+	]
+}

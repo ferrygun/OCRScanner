@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+xmlns="sap.m" xmlns:core="sap.ui.core"
+xmlns:ovp="sap.ovp.ui">
+    <Text id="ovpCountFooter" class="sapOvpCardFooter">
+        <customData>
+            <ovp:CustomData key="role" value="heading" writeToDom="true" />
+        </customData>
+    </Text>
+</core:FragmentDefinition>

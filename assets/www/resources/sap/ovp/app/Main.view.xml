@@ -1,0 +1,71 @@
+<mvc:View
+        controllerName="sap.ovp.app.Main"
+        xmlns="sap.m"
+        xmlns:variants="sap.ui.comp.smartvariants"
+        xmlns:core="sap.ui.core"
+        xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+        xmlns:build="sap.build"
+        xmlns:f="sap.f"
+        >
+    <MessagePage id="ovpErrorPage" icon="sap-icon://message-error" text="{ovplibResourceBundle>LOAD_DATA_ERROR_HEADER}"
+                 description="{ovplibResourceBundle>LOAD_DATA_ERROR_CONTENT}"
+                 showHeader="false"></MessagePage>
+    <ovp:OVPWrapper id="ovpWrapper">
+        <f:DynamicPage id="ovpMain" class="ovpApplication" preserveHeaderStateOnScroll="false" headerExpanded="false"
+                     build:metadata="#pattern:OVP">
+            <template:if test="{= !${ui>/globalFilterEntityType} &amp;&amp; !${ui>/description} ? false : true}">
+                <f:title>
+                    <f:DynamicPageTitle>
+                        <!-- Header definition -->
+                        <f:heading>
+                            <HBox class="ovpDescription">
+                                <Title text="{ui>/description}"
+                                       visible="{= ${ui>/globalFilterEntityType} ? (!!${ui>/description} &amp;&amp; ${ui>/smartVariantRequired} === false) : ${ui>/description} ? true : false}"/>
+                                <template:if test="{= ${ui>/smartVariantRequired} === true || !${ui>/description}}">
+                                    <variants:SmartVariantManagement id="ovpPageVariant" persistencyKey="ovpGlobalFilter"
+                                                                     visible="{= ${ui>/globalFilterEntityType} ? true : false}" showShare="true" />
+                                </template:if>
+                            </HBox>
+
+                        </f:heading>
+                        <f:actions>
+                            <ToolbarSpacer />
+                            <OverflowToolbarButton id="sapOvpShareButton" type="Transparent" icon="sap-icon://action"
+                            visible="{= (${ui>/globalFilterEntityType} &amp;&amp; ${ui>/smartVariantRequired})}"
+                            press = "onShareButtonPress" tooltip="{ovplibResourceBundle>shareBtn}"/>
+                        </f:actions>
+                        <f:snappedContent>
+                            <Text id="ovpFilterText"></Text>
+                        </f:snappedContent>
+                    </f:DynamicPageTitle>
+                </f:title>
+            </template:if>
+            <template:if test="{ui>/globalFilterEntityType}">
+                <f:header>
+                    <f:DynamicPageHeader pinnable="true"
+                                       build:metadata="#pattern:Header;prop:objectTitle:Title:\{i18n>title\};prop:objectSubtitile:Description:\{i18n>description\};prop:objectImageURI:ImageSource:\{manifest>sap.ui/icons/icon\}">
+                        <f:content>
+                            <template:if test="{= ${ui>/smartVariantRequired} === true || !${ui>/description}}">
+                                <template:then>
+                                    <core:Fragment fragmentName="sap.ovp.app.SmartFilterBarWithVariant" type="XML"/>
+                                </template:then>
+
+                                <template:else>
+                                    <core:Fragment fragmentName="sap.ovp.app.SmarFilterBarWithoutVariant" type="XML"/>
+                                </template:else>
+                            </template:if>
+                        </f:content>
+                    </f:DynamicPageHeader>
+                </f:header>
+            </template:if>
+            <f:content>
+                <!-- Add the content here -->
+                <core:Fragment fragmentName="{ui>/cardContainerFragment}" type="XML"/>
+            </f:content>
+        </f:DynamicPage>
+    </ovp:OVPWrapper>
+</mvc:View>
+

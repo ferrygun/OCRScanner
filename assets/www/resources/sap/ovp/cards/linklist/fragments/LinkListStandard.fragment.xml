@@ -1,0 +1,116 @@
+<core:FragmentDefinition xmlns:build="sap.build" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:ovp="sap.ovp.ui"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+	<HBox id="ovpListRow" class="sapOvpLinkListStandardHBox cardType">
+        <customData>
+            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>linkListType}" writeToDom="true" />
+        </customData>
+        <List id="ovpLinkList"
+			class="{= ${ovpCardProperties>/densityStyle} === 'cozy' ? 'sapOvpLinkListStandardPaddingCozy' : 'sapOvpLinkListStandardPaddingCompact'}"
+			showSeparators="None"
+			items="{parts:[{path:'entitySet>'}, {path:'header>'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatItems'}">
+            <template:with helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" path='ovpCardProperties>/identificationAnnotationPath' var='identification'>
+            <CustomListItem id="ovpCLI" type="Active" press="{= ${path: 'identification>0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'} ? 'onLinkNavigationSingleTarget'
+			: ${path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'} ? 'onLinkListActionPress'
+			: ${path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'} ? 'onLinkListLineItemUrl'
+			: ${path: 'entityType>com.sap.vocabularies.Communication.v1.Contact', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'} ? 'onLinkPopover'
+			: ''}"
+                            app:dataAction="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+				<HBox
+                        class="{= ${ovpCardProperties>/densityStyle} === 'cozy' &amp;&amp; !${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; !${header>Description/Value}) ? 'sapOvpCozyTitle'
+                    : ( ${ovpCardProperties>/densityStyle} === 'cozy') &amp;&amp; ${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; !${header>Description/Value}) ? 'sapOvpCozyTitleImage'
+                    : ( ${ovpCardProperties>/densityStyle} === 'cozy') &amp;&amp; ${header>TypeImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; !${header>Description/Value}) ? 'sapOvpCozyTitleIcon'
+                    : ( ${ovpCardProperties>/densityStyle} === 'cozy') &amp;&amp; !${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; ${header>Description/Value}) ? 'sapOvpCozyTitleSubtitle'
+                    : ( ${ovpCardProperties>/densityStyle} === 'cozy') &amp;&amp; ${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; ${header>Description/Value}) ? 'sapOvpCozyTitleImageSubtitle'
+                    : ( ${ovpCardProperties>/densityStyle} === 'cozy') &amp;&amp; ${header>TypeImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; ${header>Description/Value}) ? 'sapOvpCozyTitleIconSubtitle'
+                    : ${ovpCardProperties>/densityStyle} === 'compact' &amp;&amp; !${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; !${header>Description/Value}) ? 'sapOvpCompactTitle'
+                    : ( ${ovpCardProperties>/densityStyle} === 'compact') &amp;&amp; ${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; !${header>Description/Value}) ? 'sapOvpCompactTitleImage'
+                    : ( ${ovpCardProperties>/densityStyle} === 'compact') &amp;&amp; ${header>TypeImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; !${header>Description/Value}) ? 'sapOvpCompactTitleIcon'
+                    : ( ${ovpCardProperties>/densityStyle} === 'compact') &amp;&amp; !${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; ${header>Description/Value}) ? 'sapOvpCompactTitleSubtitle'
+                    : ( ${ovpCardProperties>/densityStyle} === 'compact') &amp;&amp; ${header>ImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; ${header>Description/Value}) ? 'sapOvpCompactTitleImageSubtitle'
+                    : ( ${ovpCardProperties>/densityStyle} === 'compact') &amp;&amp; ${header>TypeImageUrl} &amp;&amp; (${header>Title/Value} &amp;&amp; ${header>Description/Value}) ? 'sapOvpCompactTitleIconSubtitle'
+                    : 'ovpDefaultClass'}">
+					<template:if
+						test="{= ${header>ImageUrl} || ${header>TypeImageUrl}}">
+						<template:then>
+							<VBox class="sapOvpLinkListItem {= ${ovpCardProperties>/densityStyle} === 'cozy' ? 'sapOvpLinkListItemImageCozy' : 'sapOvpLinkListItemImageCompact' }">
+								<template:if
+									test="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+									<template:then>
+										<template:if test="{= ${ovpCardProperties>/densityStyle} === 'cozy'}">
+											<template:then>
+												<FlexBox height="40px">
+													<Image id="linkListImage"
+                                                           alt="no picture" densityAware="true" width="40px" height="40px" class="sapUiSmallMarginEnd" backgroundPosition="center center"
+														mode="Background"
+														src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"></Image>
+												</FlexBox>
+											</template:then>
+											<template:else>
+												<FlexBox height="40px">
+													<Image id="linkListImage"
+                                                           alt="no picture" densityAware="true" width="36px" height="36px" class="sapUiSmallMarginEnd" backgroundPosition="center center"
+														mode="Background"
+														src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"></Image>
+												</FlexBox>
+											</template:else>
+										</template:if>
+									</template:then>
+									<template:else>
+										<FlexBox height="40px">
+                                            <core:Icon id="linkListIcon" size="24px" class="sapOvpLinkListImageCenter"
+                                                       src="{path: 'header>TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+										</FlexBox>
+									</template:else>
+								</template:if>
+							</VBox>
+						</template:then>
+					</template:if>
+					<VBox class="sapOvpLinkListItem">
+						<template:if
+							test="{path: 'identification>0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+							<template:then>
+                                <Label id="linkListTitleLabel"
+                                       class="{= ${header>Description/Value} || !${header>Description/Value} &amp;&amp; !${header>ImageUrl} &amp;&amp; !${header>TypeImageUrl} ? 'sapOvpCardLinkListTitle' : 'sapOvpCardLinkListTitleOnly'}"
+                                       text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:then>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+                                <Label id="linkListTitleLabel"
+                                       class="{= ${header>Description/Value} || !${header>Description/Value} &amp;&amp; !${header>ImageUrl} &amp;&amp; !${header>TypeImageUrl} ? 'sapOvpCardLinkListTitle' : 'sapOvpCardLinkListTitleOnly'}"
+                                       app:dataAction="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                       text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+                                <Label id="linkListTitleLabel"
+                                       target="_blank"
+                                       class="{= ${header>Description/Value} || !${header>Description/Value} &amp;&amp; !${header>ImageUrl} &amp;&amp; !${header>TypeImageUrl} ? 'sapOvpCardLinkListTitle' : 'sapOvpCardLinkListTitleOnly'}"
+                                       text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.Communication.v1.Contact', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+                                <Label id="linkListTitleLabel"
+                                       class="{= ${header>Description/Value} || !${header>Description/Value} &amp;&amp; !${header>ImageUrl} &amp;&amp; !${header>TypeImageUrl} ? 'sapOvpCardLinkListTitle' : 'sapOvpCardLinkListTitleOnly'}"
+                                       text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:elseif>
+							<template:else>
+                                <Label id="linkListTitleLabel"
+                                        class="{= ${header>Description/Value} || !${header>Description/Value} &amp;&amp; !${header>ImageUrl} &amp;&amp; !${header>TypeImageUrl} ? 'sapOvpCardLinkListTitle' : 'sapOvpCardLinkListTitleOnly'}"
+                                        text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:else>
+						</template:if>
+						<template:if test="{header>Description/Value}">
+							<template:then>
+								<Label id="linkListSubTitleLabel"
+                                       class="sapOvpCardLinkListSubTitle"
+									text="{path: 'header>Description/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:then>
+						</template:if>
+					</VBox>
+				</HBox>
+			</CustomListItem>
+            </template:with>
+		</List>
+	</HBox>
+</core:FragmentDefinition>

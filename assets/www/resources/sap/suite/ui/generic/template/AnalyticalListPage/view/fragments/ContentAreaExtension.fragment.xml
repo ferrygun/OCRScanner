@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m" xmlns:core="sap.ui.core"
+						 xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+						 xmlns:build="sap.build">
+	<OverflowToolbar id="template::contentViewExtensionToolbar"  design="Transparent">
+		<ToolbarSpacer/>
+		<SegmentedButton selectedKey="{_templPriv>/alp/contentView}" select="._templateEventHandlers.onContentViewSegmentButtonPressed">
+			<items>
+				<template:if test="{= ${device>/system/desktop}}">
+					<SegmentedButtonItem
+						tooltip="{i18n>CONTAINER_VIEW_CHARTTABLE}"
+						key="charttable"
+						icon="{alpCustomModel>/icon/hybrid}"/>
+				</template:if>
+				<SegmentedButtonItem
+					tooltip="{i18n>CONTAINER_VIEW_CHART}"
+					key="chart"
+					visible="{alpCustomModel>/required/master}"
+					icon="{alpCustomModel>/icon/master}"/>
+				<SegmentedButtonItem
+					tooltip="{alpCustomModel>/tooltip/customview}"
+					key="customview"
+					icon="{alpCustomModel>/icon/customview}"/>
+				<SegmentedButtonItem
+					tooltip="{i18n>CONTAINER_VIEW_TABLE}"
+					key="table"
+					icon="sap-icon://table-view" />
+			</items>
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Never"/>
+			</layoutData>
+		</SegmentedButton>
+	</OverflowToolbar>
+	<ExtensionPoint name="AnalyticalListPageContentViewExtension" xmlns="sap.ui.core">
+	</ExtensionPoint>
+</core:FragmentDefinition>

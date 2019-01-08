@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core"
+		xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		template:require="sap.fe.templates.ObjectPage.AnnotationHelper">
+	<template:if test="{entityType>@com.sap.vocabularies.UI.v1.HeaderFacets}">
+		<template:then>
+			<template:with path="entityType>@com.sap.vocabularies.UI.v1.HeaderFacets"
+						   var="headerFacets">
+				<template:repeat list="{headerFacets>}" var="headerFacet">
+					<template:if
+							test="{= ${headerFacet>$Type}.indexOf('com.sap.vocabularies.UI.v1.ReferenceFacet') >= 0 }">
+						<template:then>
+							<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.HeaderFacet"
+										   type="XML"/>
+						</template:then>
+						<template:elseif
+								test="{= ${headerFacet>$Type}.indexOf('com.sap.vocabularies.UI.v1.CollectionFacet') >= 0 }">
+							<VBox displayInline="true">
+								<template:repeat list="{headerFacet>Facets}"
+												 var="headerFacet">
+									<core:Fragment
+											fragmentName="sap.fe.templates.ObjectPage.view.fragments.HeaderFacet"
+											type="XML"/>
+								</template:repeat>
+							</VBox>
+						</template:elseif>
+					</template:if>
+				</template:repeat>
+			</template:with>
+		</template:then>
+	</template:if>
+</core:FragmentDefinition>

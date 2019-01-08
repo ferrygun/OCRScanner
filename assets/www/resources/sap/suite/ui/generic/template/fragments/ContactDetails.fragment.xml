@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:build="sap.build">
+	<QuickView class="sapSmartTemplatesObjectPageContactsQuickView" placement="Auto">
+		<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.ContactDetailsQuickViewGroup" type="XML"/>
+	</QuickView>
+</core:FragmentDefinition>

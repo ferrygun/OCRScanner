@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+        xmlns:build="sap.build">
+
+    <items>
+        <StandardListItem
+                id="listItem"
+                class="sapOvpStandardListItem"
+                title="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataFieldValue'}"
+                description="{path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatSecondDataFieldValue'}"
+                info="{= ${path: 'lineItem>', formatter :'sap.ovp.cards.AnnotationHelper.getDataPointsCount'} > 0 ? ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointValue'} : ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatThirdDataFieldValue'} }"
+                infoState="{= ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.getDataPointsCount'} > 0 ? ${path: 'lineItem>', formatter: 'sap.ovp.cards.AnnotationHelper.formatFirstDataPointState'} : 'None' }"
+                type="Active"
+                press="onListItemPress"
+                build:metadata="#pattern:GenericCard>StandardList;prop::ItemTitle:\{lineItem>/0/Value\};prop::ItemDescription:\{lineItem>/1/Value\};prop::ItemInfo:\{lineItem>/2/Target@@Value\};prop::ItemNumberToleranceRangeLowValue:\{lineItem>/2/Target@@CriticalityCalculation/ToleranceRangeLowValue\};prop::ItemNumberDeviationRangeLowValue:\{lineItem>/2/Target@@CriticalityCalculation/DeviationRangeLowValue\};set:ovpCardProperties>/annotationPath:com.sap.vocabularies.UI.v1.LineItem">
+        </StandardListItem>
+    </items>
+
+</core:FragmentDefinition>

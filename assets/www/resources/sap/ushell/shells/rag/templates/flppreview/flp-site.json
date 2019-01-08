@@ -1,0 +1,15 @@
+{
+  "site": {
+    "_version": "1.0",
+    "identification": {
+      "entityType": "site"
+    },
+    "payload": {
+      "groupsOrder": []
+    }
+  },
+  "systemAliases": {},
+  "applications": {},
+  "groups": {},
+  "catalogs": {}
+}

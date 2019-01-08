@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+                         xmlns="sap.m"
+                         xmlns:core="sap.ui.core"
+                         xmlns:l="sap.ui.layout">
+    <ScrollContainer vertical="true"
+                     height="100%" width="100%" focusable="true">
+        <VBox>
+            <!--<l:HorizontalLayout>-->
+            <!--<Text text="{valueList>/title}"/>-->
+            <!--<Button press="addCondition" type="Transparent" icon="sap-icon://add"/>-->
+            <!--</l:HorizontalLayout>-->
+            <Panel>
+                <Text text="{valueList>/title}"/>
+            </Panel>
+            <l:Grid id="template::DefineConditions" content="{ path:'cm>/conditions', filters:[{path: 'operator', operator:'NE', value1:'EEQ'}]}"
+                    width="100%" defaultSpan="XL12 L12 M12 S12">
+                <l:Grid width="auto">
+                    <Select items="{ path:'om>/', templateShareable:false}" selectedKey="{cm>operator}" showSecondaryValues="true" change="onChange">
+                        <core:ListItem key="{om>key}" text="{om>key}" additionalText="{om>additionalText}"/>
+                        <layoutData>
+                            <l:GridData span="XL3 L3 M3 S3" />
+                        </layoutData>
+                    </Select>
+                    <HBox items="{ path: 'cm>values', factory: '.valueCtrlFactory'}" class="sapUiSmallMarginBeginEnd sapFEDefineConditionsInputs">
+                        <layoutData>
+                            <l:GridData span="XL7 L7 M7 S7" />
+                        </layoutData>
+                        <!--
+                        <Input value="{cm>values/0}" change="onChange"/>
+                        <Input value="{cm>values/1}" change="onChange" visible="{= ${cm>operator} === 'BT'}"/>
+                        -->
+                    </HBox>
+                    <HBox fitContainer="true">
+                        <layoutData>
+                            <l:GridData span="XL2 L2 M2 S2" />
+                        </layoutData>
+                        <Button press="removeCondition" type="Transparent" icon="sap-icon://sys-cancel"/>
+                        <Button press="addCondition" type="Transparent" icon="sap-icon://add"/>
+                    </HBox>
+                </l:Grid>
+            </l:Grid>
+        </VBox>
+    </ScrollContainer>
+
+</core:FragmentDefinition>

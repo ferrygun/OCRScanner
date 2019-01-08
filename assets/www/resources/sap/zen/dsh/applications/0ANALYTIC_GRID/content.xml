@@ -1,0 +1,296 @@
+<bi:biapp bi:version="1600" xmlns:bi="http://xml.sap.com/2011/biml/biapp" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/TR/REC-html40" xmlns:h="http://www.w3.org/TR/REC-html40">
+	<bi:component name="APPLICATION_PROPERTIES" type="APPLICATION_PROPERTIES">
+		<bi:property name="THEME" value="sap_belize"/>
+		<bi:property name="GLOBALVARIABLES" type="UNORDEREDLIST">
+			<bi:property name="GLOBALVARIABLE" index="0">
+				<bi:property name="NAME" value="g_applied_variables"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="1">
+				<bi:property name="NAME" value="g_table_enable_sorting"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="true"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="2">
+				<bi:property name="NAME" value="g_table_scaling_factors"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="3">
+				<bi:property name="NAME" value="g_filter_on"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="false"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="4">
+				<bi:property name="NAME" value="XNAV"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="true"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="5">
+				<bi:property name="NAME" value="XQUERY"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+		</bi:property>
+		<bi:property name="MESSAGE_TYPES" value="ERRORS"/>
+		<bi:property name="ON_STARTUP">
+			<bi:value><![CDATA[if (DS_1.isInitialized()) {
+	var appState = APPLICATION.getNavigationInitialState();
+	if (appState != "") {
+		//Due to present Firefly limitation, if variables exist then changes to the slice might not stick at first.
+		//Load again here, to ensure the slice is applied properly.
+		BookmarkInternal.applyApplicationState(appState, true);
+		//GLOBAL_SCRIPT_ACTIONS.LoadBookmarkAction();
+	} else {
+		/* Set Filters for Navigation Params without variables */
+		GLOBAL_SCRIPT_ACTIONS.SetFiltersFromNavigationParameters();
+	}
+} else {
+		// Data Souce is not assigned: Hide Table, disable buttons
+		CROSSTAB.setVisible(false);
+}
+]]></bi:value>
+		</bi:property>
+		<bi:property name="PROMPT_MODE" value="SFIN"/>
+		<bi:property name="SHOW_PROMPT" value="X"/>
+		<bi:property name="INITVARSCREEN_WIDTH" value="790"/>
+		<bi:property name="INITVARSCREEN_HEIGHT" value="590"/>
+		<bi:property name="UI5_MAIN" value="X"/>
+		<bi:property name="COMPACT_MODE" value="X"/>
+		<bi:property name="INTER_COMPONENT_DRAGDROP_ENABLED" value="X"/>
+		<bi:property name="ON_VAR_SUBMIT">
+			<bi:value><![CDATA[var appState = APPLICATION.getNavigationInitialState();
+
+APPLICATION.setForcePrompts(false);	
+if (XQUERY != ""  ) {
+// set data source 	
+	DS_1.assignDataSource("local", DataSourceType.QUERY, XQUERY);	
+}
+
+if (appState != "") {
+	BookmarkInternal.applyApplicationState(appState, true);
+	//In case it's in the bookmark differently than how we were instantiated
+} else {
+	GLOBAL_SCRIPT_ACTIONS.SetVariablesFromNavigationParameters();
+}
+
+	
+]]></bi:value>
+		</bi:property>
+		<bi:property name="MESSAGE_POSITION" value="BOTTOMLEFT"/>
+		<bi:property name="MAX_MEMBERS" value="1000"/>
+	</bi:component>
+	<bi:data_source_alias name="DS_1" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value=""/>
+			<bi:property name="DATA_SOURCE_CONNECTION" value="&lt;unknown&gt;"/>
+		</bi:property>
+		<bi:property name="LOAD_IN_SCRIPT" value="X"/>
+		<bi:property name="ON_RESULTSETCHANGED">
+			<bi:value><![CDATA[GLOBAL_SCRIPT_ACTIONS.SetPauseRefreshText();
+GLOBAL_SCRIPT_ACTIONS.SaveAppState(true);]]></bi:value>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:component name="ROOT" type="ABSOLUTE_LAYOUT_COMPONENT">
+		<bi:component name="PANEL_BODY_LEFT" type="PANEL_COMPONENT">
+			<bi:property name="WIDTH" value="350"/>
+			<bi:property name="HEIGHT" value="auto"/>
+			<bi:property name="BOTTOM_MARGIN" value="0"/>
+			<bi:property name="CSS_STYLE" value="border-right: 1px solid #ddd;"/>
+			<bi:component name="NAVIGATIONPANEL" type="NAVIGATIONPANEL_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="BOTTOM_MARGIN" value="0"/>
+				<bi:property name="HEIGHT" value="auto"/>
+				<bi:property name="DATA_SOURCE_ALIAS_REF" value="DS_1"/>
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+			</bi:component>
+			<bi:component name="BUTTON_PAUSEREFRESH" type="BUTTON_COMPONENT">
+				<bi:property name="TEXT" value="Pause"/>
+				<bi:property name="LEFT_MARGIN" value="250"/>
+				<bi:property name="BUTTON_TYPE" value="TRANSPARENT"/>
+				<bi:property name="WIDTH" value="100"/>
+				<bi:property name="VISIBLE" value=""/>
+				<bi:property name="ON_CLICK">
+					<bi:value><![CDATA[GLOBAL_SCRIPT_ACTIONS.SetPaused(!NAVIGATIONPANEL.isPauseRefresh());]]></bi:value>
+				</bi:property>
+			</bi:component>
+		</bi:component>
+		<bi:component name="PANEL_BODY" type="PANEL_COMPONENT">
+			<bi:property name="LEFT_MARGIN" value="350"/>
+			<bi:property name="RIGHT_MARGIN" value="0"/>
+			<bi:property name="BOTTOM_MARGIN" value="0"/>
+			<bi:property name="WIDTH" value="auto"/>
+			<bi:property name="HEIGHT" value="auto"/>
+			<bi:component name="CROSSTAB" type="CROSSTAB_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="HEIGHT" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="-1"/>
+				<bi:property name="BOTTOM_MARGIN" value="-1"/>
+				<bi:property name="DATA_SOURCE_ALIAS_REF" value="DS_1"/>
+				<bi:property name="CROSSTAB_DISPLAY_ALWAYS_FILL" value="X"/>
+				<bi:property name="CROSSTAB_ENABLE_SELECTION" value="MULTI"/>
+				<bi:property name="CROSSTAB_DD_ENABLED" value="X"/>
+				<bi:property name="CROSSTAB_ZEBRA_MODE" value="DATA"/>
+				<bi:property name="LEFT_MARGIN" value="-1"/>
+			</bi:component>
+		</bi:component>
+		<bi:component name="TEXT_POOL" type="TEXT_POOL_COMPONENT">
+			<bi:property name="TEXT_POOL_ENTRIES" type="ORDEREDLIST">
+				<bi:property name="TEXT_POOL_ENTRY" index="0">
+					<bi:property name="KEY" value="NavPanelHide"/>
+					<bi:property name="TEXT" value="Hide Navigation Panel"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="1">
+					<bi:property name="KEY" value="NavPanelShow"/>
+					<bi:property name="TEXT" value="Show Navigation Panel"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="2">
+					<bi:property name="KEY" value="Pause"/>
+					<bi:property name="TEXT" value="Pause"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="3">
+					<bi:property name="KEY" value="Refresh"/>
+					<bi:property name="TEXT" value="Refresh"/>
+				</bi:property>
+			</bi:property>
+		</bi:component>
+		<bi:component name="CONTEXT_MENU" type="CONTEXT_MENU_COMPONENT"/>
+		<bi:component name="GLOBAL_SCRIPT_ACTIONS" type="GLOBAL_SCRIPTS_COMPONENT">
+			<bi:property name="FUNCTIONS" type="ORDEREDLIST">
+				<bi:property name="FUNCTION" index="0">
+					<bi:property name="NAME" value="LoadBookmarkAction"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[/* Reset XNAV Parameter */
+XNAV = PANEL_BODY_LEFT.isVisible();
+]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="1">
+					<bi:property name="NAME" value="ChangeTableSettings"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[//CROSSTAB.setUnitsAndScalingFactorsDisplay(g_table_scaling_factors);
+CROSSTAB.setSortingEnabled(g_table_enable_sorting);]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="2">
+					<bi:property name="NAME" value="SetPaused"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[NAVIGATIONPANEL.setPauseRefresh(paused);
+GLOBAL_SCRIPT_ACTIONS.SetPauseRefreshText();]]></bi:value>
+					</bi:property>
+					<bi:property name="INPUT_PARAMETERS" type="ORDEREDLIST">
+						<bi:property name="INPUT_PARAMETER" index="0">
+							<bi:property name="NAME" value="paused"/>
+							<bi:property name="PARAMETER_TYPE" value="boolean"/>
+						</bi:property>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="3">
+					<bi:property name="NAME" value="SetPauseRefreshText"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[if (NAVIGATIONPANEL.isPauseRefresh()) {
+	BUTTON_PAUSEREFRESH.setText(TEXT_POOL.Refresh);
+} else {
+	BUTTON_PAUSEREFRESH.setText(TEXT_POOL.Pause);
+}]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="4">
+					<bi:property name="NAME" value="SaveAppState"/>
+					<bi:property name="FUNCTION_DESC" value="Save the current application state."/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[FIORI_HELPER.setAppState(BookmarkInternal.getCurrentApplicationState(true));]]></bi:value>
+					</bi:property>
+					<bi:property name="INPUT_PARAMETERS" type="ORDEREDLIST">
+						<bi:property name="INPUT_PARAMETER" index="0">
+							<bi:property name="NAME" value="checkFlag"/>
+							<bi:property name="PARAMETER_TYPE" value="boolean"/>
+							<bi:property name="PARAMETER_DESC" value="Whether to check the flag or not... for later as the flag doesn&apos;t exist yet "/>
+						</bi:property>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="5">
+					<bi:property name="NAME" value="SetVariablesFromNavigationParameters"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[var aNavParamNames = APPLICATION.getNavigationParameterNames();
+var aVariables = DS_1.getVariables();
+
+var found = false;
+
+aNavParamNames.forEach(function(navParamName, navParamIndex) {
+       aVariables.forEach(function(variable, variableIndex) {
+             if (variable.dimensionName == navParamName && !found && variable.inputEnabled && variable.type=="DimensionMember") {
+					var paramValue = APPLICATION.getNavigationParameterValue(navParamName);
+
+                    if (APPLICATION.setVariableValueExt(variable.name, paramValue) === true) {
+                    	g_applied_variables = g_applied_variables + " " + variable.name;
+						
+	               	    found = true;
+                    }
+             }
+                
+       });
+       found = false;
+}); 
+]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="6">
+					<bi:property name="NAME" value="SetFiltersFromNavigationParameters"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[var dims = DS_1.getDimensions();
+var aNavParamNames = APPLICATION.getNavigationParameterNames();
+var aAppliedVariables = g_applied_variables.split(" ");
+var varfound = false;
+var variables = DS_1.getVariables();
+
+aNavParamNames.forEach(function(navParamName, navParamIndex) {
+	variables.forEach(function(variable, variableIndex) {
+		if (variable.dimensionName == navParamName && !varfound && variable.inputEnabled && variable.type=="DimensionMember") {
+			//Only mark it as "found" if the value was also applied to the variable succesfully.
+			aAppliedVariables.forEach(function(appliedVariable, appliedVariableIndex) {
+				if (variable.name == appliedVariable) {
+					varfound = true;
+				}
+			});
+		}
+	});
+    if (!varfound) {
+		dims.forEach(function(dimension, dimIndex) {
+			if (dimension.name == navParamName) {
+				var paramValue = APPLICATION.getNavigationParameterValue(navParamName);
+
+				DS_1.setFilterExt(dimension.name, paramValue);
+			}
+		});
+    }
+    varfound = false;
+}); 	
+]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="7">
+					<bi:property name="NAME" value="ApplyNavigationParameters"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[DS_1.clearAllFilterRelevantVariables();
+DS_1.clearAllFilters();
+
+GLOBAL_SCRIPT_ACTIONS.SetVariablesFromNavigationParameters();
+GLOBAL_SCRIPT_ACTIONS.SetFiltersFromNavigationParameters();]]></bi:value>
+					</bi:property>
+				</bi:property>
+			</bi:property>
+		</bi:component>
+		<bi:component name="FIORI_HELPER" type="FIORI_HELPER_COMPONENT">
+			<bi:property name="ALWAYS_RENDER_CONTEXT" value="X"/>
+			<bi:property name="ON_TILE_SETTINGS_SUBMITTED">
+				<bi:value><![CDATA[
+]]></bi:value>
+			</bi:property>
+		</bi:component>
+	</bi:component>
+</bi:biapp>

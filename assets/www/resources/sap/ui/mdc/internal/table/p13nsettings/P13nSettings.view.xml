@@ -1,0 +1,65 @@
+<core:View xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		   xmlns="sap.m"
+		   xmlns:core="sap.ui.core"
+		   controllerName="sap.ui.mdc.internal.table.p13nsettings.P13nSettings">
+
+	<P13nDialog id="p13nDialog" ok="onConfirm" cancel="onCancel" showReset="true"
+				reset="handleReset" initialVisiblePanelType="{dialogProperties>/InitialVisiblePanel}">
+		<panels>
+			<template:if test="{dialogProperties>/showSortPanel}">
+				<P13nSortPanel visible="true" type="sort"
+							   containerQuery="true">
+					<items>
+						<template:repeat list="{propertiesModel>/sortPanelItems}" var="sortItem">
+								<P13nItem columnKey="{sortItem>columnKey}" text="{sortItem>name}" visible="true"/>
+						</template:repeat>
+					</items>
+					<sortItems>
+						<template:repeat list="{propertiesModel>/p13nSortItems}" var="sorPanelItem">
+							<P13nSortItem columnKey="{sorPanelItem>columnKey}" operation="{sorPanelItem>operation}"/>
+						</template:repeat>
+                	</sortItems>
+				</P13nSortPanel>
+			</template:if>
+			<!-- Need to check with UX if Filter panel has to be implemented here-->
+			<!--<template:if test="{dialogProperties>/showFilterPanel}">
+				<P13nFilterPanel visible="true" type="filter"
+								 containerQuery="true">
+					<items>
+						<template:repeat list="{propertiesModel>/properties}" var="property">
+							<P13nItem columnKey="{property>columnKey}" text="{property>name}" visible="true"/>
+						</template:repeat>
+					</items>
+				</P13nFilterPanel>
+			</template:if>-->
+			<template:if test="{dialogProperties>/showGroupPanel}">
+				<P13nGroupPanel maxGroups="1" visible="true" type="group" containerQuery="true">
+					<items>
+						<template:repeat list="{propertiesModel>/groupPanelItems}" var="groupItem">
+								<P13nItem columnKey="{groupItem>columnKey}" text="{groupItem>name}" visible="true"/>
+						</template:repeat>
+					</items>
+					<groupItems>
+						<template:repeat list="{propertiesModel>/p13nGroupItems}" var="groupPanelItem">
+							<P13nGroupItem columnKey="{groupPanelItem>columnKey}" operation="{groupPanelItem>operation}"/>
+						</template:repeat>
+                	</groupItems>
+				</P13nGroupPanel>
+			</template:if>
+			<!--<template:if test="{dialogProperties>/showColumnPanel}">
+				<P13nColumnsPanel visible="true" type="columns">
+					<items>
+						<template:repeat list="{propertiesModel>/columnPanelItems}" var="columnItem">
+							<P13nItem columnKey="{columnItem>columnKey}" text="{columnItem>name}"/>
+						</template:repeat>
+					</items>
+					<columnsItems>
+						<template:repeat list="{propertiesModel>/columnPanelItems}" var="columnPanelItems">
+                    		<P13nColumnsItem columnKey="{columnPanelItems>columnKey}"  visible="{columnPanelItems>selected}"/>
+						</template:repeat>
+                	</columnsItems>
+				</P13nColumnsPanel>
+			</template:if>-->
+		</panels>
+	</P13nDialog>
+</core:View>

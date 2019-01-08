@@ -1,0 +1,61 @@
+<core:View xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+		   xmlns="sap.m"
+		   xmlns:core="sap.ui.core"
+		   template:require="sap.ui.mdc.FilterField">
+
+	<template:alias name=".MODEL" value="sap.ui.model.odata.v4.AnnotationHelper">
+	<template:alias name=".FILTERFIELD" value="sap.ui.mdc.FilterField._helper">
+
+		<template:with path="valueList>"
+					   helper=".FILTERFIELD.getValueListCollectionEntitySet"
+					   var="entitySet">
+
+			<Table items="{= '{ path : \'/' + ${valueList>CollectionPath} + '\', parameters : ' + ${valueList>SuggestBindingParameters} + ' }' }">
+
+				<columns>
+					<template:repeat list="{valueList>Parameters}" var="parameter">
+						<template:with path="parameter>ValueListProperty" var="parameter"
+									   helper=".FILTERFIELD.getValueListProperty">
+							<template:if test="{= !(${parameter>@com.sap.vocabularies.UI.v1.Hidden} === true)}">
+								<Column>
+									<template:if test="{parameter>Label}">
+										<template:then>
+											<Label text="{parameter>Label@@.MODEL.value}"/>
+										</template:then>
+
+										<template:elseif
+												test="{parameter>@com.sap.vocabularies.Common.v1.Label}">
+											<Label text="{parameter>@com.sap.vocabularies.Common.v1.Label@@.MODEL.value}"/>
+										</template:elseif>
+
+										<template:else>
+											<!-- no label found, property path as fallback, to highlight it put it into [] -->
+											<Label text="[{parameter>@sapui.name@@.MODEL.value}]"/>
+										</template:else>
+									</template:if>
+								</Column>
+							</template:if>
+						</template:with>
+					</template:repeat>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<template:repeat list="{valueList>Parameters}" var="parameter">
+								<template:with path="parameter>ValueListProperty" var="dataField"
+											   helper=".FILTERFIELD.getValueListProperty">
+									<template:if test="{= !(${dataField>@com.sap.vocabularies.UI.v1.Hidden} === true)}">
+										<core:Fragment fragmentName="sap.ui.mdc.internal.field.Field"
+												   type="XML"/>
+									</template:if>
+								</template:with>
+							</template:repeat>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</template:with>
+	</template:alias>
+	</template:alias>
+
+</core:View>

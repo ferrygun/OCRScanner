@@ -1,0 +1,404 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+
+@import "../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../sap/ui/core/themes/base/global.less";
+
+/* START "Gantt.less" */
+/*!
+ * ${copyright}
+ */
+
+/* =================================== */
+/* CSS for control sap.gantt/GanttChart  */
+/* Base theme                          */
+/* =================================== */
+
+/*******************************************************************************
+ * GANTT PARAMETERS
+ ******************************************************************************/
+@_sap_gantt_Gantt_HeaderHeight: 101px;
+@_sap_gantt_Gantt_CompactHeaderHeight: @_sap_gantt_Gantt_HeaderHeight - 30px;
+
+@_sap_gantt_Gantt_CursorLineStroke: @sapUiAccent6;
+@_sap_gantt_Gantt_NowLineStroke: @sapUiCalendarColorToday;
+
+@_sap_gantt_Gantt_VerticalLineStroke: @sapUiListVerticalBorderColor;
+
+@_sap_gantt_Gantt_ExpandChartBG: #F6F6F6;
+@_sap_gantt_Gantt_ExpandChartLine: #ddd;
+@_sap_gantt_Gantt_ExpandChartText: #848f94;
+
+@_sap_gantt_Gantt_TimelineZoomColor: #40b0f0;
+@_sap_gantt_Gantt_LegendTextColor:#666;
+
+.sapGanttTimeHeaderSvgText0 {
+	font-size: @sapMFontHeader6Size;
+	font-family: @sapUiFontFamily;
+	font-weight: @sapUiFontHeaderWeight;
+	fill: @sapUiListTableGroupHeaderTextColor;
+}
+
+.sapGanttTimeHeaderSvgText1 {
+	font-size: @sapMFontMediumSize;
+	font-family: @sapUiFontFamily;
+	font-weight: normal;
+	fill: @sapUiListHeaderTextColor;
+}
+
+.sapGanttChart {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+}
+
+.sapGanttTimeHeaderSvgPath {
+	stroke: @sapUiLightBG;
+	stroke-width: 1px;
+	stroke-dasharray: none;
+}
+
+.sapGanttTimeHeaderLargeIntervalSvgPath {
+	stroke: @sapUiListTableGroupHeaderTextColor;
+	stroke-width: 1px;
+	opacity: 0.8;
+}
+
+.sapGanttShapeSvgText {
+	fill: @sapUiDeepText;
+}
+
+.sapGanttChartHeader {
+	min-height: @_sap_gantt_Gantt_HeaderHeight;
+	height: @_sap_gantt_Gantt_HeaderHeight;
+	width: 100%;
+	background-color: @sapUiListHeaderBackground;
+	overflow: hidden;
+}
+.sapGanttChartHeaderSvg {}
+
+.sapGanttChartSvgCtn {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+}
+
+.sapGanttChartTT {
+	position: relative;
+	width: 100%;
+}
+
+.sapGanttChartSPMSvgCtn {
+	position:absolute;
+	top:0;
+	left:0;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+}
+
+.sapGanttExpandChartCloseButton {
+	cursor:pointer;
+	pointer-events: auto;
+	stroke: black;
+	stroke-width: 0.5;
+	fill: white;
+}
+
+.sapGanttExpandChartCntBG {
+	pointer-events: auto;
+	fill: @_sap_gantt_Gantt_ExpandChartBG;
+	opacity: 1;
+}
+
+.sapGanttExpandChartHeaderBG {
+	pointer-events: auto;
+	fill: @_sap_gantt_Gantt_ExpandChartBG;
+	opacity: 1;
+}
+
+.sapGanttExpandChartLine {
+	pointer-events: auto;
+	fill: @_sap_gantt_Gantt_ExpandChartLine;
+	stroke-width: 1;
+	stroke: @_sap_gantt_Gantt_ExpandChartLine;
+	shape-rendering: crispEdges
+}
+.sapGanttExpandChartContent text{
+	fill: @_sap_gantt_Gantt_ExpandChartText;
+}
+
+.sapGanttExpandChartCloseButton{
+	stroke: @_sap_gantt_Gantt_ExpandChartText;
+}
+
+.sapGanttSPMaskSvg{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+}
+
+.sapGanttExpandedRow > td {
+	vertical-align: top !important;
+	padding-top: 15px !important;
+}
+
+.sapGanttChartLayoutBG{
+	background-color: transparent;
+}
+
+.sapUiSettingBox{
+	padding-right: 10px;
+}
+
+.sapUiSettingBoxItem {
+	max-width: 100%;
+}
+
+// Since UI5 1.37, tree table changes the z-index value of vertical scrollbar from 2 to 0, the vertical scrollbar is fully overlayed by gantt svg chart
+// So change the z-index of vertical scroll bar to 2
+.sapGanttChartTT .sapUiTableVSb,
+.sapGanttChartWithTable .sapUiTableVSb {
+	z-index: 2;
+}
+
+//Since the z-index of all content elements inside the splitter container are the same, the expanded chart content is rendered above the splitter bar according to the DOM order
+//The splitter bar would be overlapped by the expanded chart content when the selection panel is really narrow, less than the min-width of the tree table
+//So, set the z-index of the elements inside the splitter container to distinguish the rendering order
+.sapGanttViewSplitterH >.sapUiLoSplitterContent {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.sapGanttViewSplitterH >.sapUiLoSplitterBar {
+	position: relative;
+	z-index: 2;
+}
+
+.sapGanttChartTT .sapUiTable > div.sapUiTableCnt {
+	margin-right: -1px;
+}
+
+.sapGanttInvisiblePaintServer {
+	float: left;
+	height: 0;
+	width: 0;
+}
+.sapGanttViewContainer {
+	clear: left;
+	float: left;
+}
+
+.sapGanttChartLegend {
+	line-height: normal;
+}
+
+.sapGanttLL {
+	width: 100%;
+}
+
+.sapGanttLLItem {
+	display: flex;
+}
+
+.sapGanttLLItemTxt {
+	overflow: hidden;
+	height: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+	flex: 1;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: @_sap_gantt_Gantt_LegendTextColor;
+}
+
+.sapGanttLLSvg,
+.sapGanttLLItem .sapMCb {
+	height: 100%;
+}
+
+.noShowCheckBox {
+	visibility: hidden;
+}
+
+.sapGanttLLSvg.NoCheckBox {
+	padding-left: 0.5rem;
+}
+
+.sapGanttLLSvgDefs {
+	height: 0;
+	width: 0;
+	float: left;
+}
+.sapGanttDimensionLegendText{
+	fill: @_sap_gantt_Gantt_LegendTextColor;
+ }
+ 
+.sapGanttDimensionLegendPath {
+	stroke: #b7b6b6;
+	stroke-width: 1;
+}
+
+.sapGanttCursorLineHeader {
+	width: 64px;
+	height: 30px;
+	fill: @sapUiListBackground;
+	font-size: @sapUiFontSmallSize;
+	stroke: @_sap_gantt_Gantt_CursorLineStroke;
+	stroke-width: 1;
+	pointer-events: none;
+}
+
+text.sapGanttCursorLineLabel {
+	fill: @sapUiLink;
+	font-size: @sapUiFontSmallSize;
+	text-anchor: middle;
+	alignment-baseline: baseline;
+	dominant-baseline: central;
+}
+
+.sapGanttCursorLineBody {
+	shape-rendering: crispEdges;
+	stroke: @_sap_gantt_Gantt_CursorLineStroke;
+	stroke-width: 1;
+	stroke-dasharray: none;
+	pointer-events: none;
+}
+
+.sapGanttChartVerticalLine {
+	stroke: @_sap_gantt_Gantt_VerticalLineStroke;
+	stroke-width: 1;
+	stroke-dasharray: none;
+}
+
+.sapGanttNowLine {
+	stroke: @_sap_gantt_Gantt_NowLineStroke;
+	stroke-width: 1;
+	shape-rendering: crispEdges
+}
+
+.sapGanttNowLineHeaderSvgPath {
+	.sapGanttNowLine();
+	fill: @_sap_gantt_Gantt_NowLineStroke;
+}
+.sapGanttNowLineBodySvgLine {
+	.sapGanttNowLine();
+	stroke-dasharray: 10, 5;
+}
+
+.sapGanttSkipToolbar {
+	height: 0;
+}
+.sapGanttToolbar .sapMSlider {
+	width: 200px !important;
+}
+.sapGanttChartWithTable .sapUiTable>.sapUiTableExt {
+	background-color: @sapUiWhiteBG;
+	border-bottom: 2px solid @sapUiWhiteBG;
+}
+
+.sapGanttDraggingCursor {
+	cursor: move;
+}
+
+.sapGanttDraggingShadow {
+	position : absolute;
+	z-index : 999;
+	pointer-events: none;
+}
+
+.sapGanttChartTimePeriodZoomRectangle {
+	fill: @_sap_gantt_Gantt_TimelineZoomColor;
+	stroke: @_sap_gantt_Gantt_TimelineZoomColor;
+	stroke-width: 2px;
+	fill-opacity: 0.4;
+}
+
+.sapUiSizeCozy {
+	/* Gantt Chart Eapanded Row Checkbox */
+	.sapUiTableRowHdr.sapGanttExpandedRow::after {
+		margin-top: 12px !important;
+	}
+}
+
+.sapGanttChartContainer .sapUiLocalBusyIndicator,
+.sapGanttChartWithTable .sapUiLocalBusyIndicator,
+.sapGanttChart .sapUiLocalBusyIndicator {
+	z-index: 999;
+}
+
+.sapGanttLLItem .sapMCbBg {
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+tspan.sapGanttTooltipLine:nth-child(2n) {
+	display: block;
+}
+
+/* ------------------------------------------------ */
+/* Compact size                                     */
+/* ------------------------------------------------ */
+
+
+.sapUiSizeCompact {
+
+	.sapGanttChartHeader {
+		min-height: @_sap_gantt_Gantt_CompactHeaderHeight;
+		height: @_sap_gantt_Gantt_CompactHeaderHeight;
+	}
+
+	.sapGanttChartSvgCtn{
+		top: 0;
+	}
+
+	.sapGanttCursorLineHeader {
+		width: 64px;
+		height: 25px;
+	}
+	text.sapGanttCursorLineLabel {
+		font-size: @sapUiFontSmallSize;
+	}
+
+	.sapGanttExpandedRow > td {
+		padding-top: 5px !important;
+	}
+
+	/* Gantt Chart Eapanded Row Checkbox */
+	.sapUiTableRowHdr.sapGanttExpandedRow::before {
+		margin-top: 6px !important;
+	}
+}
+
+/* ------------------------------------------------ */
+/* Condensed size                                   */
+/* ------------------------------------------------ */
+.sapUiSizeCondensed {
+	.sapGanttExpandedRow > td {
+		padding-top: 2px !important;
+	}
+}
+
+/* ------------------------------------------------ */
+/* Shape resize                                     */
+/* ------------------------------------------------ */
+.sapUiShapeResizingCursor {
+	cursor: ew-resize;
+}
+/* END "Gantt.less" */

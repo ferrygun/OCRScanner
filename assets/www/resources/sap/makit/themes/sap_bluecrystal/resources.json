@@ -1,0 +1,153 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "Chart.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/annotation_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/chartToolbar.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/colorpicker_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/da_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/draw_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/drawcircle_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/drawline_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/drawrectangle_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/e-mail_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/erase_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/erase_d_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/fullscreen_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/graph_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/move_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/popup_tt_center.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/popup_tt_left.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/popup_tt_left_small.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/popup_tt_right.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/popup_tt_right_small.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/rangeselector_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/redo_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/redo_d_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/table_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/undo_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/undo_d_BarButtonItem.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "images/whatif_icon.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "shared.css",
+			"theme": "sap_bluecrystal"
+		}
+	]
+}

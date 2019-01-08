@@ -1,0 +1,93 @@
+<core:FragmentDefinition
+	xmlns:build="sap.build"
+	xmlns:core="sap.ui.core"
+	xmlns:lib="sap.ovp.cards.map.GeographicalMap"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m"
+	xmlns:vbm="sap.ui.vbm"
+	xmlns:ovp="sap.ovp.ui">
+	<!--Show Map -->
+	<template:with path="entityType>com.sap.vocabularies.UI.v1.HeaderInfo" var="header">
+
+		<template:with path="ovpCardProperties>/geoLocationAnnotationPath"
+		helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var="geoLocation">
+			<template:with path="ovpCardProperties>/dataPointAnnotationPath"
+		helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var="dataPoint">
+			<template:if test="{entitySet>name}">
+				<vbm:GeoMap id="oVBI" width="100%" height="25rem"
+					disableZoom="true" disablePan="true" class = "cardType">
+					<vbm:Spots
+						id="Spots"
+						items="{= ${entitySet>name} ? '{/' + ${entitySet>name} + '}' : '' }">
+						<vbm:Spot
+							id="Spot"
+							click="onClickSpot"
+							type="{path: 'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.criticalityType'}"
+							labelType="{path: 'dataPoint>', formatter: 'sap.ovp.cards.AnnotationHelper.criticalityType'}"
+							position="{path: 'geoLocation>', formatter: 'sap.ovp.cards.AnnotationHelper.formatterGeo'} "
+							labelPos="1"
+							labelText="{= ${header>Title/Value} ? ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} :  '' }" />
+					</vbm:Spots>
+                    <vbm:customData>
+                        <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>mapCardType}" writeToDom="true"/>
+                    </vbm:customData>
+				</vbm:GeoMap>
+
+				<ResponsivePopover
+				class="quickViewResponsivePopover"
+				id="quickViewPopover"
+				contentWidth="20rem"
+				placement="Auto"
+				afterOpen="onAfterOpen">
+					<customData>
+						<ovp:CustomData key="tabindex" value="0" writeToDom="true"/>
+					</customData>
+					<customHeader>
+						 <Bar>
+							  <contentMiddle>
+									   <VBox
+											   width="20rem"
+											   class="mapPopoverHeader"
+											   id="popoverHeader"
+											   build:metadata="#pattern:GenericCard;isAbstract;prop::EntitySet:\{ovpCardProperties>/entitySet\}">
+											   <customData>
+													   <ovp:CustomData key="tabindex" value="0" writeToDom="true"/>
+													   <ovp:CustomData key="role" value="button" writeToDom="true"/>
+													   <ovp:CustomData key="aria-label" value="." writeToDom="true"/>
+											   </customData>
+											   <!--
+													   For a Quickview card, the header is in the format "TypeName: Title".
+													   TypeName is set in stack.controller and is hardcoded in the annotations.
+													   Title comes from the data. Path to Title comes from annotation HeaderInfo/Title/Value.
+											   -->
+											   <Label
+															   id="ovpQuickviewCardHeader"
+															   text="{= ${path: 'header>TypeName', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} + ': ' + ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}}"
+															   tooltip="{= ${path: 'header>TypeName', formatter: 'sap.ui.model.odata.AnnotationHelper.format'} + ': ' + ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}}"
+															   class="sapOvpCardTitle tabindex-1 mapQuickViewHeaderText"
+															   build:metadata="#pattern:GenericCard;prop:text:Title">
+													   <customData>
+															   <ovp:CustomData key="aria-label" value="{= ${ovpCardProperties>/title} + ': ' + ${path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}}" writeToDom="true"/>
+															   <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+													   </customData>
+											   </Label>
+										</VBox>
+								</contentMiddle>
+					   </Bar>
+					</customHeader>
+					<content>
+						<core:Fragment fragmentName="sap.ovp.cards.quickview.Quickview" type="XML"/>
+					   <!--
+							   Footer area of the popover where the action buttons are
+					   -->
+					   <OverflowToolbar width="100%" class="mapQuickViewCardFooter">
+							   <core:Fragment fragmentName="sap.ovp.cards.generic.ActionsFooter" type="XML"/>
+					   </OverflowToolbar>
+					</content>
+				</ResponsivePopover>
+
+		</template:if>
+		</template:with>
+	</template:with>
+	</template:with>
+</core:FragmentDefinition>

@@ -1,0 +1,66 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "sap.zen.dsh.fioriwrapper",
+    "type": "application",
+    "ach": "BI-RA-AD",
+    "dataSources": {
+      "RSAO_ODATA_SRV": {
+        "uri": "/sap/opu/odata/sap/RSAO_ODATA_SRV",
+        "settings": {
+          "localUri": "./model/metadata.xml"
+        }
+      }
+    },
+    "applicationVersion": {
+      "version": "1.43.0-SNAPSHOT"
+    }
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": false
+    },
+    "supportedThemes": [
+      "sap_hcb",
+      "sap_bluecrystal",
+	  "sap_belize"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+	"services": {
+		"ShellUIService": {
+		  "factoryName": "sap.ushell.ui5service.ShellUIService"
+		}
+	},
+    "dependencies": {
+      "minUI5Version": "1.38.1-SNAPSHOT",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.generic.app": {},
+        "sap.zen.commons": {},
+        "sap.zen.crosstab": {},
+        "sap.viz": {},
+        "sap.zen.dsh": {}
+        },
+      "components": {}
+    },
+    "config": {
+      "fullWidth": true
+    },
+    "routing": {
+      "config": {
+      },
+      "routes": []
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    }
+  }
+}

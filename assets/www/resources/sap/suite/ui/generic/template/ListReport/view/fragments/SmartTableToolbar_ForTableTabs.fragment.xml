@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:build="sap.build">
+
+	<OverflowToolbar design="Transparent">
+		<ToolbarSpacer/>
+		<!-- Custom Action Breakout -->
+		<template:repeat list="{parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions/sap.suite.ui.generic.template.ListReport.view.ListReport/sap.ui.generic.app}" var="tmpEntitySet">
+			<core:Fragment fragmentName="sap.suite.ui.generic.template.ListReport.view.fragments.BreakoutActions"
+					type="XML"/>
+		</template:repeat>
+
+		<template:with path="workingContext>lineItemPath" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.resolveMetaModelPath" var="collection">
+            <core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.AnnotatedActionButtons" type="XML"/>
+		</template:with>
+        <template:with path="entityType>" var="listEntityType">
+        	<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.TableActionButtons" type="XML"/>
+        	<template:with path="entitySet>" var="listEntitySet">
+            	<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.CRUDActionButtons" type="XML"/>
+        	</template:with>
+		</template:with>
+
+	</OverflowToolbar>
+
+</core:FragmentDefinition>

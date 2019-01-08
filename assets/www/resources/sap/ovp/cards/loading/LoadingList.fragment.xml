@@ -1,0 +1,43 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:ovp="sap.ovp.ui"
+	xmlns:sfi="sap.ui.comp.smartfield"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<HBox class="sapOvpLoadingListHBox">
+		 		<HBox class="sapOvpLoadingListHBoxContent">
+        		 	<FlexBox calss="sapOvpLoadingListContent1">	
+					</FlexBox>
+					<FlexBox calss="sapOvpLoadingListContent2">	
+					</FlexBox>
+					
+				</HBox>
+					<FlexBox
+						alignItems="Start" direction="Column">
+							<items>
+								<Text text="1" width="90px" class="sapOvpLoadingTable" ></Text>
+								<Text text="2" width="150px" class="sapOvpLoadingTable"></Text>							
+							</items>
+						</FlexBox>
+						<FlexBox
+						alignItems="Start" direction="Column">
+							<items>
+								<Text text="1" width="90px" class="sapOvpLoadingTable" ></Text>
+								<Text text="2" width="150px" class="sapOvpLoadingTable"></Text>							
+							</items>
+						</FlexBox>
+						<FlexBox
+						alignItems="Start" direction="Column">
+							<items>
+								<Text text="1" width="90px" class="sapOvpLoadingTable" ></Text>
+								<Text text="2" width="150px" class="sapOvpLoadingTable"></Text>							
+							</items>
+						</FlexBox>
+						<FlexBox
+						alignItems="Start" direction="Column">
+							<items>
+								<Text text="1" width="90px" class="sapOvpLoadingTable" ></Text>
+								<Text text="2" width="150px" class="sapOvpLoadingTable"></Text>							
+							</items>
+						</FlexBox>
+				
+	</HBox>
+</core:FragmentDefinition>

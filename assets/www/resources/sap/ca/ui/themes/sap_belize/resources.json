@@ -1,0 +1,81 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Chart.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ChartToolBar.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ClusterListItem.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "DatePicker.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "FileUpload.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "HierarchyItem.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "InPlaceEdit.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "OverflowContainer.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "OverviewTile.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "PictureTile.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		}
+	]
+}

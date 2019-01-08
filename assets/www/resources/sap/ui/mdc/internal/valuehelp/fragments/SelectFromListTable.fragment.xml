@@ -1,0 +1,109 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:core="sap.ui.core">
+	<Table items="{= '{ path : \'/' + ${valueList>CollectionPath} + '\', parameters : { $$groupId : \'' + '$direct' +  '\'} }' }"
+		   growing="true"
+		   growingScrollToLoad="true"
+		   selectionChange="handleSelectionChange"
+		   id="valueListTable"
+		   type="ResponsiveTable"
+		   itemPress="handleItemPress"
+		   mode="{path: 'valueList>/sSelectionMode'}" visible="{= ${FilterLayoutFlag>/tableView}}"
+		   class="sapFEValueHelpDialogTable">
+		<layoutData>
+			   <FlexItemData growFactor="1"/>
+		</layoutData>
+
+		<columns>
+			<template:repeat list="{valueList>Parameters}" var="parameter">
+				<template:with path="parameter>ValueListProperty"
+							   var="parameter"
+							   helper="sap.ui.mdc.internal.valuehelp.ValueHelpAnnotationHelper.getValueListProperty">
+					<template:if
+							test="{= !(${parameter>@com.sap.vocabularies.UI.v1.Hidden} === true)}">
+						<Column>
+							<template:if test="{parameter>Label}">
+								<template:then>
+									<Label text="{parameter>Label@@.MODEL.value}"/>
+								</template:then>
+
+								<template:elseif
+										test="{parameter>@com.sap.vocabularies.Common.v1.Label}">
+									<Label text="{parameter>@com.sap.vocabularies.Common.v1.Label@@.MODEL.value}"/>
+								</template:elseif>
+
+								<template:else>
+									<!-- no label found, property path as fallback, to highlight it put it into [] -->
+									<Label text="[{parameter>@sapui.name@@.MODEL.value}]"/>
+								</template:else>
+							</template:if>
+						</Column>
+					</template:if>
+				</template:with>
+			</template:repeat>
+		</columns>
+		<items>
+			<ColumnListItem type="Inactive">
+				<cells>
+					<template:repeat list="{valueList>Parameters}"
+									 var="parameter">
+						<template:with path="parameter>ValueListProperty"
+									   var="dataField"
+									   helper="sap.ui.mdc.internal.valuehelp.ValueHelpAnnotationHelper.getValueListProperty">
+							<template:if
+									test="{= !(${dataField>@com.sap.vocabularies.UI.v1.Hidden} === true)}">
+								<core:Fragment
+										fragmentName="sap.ui.mdc.internal.field.Field"
+										type="XML"/>
+							</template:if>
+						</template:with>
+					</template:repeat>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	<!--
+	List control for the list view besides the table.
+	 -->
+	<!-- <List	id="valueHelpList"
+			items="{= '{ path : \'/' + ${valueList>CollectionPath} + '\', parameters : { $$groupId : \'' + '$direct' +  '\'} }' }"
+			mode="MultiSelect"
+			width="100%"
+			visible="{= ${FilterLayoutFlag>/listView}}">
+		<layoutData>
+			   <FlexItemData growFactor="1"/>
+		</layoutData>
+		<items>
+			<CustomListItem class="sapUiSmallMarginTop">
+				<template:repeat list="{valueList>Parameters}"
+								 var="parameter" class="sapUiSmallMarginTop sapUiSmallMarginEnd sapUiSmallMarginBegin">
+					<HBox class="sapUiSmallMarginBegin">
+						<template:with path="parameter>ValueListProperty"
+									   var="dataField"
+									   helper="sap.fe.controls._ValueHelp.ValueHelpAnnotationHelper.getValueListProperty">
+							<template:if
+									test="{= !(${dataField>@com.sap.vocabularies.UI.v1.Hidden} === true)}">
+								<template:if test="{dataField>Label}">
+									<template:then>
+										<Label text="{dataField>Label@@.MODEL.value}"/>
+									</template:then>
+									<template:elseif
+											test="{dataField>@com.sap.vocabularies.Common.v1.Label}">
+										<Label text="{dataField>@com.sap.vocabularies.Common.v1.Label@@.MODEL.value}"/>
+									</template:elseif>
+									<template:else>
+										<Label text="[{dataField>@sapui.name@@.MODEL.value}]"/>
+									</template:else>
+								</template:if>
+								<Text text=":"/>
+								<core:Fragment
+										fragmentName="sap.fe.controls._Field.Fragments.FieldContent"
+										type="XML"/>
+							</template:if>
+						</template:with></HBox>
+				</template:repeat>
+			</CustomListItem>
+		</items>
+	</List> -->
+
+</core:FragmentDefinition>

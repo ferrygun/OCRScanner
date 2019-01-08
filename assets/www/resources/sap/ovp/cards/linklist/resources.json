@@ -1,0 +1,53 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "AnnotationHelper-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "AnnotationHelper.js"
+		},
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "LinkList-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "LinkList.controller.js"
+		},
+		{
+			"name": "LinkList.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListCarousel.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListContactDetails.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListGrid.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListNavigationTargets.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListStandard.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListStaticDataCarousel.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListStaticDataGrid.fragment.xml"
+		},
+		{
+			"name": "fragments/LinkListStaticDataStandard.fragment.xml"
+		}
+	]
+}

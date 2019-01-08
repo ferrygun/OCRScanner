@@ -1,0 +1,88 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/Component.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component-preload-dbg.js",
+			"module": "Component-preload.js",
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ui/thirdparty/datajs.js",
+				"sap/ushell/components/tiles/utils.js"
+			],
+			"included": [
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/Component.js",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.controller.js",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.view.js",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/i18n/i18n.properties",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/manifest.json"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "Component-preload.js",
+			"merged": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ui/thirdparty/datajs.js",
+				"sap/ushell/components/tiles/utils.js"
+			],
+			"included": [
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/Component.js",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.controller.js",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.view.js",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/i18n/i18n.properties",
+				"sap/ushell/components/tiles/cdm/applauncherdynamic/manifest.json"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/Component.js"
+		},
+		{
+			"name": "DynamicTile-dbg.controller.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ui/thirdparty/datajs.js",
+				"sap/ushell/components/tiles/utils.js"
+			]
+		},
+		{
+			"name": "DynamicTile-dbg.view.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "DynamicTile.controller.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.controller.js",
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ui/thirdparty/datajs.js",
+				"sap/ushell/components/tiles/utils.js"
+			]
+		},
+		{
+			"name": "DynamicTile.view.js",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/DynamicTile.view.js"
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/i18n/i18n.properties"
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/ushell/components/tiles/cdm/applauncherdynamic/manifest.json"
+		},
+		{
+			"name": "resources.json"
+		}
+	]
+}

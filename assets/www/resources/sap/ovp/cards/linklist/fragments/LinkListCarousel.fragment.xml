@@ -1,0 +1,159 @@
+<core:FragmentDefinition xmlns:build="sap.build" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+	<Carousel id="pictureCarousel" loop="true" class="sapOvpCardLinkListCarousel cardType" arrowsPlacement="PageIndicator"
+		pages="{parts:[{path:'entitySet>'}, {path:'ovpCardProperties>/annotationPath'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatItems'}">
+        <customData>
+            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>linkListCarouselType}" writeToDom="true" />
+        </customData>
+		<pages>
+			<VBox class="sapMCrslItemTableCell">
+                <template:with helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" path='ovpCardProperties>/identificationAnnotationPath' var='identification'>
+				<template:if
+					test="{= ${header>Title/Value} || ${header>Description/Value}}">
+					<VBox
+						class="{= ${header>Title/Value} || ${header>Description/Value} ? 'sapOvpCarouselContentHeader' : 'sapOvpCarouselContentHeader sapOvpCarouselHideContentHeader' }">
+                        <template:if
+							test="{path: 'identification>0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+							<template:then>
+								<Link class="sapOvpCardLinkListTitle " press="onLinkNavigationSingleTarget"
+									text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+
+                                    <customData>
+                                        <ovp:CustomData key="aria-label" value="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" writeToDom="true"/>
+                                        <ovp:CustomData key="role" value="link" writeToDom="true" />
+                                    </customData>
+
+                                </Link>
+							</template:then>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+								<Link class="sapOvpCardLinkListTitle" press="onLinkListActionPress"
+									app:dataAction="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+									text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+
+                                    <customData>
+                                        <ovp:CustomData key="aria-label" value="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" writeToDom="true"/>
+                                        <ovp:CustomData key="role" value="link" writeToDom="true" />
+                                    </customData>
+
+                                </Link>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+								<Link class="sapOvpCardLinkListTitle" target="_blank"
+									href="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.formatString'}"
+									text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+
+                                    <customData>
+                                        <ovp:CustomData key="aria-label" value="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" writeToDom="true"/>
+                                        <ovp:CustomData key="role" value="link" writeToDom="true" />
+                                    </customData>
+
+                                </Link>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.Communication.v1.Contact', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+								<Link class="sapOvpCardLinkListTitle" press="onLinkPopover"
+									text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+
+                                    <customData>
+                                        <ovp:CustomData key="aria-label" value="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" writeToDom="true"/>
+                                        <ovp:CustomData key="role" value="link" writeToDom="true" />
+                                    </customData>
+
+                                </Link>
+							</template:elseif>
+							<template:else>
+								<Text class="sapOvpCardLinkListTitle"
+									text="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:else>
+						</template:if>
+						<Text class="sapOvpCardLinkListSubTitle"
+							text="{path: 'header>Description/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+					</VBox>
+				</template:if>
+				<template:if
+					test="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+					<template:then>
+						<template:if
+							test="{path: 'identification>0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+							<template:then>
+                                <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                    <Image id="ovpLinkLinstCarouselImg" densityAware="true" press="onLinkNavigationSingleTarget"
+                                        src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        alt="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </HBox>
+							</template:then>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+                                <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                    <Image id="ovpLinkLinstCarouselImg" densityAware="true" press="onLinkListActionPress"
+                                        app:dataAction="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        alt="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </HBox>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+                                <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                    <Image id="ovpLinkLinstCarouselImg" densityAware="true" press="onLinkListItemPress"
+                                        src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        alt="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </HBox>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.Communication.v1.Contact', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+                                <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                    <Image id="ovpLinkLinstCarouselImg" densityAware="true" press="onLinkPopover"
+                                        src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        alt="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </HBox>
+							</template:elseif>
+							<template:else>
+                                <HBox class="sapMCrslItemTableCell sapOVPCarouselImageContainer" alignItems="Center" justifyContent="Center">
+                                    <Image id="ovpLinkLinstCarouselImg" densityAware="true"
+                                        src="{path: 'header>ImageUrl', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        alt="{path: 'header>Title/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </HBox>
+							</template:else>
+						</template:if>
+					</template:then>
+					<template:else>
+						<template:if
+							test="{path: 'identification>0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+							<template:then>
+								<core:Icon width="100%" size="128px" press="onLinkNavigationSingleTarget"
+									src="{path: 'header>TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+							</template:then>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+								<core:Icon width="100%" size="128px" press="onLinkListActionPress"
+									app:dataAction="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+									src="{path: 'header>TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.UI.v1.LineItem/0/Url', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+								<core:Icon width="100%" size="128px" press="onLinkListItemPress"
+									src="{path: 'header>TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+							</template:elseif>
+							<template:elseif
+								test="{path: 'entityType>com.sap.vocabularies.Communication.v1.Contact', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.linkedAction'}">
+								<core:Icon width="100%" size="128px" press="onLinkPopover"
+									src="{path: 'header>TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+							</template:elseif>
+							<template:else>
+								<core:Icon width="100%" size="128px"
+									src="{path: 'header>TypeImageUrl', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getIconPath'}"/>
+							</template:else>
+						</template:if>
+					</template:else>
+				</template:if>
+                </template:with>
+			</VBox>
+		</pages>
+        <customData>
+            <ovp:CustomData key="aria-live" value="assertive" writeToDom="true" />
+        </customData>
+	</Carousel>
+</core:FragmentDefinition>

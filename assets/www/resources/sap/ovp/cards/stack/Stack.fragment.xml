@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:ovp="sap.ovp.ui">
+
+    <VBox id="stackContent" class="sapOvpStackCardContent" justifyContent="SpaceBetween">
+        <customData>
+            <ovp:CustomData key="tabindex" value="0" writeToDom="true"/>
+            <ovp:CustomData key="role" value="button" writeToDom="true"/>
+        </customData>
+        <Label id="stackSize" class="sapOvpStackCardSize">
+            <customData>
+                <ovp:CustomData key="role" value="" writeToDom="true"/>
+            </customData>
+        </Label>
+        <Text id="stackTotalSize" class="sapOvpStackCardTotalSize"/>
+        <core:Icon id="StackCardIcon" class="sapOvpStackCardIcon" src="sap-icon://dimension" useIconTooltip="false"></core:Icon>
+    </VBox>
+</core:FragmentDefinition>

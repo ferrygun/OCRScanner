@@ -1,0 +1,34 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	template:require="sap.suite.ui.generic.template.js.AnnotationHelperMultipleViews"
+	xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:build="sap.build">
+
+	<IconTabBar id="template::IconTabBar" expandable="false" stretchContentHeight="true" headerMode="Inline" selectedKey="{_templPriv>/listReport/multipleViews/selectedKey}">
+		<items>
+			<template:repeat list="{parameter>/settings/quickVariantSelectionX/variants}" var="tabItem">
+				<IconTabFilter id="template::IconTabFilter-{path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getIconTabFilterKey'}"
+							   key="{path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getIconTabFilterKey'}"
+							   text="{parts: [{path: 'parameter>/settings/quickVariantSelectionX'}, {path: 'tabItem>'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelperMultipleViews.getTextForItem'}">
+				</IconTabFilter>
+			</template:repeat>
+		</items>
+		<content>
+			<template:repeat list="{parameter>/settings/quickVariantSelectionX/variants}" var="tabItem">
+				<template:if test="{parts:[{path: 'entityType>'}, {path: 'tabItem>'}],  formatter: 'sap.suite.ui.generic.template.ListReport.AnnotationHelper.checkIfSmartChart'}">
+					<template:then>
+						<template:with path="parameter>/" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.createWorkingContext" var="workingContext">
+						<template:with path="tabItem>" helper="sap.suite.ui.generic.template.ListReport.AnnotationHelper.getChartAnnotationPath" var="chartAnnotationPath">
+						<template:with path="entitySet>dummy" var="facet">
+							<core:Fragment fragmentName="sap.suite.ui.generic.template.ListReport.view.fragments.SmartChart" type="XML" />
+						</template:with>
+						</template:with>
+						</template:with>
+					</template:then>
+				<template:else>
+						<core:Fragment fragmentName="sap.suite.ui.generic.template.ListReport.view.fragments.SmartTable" type="XML" />
+				</template:else>
+				</template:if>
+			</template:repeat>
+		</content>
+	</IconTabBar>
+</core:FragmentDefinition>

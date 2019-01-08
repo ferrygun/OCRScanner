@@ -1,0 +1,22 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "analyticalChart-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "analyticalChart.controller.js"
+		},
+		{
+			"name": "analyticalChart.fragment.xml"
+		}
+	]
+}

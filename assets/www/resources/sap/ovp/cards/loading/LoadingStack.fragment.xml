@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:ovp="sap.ovp.ui"
+	xmlns:sfi="sap.ui.comp.smartfield"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<HBox class="sapOvpLoadingStackHBox" width="100%">
+            <VBox class="sapOvpLoadingStackVBoxLeft">
+
+                <core:HTML
+                        content="
+              &lt;svg width=&quot;100%&quot; height=&quot;176px&quot; viewbox=&quot;0 0 100 100&quot; preserveAspectRatio=&quot;none&quot; class=&quot;sapOvpLoadingCardsSVG&quot;&gt;
+              &lt;polygon points=&quot;0 0, 0 100,7 100,7 10, 70 10,70 20, 7 20,7 33, 90 33,90 43, 7 43,7 48, 90 48,90 58, 7 58,7 80, 90 80,90 90, 7 90,7 100, 100 100, 100 0&quot; style=&quot;fill: white;&quot;&gt;
+              &lt;/polygon&gt;
+              &lt;/svg&gt;"
+                        >
+
+                </core:HTML>
+
+
+            </VBox>
+            <VBox class="sapOvpLoadingStackVBoxRight">
+                <!--<FlexBox>-->
+                    <!--<Text></Text>-->
+                <!--</FlexBox>-->
+            </VBox>
+        </HBox>
+</core:FragmentDefinition>

@@ -1,0 +1,136 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:build="sap.build">
+
+	<uxap:actions>
+
+		<!-- Custom Action Breakout -->
+		<template:repeat list="{parameter>/manifest/sap.ui5/extends/extensions/sap.ui.controllerExtensions/sap.suite.ui.generic.template.ObjectPage.view.Details/sap.ui.generic.app}"
+					     var="tmpEntitySet">
+			<template:if test="{= ${tmpEntitySet>EntitySet} === ${parameter>/entitySet} }">
+				<template:repeat list="{tmpEntitySet>Header/Actions}" var="customAction">
+		            <template:if test="{= ${customAction>determining} !== true}">
+						<uxap:ObjectPageHeaderActionButton id="action::{customAction>id}"
+														   text="{customAction>text}"
+														   press="{customAction>press}" enabled="{ui>/enabled}"
+                                                           visible="{path: 'customAction>applicablePath', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.actionControlBreakout'}"
+														   hideText="false" importance="Medium">
+						</uxap:ObjectPageHeaderActionButton>
+		            </template:if>
+				</template:repeat>
+			</template:if>
+		</template:repeat>
+
+		<template:repeat list="{entityType>com.sap.vocabularies.UI.v1.Identification}" var="dataField">
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAction' &amp;&amp; ${dataField>Determining/Bool} !== 'true' &amp;&amp; ${dataField>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/High' }">
+				<template:with path="dataField>Action"
+							   helper="sap.ui.model.odata.AnnotationHelper.gotoFunctionImport"
+							   var="action">
+					<uxap:ObjectPageHeaderActionButton
+							id="action::{path: 'dataField>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getStableIdPartFromDataField'}"
+							text="{path: 'dataField>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+							press="._templateEventHandlers.onCallAction" enabled="{ui>/enabled}"
+							visible="{parts: [{path: 'action>sap:applicable-path'}, {path: 'entitySet>entityType'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.actionControl'}"
+							hideText="false" importance="Medium">
+						<uxap:customData>
+							<core:CustomData key="Type"
+											 value="{dataField>RecordType}"/>
+							<template:if test="{= ${dataField>SemanticObject}}">
+								<core:CustomData key="SemanticObject"
+												 value="{path: 'dataField>SemanticObject', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							</template:if>
+							<core:CustomData key="Action"
+											 value="{path: 'dataField>Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+							<core:CustomData key="Label"
+											 value="{path: 'dataField>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+						</uxap:customData>
+					</uxap:ObjectPageHeaderActionButton>
+				</template:with>
+			</template:if>
+		</template:repeat>
+		<template:if test="{= !${parameter>/manifest/sap.ui.generic.app/pages/0/component/settings/treeTable}}">
+			<!-- Edit button -->
+			<template:if test="{= !${parameter>/settings/routeConfig/parentEntitySet} || ${entitySet>com.sap.vocabularies.Common.v1.DraftRoot} }">
+				<template:then>
+					<uxap:ObjectPageHeaderActionButton
+							id="edit" text="{i18n>EDIT}" type="Emphasized" hideText="false"
+							enabled="{ui>/enabled}" press="._templateEventHandlers.onEdit" importance="Medium"
+							visible="{parts: [{path: 'entitySet>Org.OData.Capabilities.V1.UpdateRestrictions'}, {path: 'entitySet>entityType'}, {path: 'parameter>/settings/routeConfig/navigation/edit/target'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getEditActionButtonVisibility'}">
+						<uxap:customData>
+							<core:CustomData key="CrossNavigation" value="{parameter>/settings/routeConfig/navigation/edit/target}"/>
+						</uxap:customData>
+					</uxap:ObjectPageHeaderActionButton>
+				</template:then>
+				<template:elseif test="{= !${parameter>/isDraftEnabled} }">
+					<uxap:ObjectPageHeaderActionButton
+						id="edit" text="{i18n>EDIT}" type="Emphasized" enabled="{ui>/enabled}" hideText="false"
+						press="._templateEventHandlers.onEdit" importance="Medium"
+						visible="{parts: [{path: 'entitySet>Org.OData.Capabilities.V1.UpdateRestrictions'}, {path: 'entitySet>entityType'}, {path: 'parameter>/settings/routeConfig/navigation/edit/target'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getEditActionButtonVisibility'}">
+						<uxap:customData>
+							<core:CustomData key="CrossNavigation" value="{parameter>/settings/routeConfig/navigation/edit/target}"/>
+						</uxap:customData>
+					</uxap:ObjectPageHeaderActionButton>
+				</template:elseif>
+			</template:if>
+
+			<!-- Delete button -->
+			<!-- For better readability devided into two different scenarios -->
+			<template:if test="{= !${parameter>/settings/routeConfig/parentEntitySet} || ${entitySet>com.sap.vocabularies.Common.v1.DraftRoot} }">
+				<template:then>
+					<!-- Scenario 1: view level 1 -->
+					<uxap:ObjectPageHeaderActionButton
+						id="delete" text="{i18n>DELETE}" enabled="{ui>/enabled}" hideText="false"
+						press="._templateEventHandlers.onDelete" importance="Medium"
+						visible="{parts: [{path: 'entitySet>Org.OData.Capabilities.V1.DeleteRestrictions'}, {path: 'entitySet>entityType'}, {path: 'parameter>/isDraftEnabled'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getDeleteActionButtonVisibility'}" />
+				</template:then>
+				<template:else>
+					<!-- Scenario 2: view level > 1 -->
+					<uxap:ObjectPageHeaderActionButton
+						id="delete" text="{i18n>DELETE}" enabled="{ui>/enabled}" hideText="false"
+						press="._templateEventHandlers.onDelete" importance="Medium"
+						visible="{parts: [{path: 'entitySet>Org.OData.Capabilities.V1.DeleteRestrictions'}, {path: 'entitySet>entityType'}, {path: 'parameter>/isDraftEnabled'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSubObjPageDeleteActionButtonVisibility'}" />
+				</template:else>
+			</template:if>
+		</template:if>
+ 		<template:if test="{parameter>/settings/showRelatedApps}">
+			<uxap:ObjectPageHeaderActionButton id="relatedApps" text="{i18n>RELATED_APPS}" hideText="false"
+											   importance="Medium"
+											   press="._templateEventHandlers.onRelatedApps"
+											   visible="{_templPrivGlobal>/generic/crossAppNavSupport}"/>
+ 		</template:if>
+
+		<template:repeat list="{entityType>com.sap.vocabularies.UI.v1.Identification}" var="dataField">
+			<template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAction' &amp;&amp; ${dataField>Determining/Bool} !== 'true' &amp;&amp; ${dataField>com.sap.vocabularies.UI.v1.Importance/EnumMember} !== 'com.sap.vocabularies.UI.v1.ImportanceType/High' }">
+				<template:with path="dataField>Action"	helper="sap.ui.model.odata.AnnotationHelper.gotoFunctionImport"	var="action">
+					<uxap:ObjectPageHeaderActionButton
+						id="action::{path: 'dataField>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getStableIdPartFromDataField'}"
+						text="{path: 'dataField>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+						hideText="false" importance="Medium"
+						press="._templateEventHandlers.onCallAction" enabled="{ui>/enabled}"
+						visible="{parts: [{path: 'action>sap:applicable-path'}, {path: 'entitySet>entityType'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.actionControl'}"
+						build:metadata="#pattern:ActionButton;staticProp:text:Label;condition:datafield>RecordType:com.sap.vocabularies.UI.v1.DataFieldForAction">
+						<uxap:customData>
+							<core:CustomData key="Type" value="{dataField>RecordType}"/>
+								<template:if test="{= ${dataField>SemanticObject}}">
+									<core:CustomData key="SemanticObject" value="{path: 'dataField>SemanticObject', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+								</template:if>
+								<core:CustomData key="Action" value="{path: 'dataField>Action', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+								<core:CustomData key="Label" value="{path: 'dataField>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+						</uxap:customData>
+					</uxap:ObjectPageHeaderActionButton>
+				</template:with>
+			</template:if>
+		</template:repeat>
+
+		<uxap:ObjectPageHeaderActionButton id="template::Share"
+										   text="{i18n>SHARE}"
+										   icon="sap-icon://action" enabled="{ui>/enabled}" type="Transparent"
+										   press="._templateEventHandlers.onShareObjectPageActionButtonPress"
+										   importance="High" class="sapSmartTemplatesShareMenuButton"
+										   visible="{= ${parameter>/manifest/sap.ui.generic.app/settings/flexibleColumnLayout} ? '{= ${_templPrivGlobal>/generic/FCL/highestViewLevel} ===' + ${parameter>/settings/routeConfig/viewLevel} + ' }' : 'true' }"
+										   tooltip="{i18n>SHARE}"/>
+
+		<core:Fragment fragmentName="sap.suite.ui.generic.template.detailTemplates.fragments.PaginatorButtons" type="XML"/>
+		<core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.FCLActions" type="XML"/>
+	</uxap:actions>
+
+</core:FragmentDefinition>

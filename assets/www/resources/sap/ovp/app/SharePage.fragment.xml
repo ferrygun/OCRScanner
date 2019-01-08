@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:footerbar="sap.ushell.ui.footerbar">
+   <ActionSheet id="template::ShareSheet" placement="VerticalPreferedBottom">
+      <buttons>
+         <Button id="ShareEmailButton" icon="sap-icon://email" press="shareEmailPressed" text="{ovplibResourceBundle>Email_Text}"/>
+         <footerbar:AddBookmarkButton id="BookmarkButton" 
+                                      title="{ui>/tileInfo/tileTitle}"
+                                      tileIcon="sap-icon://bookmark" 
+                                      customUrl="{ui>/tileInfo/tileCustomURL}"/>
+      </buttons>
+   </ActionSheet>
+</core:FragmentDefinition>

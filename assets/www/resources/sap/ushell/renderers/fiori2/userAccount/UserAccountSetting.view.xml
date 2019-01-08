@@ -1,0 +1,6 @@
+<View
+        controllerName="sap.ushell.renderers.fiori2.userAccount.UserAccountSelector"
+        xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m">
+    <core:Fragment fragmentName="sap.ushell.renderers.fiori2.userAccount.UserAccountSetting" type="XML"></core:Fragment>
+</View>

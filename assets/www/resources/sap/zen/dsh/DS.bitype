@@ -1,0 +1,6 @@
+{
+     "type_id":"sap.bi.ds.biapp", 
+     "name":"DS",
+     "description":"Design Studio",
+     "version":"0.1.0"
+}

@@ -1,0 +1,63 @@
+<core:FragmentDefinition
+    xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+    xmlns="sap.m" xmlns:build="sap.build" xmlns:core="sap.ui.core">
+
+    <template:if test="{= ${listEntitySet>Org.OData.Capabilities.V1.DeleteRestrictions/Deletable/Bool} !== 'false' &amp;&amp; ${listEntityType>sap:semantics} !== 'aggregate' &amp;&amp; !${parameter>/settings/gridTable}}">
+        <template:if test="{path: 'parameter>/settings/routeConfig/', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.isListReportTemplate'}">
+        	<template:then>
+	        		<Button 
+	        			id="deleteEntry{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+	                	text="{i18n>DELETE}"
+	                	press="._templateEventHandlers.deleteEntries" 
+	                	type="Transparent" 
+	                	enabled="{_templPriv>/listReport/deleteEnabled}">
+						<customData>
+	                    	<core:CustomData key="Type" value="CRUDActionDelete"/>
+	                	</customData>
+            		</Button>
+	    	</template:then>
+        	<template:else>
+			        	<Button
+		        			id="{path: 'facet>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getStableIdPartFromFacet'}::deleteEntry{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+				            text="{i18n>DELETE}"
+			                press="._templateEventHandlers.deleteEntries" type="Transparent"
+							enabled="{path: 'facet>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.buildDeleteButtonEnablementExpression'}"
+							visible="{= ${parameter>/isDraftEnabled} ? '{ui>/editable}' : '{= !${ui>/editable} }' }">
+							<customData>
+		                    	<core:CustomData key="Type" value="CRUDActionDelete"/>
+		                	</customData>
+	            		</Button>
+        	</template:else>
+        </template:if>
+    </template:if>
+	<template:if test="{= ${listEntitySet>Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool} !== 'false' || ${parts: [{path: 'listEntitySet>name'}, {path: 'parameter>/settings/subPages/'}, {path: 'facet>Target/AnnotationPath'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getCreateNavigationIntent'}}">
+		<template:if test="{= ${path: 'parameter>/settings/routeConfig/', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.isListReportTemplate'}}">
+		<template:then>
+			<OverflowToolbarButton
+				id="addEntry{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+				icon="sap-icon://add"
+				tooltip="{i18n>CREATE_NEW_OBJECT}"
+				text="{i18n>CREATE_NEW_OBJECT}"
+				press="._templateEventHandlers.addEntry"
+				type="Transparent"
+				visible="true">
+				<customData>
+					<core:CustomData key="CrossNavigation"
+						value="{parts: [{path: 'listEntitySet>name'}, {path: 'parameter>/settings/subPages/'}, {path: 'facet>Target/AnnotationPath'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getCreateNavigationIntent'}" />
+				</customData>
+			</OverflowToolbarButton>
+		</template:then>
+		<template:else>
+				<OverflowToolbarButton
+					id="{path: 'facet>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getStableIdPartFromFacet'}::addEntry{= ${parameter>/settings/quickVariantSelectionX} ? ${path: 'tabItem>', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.getSuffixFromIconTabFilterKey'} : ''}"
+					icon="sap-icon://add"
+					press="._templateEventHandlers.addEntry"
+					tooltip="{i18n>ADD}"
+					text="{i18n>ADD}"
+					visible="{parts: [{path: 'entitySet>'}, {path: 'listEntitySet>'}, {path: 'parameter>/settings/subPages/'}, {path: 'facet>'}, {path: 'parameter>/settings/sections'},{path: 'parameter>/isDraftEnabled'}], formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.isRelatedEntityCreatable'}">
+				</OverflowToolbarButton>
+		</template:else>
+		</template:if>
+	</template:if>
+
+</core:FragmentDefinition>

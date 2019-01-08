@@ -1,0 +1,30 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:build="sap.build"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:sfi="sap.ui.comp.smartfield"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+
+    <Table id="ovpTable" class="ovpTableClass cardType"
+           items="{parts:[{path:'entitySet>'}, {path:'ovpCardProperties>/annotationPath'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatItems'}"
+           build:metadata="#pattern:GenericCard>Table;set:ovpCardProperties>/annotationPath:com.sap.vocabularies.UI.v1.LineItem">
+        <customData>
+            <ovp:CustomData key="aria-label" value="{ovplibResourceBundle>tableCard}" writeToDom="true"/>
+        </customData>
+
+        <template:if
+                test="{= ${ovpCardProperties>/layoutDetail} === 'resizable'}">
+            <template:then>
+                <core:Fragment fragmentName="sap.ovp.cards.table.TableDashBoardLayout" type="XML"/>
+            </template:then>
+
+            <template:else>
+                <core:Fragment fragmentName="sap.ovp.cards.table.TableEasyScanLayout" type="XML"/>
+            </template:else>
+        </template:if>
+
+
+    </Table>
+</core:FragmentDefinition>

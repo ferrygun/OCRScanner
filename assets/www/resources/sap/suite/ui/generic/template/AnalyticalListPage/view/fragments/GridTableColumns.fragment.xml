@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" xmlns="sap.m" xmlns:build="sap.build" xmlns:table="sap.ui.table" xmlns:core="sap.ui.core">
+    <template:repeat list="{collection&gt;}" var="dataField">
+        <template:if test="{= (${dataField&gt;RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAction' || ${dataField&gt;RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation') &amp;&amp; ${dataField&gt;Inline/Bool} === 'true'}" build:metadata="#ignore">
+            <template:with path="dataField&gt;Value" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="dataFieldValue">
+                <table:Column customData:p13nData="{path: 'dataField&gt;', formatter: 'sap.suite.ui.generic.template.js.AnnotationHelper.createP13NColumnForAction'}" hAlign="Center">
+                    <template:if test="{dataField&gt;Label}" build:metadata="#ignore">
+                        <template:then build:metadata="#ignore">
+                            <core:InvisibleText text="{path: 'dataField&gt;Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" />
+                        </template:then>
+                        <template:else>
+                            <core:InvisibleText text="{path: 'dataFieldValue&gt;com.sap.vocabularies.Common.v1.Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" />
+                        </template:else>
+                    </template:if>
+                    <table:template>
+                        <core:Fragment fragmentName="sap.suite.ui.generic.template.fragments.InlineButton" type="XML" />
+                    </table:template>
+                </table:Column>
+            </template:with>
+        </template:if>
+    </template:repeat>
+</core:FragmentDefinition>

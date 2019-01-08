@@ -1,0 +1,1365 @@
+<bi:biapp bi:version="1600" xmlns:bi="http://xml.sap.com/2011/biml/biapp" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/TR/REC-html40" xmlns:h="http://www.w3.org/TR/REC-html40" xmlns:sdk1="com.sap.ip.bi" sdk1:version="16.153">
+	<bi:component name="APPLICATION_PROPERTIES" type="APPLICATION_PROPERTIES">
+		<bi:property name="THEME" value="sap_belize"/>
+		<bi:property name="GLOBALVARIABLES" type="UNORDEREDLIST">
+			<bi:property name="GLOBALVARIABLE" index="0">
+				<bi:property name="NAME" value="g_version"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;16.100.0.201609081400&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="1">
+				<bi:property name="NAME" value="g_filterbar_dims"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="2">
+				<bi:property name="NAME" value="g_crosstab_columnwidths"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="3">
+				<bi:property name="NAME" value="g_crosstab_displayScalingFactors"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="false"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="4">
+				<bi:property name="NAME" value="g_jump_targets_fetched"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="false"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="5">
+				<bi:property name="NAME" value="g_chart_type"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="6">
+				<bi:property name="NAME" value="g_chart_min"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="float"/>
+				<bi:property name="VALUE" value="0.0"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="7">
+				<bi:property name="NAME" value="g_chart_axis_scaling"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="true"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="8">
+				<bi:property name="NAME" value="g_chart_max"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="float"/>
+				<bi:property name="VALUE" value="0.0"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="9">
+				<bi:property name="NAME" value="g_chart_scaling_factors"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="true"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="10">
+				<bi:property name="NAME" value="g_table_enable_sorting"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="true"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="11">
+				<bi:property name="NAME" value="g_table_scaling_factors"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="12">
+				<bi:property name="NAME" value="g_filter_on"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="false"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="13">
+				<bi:property name="NAME" value="g_display_mode"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;TABLE&apos;"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="14">
+				<bi:property name="NAME" value="g_fullscreen"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="false"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="15">
+				<bi:property name="NAME" value="XNAV"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="boolean"/>
+				<bi:property name="VALUE" value="true"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="16">
+				<bi:property name="NAME" value="XQUERY"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="17">
+				<bi:property name="NAME" value="XPROMPT"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="18">
+				<bi:property name="NAME" value="XDISPLAY"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;TABLE&apos;"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="19">
+				<bi:property name="NAME" value="XCHART_TYPE"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+			<bi:property name="GLOBALVARIABLE" index="20">
+				<bi:property name="NAME" value="XVISIBLEPROMPTS"/>
+				<bi:property name="GLOBAL_VAR_TYPE" value="String"/>
+				<bi:property name="VALUE" value="&apos;&apos;"/>
+				<bi:property name="URL_PARAM" value="X"/>
+			</bi:property>
+		</bi:property>
+		<bi:property name="MESSAGE_TYPES" value="ERRORS"/>
+		<bi:property name="ON_STARTUP">
+			<bi:value><![CDATA[
+if (DS_1.isInitialized()) {
+	// check variables and disable Prompt Settings, if necessary
+	var variables = DS_1.getVariables();
+	var dimensionMemberVariablesExist = false;
+	if (variables.length > 0) {
+		var prompt_possible = false;
+		variables.forEach(function(variable, varIndex) {
+			if (variable.inputEnabled == true) {
+				prompt_possible = true;
+				if (variable.type=="DimensionMember") {
+					dimensionMemberVariablesExist = true;
+				}
+			}
+		});
+		if (prompt_possible) {
+			ACTIONSHEET_SETTINGS_ACTIONS.addItem("SHOW_PROMPTS", TEXT_POOL.ShowPrompts, "", 0);
+		}
+	}
+
+	var appState = APPLICATION.getNavigationInitialState();
+	if (appState != "" && variables.length > 0) {
+		//Due to present Firefly limitation, if variables exist then changes to the slice might not stick at first.
+		//Load again here, to ensure the slice is applied properly.
+		BookmarkInternal.applyApplicationState(appState, true);
+		GLOBAL_SCRIPT_ACTIONS.LoadBookmarkAction();
+	} else if (!dimensionMemberVariablesExist) {
+		/* Set Filters for Navigation Params ONLY if there are no input-enabled Dimension Member Variables.  If there are, then navigation params should only be used for variables.*/
+		var dims = DS_1.getDimensions();
+		var aNavParamNames = APPLICATION.getNavigationParameterNames();
+		
+		aNavParamNames.forEach(function(navParamName, navParamIndex) {
+			dims.forEach(function(dimension, dimIndex) {
+				if (dimension.name == navParamName) {
+					var paramValue = APPLICATION.getNavigationParameterValue(navParamName);
+	
+					DS_1.setFilterExt(dimension.name, paramValue);
+				}
+			});
+		}); 	
+	}
+	//FIORI_HELPER.fetchJumpTargets(DS_1);
+	
+	/* Set Initial Layout Options Provided by URL Parameters */
+	GLOBAL_SCRIPT_ACTIONS.ChartTableAction();
+	GLOBAL_SCRIPT_ACTIONS.NavPanelAction();
+	if (XCHART_TYPE != "") {
+		CHART.setChartType(XCHART_TYPE);
+	}
+	DD_CHART_TYPE.setSelectedValue(CHART.getChartType());
+	
+	if (DS_1.getInfo().queryDescription) { 
+		FIORI_HELPER.setTitle(DS_1.getInfo().queryDescription);
+	}
+	else if (DS_1.getInfo().queryTechnicalName) {  
+		FIORI_HELPER.setTitle(DS_1.getInfo().queryTechnicalName);
+	}
+	else if (XQUERY != "") {
+		FIORI_HELPER.setTitle(XQUERY);
+	}
+	
+	var navigationPassible = FIORI_HELPER.isNavigationPossible();
+	BUTTON_JUMP.setVisible(navigationPassible);
+	if (navigationPassible) {
+		FIORI_HELPER.registerSelectionCapableElement(CROSSTAB);
+		FIORI_HELPER.registerSelectionCapableElement(CHART);
+	}
+} else {
+		// Data Souce is not assigned: Hide all App UI elements -- Only MessageView will be shown.
+		PANEL_ALL.setVisible(false);
+		FOOTERBAR.setVisible(false);
+}
+]]></bi:value>
+		</bi:property>
+		<bi:property name="PROMPT_MODE" value="SFIN"/>
+		<bi:property name="SHOW_PROMPT" value="X"/>
+		<bi:property name="INITVARSCREEN_WIDTH" value="790"/>
+		<bi:property name="INITVARSCREEN_HEIGHT" value="590"/>
+		<bi:property name="UI5_MAIN" value="X"/>
+		<bi:property name="COMPACT_MODE" value="X"/>
+		<bi:property name="INTER_COMPONENT_DRAGDROP_ENABLED" value="X"/>
+		<bi:property name="ON_VAR_SUBMIT">
+			<bi:value><![CDATA[var aNavParamNames = APPLICATION.getNavigationParameterNames();
+var sVisiblePrompts = XVISIBLEPROMPTS;
+var appState = APPLICATION.getNavigationInitialState();
+var aVisibleVariables = [""];
+var bExternalStateLoaded = false;
+aVisibleVariables.pop();
+
+if (appState != "") {
+	XPROMPT = 'false';
+}
+
+/* Disable Prompts if requested via URL Parmeter */
+if (XPROMPT == 'false' ) {
+	APPLICATION.setForcePrompts(false);	
+}
+
+/* if XPROMPT is not specified, disable Prompts, when NavigationParmaeters are available */
+else if (XPROMPT =='') {
+	var navParamsExists = false;
+	aNavParamNames.forEach(function(navParamName, index) {
+        if (Convert.subString(navParamName, 0,1) != 'X'  && navParamName != 'appName') {
+          	 navParamsExists = true;
+        }
+	});
+	if (navParamsExists) {
+	   	APPLICATION.setForcePrompts(false);	
+	}
+	else  {
+		APPLICATION.setForcePrompts(true);	
+	}
+}
+/* Otherwise enable Prompts */
+else {
+	   	APPLICATION.setForcePrompts(true);	
+}
+
+
+if (XQUERY != ""  ) {
+// set data source 	
+	DS_1.assignDataSource("local", DataSourceType.QUERY, XQUERY);	
+}
+
+if (appState != "") {
+	BookmarkInternal.applyApplicationState(appState, true);
+	//In case it's in the bookmark differently than how we were instantiated
+	bExternalStateLoaded = true;
+	GLOBAL_SCRIPT_ACTIONS.LoadBookmarkAction();
+} 
+
+if (bExternalStateLoaded) {
+	FILTERBAR.setIgnoreDefaultVariant(true);	
+}
+
+//Must fetch again, in case the parameter names have changed due to new query being loaded above.
+aNavParamNames = APPLICATION.getNavigationParameterNames();
+var aVariables = DS_1.getVariables();
+if (bExternalStateLoaded) {
+	//In case the saved in bookmark prompts are different than the original values
+	sVisiblePrompts = XVISIBLEPROMPTS;
+}
+
+if (!bExternalStateLoaded) {
+	var found = false;
+
+	aNavParamNames.forEach(function(navParamName, navParamIndex) {
+	       aVariables.forEach(function(variable, variableIndex) {
+	             if (variable.dimensionName == navParamName && !found && variable.inputEnabled && variable.type=="DimensionMember") {
+						var paramValue = APPLICATION.getNavigationParameterValue(navParamName);
+	
+	                    if (APPLICATION.setVariableValueExt(variable.name, paramValue) === true) {
+							//If prompt visibility setting was made, append any variables which were set here, so that all explicitly set variables
+							//are also included.
+							if (sVisiblePrompts != '') {
+								//Append the navParams set to the list, so they will be bookmarked later if need be.
+								sVisiblePrompts = sVisiblePrompts + "," + navParamName;	
+							}
+							
+		               	    found = true;
+	                    }
+	             }
+	                
+	       });
+	       found = false;
+	}); 
+}
+
+if (sVisiblePrompts != '') {
+	var aVisiblePrompts = sVisiblePrompts.split(",");
+
+	aVisiblePrompts.forEach(function(objectName, index) {
+		var aDimensionNames = APPLICATION.getDimensionNamesForNavigationParameterName(objectName);
+		aDimensionNames.forEach(function(dimensionName, index) {
+			aVariables.forEach(function(variable, variableIndex) {
+				if (variable.dimensionName == dimensionName || variable.name == dimensionName) {
+					aVisibleVariables.push(variable.name);
+				}
+			});
+		});
+	});		
+	//Overwrite the passed in value, in case we augmented it.  Could be important for bookmarking.
+	XVISIBLEPROMPTS = sVisiblePrompts;
+	APPLICATION.setVisiblePrompts(aVisibleVariables);
+}
+	
+]]></bi:value>
+		</bi:property>
+		<bi:property name="MESSAGE_POSITION" value="BOTTOMLEFT"/>
+		<bi:property name="MAX_MEMBERS" value="1000"/>
+	</bi:component>
+	<bi:data_source_alias name="DS_1" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value=""/>
+			<bi:property name="DATA_SOURCE_CONNECTION" value="&lt;unknown&gt;"/>
+		</bi:property>
+		<bi:property name="LOAD_IN_SCRIPT" value="X"/>
+		<bi:property name="ON_RESULTSETCHANGED">
+			<bi:value><![CDATA[
+if (DS_1.isInitialized()) {			
+	GLOBAL_SCRIPT_ACTIONS.SetPauseRefreshText();
+	GLOBAL_SCRIPT_ACTIONS.SaveFilterBarSettings();
+	GLOBAL_SCRIPT_ACTIONS.SaveCrosstabSettings();
+	GLOBAL_SCRIPT_ACTIONS.SaveAppState();
+}]]></bi:value>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:component name="ROOT" type="ABSOLUTE_LAYOUT_COMPONENT">
+		<bi:component name="PANEL_ALL" type="PANEL_COMPONENT">
+			<bi:property name="WIDTH" value="auto"/>
+			<bi:property name="RIGHT_MARGIN" value="0"/>
+			<bi:property name="HEIGHT" value="auto"/>
+			<bi:property name="BOTTOM_MARGIN" value="0"/>
+			<bi:component name="PANEL_FILTERBAR" type="PANEL_COMPONENT">
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="CSS_STYLE" value="z-Index:2;&#13;&#10;overflow:visible"/>
+				<bi:component name="FILTERBAR" type="FILTER_BAR_COMPONENT">
+					<bi:property name="ON_TOGGLE">
+						<bi:value><![CDATA[g_filter_on=!g_filter_on;
+GLOBAL_SCRIPT_ACTIONS.ToggleFilterPanel();]]></bi:value>
+					</bi:property>
+					<bi:property name="DATA_SOURCE_ALIAS_REF" value="DS_1"/>
+					<bi:property name="ON_VARIANT_LOAD">
+						<bi:value><![CDATA[GLOBAL_SCRIPT_ACTIONS.LoadBookmarkAction();]]></bi:value>
+					</bi:property>
+					<bi:property name="FILTERBAR_MAX_MEMBERS" value="1000"/>
+				</bi:component>
+			</bi:component>
+			<bi:component name="BODY" type="PANEL_COMPONENT">
+				<bi:property name="TOP_MARGIN" value="50"/>
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+				<bi:property name="BOTTOM_MARGIN" value="40"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="HEIGHT" value="auto"/>
+				<bi:component name="PANEL_BODY_LEFT" type="PANEL_COMPONENT">
+					<bi:property name="WIDTH" value="350"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="CSS_STYLE" value="border-right: 1px solid #ddd;"/>
+					<bi:component name="NAVIGATIONPANEL" type="NAVIGATIONPANEL_COMPONENT">
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="BOTTOM_MARGIN" value="0"/>
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DS_1"/>
+						<bi:property name="RIGHT_MARGIN" value="0"/>
+					</bi:component>
+					<bi:component name="BUTTON_PAUSEREFRESH" type="BUTTON_COMPONENT">
+						<bi:property name="TEXT" value="Pause"/>
+						<bi:property name="LEFT_MARGIN" value="240"/>
+						<bi:property name="BUTTON_TYPE" value="TRANSPARENT"/>
+						<bi:property name="WIDTH" value="110"/>
+						<bi:property name="CSS_CLASS" value="sapContrastPlus"/>
+						<bi:property name="VISIBLE" value=""/>
+						<bi:property name="ON_CLICK">
+							<bi:value><![CDATA[GLOBAL_SCRIPT_ACTIONS.SetPaused(!NAVIGATIONPANEL.isPauseRefresh());]]></bi:value>
+						</bi:property>
+					</bi:component>
+				</bi:component>
+				<bi:component name="PANEL_BODY" type="PANEL_COMPONENT">
+					<bi:property name="LEFT_MARGIN" value="350"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:component name="PANEL_TOOLBAR" type="PANEL_COMPONENT">
+						<bi:property name="CSS_STYLE" value="border-top: 1px solid #cdcdcd;&#13;&#10;border-bottom: 1px solid #dddddd;&#13;&#10;"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="0"/>
+						<bi:property name="HEIGHT" value="31"/>
+						<bi:property name="CSS_CLASS" value="sapContrastPlus sapMBar-CTX sapMContent-CTX sapMHeader-CTX sapMIBar sapMIBar-CTX"/>
+						<bi:component name="BUTTON_SHOW_HIDE_NAV_PANEL" type="BUTTON_COMPONENT">
+							<bi:property name="ICON" value="sap-icon://close-command-field"/>
+							<bi:property name="ON_CLICK">
+								<bi:value><![CDATA[XNAV = !XNAV;
+GLOBAL_SCRIPT_ACTIONS.NavPanelAction();]]></bi:value>
+							</bi:property>
+							<bi:property name="WIDTH" value="30"/>
+							<bi:property name="TOOLTIP" value="Hide Navigational Panel"/>
+							<bi:property name="LEFT_MARGIN" value="2"/>
+						</bi:component>
+						<bi:component name="BUTTON_JUMP" type="BUTTON_COMPONENT">
+							<bi:property name="TEXT" value="Jump To"/>
+							<bi:property name="ON_CLICK">
+								<bi:value><![CDATA[BUTTON_JUMP.showLoadingState();
+									ACTIONSHEET_JUMP_TO.removeAllItems();
+									FIORI_HELPER.fetchJumpTargets(DS_1);
+									]]></bi:value>
+							</bi:property>
+							<bi:property name="LEFT_MARGIN" value="auto"/>
+							<bi:property name="RIGHT_MARGIN" value="180"/>
+							<bi:property name="WIDTH" value="100"/>
+						</bi:component>
+						<bi:component name="BUTTON_CHART_TABLE_DISPLAY" type="com_sap_ip_bi_SegmentedButton">
+							<bi:property name="LEFT_MARGIN" value="auto"/>
+							<bi:property name="TOP_MARGIN" value="4"/>
+							<bi:property name="ButtonItems" type="ORDEREDLIST">
+								<bi:property name="Item" index="0">
+									<bi:property name="value" value="CHART"/>
+									<bi:property name="image" value="sap-icon://bar-chart"/>
+									<bi:property name="tooltip" value="Chart"/>
+								</bi:property>
+								<bi:property name="Item" index="1">
+									<bi:property name="value" value="CHART_TABLE"/>
+									<bi:property name="image" value="sap-icon://BusinessSuiteInAppSymbols/icon-split-screen"/>
+									<bi:property name="tooltip" value="Chart and Table"/>
+								</bi:property>
+								<bi:property name="Item" index="2">
+									<bi:property name="value" value="TABLE"/>
+									<bi:property name="image" value="sap-icon://table-chart"/>
+									<bi:property name="tooltip" value="Table"/>
+								</bi:property>
+							</bi:property>
+							<bi:property name="onClick">
+								<bi:value><![CDATA[XDISPLAY = BUTTON_CHART_TABLE_DISPLAY.getSelectedValue();
+GLOBAL_SCRIPT_ACTIONS.ChartTableAction();
+GLOBAL_SCRIPT_ACTIONS.SaveAppState();]]></bi:value>
+							</bi:property>
+							<bi:property name="RIGHT_MARGIN" value="75"/>
+							<bi:property name="WIDTH" value="101"/>
+							<bi:property name="HEIGHT" value="auto"/>
+							<bi:property name="BOTTOM_MARGIN" value="0"/>
+						</bi:component>
+						<bi:component name="BUTTON_SETTINGS" type="BUTTON_COMPONENT">
+							<bi:property name="ICON" value="sap-icon://action-settings"/>
+							<bi:property name="ON_CLICK">
+								<bi:value><![CDATA[ACTIONSHEET_SETTINGS_ACTIONS.open(BUTTON_SETTINGS);]]></bi:value>
+							</bi:property>
+							<bi:property name="LEFT_MARGIN" value="auto"/>
+							<bi:property name="RIGHT_MARGIN" value="35"/>
+							<bi:property name="WIDTH" value="30"/>
+							<bi:property name="TOOLTIP" value="Settings"/>
+						</bi:component>
+						<bi:component name="BUTTON_FULLSCREEN" type="BUTTON_COMPONENT">
+							<bi:property name="LEFT_MARGIN" value="auto"/>
+							<bi:property name="RIGHT_MARGIN" value="5"/>
+							<bi:property name="WIDTH" value="30"/>
+							<bi:property name="CSS_CLASS" value="ICON_CHART_TABLE"/>
+							<bi:property name="TOOLTIP" value="Fullscreen"/>
+							<bi:property name="ICON" value="sap-icon://full-screen"/>
+							<bi:property name="ON_CLICK">
+								<bi:value><![CDATA[g_fullscreen = !g_fullscreen;
+GLOBAL_SCRIPT_ACTIONS.FullscreenAction();]]></bi:value>
+							</bi:property>
+						</bi:component>
+					</bi:component>
+					<bi:component name="PANEL_DETAILS" type="PANEL_COMPONENT">
+						<bi:property name="TOP_MARGIN" value="33"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="0"/>
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="BOTTOM_MARGIN" value="1"/>
+						<bi:property name="CSS_STYLE" value="border-bottom: #cdcdcd;&#13;&#10;border-bottom-width: 1px;&#13;&#10;border-bottom-style: solid;&#13;&#10;overflow: hidden !important;"/>
+						<bi:component name="PANEL_DETAILS_CROSSTAB" type="PANEL_COMPONENT">
+							<bi:property name="WIDTH" value="auto"/>
+							<bi:property name="HEIGHT" value="auto"/>
+							<bi:property name="RIGHT_MARGIN" value="0"/>
+							<bi:property name="BOTTOM_MARGIN" value="0"/>
+							<bi:component name="CROSSTAB" type="CROSSTAB_COMPONENT">
+								<bi:property name="WIDTH" value="auto"/>
+								<bi:property name="HEIGHT" value="auto"/>
+								<bi:property name="RIGHT_MARGIN" value="-1"/>
+								<bi:property name="BOTTOM_MARGIN" value="-1"/>
+								<bi:property name="DATA_SOURCE_ALIAS_REF" value="DS_1"/>
+								<bi:property name="CROSSTAB_DISPLAY_ALWAYS_FILL" value="X"/>
+								<bi:property name="CROSSTAB_ENABLE_SELECTION" value="MULTI"/>
+								<bi:property name="CROSSTAB_DD_ENABLED" value="X"/>
+								<bi:property name="CROSSTAB_ZEBRA_MODE" value="DATA"/>
+								<bi:property name="TOP_MARGIN" value="-1"/>
+								<bi:property name="LEFT_MARGIN" value="-1"/>
+								<bi:property name="ON_COLWIDTH_CHANGED">
+									<bi:value><![CDATA[GLOBAL_SCRIPT_ACTIONS.SaveCrosstabSettings();
+GLOBAL_SCRIPT_ACTIONS.SaveAppState();]]></bi:value>
+								</bi:property>
+								<bi:property name="SCALING_FACTORS_VISIBLE" value="NO_DISPLAY"/>
+							</bi:component>
+						</bi:component>
+						<bi:component name="PANEL_DETAILS_CHART" type="PANEL_COMPONENT">
+							<bi:property name="WIDTH" value="auto"/>
+							<bi:property name="HEIGHT" value="auto"/>
+							<bi:property name="RIGHT_MARGIN" value="0"/>
+							<bi:property name="VISIBLE" value=""/>
+							<bi:property name="BOTTOM_MARGIN" value="0"/>
+							<bi:component name="CHART" type="com_sap_ip_bi_InfoChart">
+								<bi:property name="BOTTOM_MARGIN" value="0"/>
+								<bi:property name="WIDTH" value="auto"/>
+								<bi:property name="RIGHT_MARGIN" value="0"/>
+								<bi:property name="HEIGHT" value="auto"/>
+								<bi:property name="DATA_SOURCE_ALIAS_REF" value="DS_1"/>
+							</bi:component>
+						</bi:component>
+						<bi:component name="PANEL_DETAILS_CHART_TABLE" type="GRID_LAYOUT_COMPONENT">
+							<bi:property name="COLUMN_SETTINGS_LIST" type="ORDEREDLIST" value="">
+								<bi:property name="COLUMN_WIDTH" index="0" value="1"/>
+							</bi:property>
+							<bi:property name="ROW_SETTINGS_LIST" type="ORDEREDLIST" value="">
+								<bi:property name="ROW_HEIGHT" index="0" value="1"/>
+								<bi:property name="ROW_HEIGHT" index="1" value="1"/>
+							</bi:property>
+							<bi:property name="BOTTOM_MARGIN" value="0"/>
+							<bi:property name="RIGHT_MARGIN" value="0"/>
+							<bi:property name="VISIBLE" value=""/>
+							<bi:component name="GRID_CELL_1" type="GRID_CELL_COMPONENT"/>
+							<bi:component name="GRID_CELL_2" type="GRID_CELL_COMPONENT"/>
+						</bi:component>
+					</bi:component>
+				</bi:component>
+			</bi:component>
+		</bi:component>
+		<bi:component name="DIALOG_INFORMATION" type="DIALOG_COMPONENT">
+			<bi:property name="HEIGHT" value="460"/>
+			<bi:property name="DIALOGTITLE" value="Information"/>
+			<bi:property name="DIALOGBUTTONS" type="ORDEREDLIST">
+				<bi:property name="DIALOGBUTTON" index="0" value="CLOSE">
+					<bi:property name="TEXT" value="Close"/>
+					<bi:property name="VALUE" value="CLOSE"/>
+					<bi:property name="ON_CLICK">
+						<bi:value><![CDATA[DIALOG_INFORMATION.close();]]></bi:value>
+					</bi:property>
+				</bi:property>
+			</bi:property>
+			<bi:property name="DESIGNER_VISIBLE" value=""/>
+			<bi:component name="INFO_QUERY_NAME_LABEL" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Query  Name"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="HEIGHT" value="20"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="10"/>
+				<bi:property name="CSS_CLASS" value="sapMLabelBold sapMLabel"/>
+			</bi:component>
+			<bi:component name="INFO_QUERY_NAME" type="TEXT_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="30"/>
+				<bi:property name="HEIGHT" value="40"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+			</bi:component>
+			<bi:component name="INFO_INFOPROVIDER_NAME_LABEL" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="InfoProvider  Name"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="HEIGHT" value="20"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="78"/>
+				<bi:property name="CSS_CLASS" value="sapMLabelBold sapMLabel"/>
+			</bi:component>
+			<bi:component name="INFO_INFOPROVIDER_NAME" type="TEXT_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="98"/>
+				<bi:property name="HEIGHT" value="40"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+			</bi:component>
+			<bi:component name="INFO_INFOPROVIDER_LAST_DATA_UPDATE_LABEL" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Last Data Update"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="HEIGHT" value="20"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="146"/>
+				<bi:property name="CSS_CLASS" value="sapMLabelBold sapMLabel"/>
+			</bi:component>
+			<bi:component name="INFO_INFOPROVIDER_LAST_DATA_UPDATE" type="TEXT_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="166"/>
+				<bi:property name="HEIGHT" value="40"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="DATA_TYPE" value="DATE_TIME"/>
+			</bi:component>
+			<bi:component name="BUTTON_REFRESH_DATA" type="BUTTON_COMPONENT">
+				<bi:property name="ICON" value="sap-icon://refresh"/>
+				<bi:property name="LEFT_MARGIN" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="60"/>
+				<bi:property name="WIDTH" value="30"/>
+				<bi:property name="TOOLTIP" value="Refresh Data"/>
+				<bi:property name="ON_CLICK">
+					<bi:value><![CDATA[DS_1.reloadData();
+
+var lLastDataUpdate = DS_1.getInfo().lastDataUpdate;
+INFO_INFOPROVIDER_LAST_DATA_UPDATE.setText(lLastDataUpdate);]]></bi:value>
+				</bi:property>
+				<bi:property name="TOP_MARGIN" value="155"/>
+				<bi:property name="BUTTON_TYPE" value="TRANSPARENT"/>
+			</bi:component>
+			<bi:component name="INFO_VARIABLE_LABEL" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Variables"/>
+				<bi:property name="TOP_MARGIN" value="210"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="CSS_CLASS" value="sapMLabelBold sapMLabel"/>
+				<bi:property name="HEIGHT" value="20"/>
+			</bi:component>
+			<bi:component name="INFO_VARIABLE" type="TEXT_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="230"/>
+				<bi:property name="HEIGHT" value="90"/>
+				<bi:property name="CSS_CLASS" value="myInfoText"/>
+				<bi:property name="CSS_STYLE" value="overflow-y:auto;"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+			</bi:component>
+			<bi:component name="INFO_FILTERS_LABEL" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Filters"/>
+				<bi:property name="TOP_MARGIN" value="328"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="HEIGHT" value="20"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="CSS_CLASS" value="sapMLabelBold sapMLabel"/>
+			</bi:component>
+			<bi:component name="INFO_FILTERS" type="TEXT_COMPONENT">
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="348"/>
+				<bi:property name="HEIGHT" value="90"/>
+				<bi:property name="CSS_CLASS" value="myInfoText"/>
+				<bi:property name="CSS_STYLE" value="overflow-y:auto;"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+			</bi:component>
+		</bi:component>
+		<bi:component name="DIALOG_CHART_SETTINGS" type="DIALOG_COMPONENT">
+			<bi:property name="WIDTH" value="450"/>
+			<bi:property name="HEIGHT" value="305"/>
+			<bi:property name="DIALOGTITLE" value="Chart Settings"/>
+			<bi:property name="DESIGNER_VISIBLE" value=""/>
+			<bi:property name="DIALOGBUTTONS" type="ORDEREDLIST">
+				<bi:property name="DIALOGBUTTON" index="0" value="OK">
+					<bi:property name="TEXT" value="OK"/>
+					<bi:property name="VALUE" value="OK"/>
+					<bi:property name="ON_CLICK">
+						<bi:value><![CDATA[XCHART_TYPE = DD_CHART_TYPE.getSelectedValue();
+
+g_chart_axis_scaling = CB_CHART_ENABLE_AXIS_SCALING.isChecked();
+
+var lError = false;
+var lMessage = "";
+var lValue = "";
+
+lValue = INPUT_CHART_AXIS_SCALING_MIN.getValue();
+if (GLOBAL_SCRIPT_ACTIONS.isNumber(lValue)) {
+	g_chart_min = Convert.stringToFloat(lValue);
+} else {
+	lError = true;
+	lMessage = Convert.formatString(TEXT_POOL.InvalidInput, [INPUT_CHART_AXIS_SCALING_MIN.getValue(), TEXT_CHART_AXIS_SCALING_MIN.getText()]);
+	APPLICATION.createErrorMessage(lMessage);
+}
+
+lValue = INPUT_CHART_AXIS_SCALING_MAX.getValue();
+if (GLOBAL_SCRIPT_ACTIONS.isNumber(lValue)) {
+	g_chart_max = Convert.stringToFloat(lValue);
+} else {
+	lError = true;
+	lMessage = Convert.formatString(TEXT_POOL.InvalidInput, [INPUT_CHART_AXIS_SCALING_MAX.getValue(), TEXT_CHART_AXIS_SCALING_MAX.getText()]);
+	APPLICATION.createErrorMessage(lMessage);
+}
+
+g_chart_scaling_factors = CB_CHART_SHOW_SCALING.isChecked();
+
+if (!lError) {
+	GLOBAL_SCRIPT_ACTIONS.ChangeChartSettings();
+	GLOBAL_SCRIPT_ACTIONS.SaveAppState();
+	DIALOG_CHART_SETTINGS.close();
+}]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="DIALOGBUTTON" index="1" value="CLOSE">
+					<bi:property name="TEXT" value="Close"/>
+					<bi:property name="VALUE" value="CLOSE"/>
+					<bi:property name="ON_CLICK">
+						<bi:value><![CDATA[DIALOG_CHART_SETTINGS.close();]]></bi:value>
+					</bi:property>
+				</bi:property>
+			</bi:property>
+			<bi:component name="TEXT_CHART_TYPE" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Chart Type"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="TOP_MARGIN" value="16"/>
+				<bi:property name="CSS_CLASS" value="sapMLabel"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+			</bi:component>
+			<bi:component name="DD_CHART_TYPE" type="DROPDOWN_COMPONENT">
+				<bi:property name="TOP_MARGIN" value="34"/>
+				<bi:property name="WIDTH" value="200"/>
+				<bi:property name="ON_SELECT">
+					<bi:value><![CDATA[XCHART_TYPE = DD_CHART_TYPE.getSelectedValue();]]></bi:value>
+				</bi:property>
+				<bi:property name="ITEMS" type="ORDEREDLIST">
+					<bi:property name="SELECTION_ITEM" index="0">
+						<bi:property name="VALUE" value="INFO_COLUMN"/>
+						<bi:property name="TEXT" value="Column"/>
+						<bi:property name="SELECTED" value="X"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="1">
+						<bi:property name="VALUE" value="INFO_BAR"/>
+						<bi:property name="TEXT" value="Bar"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="2">
+						<bi:property name="VALUE" value="INFO_LINE"/>
+						<bi:property name="TEXT" value="Line"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="3">
+						<bi:property name="VALUE" value="INFO_PIE"/>
+						<bi:property name="TEXT" value="Pie"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="4">
+						<bi:property name="VALUE" value="INFO_STACKED_COLUMN"/>
+						<bi:property name="TEXT" value="Column - Stacked"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="5">
+						<bi:property name="VALUE" value="INFO_STACKED_BAR"/>
+						<bi:property name="TEXT" value="Bar - Stacked"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="6">
+						<bi:property name="VALUE" value="INFO_AREA"/>
+						<bi:property name="TEXT" value="Area"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="7">
+						<bi:property name="VALUE" value="INFO_HORIZONTAL_AREA"/>
+						<bi:property name="TEXT" value="Horizontal Area"/>
+					</bi:property>
+				</bi:property>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+			</bi:component>
+			<bi:component name="CB_CHART_ENABLE_AXIS_SCALING" type="CHECKBOX_COMPONENT">
+				<bi:property name="TEXT" value="Enable Axis Scaling"/>
+				<bi:property name="TOP_MARGIN" value="74"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="ON_CLICK">
+					<bi:value><![CDATA[var checked = CB_CHART_ENABLE_AXIS_SCALING.isChecked();
+INPUT_CHART_AXIS_SCALING_MIN.setEnabled(checked);
+INPUT_CHART_AXIS_SCALING_MAX.setEnabled(checked);]]></bi:value>
+				</bi:property>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+			</bi:component>
+			<bi:component name="GRID_CHART_SCALING" type="GRID_LAYOUT_COMPONENT">
+				<bi:property name="GRID_ORIENTATION" value="V"/>
+				<bi:property name="COLUMN_SETTINGS_LIST" type="ORDEREDLIST" value="">
+					<bi:property name="COLUMN_WIDTH" index="0" value="1"/>
+					<bi:property name="COLUMN_WIDTH" index="1" value="1"/>
+				</bi:property>
+				<bi:property name="ROW_SETTINGS_LIST" type="ORDEREDLIST" value="">
+					<bi:property name="ROW_HEIGHT" index="0" value="1"/>
+					<bi:property name="ROW_HEIGHT" index="1" value="1"/>
+				</bi:property>
+				<bi:property name="TOP_MARGIN" value="104"/>
+				<bi:property name="LEFT_MARGIN" value="50"/>
+				<bi:property name="BOTTOM_MARGIN" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+				<bi:property name="HEIGHT" value="80"/>
+				<bi:component name="GRID_CELL_3" type="GRID_CELL_COMPONENT">
+					<bi:component name="TEXT_CHART_AXIS_SCALING_MIN" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Minimum"/>
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="BOTTOM_MARGIN" value="0"/>
+						<bi:property name="CSS_CLASS" value="sapMLabel"/>
+						<bi:property name="CSS_STYLE" value="line-height: 2em;"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="16"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="GRID_CELL_6" type="GRID_CELL_COMPONENT">
+					<bi:component name="INPUT_CHART_AXIS_SCALING_MIN" type="INPUTFIELD_COMPONENT">
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="ENABLED" value=""/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="16"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="GRID_CELL_4" type="GRID_CELL_COMPONENT">
+					<bi:component name="TEXT_CHART_AXIS_SCALING_MAX" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Maximum"/>
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="BOTTOM_MARGIN" value="0"/>
+						<bi:property name="CSS_STYLE" value="line-height: 2em;"/>
+						<bi:property name="CSS_CLASS" value="sapMLabel"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="16"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="GRID_CELL_5" type="GRID_CELL_COMPONENT">
+					<bi:component name="INPUT_CHART_AXIS_SCALING_MAX" type="INPUTFIELD_COMPONENT">
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="ENABLED" value=""/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="16"/>
+					</bi:component>
+				</bi:component>
+			</bi:component>
+			<bi:component name="CB_CHART_SHOW_SCALING" type="CHECKBOX_COMPONENT">
+				<bi:property name="TEXT" value="Show Scaling Factors"/>
+				<bi:property name="TOP_MARGIN" value="188"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="LEFT_MARGIN" value="16"/>
+				<bi:property name="RIGHT_MARGIN" value="16"/>
+			</bi:component>
+		</bi:component>
+		<bi:component name="DIALOG_TOTALS" type="DIALOG_COMPONENT">
+			<bi:property name="WIDTH" value="300"/>
+			<bi:property name="HEIGHT" value="320"/>
+			<bi:property name="DIALOGTITLE" value="Totals"/>
+			<bi:property name="DESIGNER_VISIBLE" value=""/>
+			<bi:property name="DIALOGBUTTONS" type="ORDEREDLIST">
+				<bi:property name="DIALOGBUTTON" index="0" value="OK">
+					<bi:property name="TEXT" value="OK"/>
+					<bi:property name="VALUE" value="OK"/>
+					<bi:property name="ON_CLICK">
+						<bi:value><![CDATA[var dims = DS_1.getDimensions();
+DS_1.setTotalsPosition(Axis.ROWS,RADIO_TOTAL_POSITION.getSelectedValue());
+DS_1.setTotalsPosition(Axis.COLUMNS,RADIO_TOTAL_POSITION.getSelectedValue());
+
+if (RADIO_SHOW_TOTALS.getSelectedValue() != "CUSTOMIZED") {
+    dims.forEach(function(element, index) {
+      	DS_1.setTotalsDisplay(element.name, RADIO_SHOW_TOTALS.getSelectedValue());
+    });
+}
+DIALOG_TOTALS.close();]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="DIALOGBUTTON" index="1" value="CANCEL">
+					<bi:property name="TEXT" value="Cancel"/>
+					<bi:property name="VALUE" value="CANCEL"/>
+					<bi:property name="ON_CLICK">
+						<bi:value><![CDATA[DIALOG_TOTALS.close();]]></bi:value>
+					</bi:property>
+				</bi:property>
+			</bi:property>
+			<bi:component name="TEXT_SHOW_TOTALS" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Show Totals"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+				<bi:property name="HEIGHT" value="23"/>
+				<bi:property name="TOP_MARGIN" value="10"/>
+				<bi:property name="LEFT_MARGIN" value="10"/>
+			</bi:component>
+			<bi:component name="RADIO_SHOW_TOTALS" type="RADIOBUTTONGROUP_COMPONENT">
+				<bi:property name="ITEMS" type="ORDEREDLIST">
+					<bi:property name="SELECTION_ITEM" index="0">
+						<bi:property name="VALUE" value="SHOW"/>
+						<bi:property name="TEXT" value="Show All"/>
+						<bi:property name="SELECTED" value="X"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="1">
+						<bi:property name="VALUE" value="HIDE"/>
+						<bi:property name="TEXT" value="Hide All"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="2">
+						<bi:property name="VALUE" value="HIDE_IF_ONLY_ONE_MEMBER"/>
+						<bi:property name="TEXT" value="Hide All With Only One Member"/>
+					</bi:property>
+				</bi:property>
+				<bi:property name="TOP_MARGIN" value="35"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+				<bi:property name="HEIGHT" value="auto"/>
+				<bi:property name="LEFT_MARGIN" value="10"/>
+			</bi:component>
+			<bi:component name="TEXT_TOTAL_POSITION" type="TEXT_COMPONENT">
+				<bi:property name="TEXT" value="Total Position"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+				<bi:property name="TOP_MARGIN" value="140"/>
+				<bi:property name="LEFT_MARGIN" value="10"/>
+			</bi:component>
+			<bi:component name="RADIO_TOTAL_POSITION" type="RADIOBUTTONGROUP_COMPONENT">
+				<bi:property name="ITEMS" type="ORDEREDLIST">
+					<bi:property name="SELECTION_ITEM" index="0">
+						<bi:property name="VALUE" value="BEFORE"/>
+						<bi:property name="TEXT" value="Above"/>
+					</bi:property>
+					<bi:property name="SELECTION_ITEM" index="1">
+						<bi:property name="VALUE" value="AFTER"/>
+						<bi:property name="TEXT" value="Below"/>
+						<bi:property name="SELECTED" value="X"/>
+					</bi:property>
+				</bi:property>
+				<bi:property name="TOP_MARGIN" value="165"/>
+				<bi:property name="WIDTH" value="auto"/>
+				<bi:property name="RIGHT_MARGIN" value="0"/>
+				<bi:property name="HEIGHT" value="auto"/>
+				<bi:property name="LEFT_MARGIN" value="10"/>
+			</bi:component>
+		</bi:component>
+		<bi:component name="FOOTERBAR" type="FOOTERBAR_COMPONENT">
+			<bi:component name="BUTTON_ACTIONS" type="FOOTERBARBUTTON_COMPONENT">
+				<bi:property name="TEXT" value=""/>
+				<bi:property name="TOOLTIP" value="Actions"/>
+				<bi:property name="ICON" value="sap-icon://action"/>
+				<bi:property name="ON_CLICK">
+					<bi:value><![CDATA[ACTIONSHEET_FOOTER_ACTIONS.open(BUTTON_ACTIONS);]]></bi:value>
+				</bi:property>
+			</bi:component>
+		</bi:component>
+		<bi:component name="TEXT_POOL" type="TEXT_POOL_COMPONENT">
+			<bi:property name="TEXT_POOL_ENTRIES" type="ORDEREDLIST">
+				<bi:property name="TEXT_POOL_ENTRY" index="0">
+					<bi:property name="KEY" value="NavPanelHide"/>
+					<bi:property name="TEXT" value="Hide Navigation Panel"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="1">
+					<bi:property name="KEY" value="NoJumpTargets"/>
+					<bi:property name="TEXT" value="No Jump Targets Available"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="2">
+					<bi:property name="KEY" value="Fullscreen"/>
+					<bi:property name="TEXT" value="Fullscreen"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="3">
+					<bi:property name="KEY" value="ExitFullscreen"/>
+					<bi:property name="TEXT" value="Exit Fullscreen"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="4">
+					<bi:property name="KEY" value="EnterTitle"/>
+					<bi:property name="TEXT" value="Enter a Name"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="5">
+					<bi:property name="KEY" value="Customized"/>
+					<bi:property name="TEXT" value="Customized"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="6">
+					<bi:property name="KEY" value="NavPanelShow"/>
+					<bi:property name="TEXT" value="Show Navigation Panel"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="7">
+					<bi:property name="KEY" value="FilteredBy"/>
+					<bi:property name="TEXT" value="Filtered by: {0}"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="8">
+					<bi:property name="KEY" value="Pause"/>
+					<bi:property name="TEXT" value="Pause"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="9">
+					<bi:property name="KEY" value="Refresh"/>
+					<bi:property name="TEXT" value="Refresh"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="10">
+					<bi:property name="KEY" value="ShowPrompts"/>
+					<bi:property name="TEXT" value="Show Prompts"/>
+				</bi:property>
+				<bi:property name="TEXT_POOL_ENTRY" index="11">
+					<bi:property name="KEY" value="InvalidInput"/>
+					<bi:property name="TEXT" value="Value &quot;{0}&quot; invalid. Please provide a valid value for &quot;{1}&quot;."/>
+				</bi:property>
+			</bi:property>
+		</bi:component>
+		<bi:component name="CONTEXT_MENU" type="CONTEXT_MENU_COMPONENT"/>
+		<bi:component name="GLOBAL_SCRIPT_ACTIONS" type="GLOBAL_SCRIPTS_COMPONENT">
+			<bi:property name="FUNCTIONS" type="ORDEREDLIST">
+				<bi:property name="FUNCTION" index="0">
+					<bi:property name="NAME" value="NavPanelAction"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[if (XNAV) {
+	BUTTON_SHOW_HIDE_NAV_PANEL.setTooltip(TEXT_POOL.NavPanelHide);
+	if (APPLICATION.getInfo().isRightToLeft) {
+		BUTTON_SHOW_HIDE_NAV_PANEL.setIcon("sap-icon://open-command-field");
+	} else {
+		BUTTON_SHOW_HIDE_NAV_PANEL.setIcon("sap-icon://close-command-field");
+	}
+	NAVIGATIONPANEL.setMode(NavigationPanelMode.NAVIGATION);
+	PANEL_BODY_LEFT.setWidth(350);
+	PANEL_BODY.setLeftMargin(350);
+	if (APPLICATION.getInfo().isRightToLeft) {
+		BUTTON_PAUSEREFRESH.setVisible(true);
+		BUTTON_PAUSEREFRESH.setLeftMargin(0);
+	}
+}
+else {
+	BUTTON_SHOW_HIDE_NAV_PANEL.setTooltip(TEXT_POOL.NavPanelShow);
+	if (APPLICATION.getInfo().isRightToLeft) {
+		BUTTON_SHOW_HIDE_NAV_PANEL.setIcon("sap-icon://close-command-field");
+	} else {
+		BUTTON_SHOW_HIDE_NAV_PANEL.setIcon("sap-icon://open-command-field");
+	}
+	GLOBAL_SCRIPT_ACTIONS.SetPaused(false);
+	NAVIGATIONPANEL.setMode(NavigationPanelMode.LIST_ONLY);	
+	PANEL_BODY_LEFT.setWidth(175);
+	PANEL_BODY.setLeftMargin(175);
+	if (APPLICATION.getInfo().isRightToLeft) {
+		BUTTON_PAUSEREFRESH.setVisible(false);
+		BUTTON_PAUSEREFRESH.setLeftMargin(0);
+	}
+}]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="1">
+					<bi:property name="NAME" value="ChangeChartSettings"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[// set chart type
+if (XCHART_TYPE != "") {
+	if (XCHART_TYPE.indexOf("INFO_") !== 0) {
+		if (XCHART_TYPE === "VERTICAL_BAR") {
+			XCHART_TYPE = InfoChartType.INFO_COLUMN;
+		} else if (XCHART_TYPE === "HORIZONTAL_BAR") {
+			XCHART_TYPE = InfoChartType.INFO_BAR;
+		} else if (XCHART_TYPE === "LINE") {
+			XCHART_TYPE = InfoChartType.INFO_LINE;
+		} else if (XCHART_TYPE === "PIE") {
+			XCHART_TYPE = InfoChartType.INFO_PIE;
+		} else if (XCHART_TYPE === "MULTIPIE") {
+			XCHART_TYPE = InfoChartType.INFO_COLUMN;
+		} else if (XCHART_TYPE === "VERTICAL_STACKED_BAR") {
+			XCHART_TYPE = InfoChartType.INFO_STACKED_COLUMN;
+		} else if (XCHART_TYPE === "HORIZONTAL_STACKED_BAR") {
+			XCHART_TYPE = InfoChartType.INFO_STACKED_BAR;
+		} else if (XCHART_TYPE === "AREA") {
+			XCHART_TYPE = InfoChartType.INFO_AREA;
+		} else if (XCHART_TYPE === "HORIZONTAL_AREA") {
+			XCHART_TYPE = InfoChartType.INFO_HORIZONTAL_AREA;
+		} else {
+			XCHART_TYPE = "INFO_" + XCHART_TYPE;
+		}
+	}
+	CHART.setChartType(XCHART_TYPE);
+}
+
+// set display scaling factors
+CHART.showScalingFactors(g_chart_scaling_factors);
+
+// set axis scaling
+if (g_chart_axis_scaling) {
+	CHART.setAxisScaling(InfoChartAxisScaling.AXIS_1, g_chart_min, g_chart_max);
+} 
+else {
+	CHART.removeAxisScaling(InfoChartAxisScaling.AXIS_1);
+}]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="2">
+					<bi:property name="NAME" value="LoadBookmarkAction"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[/* Set Application State based on Script Variables */
+GLOBAL_SCRIPT_ACTIONS.ChangeChartSettings();
+GLOBAL_SCRIPT_ACTIONS.ChartTableAction();
+
+/* Reset XNAV Parameter */
+XNAV = PANEL_BODY_LEFT.isVisible();
+GLOBAL_SCRIPT_ACTIONS.FillFilterBar();
+
+/* apply crosstab script variables to crosstab */
+GLOBAL_SCRIPT_ACTIONS.ApplyCrosstabSettings();]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="3">
+					<bi:property name="NAME" value="ChangeTableSettings"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[//CROSSTAB.setUnitsAndScalingFactorsDisplay(g_table_scaling_factors);
+CROSSTAB.setSortingEnabled(g_table_enable_sorting);]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="4">
+					<bi:property name="NAME" value="ChartTableAction"/>
+					<bi:property name="FUNCTION_DESC" value="Changes display of Chart / Table / Split screen according to  XDISPLAY"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[/* Set Visibility of Panels and CSS-Class of Buttons */
+if ( XDISPLAY == "CHART") {
+	PANEL_DETAILS_CHART.setVisible(true);
+	PANEL_DETAILS_CHART.moveComponent(CHART);
+	PANEL_DETAILS_CROSSTAB.setVisible(false);
+	PANEL_DETAILS_CHART_TABLE.setVisible(false);	
+} else if (XDISPLAY == "CHART_TABLE") {
+	PANEL_DETAILS_CHART.setVisible(false);
+	PANEL_DETAILS_CROSSTAB.setVisible(false);
+	PANEL_DETAILS_CHART_TABLE.setVisible(true);
+	PANEL_DETAILS_CHART_TABLE.moveComponent(0, 0, CHART);
+	PANEL_DETAILS_CHART_TABLE.moveComponent(1, 0, CROSSTAB);
+} else {
+	XDISPLAY = "TABLE"; 
+	PANEL_DETAILS_CHART.setVisible(false);
+	PANEL_DETAILS_CROSSTAB.setVisible(true);
+	PANEL_DETAILS_CROSSTAB.moveComponent(CROSSTAB);
+	PANEL_DETAILS_CHART_TABLE.setVisible(false);
+}
+BUTTON_CHART_TABLE_DISPLAY.setSelectedValue(XDISPLAY);]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="5">
+					<bi:property name="NAME" value="ToggleFilterPanel"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[if (FILTERBAR.isFilterAreaVisible()) {
+	BODY.setTopMargin(50+96);
+} else {
+	BODY.setTopMargin(50);
+}]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="6">
+					<bi:property name="NAME" value="FullscreenAction"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[if (g_fullscreen) {
+	PANEL_BODY.setLeftMargin(0);
+	BODY.setTopMargin(0);
+	BUTTON_FULLSCREEN.setIcon("sap-icon://exit-full-screen");
+	BUTTON_FULLSCREEN.setTooltip(TEXT_POOL.ExitFullscreen);
+	PANEL_FILTERBAR.setHeight(0);
+} else {
+	if (XNAV) {
+		PANEL_BODY.setLeftMargin(350);
+	} else {
+		PANEL_BODY.setLeftMargin(175);
+	}
+	GLOBAL_SCRIPT_ACTIONS.ToggleFilterPanel();
+	BUTTON_FULLSCREEN.setIcon("sap-icon://full-screen");
+	BUTTON_FULLSCREEN.setTooltip(TEXT_POOL.Fullscreen);
+}
+FILTERBAR.setVisible(!g_fullscreen);
+PANEL_BODY_LEFT.setVisible(!g_fullscreen);
+BUTTON_SHOW_HIDE_NAV_PANEL.setVisible(!g_fullscreen);]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="7">
+					<bi:property name="NAME" value="SetPaused"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[NAVIGATIONPANEL.setPauseRefresh(paused);
+GLOBAL_SCRIPT_ACTIONS.SetPauseRefreshText();]]></bi:value>
+					</bi:property>
+					<bi:property name="INPUT_PARAMETERS" type="ORDEREDLIST">
+						<bi:property name="INPUT_PARAMETER" index="0">
+							<bi:property name="NAME" value="paused"/>
+							<bi:property name="PARAMETER_TYPE" value="boolean"/>
+						</bi:property>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="8">
+					<bi:property name="NAME" value="SetPauseRefreshText"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[if (NAVIGATIONPANEL.isPauseRefresh()) {
+	BUTTON_PAUSEREFRESH.setText(TEXT_POOL.Refresh);
+} else {
+	BUTTON_PAUSEREFRESH.setText(TEXT_POOL.Pause);
+}]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="9">
+					<bi:property name="NAME" value="FillFilterBar"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[var aOriginalFilteredDims = FILTERBAR.getVisibleDimensionNames();
+
+aOriginalFilteredDims.forEach(function(originalDimName, index) {
+  FILTERBAR.removeVisibleDimension(originalDimName);
+});
+
+var aFilteredDims = g_filterbar_dims.split(" ");
+
+aFilteredDims.forEach(function(dimName, index) {
+	if (dimName != "") {
+		FILTERBAR.addVisibleDimension(dimName);
+	}
+});]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="10">
+					<bi:property name="NAME" value="SaveFilterBarSettings"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[var dims = FILTERBAR.getVisibleDimensionNames();
+g_filterbar_dims = "";
+dims.forEach(function(dimensionName, dimensionIndex) {
+	g_filterbar_dims = g_filterbar_dims + " " + dimensionName;
+}); ]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="11">
+					<bi:property name="NAME" value="SaveAppState"/>
+					<bi:property name="FUNCTION_DESC" value="Save the current application state."/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[FIORI_HELPER.setAppState(BookmarkInternal.getCurrentApplicationState(true));]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="12">
+					<bi:property name="NAME" value="ApplyCrosstabSettings"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[try {
+	var ltArrayColumnWidths = JSON.parse(g_crosstab_columnwidths);
+	CROSSTAB.applyColumnWidths(ltArrayColumnWidths);
+} catch (exception) {
+	// if g_crosstab_columnwidths is empty then JSON.parse will throw an exception:
+	// Unexpected end of JSON input message
+}
+
+CROSSTAB.setDisplayScalingFactorInHeader(g_crosstab_displayScalingFactors);]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="13">
+					<bi:property name="NAME" value="SaveCrosstabSettings"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[g_crosstab_columnwidths = "";
+var ltColumns = CROSSTAB.getColumnsWithSetWidths();
+g_crosstab_columnwidths = JSON.stringify(ltColumns);
+
+g_crosstab_displayScalingFactors = CROSSTAB.getDisplayScalingFactorInHeader();]]></bi:value>
+					</bi:property>
+				</bi:property>
+				<bi:property name="FUNCTION" index="14">
+					<bi:property name="NAME" value="isNumber"/>
+					<bi:property name="FUNCTION_DESC" value="Check if value is a valid number"/>
+					<bi:property name="FUNCTION_BODY">
+						<bi:value><![CDATA[return !isNaN(numberAsString);]]></bi:value>
+					</bi:property>
+					<bi:property name="INPUT_PARAMETERS" type="ORDEREDLIST">
+						<bi:property name="INPUT_PARAMETER" index="0">
+							<bi:property name="NAME" value="numberAsString"/>
+							<bi:property name="PARAMETER_TYPE" value="String"/>
+							<bi:property name="PARAMETER_DESC" value="number value as string"/>
+						</bi:property>
+					</bi:property>
+				</bi:property>
+			</bi:property>
+		</bi:component>
+		<bi:component name="ACTIONSHEET_FOOTER_ACTIONS" type="ACTION_SHEET_COMPONENT">
+			<bi:property name="ACTION_SHEET_ITEMS_LIST" type="ORDEREDLIST">
+				<bi:property name="ACTION_SHEET_ITEM" index="0">
+					<bi:property name="VALUE" value="EXPORT"/>
+					<bi:property name="TEXT" value="Export to Excel"/>
+					<bi:property name="ICON" value="sap-icon://excel-attachment"/>
+				</bi:property>
+				<bi:property name="ACTION_SHEET_ITEM" index="1">
+					<bi:property name="VALUE" value="EMAIL"/>
+					<bi:property name="TEXT" value="Send Email"/>
+					<bi:property name="ICON" value="sap-icon://email"/>
+				</bi:property>
+				<bi:property name="ACTION_SHEET_ITEM" index="2">
+					<bi:property name="VALUE" value="TILE"/>
+					<bi:property name="TEXT" value="Save as Tile"/>
+					<bi:property name="ICON" value="sap-icon://add-favorite"/>
+				</bi:property>
+			</bi:property>
+			<bi:property name="PLACEMENT" value="TOP"/>
+			<bi:property name="ON_SELECT">
+				<bi:value><![CDATA[if (ACTIONSHEET_FOOTER_ACTIONS.getSelectedValue() == "EXPORT") {
+	APPLICATION.export(ExportType.EXCEL_xlsx);
+} else if (ACTIONSHEET_FOOTER_ACTIONS.getSelectedValue() == "EMAIL") {
+	var sUrl = FIORI_HELPER.getShellURL("");
+	sUrl = Convert.urlEncode(sUrl);
+	APPLICATION.openNewWindow("mailto:?subject=" + DS_1.getInfo().queryDescription + "&body=" + sUrl);
+} else if (ACTIONSHEET_FOOTER_ACTIONS.getSelectedValue() == "TILE") {
+	FIORI_HELPER.setAppState(BookmarkInternal.getCurrentApplicationState(true));
+	FIORI_HELPER.openTileSettings();
+}]]></bi:value>
+			</bi:property>
+		</bi:component>
+		<bi:component name="ACTIONSHEET_JUMP_TO" type="ACTION_SHEET_COMPONENT">
+			<bi:property name="PLACEMENT" value="BOTTOM"/>
+			<bi:property name="ON_SELECT">
+				<bi:value><![CDATA[var selectedValue = ACTIONSHEET_JUMP_TO.getSelectedValue();
+if (selectedValue != "") {
+	FIORI_HELPER.jumpTo(selectedValue);
+}]]></bi:value>
+			</bi:property>
+		</bi:component>
+		<bi:component name="ACTIONSHEET_SETTINGS_ACTIONS" type="ACTION_SHEET_COMPONENT">
+			<bi:property name="ACTION_SHEET_ITEMS_LIST" type="ORDEREDLIST">
+				<bi:property name="ACTION_SHEET_ITEM" index="0">
+					<bi:property name="VALUE" value="CHART_SETTINGS"/>
+					<bi:property name="TEXT" value="Chart Settings"/>
+				</bi:property>
+				<bi:property name="ACTION_SHEET_ITEM" index="1">
+					<bi:property name="VALUE" value="SWAP_AXES"/>
+					<bi:property name="TEXT" value="Swap Axes"/>
+				</bi:property>
+				<bi:property name="ACTION_SHEET_ITEM" index="2">
+					<bi:property name="VALUE" value="TOTALS"/>
+					<bi:property name="TEXT" value="Totals"/>
+				</bi:property>
+				<bi:property name="ACTION_SHEET_ITEM" index="3">
+					<bi:property name="VALUE" value="INFO"/>
+					<bi:property name="TEXT" value="Information"/>
+				</bi:property>
+			</bi:property>
+			<bi:property name="PLACEMENT" value="VERTICAL"/>
+			<bi:property name="ON_SELECT">
+				<bi:value><![CDATA[if(ACTIONSHEET_SETTINGS_ACTIONS.getSelectedValue() == "TOTALS") {
+	DIALOG_TOTALS.open();	
+} else if(ACTIONSHEET_SETTINGS_ACTIONS.getSelectedValue() == "SWAP_AXES") {
+	var colDims = DS_1.getDimensions(Axis.COLUMNS);
+	var rowDims = DS_1.getDimensions(Axis.ROWS);
+	colDims.forEach(function(element, index) {
+  		DS_1.moveDimensionToRows(element.name);
+	});
+	rowDims.forEach(function(element, index) {
+  		DS_1.moveDimensionToColumns(element.name);
+	});
+} else if (ACTIONSHEET_SETTINGS_ACTIONS.getSelectedValue() == "CHART_SETTINGS") {
+	DIALOG_CHART_SETTINGS.open();	
+} else if (ACTIONSHEET_SETTINGS_ACTIONS.getSelectedValue() == "SHOW_PROMPTS") {
+	APPLICATION.openPromptDialog(400, 400);
+} else if (ACTIONSHEET_SETTINGS_ACTIONS.getSelectedValue() == "INFO") {
+	// Query
+	INFO_QUERY_NAME.setText( DS_1.getInfo().queryDescription + "\t" +  "(" + DS_1.getInfo().queryTechnicalName + ")");
+	
+	// InfoProvider
+	INFO_INFOPROVIDER_NAME.setText( DS_1.getInfo().infoProviderDescription + "\t" +  "(" + DS_1.getInfo().infoProviderTechnicalName + ")");
+	
+	// InfoProvider Last Data Update
+	INFO_INFOPROVIDER_LAST_DATA_UPDATE.setText(DS_1.getInfo().lastDataUpdate);
+	
+	// Variables
+	var lVariableText = '';
+	var ltVariables = DS_1.getVariables();
+	ltVariables.forEach(function(element, index) {
+		 if (DS_1.getVariableValueText(element.name) != "") {
+	        lVariableText = lVariableText + element.text + ": " + DS_1.getVariableValueText(element.name)+ "\n";
+	     }
+	});
+	INFO_VARIABLE.setText(lVariableText);
+	
+	// Filters
+	var lFilterText = '';
+	var ltDimensions = DS_1.getDimensions();
+	ltDimensions.forEach(function(element, index) {
+		if (DS_1.getFilterText(element.name) != "") {
+			lFilterText = lFilterText + element.text + ": " +	DS_1.getFilterText(element.name)+ "\n";             
+	    }
+	});
+	INFO_FILTERS.setText(lFilterText);
+	
+	DIALOG_INFORMATION.open();	
+}]]></bi:value>
+			</bi:property>
+		</bi:component>
+		<bi:component name="FIORI_HELPER" type="FIORI_HELPER_COMPONENT">
+			<bi:property name="ON_JUMP_TARGETS_FETCHED">
+				<bi:value><![CDATA[var targets = FIORI_HELPER.getFetchedJumpTargets();
+if (targets.length > 0) {
+	targets.forEach(function(element, index) {
+		ACTIONSHEET_JUMP_TO.addItem(element.key,element.value);
+	});
+} else {
+	ACTIONSHEET_JUMP_TO.addItem("",TEXT_POOL.NoJumpTargets);
+	BUTTON_JUMP.setEnabled(false);
+}
+ACTIONSHEET_JUMP_TO.open(BUTTON_JUMP);
+BUTTON_JUMP.hideLoadingState();]]></bi:value>
+			</bi:property>
+			<bi:property name="ON_TILE_SETTINGS_SUBMITTED">
+				<bi:value><![CDATA[FIORI_HELPER.saveTileFromSettings("");
+]]></bi:value>
+			</bi:property>
+			<bi:property name="ON_BEFORE_JUMP">
+				<bi:value><![CDATA[GLOBAL_SCRIPT_ACTIONS.SaveAppState();]]></bi:value>
+			</bi:property>
+		</bi:component>
+	</bi:component>
+</bi:biapp>

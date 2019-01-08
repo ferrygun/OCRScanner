@@ -1,0 +1,48 @@
+{
+  "_version": "1.2.0",
+  "sap.app": {
+    "_version": "1.2.0",
+    "id": "sap.collaboration",
+    "type": "library",
+    "embeds": [
+      "components/socialtimeline",
+      "components/fiori/sharing/dialog",
+      "components/fiori/sharing",
+      "components/fiori/notification",
+      "components/fiori/feed/dialog",
+      "components/fiori/feed",
+      "components/socialprofile",
+      "components/feed"
+    ],
+    "applicationVersion": {
+      "version": "1.52.0"
+    },
+    "title": "SAP UI library: SAP Collaboration for Social Media Integration.",
+    "description": "SAP UI library: SAP Collaboration for Social Media Integration.",
+    "ach": "CA-UI5-BS-SM",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_bluecrystal"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.52",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.52.0"
+        },
+        "sap.suite.ui.commons": {
+          "minVersion": "1.52.0"
+        }
+      }
+    }
+  }
+}

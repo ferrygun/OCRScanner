@@ -1,0 +1,32 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core"
+		xmlns:mdc="sap.ui.mdc.experimental"
+		xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<VBox id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::ProgressIndicatorVBox">
+		<Title id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::ProgressIndicatorTitle"
+			   level="H3" text="{dataPoint>Title@@.MODEL.value}"
+			   visible="{= !!${dataPoint>Title}}"/>
+		<Label
+				id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::ProgressIndicatorSubTitle"
+				text="{path:'dataPoint>Description@@.MODEL.value'}"
+				visible="{= !!${dataPoint>Description@@.MODEL.value}}"/>
+		<template:with path="dataPoint>Value" var="valueProperty">
+			<ProgressIndicator
+					id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::ProgressIndicator"
+					displayValue="{ parts: [{path:'dataPoint>'}, {path:'valueProperty>$Path@Org.OData.Measures.V1.Unit@@.MODEL.value'}], formatter: '.AH.buildExpressionForProgressIndicatorDisplayValue'}"
+					showValue="true"
+					percentValue="{ parts: [{path:'dataPoint>'}, {path:'valueProperty>$Path@Org.OData.Measures.V1.Unit@@.MODEL.value'}], formatter: '.AH.buildExpressionForProgressIndicatorPercentValue' }"
+					state="{path:'dataPoint>', formatter:'.AH.buildExpressionForProgressIndicatorCriticality'}">
+				<customData>
+					<core:CustomData key="Target" value="{= ${path: 'dataPoint>TargetValue@@.MODEL.value'} }" />
+					<core:CustomData key="UoM" value="{= ${path: 'valueProperty>$Path@Org.OData.Measures.V1.Unit@@.MODEL.value'} }" />
+				</customData>
+			</ProgressIndicator>
+			<Label
+					id="header::{path: 'headerFacet>', formatter: '.AH.getStableIdPartFromFacet'}::ProgressIndicatorFooter"
+					text="{path:'valueProperty>$Path@com.sap.vocabularies.Common.v1.Label@@.MODEL.value'}"
+					visible="{= !!${valueProperty>$Path@com.sap.vocabularies.Common.v1.Label@@.MODEL.value} }"/>
+		</template:with>
+	</VBox>
+</core:FragmentDefinition>

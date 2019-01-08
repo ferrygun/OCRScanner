@@ -1,0 +1,580 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_belize/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_belize/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_belize/global.less";
+/* START "Chart.css" */
+/*
+*BEGIN LESS PARAMETER DEFINITION
+*/
+
+/* Semantic Theming Mapping*/
+
+@sapCaUiChartSemanticColor-Neutral-Dark: darken(@sapUiChartNeutral, 10);
+
+@sapCaUiChartSemanticColor-Neutral: @sapUiChartNeutral;
+
+@sapCaUiChartSemanticColor-Neutral-Light: lighten(@sapUiChartNeutral, 10);
+
+@sapCaUiChartSemanticColor-Good-Dark:  darken(@sapUiChartGood, 10);
+
+@sapCaUiChartSemanticColor-Good: @sapUiChartGood;
+
+@sapCaUiChartSemanticColor-Good-Light: lighten(@sapUiChartGood, 10);
+
+@sapCaUiChartSemanticColor-Critical-Dark: darken(@sapUiChartCritical, 10);
+
+@sapCaUiChartSemanticColor-Critical: @sapUiChartCritical;
+
+@sapCaUiChartSemanticColor-Critical-Light: lighten(@sapUiChartCritical, 10);
+
+@sapCaUiChartSemanticColor-Bad-Dark: darken(@sapUiChartBad, 10);
+
+@sapCaUiChartSemanticColor-Bad: @sapUiChartBad;
+
+@sapCaUiChartSemanticColor-Bad-Light: lighten(@sapUiChartBad, 10);
+
+/*Chart parameters*/
+
+@sapCaUiChartBackgroundColor: @sapUiGroupContentBackground;
+
+@sapCaUiChartAxisStroke: @sapUiChartGridlineColor;
+
+@sapCaUiChartAxisGridlineColor: @sapUiChartGridlineColor;
+
+@sapCaUiChartBackgroundStroke: @sapUiChartGridlineColor;
+
+@sapCaUiChartFontFamily: @sapUiFontFamily;
+
+@sapCaUiChartFontSize: @sapMFontSmallSize;
+
+@sapCaUiChartAxisFontSize: @sapMFontSmallSize;
+
+@sapCaUiChartFontColor: @sapUiText;
+
+@sapCaUiChartFontWeight: normal;
+
+@sapCaUiChartDataLabelShadow: 0px 0px 5px rgba(255,255,255,0.5);
+
+/*Chart ToolBar parameters*/
+
+@sapCaUiChartToolBarBackground: @sapUiToolbarBackground;
+
+@sapCaUiChartToolBarFullscreenBackground: @sapUiToolbarBackground;
+
+@sapCaUiChartToolBarTitleShadow: #fff;
+
+@sapCaUiChartToolBarTitleFontFamily: @sapUiFontFamily;
+
+@sapCaUiChartToolBarTitleFontSize: @sapMFontMediumSize;
+
+@sapCaUiChartToolBarTitleFontWeight: normal;
+
+@sapCaUiChartToolBarTitleFontColor: @sapUiFieldPlaceholderTextColor;
+
+/*Chart Popover parameters*/
+
+@sapCaUiChartPopoverItemFontFamily: @sapUiFontFamily;
+
+@sapCaUiChartPopoverItemFontSize: @sapMFontMediumSize;
+
+@sapCaUiChartPopoverItemFontColor: @sapUiText;
+
+@sapCaUiChartPopoverItemFontWeight: normal;
+
+@sapCaUiChartPopoverGroupFontFamily: @sapUiFontFamily;
+
+@sapCaUiChartPopoverGroupFontSize: @sapMFontMediumSize;
+
+@sapCaUiChartPopoverGroupFontColor: @sapUiText;
+
+@sapCaUiChartPopoverGroupFontWeight: bold;
+
+@sapCaUiChartPopoverCloseIconSize:38px;
+
+@sapCaUiChartTitleColor: @sapUiText;
+
+@sapCaUiChartTitleFontFamily: @sapCaUiChartFontFamily;
+
+@sapCaUiChartTitleFontSize: @sapMFontLargeSize;
+
+@sapCaUiChartPopoverCloseIcon: decline;
+
+/*Variable no longer used: kept in case customers override them*/
+
+@sapCaUiChartPopoverCloseIconColor: @sapUiContentIconColor;
+
+@sapCaUiChartToolBarIconColor: @sapUiContentIconColor;
+
+@sapCaUiChartToolBarActiveIconColor: @sapUiActive;
+
+@sapCaUiChartToolBarIconSize: 1.375rem;
+/*
+*END LESS PARAMETER DEFINITION
+*/
+
+.sapCaUiChart {
+    position: relative;
+    padding-top: 1rem;
+}
+
+/* show the border only when selected */
+.sapCaUiChart  .v-datapoint-selected {
+    stroke: @sapCaUiChartAxisStroke;
+    stroke-width: 0.063rem;
+}
+
+.sapCaUiChart path.v-datapoint-selected,
+.sapCaUiChart path.v-datapoint-hover {
+    stroke: @sapUiContentLabelColor;
+    stroke-width: 2px;
+}
+
+.sapCaUiChart line.v-categoryaxisline,
+.sapCaUiChart line.v-valueaxisline,
+.sapCaUiChart line.v-fixed-valueaxisline {
+    stroke: @sapCaUiChartAxisStroke;
+    stroke-width: 0.063rem;
+}
+
+.sapCaUiChart .v-categoryaxisline,
+.sapCaUiChart .v-valueaxisline,
+.sapCaUiChart .v-fixed-categoryaxisline,
+.sapCaUiChart .v-fixed-valueaxisline {
+    stroke: @sapCaUiChartAxisStroke;
+    stroke-width: 0.063rem;
+}
+
+.sapCaUiChart path.v-categoryaxisline {
+    stroke: @sapCaUiChartAxisGridlineColor;
+    stroke-width: 0.063rem;
+}
+
+.sapCaUiChart path.v-valueaxisline {
+    stroke: none
+}
+
+.sapCaUiChart .v-hoverline {
+    stroke: @sapUiActive;
+}
+
+.sapCaUiChart .sapVizChart .v-gridline,
+.sapCaUiChart .v-gridline {
+    stroke: @sapCaUiChartAxisGridlineColor;
+    stroke-width: 0.063rem;
+}
+
+.sapCaUiChart .v-datalabel {
+    font-family: @sapCaUiChartFontFamily;
+    font-size: @sapCaUiChartFontSize;
+    font-weight: @sapCaUiChartFontWeight;
+    text-shadow: @sapCaUiChartDataLabelShadow;
+    fill:@sapCaUiChartToolBarTitleFontColor;
+}
+
+.sapCaUiChart .v-datalabel text:hover,
+.sapCaUiChart .v-datalabel text:focus{
+    cursor: pointer;
+}
+
+.sapCaUiChart .v-lines {
+        stroke-width : 0.125rem;
+}
+
+.sapCaUiChartMarkerSize {
+    font-size: 0.563rem;
+}
+.sapCaUiChart .v-datapoint {
+    stroke-width : 0.063rem;
+    stroke : #FFF;
+    cursor: pointer;
+}
+
+.sapCaUiChart .v-m-main .v-label,
+.sapCaUiChart .v-m-legend .v-label {
+    font-family: @sapCaUiChartFontFamily;
+    font-size: @sapCaUiChartFontSize;
+    font-weight: @sapCaUiChartFontWeight;
+    fill:@sapCaUiChartToolBarTitleFontColor;
+}
+
+.sapCaUiChart .v-m-main .v-axis .v-label {
+    font-size: @sapCaUiChartAxisFontSize;
+}
+
+.sapCaUiChart .sapVizChart .v-background-border,
+.sapCaUiChart .v-background-border {
+    stroke: @sapCaUiChartBackgroundStroke;
+}
+
+.sapCaUiChart .v-labelarea {
+   cursor: pointer;
+}
+
+.sapCaUiChart .v-backgroundutil .v-background-body {
+    fill: @sapCaUiChartBackgroundColor !important; /* Sorry overriden by CVOM */
+    opacity: 0.8;
+}
+
+.sapCaUiChart  .v-background-body {
+    opacity: 0;
+}
+
+.sapCaUiChart.sapCaUiChartNoHover .v-hovershadow {
+    fill: transparent;
+}
+
+.sapCaUiChart.sapCaUiChartNoHover .v-hovershadow-mousedown {
+    fill: transparent;
+}
+
+/* Bubble Specific */
+.sapCaUiChart .sapBubbleTxtDiv {
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.sapCaUiChart .sapBubbleTxt {
+    cursor:default;
+    text-align:center;
+    overflow:hidden;
+    white-space:nowrap;
+    font-family: @sapCaUiChartFontFamily;
+    font-size: @sapCaUiChartFontSize;
+    color:@sapCaUiChartFontColor;
+    font-weight: @sapCaUiChartFontWeight;
+    text-shadow: @sapCaUiChartDataLabelShadow;
+}
+
+.sapCaUiChart .v-valueLabels{
+    font-family: @sapCaUiChartFontFamily;
+    font-size: @sapCaUiChartFontSize;
+    font-weight: @sapCaUiChartFontWeight;
+    text-shadow: @sapCaUiChartDataLabelShadow;
+    fill:@sapCaUiChartToolBarTitleFontColor;
+}
+
+.sapCaUiChartSelectionNoneCursor .v-datapoint,
+.sapCaUiChartSelectionNoneCursor .v-labelarea,
+.sapCaUiChartSelectionNoneCursor .v-datalabel text:hover,
+.sapCaUiChartSelectionNoneCursor .v-datalabel text:focus {
+    cursor: default
+}
+
+.sapCaUiChart .v-m-title .v-title{
+    fill:@sapCaUiChartTitleColor;
+    font-family:@sapCaUiChartTitleFontFamily;
+    font-size:@sapCaUiChartTitleFontSize;
+}
+
+/* END "Chart.css" */
+
+/* START "ChartToolBar.css" */
+/* ===================================================== */
+/* CSS for control sap.ca.ui.charts/ChartToolBar.control */
+/* ===================================================== */
+
+/* title - when no selects are displayed */
+.sapCaUiChartToolBar .chartToolBarTitle {
+    font-family: @sapCaUiChartToolBarTitleFontFamily;
+    font-size: @sapCaUiChartToolBarTitleFontSize;
+    font-weight: @sapCaUiChartToolBarTitleFontWeight;
+    color: @sapCaUiChartToolBarTitleFontColor;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-shadow: @sapCaUiChartToolBarTitleShadow;
+}
+
+/* styling */
+.sapCaUiChartToolBar .sapMBtn.legendSmallIcon,
+.sapCaUiChartToolBar .sapMBtn.legendIcon {
+    border-left: none;
+}
+
+.sapCaUiChartToolBar .sapCaUiChartToolBarChartArea {
+    background-color: @sapCaUiChartBackgroundColor;
+}
+
+.sapCaUiChartToolBar .iconBar {
+    background: @sapCaUiChartToolBarBackground;
+}
+
+.sapCaUiOverlay .sapCaUiChartToolBar .iconBar {
+    background: @sapCaUiChartToolBarFullscreenBackground;
+}
+
+/* END "ChartToolBar.css" */
+
+/* START "ClusterListItem.css" */
+/* ========================================================= */
+/* CSS for control sap.ca.ui.charts/ClusterListItem.control  */
+/* ========================================================= */
+
+
+.sapCaUiCLI .sapMCLIItem {
+    font-family: @sapCaUiChartPopoverItemFontFamily;
+    font-size: @sapCaUiChartPopoverItemFontSize;
+    font-weight: @sapCaUiChartPopoverItemFontWeight;
+    color: @sapCaUiChartPopoverItemFontColor;
+    -moz-box-flex: 1;    /* OLD - Firefox 19- */
+    flex: 1;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-flex: 1; /* Chrome */
+	-ms-flex: 1 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 5px;
+	width: 100%;
+	display: block !important;
+}
+
+.sapCaUiCLI .sapMCLIItem,
+.sapCaUiCLI .sapMCLIGroup,
+.sapCaUiCLI .sapMCLIValue {
+    line-height:1rem;
+}
+
+.sapCaUiCLI .sapMCLITitle {
+    font-family:@sapCaUiChartPopoverGroupFontFamily;
+    font-size: @sapCaUiChartPopoverGroupFontSize;
+    font-weight: @sapCaUiChartPopoverGroupFontWeight;
+    color: @sapCaUiChartPopoverGroupFontColor;
+    line-height: 1rem;
+	width: 100%;
+}
+
+/* END "ClusterListItem.css" */
+
+/* START "DatePicker.css" */
+/* ============================================= */
+/* CSS for control sap.ca.ui/DatePicker.control */
+/* ============================================= */
+.sapCaUiDatePicker .sapCaUiGreyIcon {
+	color: @sapUiContentIconColor;
+}
+
+/* END "DatePicker.css" */
+
+/* START "FileUpload.css" */
+/* ============================================= */
+/* CSS for control sap.ca.ui/FileUpload.control */
+/* ============================================= */
+
+.sapCaUiFU .sapMCLI {
+	border-top: 1px solid @sapUiContentForegroundBorderColor;
+}
+
+.sapCaUiFU .sapMLIBSelectD:hover {
+	background-color: @sapUiButtonHoverBackground;
+}
+
+.sapCaUiFUInnerHL > label {
+	font-size: @sapMFontMediumSize;
+	color: @sapUiContentLabelColor;
+}
+
+.sapCaUiFileUploadFileLoadedText {
+	color: @sapLinkColor;
+	font-size: @sapMFontLargeSize;
+}
+
+.sapCaUiFileUploadItemIcon {
+	color: @sapUiContentIconColor;
+}
+
+.sapCaUiFileUploadAttachmentLabel {
+	color: @sapUiBaseText;
+	font-size: @sapMFontLargeSize;
+}
+
+/* Compact Mode */
+.sapUiSizeCompact .sapCaUiFileUploadAttachmentLabel {
+	font-size: @sapMFontMediumSize;
+}
+
+.sapUiSizeCompact .sapCaUiFileUploadFileLoadedText {
+	font-size: @sapMFontMediumSize;
+}
+
+/* END "FileUpload.css" */
+
+/* START "OverflowContainer.css" */
+/* =================================================== */
+/* CSS for control sap.ca.ui/OverflowContainer.control */
+/* =================================================== */
+
+.sapCaUiOC {
+	overflow: hidden;
+	position: relative;
+	transition: height 200ms linear;
+	-webkit-transition: height 200ms linear;
+	-moz-transition: height 200ms linear;
+	-ms-transition: height 200ms linear;
+	-o-transition: height 200ms linear;
+	background-color: @sapUiGroupContentBackground;
+	padding: 0;
+	margin: 0;
+}
+
+.sapCaUiOCOverlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;
+	background: -moz-linear-gradient(fade(@sapUiGroupContentBackground, 20%) 0%, fade(@sapUiGroupContentBackground, 90%) 100%);
+	background: -ms-linear-gradient(top, @sapUiGroupContentBackground 20%, @sapUiGroupContentBackground 90%);
+	background: -webkit-linear-gradient(top, @sapUiGroupContentBackground 20%, @sapUiGroupContentBackground 90%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @sapUiGroupContentBackground 20%, @sapUiGroupContentBackground 90%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @sapUiGroupContentBackground 20%, @sapUiGroupContentBackground 90%); /* IE10+ */
+	background: linear-gradient(to bottom, @sapUiGroupContentBackground 20%, @sapUiGroupContentBackground 90%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#e6ffffff', GradientType=0); /* IE6-9 */
+	background: -webkit-gradient(linear, left top, left bottom, from(fade(@sapUiGroupContentBackground, 20%)), to(fade(@sapUiGroupContentBackground, 90%)));
+}
+
+.sapCaUiOCBtn {
+	position: absolute;
+	right: 0rem;
+	height: 3rem;
+	width: 3rem;
+	bottom: 0;
+	border: none;
+	background-color: fade(@sapUiGroupContentBackground, 20%);
+	outline: none;
+	cursor: pointer;
+	color: @sapUiContentIconColor;
+}
+
+.sapCaUiOC > .sapMBtnIcon > .sapMBtnCustomIcon.sapUiIcon.sapUiIconMirrorInRTL {
+	font-size: 1.5rem;
+	width: 2.875rem;
+	text-align: center;
+	margin: 0;
+}
+
+/* END "OverflowContainer.css" */
+
+/* START "OverviewTile.css" */
+/* ============================================= */
+/* CSS for control sap.ca.ui/OverviewTile.control */
+/* ============================================= */
+
+.sapCaUiOverviewTile {
+	border: 0.0625rem solid @sapUiContentForegroundBorderColor;
+	background-color: @sapUiBaseBG;
+}
+
+.sapCaUiOverviewTile.sapMTileActive {
+	background-color: @sapUiHighlight;
+}
+
+.sapCaUiOverviewTileTitle {
+	font-family: @sapUiFontHeaderFamily;
+	font-size: @sapMFontHeader5Size;
+	font-weight: @sapUiFontHeaderWeight;
+	color: @sapUiTextTitle;
+}
+
+.sapCaUiOverviewTileContact {
+	font-family: @sapUiFontFamily;
+	font-size: @sapMFontMediumSize;
+}
+
+.sapCaUiOTFormLbl {
+	color: @sapUiContentLabelColor;
+}
+
+.sapCaUiOverviewTile:focus {
+	border: 0.0625rem dotted @sapUiContentFocusColor;
+	outline: 0;
+}
+
+/* END "OverviewTile.css" */
+
+/* START "PictureTile.css" */
+.sapCaUiPTDeleteButton .sapUiIcon:before {
+	background-color: @sapUiWhiteBG;
+	border-radius: 2rem;
+	color: @sapUiText;
+}
+
+.sapCaUiPTDeleteButton .sapUiIcon{
+	outline: none;
+}
+
+
+
+/* END "PictureTile.css" */
+
+/* START "HierarchyItem.css" */
+/* ============================================= */
+/* CSS for control sap.ca.ui/HierarchyItem.control */
+/* ============================================= */
+
+.sapCaUiHierarchyItemIcon {
+	color: @sapUiBaseText;
+}
+
+.sapCaUiHierarchyItemLevelTypeLbl {
+	color: @sapUiContentLabelColor;
+	font-size: @sapMFontMediumSize;
+}
+
+.sapCaUiHierarchyItemIdentifierLbl {
+	font-size: @sapMFontMediumSize;
+	color: @sapUiContentLabelColor;
+}
+
+/* END "HierarchyItem.css" */
+
+/* START "InPlaceEdit.css" */
+/* =============================================== */
+/* CSS for control sap.ca.ui/InPlaceEdit.control */
+/* =============================================== */
+
+.sapCaUiIpe {
+    height:3rem;
+
+    &:not(.sapCaUiIpeEdit) {
+         padding: 0.125rem;
+    }
+
+    .sapMText, .sapCaUiIpeCont {
+        height:2.5rem;
+    }
+
+    .sapMText {
+        line-height:2.5rem;
+    }
+
+    .sapMBtn {
+        height:100%
+    }
+
+    .sapCaUiIpeCont {
+        font-size: 0.875rem;
+        line-height: 2.375rem;
+
+        .sapCaUiIpeEBtn {
+            height: 2.375rem;
+            width: 2.375rem;
+            line-height: 2.375rem;
+            padding:0;
+
+            & > .sapMBtnInner {
+                border:none;
+            }
+        }
+    }
+
+}
+
+
+/* END "InPlaceEdit.css" */
+

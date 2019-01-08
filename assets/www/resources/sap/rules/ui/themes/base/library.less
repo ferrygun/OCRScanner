@@ -1,0 +1,224 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+
+@import "../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../sap/ui/core/themes/base/global.less";
+//@import "../../../../../../resources/sap/ui/core/themes/base/base.less";
+//@import "../../../../../../resources/sap/ui/core/themes/base/global.less";
+
+/* START "RuleBuilder.less" */
+.sapRULRuleBuilder {
+
+}
+/* END "RuleBuilder.less" */
+
+/* START "DecisionTableSettings.less" */
+.sapRULTDecisionTableSettings{
+
+}
+
+.sapRULTDecisionTableSettings TH  {
+	background-color: transparent !important;
+}
+
+.sapRULTDecisionTableSettings TD  {
+	background-color: transparent;
+	padding-left: 0px !important;
+}
+
+.sapRULTDecisionTableSettings .sapMListTbl {
+	width: 101%; // elimintaes a blue stripe to the right of the table
+}
+// .sapRULTDecisionTableSettings .sapMListTblCell:first-child {
+// 	padding-left: 0rem !important;
+// }
+
+.sapRULTDecisionTableSettings .sapMListTbl th {
+	border-bottom: 0px !important;
+	padding-left: 0px !important;
+} 
+    
+.sapRULTDecisionTableSettingsMessageStrip {
+    height: 35px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+} 
+
+.sapRULTDecisionTableSettingsMessageStrip .sapMText{
+  line-height: 1.2 !important;
+  padding-top: 0px !important;
+}  
+
+.sapRULExpressionAdvancedResultTable>.sapMInput>.sapMInputBaseInner {
+    background-color: #f2f2f2 !important ;
+}
+
+.sapRULExpressionAdvancedResultTable>.sapMInput>.sapMInputBaseInner:hover {
+    background-color: #f2f2f2 !important;
+}
+.sapRULTDecisionTableSettingsForm{
+	    padding-right: 0.25rem;
+}
+
+
+
+/* END "DecisionTableSettings.less" */
+
+/* START "DecisionTable.less" */
+.sapRULDecisionTable{
+	
+}
+.sapRULDecisionTable .sapUiTableCtrlScr{
+	overflow-y: visible;
+}
+.sapRULDecisionTable .sapUiTableCnt{
+		overflow-y: visible;
+}
+
+.sapRULDecisionTable .sapUiTableCCnt{
+		overflow-y: visible;
+}
+.sapRULDecisionTableLink{
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+.sapRULDecisionTable>td {
+	padding: 0px;
+	position: relative;
+}
+/*** Fix for thcik column header ***/
+.sapRULDecisionTableColumnHeaderLabel , .sapRULDecisionTableColumnHeaderLabel > * {
+	//line-height: 2 !important;
+	//height: 2rem !important;
+	//vertical-align: middle;
+}
+
+.sapRULDecisionTable .sapUiTableCol, .sapUiTableTr>td {
+    position: relative;
+}
+
+.sapUiSizeCozy .sapRULDecisionTable .sapUiTableColHdrCnt{
+	//height: 4rem !important;
+}
+
+.sapUiSizeCozy .sapRULDecisionTable .sapUiTableCol{
+	//height: 2rem !important;
+}
+
+.sapUiSizeCozy .sapRULDecisionTable .sapUiTableColCell {
+	//height: 2rem !important;
+}
+
+/*** Fix for cut header + add 3 dots in the end of header
+---> http://stackoverflow.com/questions/37273477/openui5-sapui5-bug
+***/
+
+.sapRULDecisionTableColumnHeaderLabel {
+	line-height: normal !important;
+}
+
+/*** Fix for remove row hover background-color in edit mode
+---> bug-4230
+***/
+
+.sapRULDecisionTableEdit .sapUiTableCtrl .sapUiTableRowHvr>td{
+  background-color: transparent !important;
+}
+ 
+.sapRULDecisionTableEdit .sapUiTableCtrl tr.sapUiTableRowHvr{
+  background-color: transparent !important;
+}
+
+.sapRULDecisionTableToolBar {
+	background-color: @sapUiListBackground;
+	font-size: @sapUiFontSize;
+}
+/* END "DecisionTable.less" */
+
+/* START "DecisionTableCell.less" */
+.sapRULDecisionTableSCell{
+	
+}
+
+.sapRULDecisionTableSCell .sapMInputBaseErrorInner {
+    border-color: @sapUiFieldInvalidColor;
+    border-style: solid;
+    border-width: 2px;
+    //bug 4851
+    padding-top: 1px;
+}
+
+.sapRULDecisionTableSCell .sapMInputBaseErrorInner:focus {
+  border-style: dotted;
+}
+
+.sapRULDecisionTableSCellFocus{
+            position: absolute;
+            top:0px;
+}
+
+.sapRULDecisionTableSCellTextOverflow .sapMInputBaseInner{
+            text-overflow: ellipsis;
+}
+
+.sapRULDecisionTableSCellMarked{
+  //background-color: lightgray;
+}
+/* END "DecisionTableCell.less" */
+
+/* START "ExpressionAdvanced.less" */
+.CodeMirror div.CodeMirror-cursor {
+	border-left: 1px solid @sapUiText;
+ }
+ 
+.sapRULExpressionAdvanced .sapMInputDivWrapper  {
+	height:auto;
+}
+
+.sapRULExpressionAdvanced .CodeMirror-rules .cm-valuehelp {
+	color: #00c; 
+	font-weight: bold; 
+	text-decoration: underline;
+	cursor:pointer;
+}
+/* END "ExpressionAdvanced.less" */
+
+/* START "ExpressionBasic.less" */
+.sapRULExpressionBasic{
+  margin-right: 0.5rem!important; 
+}
+/* END "ExpressionBasic.less" */
+
+/* START "TextRule.less" */
+.sapRULTextRule{
+	
+}
+.sapTextRuleFontSize{
+      font-size: 1.125rem;
+}
+
+.sapTextRuleLink{
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+.sapTextRuleSettingsMessageStrip {
+   	height: 35px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.sapTextRuleSettingsMessageStrip .sapMText{
+  line-height: 1.2 !important;
+  padding-top: 0px !important;
+}
+
+.sapTextRuleSettingsForm{
+	    padding-right: 0.25rem;
+}
+/* END "TextRule.less" */

@@ -1,0 +1,576 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "ActionMode-dbg.js",
+			"module": "sap/ushell/components/flp/ActionMode.js",
+			"isDebug": true,
+			"condRequired": [
+				"sap/m/MessageToast.js"
+			]
+		},
+		{
+			"name": "ActionMode.js",
+			"module": "sap/ushell/components/flp/ActionMode.js",
+			"condRequired": [
+				"sap/m/MessageToast.js"
+			]
+		},
+		{
+			"name": "Component-dbg.js",
+			"module": "sap/ushell/components/flp/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/UIComponent.js",
+				"sap/ushell/components/flp/ComponentKeysHandler.js",
+				"sap/ushell/components/flp/CustomRouter.js",
+				"sap/ushell/components/flp/launchpad/DashboardManager.js",
+				"sap/ushell/resources.js"
+			]
+		},
+		{
+			"name": "Component-preload-dbg.js",
+			"module": "Component-preload.js",
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/Label.js",
+				"sap/m/RadioButton.js",
+				"sap/m/RadioButtonGroup.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/base/EventProvider.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ushell/Layout.js",
+				"sap/ushell/override.js",
+				"sap/ushell/resources.js",
+				"sap/ushell/services/Message.js",
+				"sap/ushell/ui/appfinder/AppBox.js",
+				"sap/ushell/ui/appfinder/PinButton.js",
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js",
+				"sap/ushell/ui/launchpad/AnchorItem.js",
+				"sap/ushell/ui/launchpad/CatalogEntryContainer.js",
+				"sap/ushell/ui/launchpad/CatalogTileContainer.js",
+				"sap/ushell/ui/launchpad/CatalogsContainer.js",
+				"sap/ushell/ui/launchpad/DashboardGroupsContainer.js",
+				"sap/ushell/ui/launchpad/GroupListItem.js",
+				"sap/ushell/ui/launchpad/Panel.js",
+				"sap/ushell/ui/launchpad/Tile.js",
+				"sap/ushell/ui/launchpad/TileContainer.js",
+				"sap/ushell/ui/launchpad/TileContainerUtils.js",
+				"sap/ushell/ui/launchpad/TileState.js",
+				"sap/ushell/ui/shell/RightFloatingContainer.js",
+				"sap/ushell/ui5service/ShellUIService.js",
+				"sap/ushell/utils.js"
+			],
+			"condRequired": [
+				"sap/m/MessageToast.js"
+			],
+			"included": [
+				"sap/ushell/components/flp/ActionMode.js",
+				"sap/ushell/components/flp/Component.js",
+				"sap/ushell/components/flp/ComponentKeysHandler.js",
+				"sap/ushell/components/flp/CustomRouter.js",
+				"sap/ushell/components/flp/FLPAnalytics.js",
+				"sap/ushell/components/flp/launchpad/DashboardLoadingManager.js",
+				"sap/ushell/components/flp/launchpad/DashboardManager.js",
+				"sap/ushell/components/flp/launchpad/PagingManager.js",
+				"sap/ushell/components/flp/launchpad/appfinder/AppFinder.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/AppFinder.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/Catalog.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/Catalog.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/EasyAccess.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/EasyAccess.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.view.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardContent.controller.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardContent.view.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardGroupsBox.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardUIActions.js",
+				"sap/ushell/components/flp/launchpad/group_list/GroupList.controller.js",
+				"sap/ushell/components/flp/launchpad/group_list/GroupList.view.js",
+				"sap/ushell/components/flp/settings/FlpSettings.controller.js",
+				"sap/ushell/components/flp/settings/FlpSettings.view.xml"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "Component-preload.js",
+			"merged": true,
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/Label.js",
+				"sap/m/RadioButton.js",
+				"sap/m/RadioButtonGroup.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/base/EventProvider.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ushell/Layout.js",
+				"sap/ushell/override.js",
+				"sap/ushell/resources.js",
+				"sap/ushell/services/Message.js",
+				"sap/ushell/ui/appfinder/AppBox.js",
+				"sap/ushell/ui/appfinder/PinButton.js",
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js",
+				"sap/ushell/ui/launchpad/AnchorItem.js",
+				"sap/ushell/ui/launchpad/CatalogEntryContainer.js",
+				"sap/ushell/ui/launchpad/CatalogTileContainer.js",
+				"sap/ushell/ui/launchpad/CatalogsContainer.js",
+				"sap/ushell/ui/launchpad/DashboardGroupsContainer.js",
+				"sap/ushell/ui/launchpad/GroupListItem.js",
+				"sap/ushell/ui/launchpad/Panel.js",
+				"sap/ushell/ui/launchpad/Tile.js",
+				"sap/ushell/ui/launchpad/TileContainer.js",
+				"sap/ushell/ui/launchpad/TileContainerUtils.js",
+				"sap/ushell/ui/launchpad/TileState.js",
+				"sap/ushell/ui/shell/RightFloatingContainer.js",
+				"sap/ushell/ui5service/ShellUIService.js",
+				"sap/ushell/utils.js"
+			],
+			"condRequired": [
+				"sap/m/MessageToast.js"
+			],
+			"included": [
+				"sap/ushell/components/flp/ActionMode.js",
+				"sap/ushell/components/flp/Component.js",
+				"sap/ushell/components/flp/ComponentKeysHandler.js",
+				"sap/ushell/components/flp/CustomRouter.js",
+				"sap/ushell/components/flp/FLPAnalytics.js",
+				"sap/ushell/components/flp/launchpad/DashboardLoadingManager.js",
+				"sap/ushell/components/flp/launchpad/DashboardManager.js",
+				"sap/ushell/components/flp/launchpad/PagingManager.js",
+				"sap/ushell/components/flp/launchpad/appfinder/AppFinder.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/AppFinder.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/Catalog.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/Catalog.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/EasyAccess.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/EasyAccess.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.view.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.controller.js",
+				"sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.view.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardContent.controller.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardContent.view.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardGroupsBox.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardUIActions.js",
+				"sap/ushell/components/flp/launchpad/group_list/GroupList.controller.js",
+				"sap/ushell/components/flp/launchpad/group_list/GroupList.view.js",
+				"sap/ushell/components/flp/settings/FlpSettings.controller.js",
+				"sap/ushell/components/flp/settings/FlpSettings.view.xml"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "sap/ushell/components/flp/Component.js",
+			"required": [
+				"sap/ui/core/UIComponent.js",
+				"sap/ushell/components/flp/ComponentKeysHandler.js",
+				"sap/ushell/components/flp/CustomRouter.js",
+				"sap/ushell/components/flp/launchpad/DashboardManager.js",
+				"sap/ushell/resources.js"
+			]
+		},
+		{
+			"name": "ComponentKeysHandler-dbg.js",
+			"module": "sap/ushell/components/flp/ComponentKeysHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js"
+			]
+		},
+		{
+			"name": "ComponentKeysHandler.js",
+			"module": "sap/ushell/components/flp/ComponentKeysHandler.js",
+			"required": [
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js"
+			]
+		},
+		{
+			"name": "CustomRouter-dbg.js",
+			"module": "sap/ushell/components/flp/CustomRouter.js",
+			"isDebug": true
+		},
+		{
+			"name": "CustomRouter.js",
+			"module": "sap/ushell/components/flp/CustomRouter.js"
+		},
+		{
+			"name": "FLPAnalytics-dbg.js",
+			"module": "sap/ushell/components/flp/FLPAnalytics.js",
+			"isDebug": true
+		},
+		{
+			"name": "FLPAnalytics.js",
+			"module": "sap/ushell/components/flp/FLPAnalytics.js"
+		},
+		{
+			"name": "launchpad/DashboardLoadingManager-dbg.js",
+			"module": "sap/ushell/components/flp/launchpad/DashboardLoadingManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/EventProvider.js",
+				"sap/ushell/ui/launchpad/TileState.js"
+			]
+		},
+		{
+			"name": "launchpad/DashboardLoadingManager.js",
+			"module": "sap/ushell/components/flp/launchpad/DashboardLoadingManager.js",
+			"required": [
+				"sap/ui/base/EventProvider.js",
+				"sap/ushell/ui/launchpad/TileState.js"
+			]
+		},
+		{
+			"name": "launchpad/DashboardManager-dbg.js",
+			"module": "sap/ushell/components/flp/launchpad/DashboardManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/EventProvider.js",
+				"sap/ushell/components/flp/launchpad/DashboardLoadingManager.js",
+				"sap/ushell/components/flp/launchpad/PagingManager.js",
+				"sap/ushell/services/Message.js",
+				"sap/ushell/ui/launchpad/TileState.js"
+			]
+		},
+		{
+			"name": "launchpad/DashboardManager.js",
+			"module": "sap/ushell/components/flp/launchpad/DashboardManager.js",
+			"required": [
+				"sap/ui/base/EventProvider.js",
+				"sap/ushell/components/flp/launchpad/DashboardLoadingManager.js",
+				"sap/ushell/components/flp/launchpad/PagingManager.js",
+				"sap/ushell/services/Message.js",
+				"sap/ushell/ui/launchpad/TileState.js"
+			]
+		},
+		{
+			"name": "launchpad/PagingManager-dbg.js",
+			"module": "sap/ushell/components/flp/launchpad/PagingManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/EventProvider.js"
+			]
+		},
+		{
+			"name": "launchpad/PagingManager.js",
+			"module": "sap/ushell/components/flp/launchpad/PagingManager.js",
+			"required": [
+				"sap/ui/base/EventProvider.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/AppFinder-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/AppFinder.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js",
+				"sap/ushell/ui5service/ShellUIService.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/AppFinder-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/AppFinder.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/AppFinder.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/AppFinder.controller.js",
+			"required": [
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js",
+				"sap/ushell/ui5service/ShellUIService.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/AppFinder.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/AppFinder.view.js"
+		},
+		{
+			"name": "launchpad/appfinder/Catalog-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/Catalog.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ushell/components/flp/launchpad/PagingManager.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/Catalog-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/Catalog.view.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/ui/appfinder/AppBox.js",
+				"sap/ushell/ui/appfinder/PinButton.js",
+				"sap/ushell/ui/launchpad/CatalogEntryContainer.js",
+				"sap/ushell/ui/launchpad/CatalogTileContainer.js",
+				"sap/ushell/ui/launchpad/CatalogsContainer.js",
+				"sap/ushell/ui/launchpad/Panel.js",
+				"sap/ushell/ui/launchpad/Tile.js",
+				"sap/ushell/ui/launchpad/TileContainerUtils.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/Catalog.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/Catalog.controller.js",
+			"required": [
+				"sap/ushell/components/flp/launchpad/PagingManager.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/Catalog.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/Catalog.view.js",
+			"required": [
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/ui/appfinder/AppBox.js",
+				"sap/ushell/ui/appfinder/PinButton.js",
+				"sap/ushell/ui/launchpad/CatalogEntryContainer.js",
+				"sap/ushell/ui/launchpad/CatalogTileContainer.js",
+				"sap/ushell/ui/launchpad/CatalogsContainer.js",
+				"sap/ushell/ui/launchpad/Panel.js",
+				"sap/ushell/ui/launchpad/Tile.js",
+				"sap/ushell/ui/launchpad/TileContainerUtils.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/EasyAccess-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/EasyAccess.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/EasyAccess-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/EasyAccess.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/EasyAccess.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/EasyAccess.controller.js"
+		},
+		{
+			"name": "launchpad/appfinder/EasyAccess.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/EasyAccess.view.js"
+		},
+		{
+			"name": "launchpad/appfinder/GroupListPopover-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/GroupListPopover-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/GroupListPopover.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.controller.js"
+		},
+		{
+			"name": "launchpad/appfinder/GroupListPopover.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/GroupListPopover.view.js"
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyApps-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyApps-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.view.js",
+			"isDebug": true,
+			"required": [
+				"sap/ushell/ui/appfinder/AppBox.js",
+				"sap/ushell/ui/appfinder/PinButton.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyApps.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.controller.js"
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyApps.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyApps.view.js",
+			"required": [
+				"sap/ushell/ui/appfinder/AppBox.js",
+				"sap/ushell/ui/appfinder/PinButton.js"
+			]
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyFolders-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyFolders-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyFolders.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.controller.js"
+		},
+		{
+			"name": "launchpad/appfinder/HierarchyFolders.view.js",
+			"module": "sap/ushell/components/flp/launchpad/appfinder/HierarchyFolders.view.js"
+		},
+		{
+			"name": "launchpad/dashboard/DashboardContent-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardContent.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardUIActions.js",
+				"sap/ushell/ui/launchpad/TileContainer.js",
+				"sap/ushell/utils.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardContent-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardContent.view.js",
+			"isDebug": true,
+			"required": [
+				"sap/ushell/Layout.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardGroupsBox.js",
+				"sap/ushell/override.js",
+				"sap/ushell/resources.js",
+				"sap/ushell/ui/launchpad/AnchorItem.js",
+				"sap/ushell/ui/launchpad/Tile.js",
+				"sap/ushell/ui/launchpad/TileContainer.js",
+				"sap/ushell/ui/shell/RightFloatingContainer.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardContent.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardContent.controller.js",
+			"required": [
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardUIActions.js",
+				"sap/ushell/ui/launchpad/TileContainer.js",
+				"sap/ushell/utils.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardContent.view.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardContent.view.js",
+			"required": [
+				"sap/ushell/Layout.js",
+				"sap/ushell/components/flp/launchpad/dashboard/DashboardGroupsBox.js",
+				"sap/ushell/override.js",
+				"sap/ushell/resources.js",
+				"sap/ushell/ui/launchpad/AnchorItem.js",
+				"sap/ushell/ui/launchpad/Tile.js",
+				"sap/ushell/ui/launchpad/TileContainer.js",
+				"sap/ushell/ui/shell/RightFloatingContainer.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardGroupsBox-dbg.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardGroupsBox.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js",
+				"sap/ushell/ui/launchpad/DashboardGroupsContainer.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardGroupsBox.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardGroupsBox.js",
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ushell/ui/launchpad/AccessibilityCustomData.js",
+				"sap/ushell/ui/launchpad/DashboardGroupsContainer.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardUIActions-dbg.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardUIActions.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "launchpad/dashboard/DashboardUIActions.js",
+			"module": "sap/ushell/components/flp/launchpad/dashboard/DashboardUIActions.js",
+			"required": [
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "launchpad/group_list/GroupList-dbg.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/group_list/GroupList.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "launchpad/group_list/GroupList-dbg.view.js",
+			"module": "sap/ushell/components/flp/launchpad/group_list/GroupList.view.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/override.js",
+				"sap/ushell/ui/launchpad/GroupListItem.js"
+			]
+		},
+		{
+			"name": "launchpad/group_list/GroupList.controller.js",
+			"module": "sap/ushell/components/flp/launchpad/group_list/GroupList.controller.js"
+		},
+		{
+			"name": "launchpad/group_list/GroupList.view.js",
+			"module": "sap/ushell/components/flp/launchpad/group_list/GroupList.view.js",
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ushell/override.js",
+				"sap/ushell/ui/launchpad/GroupListItem.js"
+			]
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "settings/FlpSettings-dbg.controller.js",
+			"module": "sap/ushell/components/flp/settings/FlpSettings.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "settings/FlpSettings.controller.js",
+			"module": "sap/ushell/components/flp/settings/FlpSettings.controller.js",
+			"required": [
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "settings/FlpSettings.view.xml",
+			"module": "sap/ushell/components/flp/settings/FlpSettings.view.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/Label.js",
+				"sap/m/RadioButton.js",
+				"sap/m/RadioButtonGroup.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ushell/components/flp/settings/FlpSettings.controller.js"
+			]
+		}
+	]
+}

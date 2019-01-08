@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:f="sap.ui.layout.form"
+						 xmlns:mdc="sap.ui.mdc.experimental"
+						 xmlns:core="sap.ui.core">
+	<template:alias name=".MODEL" value="sap.ui.model.odata.v4.AnnotationHelper">
+		<f:Form editable="false">
+			<f:layout>
+				<f:ResponsiveGridLayout
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="12"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="0"
+						emptySpanL="0"
+						emptySpanM="0"
+						emptySpanS="0"
+						columnsXL="2"
+						columnsL="2"
+						columnsM="1"
+						singleContainerFullSize="false"/>
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer title="{this>formTitle}">
+					<f:formElements>
+						<template:with path="dataFieldCollection>" var="formElements">
+							<template:repeat list="{formElements>}" var="dataField">
+								<template:if
+										test="{= ${dataField>$Type} !== 'com.sap.vocabularies.UI.v1.DataFieldForAction'}">
+									<template:then>
+										<f:FormElement label="{dataField>@@.MODEL.label}">
+											<f:fields>
+												<HBox>
+													<mdc:Field value="{dataField>Value/@@.MODEL.value}"
+															   editMode="Display"/>
+												</HBox>
+											</f:fields>
+										</f:FormElement>
+									</template:then>
+								</template:if>
+							</template:repeat>
+						</template:with>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</template:alias>
+</core:FragmentDefinition>

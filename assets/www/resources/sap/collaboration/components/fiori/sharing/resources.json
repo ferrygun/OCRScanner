@@ -1,0 +1,96 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "FolderSelection-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "FolderSelection-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "FolderSelection.controller.js"
+		},
+		{
+			"name": "FolderSelection.view.js"
+		},
+		{
+			"name": "NoGroups-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "NoGroups-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "NoGroups.controller.js"
+		},
+		{
+			"name": "NoGroups.view.js"
+		},
+		{
+			"name": "Sharing-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "Sharing-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "Sharing.controller.js"
+		},
+		{
+			"name": "Sharing.view.js"
+		},
+		{
+			"name": "attachment/Attachment-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "attachment/Attachment.js"
+		},
+		{
+			"name": "attachment/InvalidAttachmentConstructorArgumentsException-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "attachment/InvalidAttachmentConstructorArgumentsException.js"
+		},
+		{
+			"name": "attachment/InvalidAttachmentParameterException-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "attachment/InvalidAttachmentParameterException.js"
+		},
+		{
+			"name": "dialog/Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "dialog/Component.js"
+		},
+		{
+			"name": "helper/AttachmentsUtil-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "helper/AttachmentsUtil.js"
+		},
+		{
+			"name": "helper/ShareUtil-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "helper/ShareUtil.js"
+		}
+	]
+}

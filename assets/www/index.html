@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>GPS</title>
+
+		<!--<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core-dbg.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"GPS.GPS": "./"}'>
+		</script>
+-->
+<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core-dbg.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"GPS.GPS":"./"}'>
+		</script>
+
+<script src="hybrid/sap-mobile-hybrid.js" id="sap-mobile-hybrid" type="text/javascript"></script>
+<script src="cordova.js" onload="sap.hybrid.setCordova();" type="text/javascript"></script>
+<script>
+sap.hybrid.startApp = function() {
+	var oScript = document.createElement("script");
+	oScript.text = "\
+			sap.ui.getCore().attachInit(function() {\
+				new sap.m.Shell({\
+					app: new sap.ui.core.ComponentContainer({\
+						height : \"100%\",\
+						name : \"GPS.GPS\"\
+					})\
+				}).placeAt(\"content\");\
+			});\
+			";
+	document.head.appendChild(oScript);
+
+}
+</script>
+<script>sap.hybrid.bootStrap();</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!--<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "GPS.GPS"
+					})
+				}).placeAt("content");
+			});
+		</script>
+-->
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

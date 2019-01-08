@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<Dialog class="sapUiContentPadding" id="messageDialog" state="{settings>/state}" type="Message" initialFocus="Close" title="{settings>/title}"
+		 showHeader="true" horizontalScrolling="false" draggable="true" ariaLabelledBy="listTitle">
+		<content>
+			<Text text="{settings>/genericListText}" id="listTitle" />
+			<List id="messageList">
+			</List>
+		</content>
+		<buttons>
+			<Button text="{settings>/closeButtonText}" id="Close" press="onMessageDialogClose"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

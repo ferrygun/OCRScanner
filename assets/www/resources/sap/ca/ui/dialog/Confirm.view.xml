@@ -1,0 +1,80 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+			controllerName="sap.ca.ui.dialog.Confirm" xmlns:html="http://www.w3.org/1999/xhtml"
+			resourceBundleName="sap.ca.ui.i18n.i18n" resourceBundleAlias="ca_i18n">
+
+	<Dialog id="DLG_CONFIRM" title="{/title}" height="100%">
+		<content>
+			<layout:VerticalLayout width="100%">
+				<Text id="LBL_QUT" text="{/question}"/>
+				<Text id="TXT_EMPTYLINE" text="" />
+				<layout:VerticalLayout id="VLT_ADDINFO" width="100%" class="confirmVerticalLayout">
+	                 <layout:Grid hSpacing="0" vSpacing="0">
+                        <layout:content>
+                            <Label id="LBL_INFO1" text="{/additionalInformation/0/label}">
+                                <layoutData>
+                                    <layout:GridData span="L3 M3 S12" indent="L2 M2" />
+                                </layoutData>
+                            </Label>
+                            <Text id="TXT_INFO1" text="{/additionalInformation/0/text}">
+                                <layoutData>
+                                    <layout:GridData span="L7 M7 S12"/>
+                                </layoutData>
+                            </Text>
+                            <Label id="LBL_INFO2" text="{/additionalInformation/1/label}">
+                                <layoutData>
+                                    <layout:GridData span="L3 M3 S12"  indent="L2 M2"
+                                                     linebreakL="true"
+                                                     linebreakM="true"
+                                                     linebreakS="true"/>
+                                </layoutData>
+                            </Label>
+                            <Text id="TXT_INFO2" text="{/additionalInformation/1/text}">
+                                <layoutData>
+                                    <layout:GridData span="L7 M7 S12"/>
+                                </layoutData>
+                            </Text>
+                            <Label id="LBL_INFO3" text="{/additionalInformation/2/label}">
+                                <layoutData>
+                                    <layout:GridData span="L3 M3 S12"  indent="L2 M2"
+                                                     linebreakL="true"
+                                                     linebreakM="true"
+                                                     linebreakS="true" />
+                                </layoutData>
+                            </Label>
+                            <Text id="TXT_INFO3" text="{/additionalInformation/2/text}">
+                                <layoutData>
+                                    <layout:GridData span="L7 M7 S12"/>
+                                </layoutData>
+                            </Text>
+                            <Label id="LBL_INFO4" text="{/additionalInformation/3/label}">
+                                <layoutData>
+                                    <layout:GridData span="L3 M3 S12"   indent="L2 M2"
+                                                     linebreakL="true"
+                                                     linebreakM="true"
+                                                     linebreakS="true"/>
+                                </layoutData>
+                            </Label>
+                            <Text id="TXT_INFO4" text="{/additionalInformation/3/text}">
+                                <layoutData>
+                                    <layout:GridData span="L7 M7 S12"/>
+                                </layoutData>
+                            </Text>
+                        </layout:content>
+                    </layout:Grid>
+				</layout:VerticalLayout>
+				<TextArea id="TXA_NOTE" value="" placeholder="{ca_i18n>YMSG_TEXT_NOTE}" width="100%" liveChange="onNoteInput"></TextArea>
+			</layout:VerticalLayout>
+		</content>
+		<beginButton>
+			<Button id="BTN_CONFIRM" press="onConfirmDialog" type="Transparent" text="{/confirmButtonLabel}"/>
+		</beginButton>
+		<endButton>
+			<Button id="BTN_CANCEL" press="onCancelDialog" text="{ca_i18n>dialog.cancel}"/>
+		</endButton>
+	</Dialog>
+</core:View>

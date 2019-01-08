@@ -1,0 +1,50 @@
+{
+  "_version": "1.2.0",
+  "sap.app": {
+    "_version": "1.2.0",
+    "id": "sap.gantt",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.52.4"
+    },
+    "title": "UI5 library: sap.gantt",
+    "description": "UI5 library: sap.gantt",
+    "ach": "CA-UI5-CTR-GNT",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_belize",
+      "sap_belize_hcb",
+      "sap_belize_hcw",
+      "sap_belize_plus",
+      "sap_bluecrystal",
+      "sap_hcb"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.52",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.52.0"
+        },
+        "sap.ui.layout": {
+          "minVersion": "1.52.0"
+        },
+        "sap.ui.table": {
+          "minVersion": "1.52.0"
+        },
+        "sap.m": {
+          "minVersion": "1.52.0"
+        }
+      }
+    }
+  }
+}

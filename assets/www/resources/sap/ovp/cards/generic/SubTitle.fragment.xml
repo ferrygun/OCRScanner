@@ -1,0 +1,93 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:build="sap.build"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+    <template:if test="{= ${ovpCardProperties>/state} !== 'Loading'}">
+        <template:if test="{ovpCardProperties>/dynamicSubtitleAnnotationPath}">
+            <template:then>
+                <template:with path='ovpCardProperties>/dynamicSubtitleAnnotationPath'
+                               helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath"
+                               var='headerInfo'>
+                    <template:if test="{headerInfo>Description}">
+                        <HBox>
+                            <FlexBox items="{parts:[{path:'entitySet>'}, {path:'headerInfo>'}], formatter: 'sap.ovp.cards.AnnotationHelper.getAggregateNumber'}"
+                                     class="sapOvpCardSubtitleContainer ovpHeaderContainer">
+                                <Text
+                                        id = "ovpDescriptionValue" maxLines="2"
+                                        text="{path: 'headerInfo>Description/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                        class="sapOvpCardSubtitle tabindex-1"
+                                        build:metadata="#pattern:GenericCard;prop:text:subTitle">
+                                    <customData>
+                                        <ovp:CustomData key="aria-label"
+                                                        value="{path: 'headerInfo>Description/Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                        writeToDom="true"/>
+                                        <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+                                        <ovp:CustomData key="aria-level" value="4" writeToDom="true"/>
+                                    </customData>
+                                </Text>
+                            </FlexBox>
+                        </HBox>
+                    </template:if>
+                </template:with>
+            </template:then>
+            <template:else>
+                <template:if test="{ovpCardProperties>/subTitle}">
+                    <template:then>
+                        <FlexBox class="sapOvpCardSubtitleContainer ovpHeaderContainer">
+                            <Text
+                          id = "SubTitle-Text" maxLines="2"
+                                    text="{ovpCardProperties>/subTitle}"
+                                    class="sapOvpCardSubtitle tabindex-1 {= ${ovpCardProperties>/subTitle} === '' ? 'sapOvpCardEmptySubtitle' : ''}"
+                                    build:metadata="#pattern:GenericCard;prop:text:subTitle">
+                                <customData>
+                                    <ovp:CustomData key="aria-label" value="{ovpCardProperties>/subTitle}"
+                                                    writeToDom="true"/>
+                                    <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+                                    <ovp:CustomData key="aria-level" value="4" writeToDom="true"/>
+                                </customData>
+                            </Text>
+                        </FlexBox>
+                    </template:then>
+                    <template:else>
+                        <template:if test="{ovpCardProperties>/dataPointAnnotationPath}">
+                            <template:then>
+                                <template:with path='ovpCardProperties>/dataPointAnnotationPath'
+                                               helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath"
+                                               var='dataPoint'>
+                                    <template:if test="{dataPoint>Description}">
+                                        <HBox>
+                                            <FlexBox
+                                                    items="{parts:[{path:'entitySet>'}, {path:'dataPoint>'}], formatter: 'sap.ovp.cards.AnnotationHelper.getAggregateNumber'}"
+                                                    class="sapOvpCardSubtitleContainer ovpHeaderContainer">
+                                                <Text
+                                                    id = "ovpDescriptionValue" maxLines="2"
+                                                        text="{path: 'dataPoint>Description', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                        class="sapOvpCardSubtitle tabindex-1"
+                                                        build:metadata="#pattern:GenericCard;prop:text:subTitle">
+                                                    <customData>
+                                                        <ovp:CustomData key="aria-label"
+                                                                        value="{path: 'dataPoint>Description', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                                        writeToDom="true"/>
+                                                        <ovp:CustomData key="role" value="heading" writeToDom="true"/>
+                                                        <ovp:CustomData key="aria-level" value="4" writeToDom="true"/>
+                                                    </customData>
+                                                </Text>
+                                            </FlexBox>
+                                        </HBox>
+                                    </template:if>
+                                </template:with>
+                            </template:then>
+                            <template:else>
+                                <FlexBox class="sapOvpCardSubtitleContainer ovpHeaderContainer sapOvpCardEmptySubtitle"></FlexBox>
+                            </template:else>
+                        </template:if>
+                    </template:else>
+                </template:if>
+            </template:else>
+        </template:if>
+    </template:if>
+
+</core:FragmentDefinition>

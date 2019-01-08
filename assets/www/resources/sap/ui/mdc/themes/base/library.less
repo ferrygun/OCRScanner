@@ -1,0 +1,98 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+@import "../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../sap/ui/core/themes/base/global.less";
+/* START "BaseField.less" */
+.sapUiMdcBaseField {
+	display: inline-block;
+}
+
+.sapUiSizeCompact .sapUiMdcBaseFieldIcon>.sapMInputBaseInner {
+	padding-left: 1.525rem;
+}
+
+// .sapUiMdcBaseFieldFH .sapUiMdcFHButton::before, .sapUiMdcBaseFieldIcon::before {
+// 	width: 1.54rem;
+// 	height: 1.54rem;
+// 	font-family: 'SAP-icons';
+// 	position: absolute;
+// 	text-align: center;
+// 	padding-top: 0.25rem;
+// 	overflow: hidden;
+// 	box-sizing: border-box;
+// }
+
+// .sapUiMdcBaseFieldFH.sapUiMdcBaseField:not(.sapMInputBaseReadonly) .sapUiMdcFHButton:hover::before {
+// 	background-color: @sapUiButtonLiteHoverBackground;
+// }
+
+// .sapUiMdcBaseFieldFH.sapUiMdcBaseField:not(.sapMInputBaseReadonly) .sapUiMdcFHButton:active::before {
+// 	background-color: @sapUiButtonLiteActiveBackground;
+// 	color: @sapUiButtonActiveTextColor;
+// 	outline: 1px dotted @sapUiContentContrastFocusColor;
+// }
+
+// .sapUiMdcFHButton {
+// 	cursor: pointer;
+// 	display: none;
+// 	color: @sapUiContentIconColor;
+// }
+// .sapUiMdcBaseFieldFH .sapUiMdcFHButton {
+// 	display:inline-block;
+// 	position:absolute;
+// }
+
+// .sapUiMdcFHButton::before {
+// 	content: attr(data-sap-ui-fieldhelp) "";
+// 	right: 0;
+// }
+
+.sapUiMdcBaseFieldIcon::before {
+	content: attr(data-sap-ui-icon) "";
+	cursor: default;
+}
+
+.sapUiMdcBaseField .sapMInputBaseReadonlyInner  {
+	border: transparent;
+	background-color: transparent;
+}
+
+/* END "BaseField.less" */
+
+/* START "BaseFilterField.less" */
+.sapUiMdcBaseFilterField > .sapMMultiInput > .sapMInputDivWrapper,
+.sapUiSizeCompact .sapUiMdcBaseFilterField > .sapMMultiInput > .sapMInputDivWrapper,
+.sapUiMdcBaseFilterField  > .sapMMultiInput.sapMInputBase,
+.sapUiSizeCompact .sapUiMdcBaseFilterField  > .sapMMultiInput.sapMInputBase {
+    height: auto;
+}
+
+/* END "BaseFilterField.less" */
+
+///* START "FilterToken.less" */
+html.sap-desktop .sapMToken.sapMTokenSelected.sapMTokenEditing {
+	color: @sapUiFieldTextColor;
+	background-color: @sapUiFieldBackground;
+}
+
+.sapMFilterToken > div.sapMFilterTokenText {
+	min-width: 2rem;
+	outline: none;
+	display: inline-block;
+}
+
+.sapMFilterToken.sapMTokenEditing > div.sapMFilterTokenText {
+	min-width: 4rem;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	pointer-events: auto;
+}
+
+/* END "FilterToken.less" */
+

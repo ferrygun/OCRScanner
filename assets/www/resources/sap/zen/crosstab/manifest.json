@@ -1,0 +1,41 @@
+{
+  "_version": "1.2.0",
+  "sap.app": {
+    "_version": "1.2.0",
+    "id": "sap.zen.crosstab",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.52.4"
+    },
+    "title": "Design Studio Crosstab library.",
+    "description": "Design Studio Crosstab library.  NOT INTENDED FOR STANDALONE USAGE.",
+    "ach": "BI-RA-AD-EA",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_belize",
+      "sap_belize_hcb",
+      "sap_belize_hcw",
+      "sap_belize_plus",
+      "sap_bluecrystal",
+      "sap_hcb"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.52",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.52.0"
+        }
+      }
+    }
+  }
+}

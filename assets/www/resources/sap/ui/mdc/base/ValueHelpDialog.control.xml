@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog contentWidth="1080px" contentHeight="70%" verticalScrolling="false" resizable="true" draggable="true" class="sapUiNoContentPadding">
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Label text="{$this>/title}"/>
+				</contentMiddle>
+				<contentRight>
+					<Button press=".onReset" text="{$i18n>valuehelp.RESET}" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+		</content>
+		<beginButton >
+			<Button press=".onOk" text="{$i18n>valuehelp.OK}" />
+		</beginButton>
+		<endButton >
+			<Button press=".onCancel" text="{$i18n>valuehelp.CANCEL}" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

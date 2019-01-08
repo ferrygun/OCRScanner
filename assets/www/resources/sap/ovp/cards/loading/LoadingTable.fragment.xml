@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:build="sap.build" xmlns:ovp="sap.ovp.ui"
+	xmlns:sfi="sap.ui.comp.smartfield"
+	xmlns:template="http://schemas.sap.com/sapui3.5/extension/sap.ui.core.template/1"
+	controllerName="sap.m.sample.Table.Table" xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<VBox>
+		<HBox class="sapOvpLoadingTableVBox" height="3.575rem"
+			justifyContent="SpaceBetween">
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpTableRight" height="1rem" width="30%"></FlexBox>
+		</HBox>
+		<HBox class="sapOvpLoadingTableVBox" height="3.575rem"
+			justifyContent="SpaceBetween">
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpTableRight" height="1rem" width="30%"></FlexBox>
+		</HBox>
+		<HBox class="sapOvpLoadingTableVBox" height="3.575rem"
+			justifyContent="SpaceBetween">
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpTableRight" height="1rem" width="30%"></FlexBox>
+		</HBox>
+		<HBox class="sapOvpLoadingTableVBox" height="3.575rem"
+			justifyContent="SpaceBetween">
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpTableRight" height="1rem" width="30%"></FlexBox>
+		</HBox>
+		<HBox class="sapOvpLoadingTableVBox" height="3.575rem"
+			justifyContent="SpaceBetween">
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpLoadingFlex" height="1rem" width="30%"></FlexBox>
+			<FlexBox class="sapOvpTableRight" height="1rem" width="30%"></FlexBox>
+		</HBox>
+	</VBox>
+
+</core:FragmentDefinition> 

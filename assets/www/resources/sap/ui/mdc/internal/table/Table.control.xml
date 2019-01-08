@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<template:if test="{= ${entitySet>} &amp;&amp; (${entitySet>$kind} === 'EntitySet' || ${entitySet>$isCollection})}">
+		<template:then>
+			<template:alias name=".MODEL" value="sap.ui.model.odata.v4.AnnotationHelper">
+				<template:alias name=".TABLE" value="sap.ui.mdc.Table._helper">
+					<template:with path="entitySet>./@com.sap.vocabularies.UI.v1.LineItem" var="lineItem">
+						<!-- currently UI.LineItem without qualifier is used, in future we should use a give annotation or determine a valid working context  -->
+						<template:if test="{= ${this>type} === 'GridTable' }">
+							<template:then>
+								<core:Fragment fragmentName="sap.ui.mdc.internal.table.gridtable.GridTable" type="XML"/>
+							</template:then>
+							<template:else>
+								<core:Fragment fragmentName="sap.ui.mdc.internal.table.responsivetable.ResponsiveTable"
+											   type="XML"/>
+							</template:else>
+						</template:if>
+					</template:with>
+				</template:alias>
+			</template:alias>
+		</template:then>
+		<template:else>
+			<template:if test="{_$error>}">
+				<template:then>
+					<MessageStrip text="{= 'Error when rendering ' + ${this>id} + ':' + ${_$error>/entitySet/message} }" type="Error" showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom"></MessageStrip>
+				</template:then>
+				<template:else>
+					<MessageStrip text="{= 'Error when rendering ' + ${this>id} + ':' +
+						( !${entitySet>$kind} ? 'Unknown context specified in ' + ${this>metadataContexts} : 'Unknown error' )
+					} " type="Error" showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom"></MessageStrip>
+				</template:else>
+			</template:if>
+
+		</template:else>
+	</template:if>
+</core:FragmentDefinition>

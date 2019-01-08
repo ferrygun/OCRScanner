@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+						 xmlns="sap.m"
+						 xmlns:core="sap.ui.core">
+
+
+		<!-- the content of the field control is located in a fragment to allow controls like the table or form
+		     to use the fragment directly instead of creating an instance of an XML composite control
+		      TODO: define the API, write it on top in a JSDOC like way
+		      -->
+		<core:Fragment fragmentName="sap.ui.mdc.internal.field.Field" type="XML"/>
+
+
+</core:FragmentDefinition>

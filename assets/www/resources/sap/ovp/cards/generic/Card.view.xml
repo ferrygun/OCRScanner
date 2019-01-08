@@ -1,0 +1,36 @@
+<mvc:View
+        controllerName="sap.ovp.cards.generic.Card"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+
+    <VBox class="sapOvpCardOverlaySideContainer sapOvpCardRightOverlayCursor"></VBox> <!--Div to enable cursor ew-resize in Right Corner of the card-->
+
+
+    <template:if test="{= ${ovpCardProperties>/contentPosition} === 'Right'}" >
+
+        <template:then>
+            <core:Fragment fragmentName="sap.ovp.cards.generic.ContentRight" type="XML"/>
+        </template:then>
+
+        <template:else>
+            <core:Fragment fragmentName="sap.ovp.cards.generic.ContentMiddle" type="XML"/>
+        </template:else>
+
+    </template:if>
+    
+	<template:if test="{device>/support/touch}">
+        <template:then>
+            <core:HTML content="&lt;div&gt;&lt;/div&gt;">
+        	</core:HTML>
+        </template:then>
+
+        <template:else>
+            <core:HTML content="&lt;div;&gt;&lt;/div&gt;">
+        	</core:HTML>
+        </template:else>
+    </template:if>
+    <HBox class="sapOvpCardOverlayContainer sapOvpCardBottomOverlayCursor"></HBox> <!--Div to enable cursor ns-resize in Bottom of the card-->
+
+</mvc:View>

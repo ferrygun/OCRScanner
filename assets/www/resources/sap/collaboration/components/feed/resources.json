@@ -1,0 +1,66 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "BOMode-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "BOMode.js"
+		},
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "Component.json"
+		},
+		{
+			"name": "GroupIDsMode-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "GroupIDsMode.js"
+		},
+		{
+			"name": "Mode-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Mode.js"
+		},
+		{
+			"name": "ModeFactory-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "ModeFactory.js"
+		},
+		{
+			"name": "UserMode-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "UserMode.js"
+		},
+		{
+			"name": "fragments/CustomListItem.fragment.xml"
+		},
+		{
+			"name": "fragments/GroupSelector.fragment.xml"
+		},
+		{
+			"name": "views/GroupFeed-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "views/GroupFeed.controller.js"
+		},
+		{
+			"name": "views/GroupFeed.view.xml"
+		}
+	]
+}

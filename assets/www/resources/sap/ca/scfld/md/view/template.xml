@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<scfld:template id="sap.ca.scfld.md" xmlns:scfld="http://xml.sap.com/2013/08/sap/ca/scaffolding">
+    <name>Master/Detail application</name>
+</scfld:template>

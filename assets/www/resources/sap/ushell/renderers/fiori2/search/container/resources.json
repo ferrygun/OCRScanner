@@ -1,0 +1,68 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "App-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "App-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "App.controller.js"
+		},
+		{
+			"name": "App.view.js"
+		},
+		{
+			"name": "Component-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component-preload-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "Component-preload.js",
+			"merged": true
+		},
+		{
+			"name": "Component.html"
+		},
+		{
+			"name": "Component.js"
+		},
+		{
+			"name": "ComponentControl-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "ComponentControl.js"
+		},
+		{
+			"name": "ComponentService-dbg.js",
+			"isDebug": true
+		},
+		{
+			"name": "ComponentService.js"
+		},
+		{
+			"name": "Search-dbg.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "Search-dbg.view.js",
+			"isDebug": true
+		},
+		{
+			"name": "Search.controller.js"
+		},
+		{
+			"name": "Search.view.js"
+		},
+		{
+			"name": "index.html"
+		}
+	]
+}

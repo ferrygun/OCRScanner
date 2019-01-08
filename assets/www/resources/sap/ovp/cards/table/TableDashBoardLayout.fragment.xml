@@ -1,0 +1,393 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:build="sap.build"
+        xmlns:ovp="sap.ovp.ui"
+        xmlns:sfi="sap.ui.comp.smartfield"
+        xmlns:navpopover="sap.ui.comp.navpopover"
+        xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+    <template:with path='ovpCardProperties>/annotationPath'
+                   helper="sap.ovp.cards.AnnotationHelper.resolveEntityTypePath" var='eachItem'>
+
+        <template:with  path="eachItem>" helper="sap.ovp.cards.AnnotationHelper.removeDuplicateDataField" var="lineItem">
+
+        <columns>
+
+            <!--If condition for Importance High-->
+            <template:repeat list="{path:'lineItem>'}" var="dataField">
+                <template:if
+                        test="{= ${dataField>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/High'}">
+                    <template:then>
+                        <template:if test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                            <template:then>
+                                <Column styleClass="sapTableColumnHide" visible="false">
+                                    <Text text="{path: 'dataField>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:then>
+                            <template:elseif
+                                    test="{= ${dataField>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                <Column styleClass="sapTableColumnHide" visible="false" hAlign="{= ${path: 'dataField>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'Center' : ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'Left' : 'Right'}">
+                                    <Text class="displayBlock {= ${path: 'dataField>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : ${dataField>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'textAlignLeft' : 'textAlignRight'}"
+                                          text="{path: 'dataField>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:elseif>
+                        </template:if>
+                    </template:then>
+                </template:if>
+            </template:repeat>
+            <!--End of If condition for Importance High-->
+
+            <!--If condition for Importance Medium-->
+            <template:repeat list="{path:'lineItem>'}" var="dataField1">
+                <template:if
+                        test="{= ${dataField1>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/Medium'}">
+                    <template:then>
+                        <template:if test="{= ${dataField1>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                            <template:then>
+                                <Column styleClass="sapTableColumnHide" visible="false">
+                                    <Text text="{path: 'dataField1>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:then>
+                            <template:elseif
+                                    test="{= ${dataField1>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                <Column styleClass="sapTableColumnHide" visible="false" hAlign="{= ${path: 'dataField1>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'Center' : ${dataField1>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'Left' : 'Right'}">
+                                    <Text class="displayBlock {= ${path: 'dataField1>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : ${dataField1>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'textAlignLeft' : 'textAlignRight'}"
+                                          text="{path: 'dataField1>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:elseif>
+                        </template:if>
+                    </template:then>
+                </template:if>
+            </template:repeat>
+            <!--End of If condition for Importance Medium-->
+
+            <!--If condition for Importance Low-->
+            <template:repeat list="{path:'lineItem>'}" var="dataField2">
+                <template:if
+                        test="{= ${dataField2>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/Low'}">
+                    <template:then>
+                        <template:if test="{= ${dataField2>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                            <template:then>
+                                <Column styleClass="sapTableColumnHide" visible="false">
+                                    <Text text="{path: 'dataField2>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:then>
+                            <template:elseif
+                                    test="{= ${dataField2>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                <Column styleClass="sapTableColumnHide" visible="false" hAlign="{= ${path: 'dataField2>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'Center' : ${dataField2>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'Left' : 'Right'}">
+                                    <Text class="displayBlock {= ${path: 'dataField2>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : ${dataField2>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'textAlignLeft' : 'textAlignRight'}"
+                                          text="{path: 'dataField2>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:elseif>
+                        </template:if>
+                    </template:then>
+                </template:if>
+            </template:repeat>
+            <!--End of If condition for Importance Low-->
+
+            <!--Else Part-->
+            <template:repeat list="{path:'lineItem>'}" var="dataField3">
+                <template:if test="{=  !${dataField3>com.sap.vocabularies.UI.v1.Importance/EnumMember}}">
+                    <template:then>
+                        <template:if test="{= ${dataField3>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                            <template:then>
+                                <Column styleClass="sapTableColumnHide" visible="false">
+                                    <Text text="{path: 'dataField3>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:then>
+                            <template:elseif
+                                    test="{= ${dataField3>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                <Column styleClass="sapTableColumnHide" visible="false" hAlign="{= ${path: 'dataField3>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'Center' : ${dataField3>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'Left' : 'Right'}">
+                                    <Text class="displayBlock {= ${path: 'dataField3>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : ${dataField3>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0 ? 'textAlignLeft' : 'textAlignRight'}"
+                                          text="{path: 'dataField3>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+                                </Column>
+                            </template:elseif>
+                        </template:if>
+                    </template:then>
+                </template:if>
+
+            </template:repeat>
+            <!--End of Else Part-->
+        </columns>
+
+        <items>
+            <ColumnListItem
+                    id = "tableItem"
+                    type="Active"
+                    press="onColumnListItemPress">
+                <cells>
+
+                    <template:repeat list="{path:'lineItem>'}" var="dataField4">
+                        <template:if
+                                test="{= ${dataField4>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/High'}">
+                            <template:then>
+                                <template:if
+                                        test="{= ${dataField4>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                                    <template:then>
+                                        <template:if
+                                                test="{parts:[{path:'entitySet>'}, {path:'dataField4>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                            <template:then>
+                                                <navpopover:SmartLink
+                                                        class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow ovpTableSmartLink' : 'sapTableDataRowIE ovpTableSmartLink' }"
+                                                        text="{path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"
+                                                        semanticObject="{parts:[{path:'entitySet>'}, {path:'dataField4>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                                </navpopover:SmartLink>
+                                            </template:then>
+                                            <template:else>
+                                                <Text class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                      text="{path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:then>
+                                    <template:elseif
+                                            test="{= ${dataField4>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                        <template:if test="{= ${dataField4>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+                                            <template:then>
+                                                <template:with path="dataField4>Target" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="contact">
+                                                    <VBox>
+                                                        <core:Fragment fragmentName="sap.ovp.cards.table.ContactDetails"
+                                                                       type="XML"/>
+                                                        <Link binding="{= ${ path: 'dataField4>Target/AnnotationPath'}.indexOf('/') > -1 ? '{' + ${path: 'dataField4>Target/AnnotationPath'}.slice(0, ${ path: 'dataField4>Target/AnnotationPath'}.indexOf('/')) + '}' : null}"
+                                                              class="textAlignLeft {= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                              text="{path: 'contact>fn', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                              press="onContactDetailsLinkPress">
+                                                        </Link>
+                                                    </VBox>
+                                                </template:with>
+                                            </template:then>
+                                            <template:elseif test="{= ${path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGeneric'} === true  &amp;&amp; ${ovpCardProperties>/enableLocaleCurrencyFormatting} === false}">
+                                                <sfi:SmartField class="{= ${path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                                editable="false" uomEditable="false" enabled="true"
+                                                                clientSideMandatoryCheck="false"
+                                                                value="{path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}">
+                                                    <sfi:controlProposal>
+                                                        <sfi:ControlProposal>
+                                                            <sfi:objectStatus>
+                                                                <sfi:ObjectStatus
+                                                                        criticality="{path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateForSmartFieldGeneric'}"
+                                                                        criticalityRepresentationType="WithoutIcon"/>
+                                                            </sfi:objectStatus>
+                                                        </sfi:ControlProposal>
+                                                    </sfi:controlProposal>
+                                                </sfi:SmartField>
+                                            </template:elseif>
+                                            <template:else>
+                                                <ObjectNumber
+                                                        class="{= ${path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                        number="{path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}"
+                                                        state="{path: 'dataField4>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:elseif>
+                                </template:if>
+                            </template:then>
+                        </template:if>
+                    </template:repeat>
+
+
+                    <template:repeat list="{path:'lineItem>'}" var="dataField5">
+                        <template:if
+                                test="{= ${dataField5>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/Medium'}">
+                            <template:then>
+                                <template:if
+                                        test="{= ${dataField5>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                                    <template:then>
+                                        <template:if
+                                                test="{parts:[{path:'entitySet>'}, {path:'dataField5>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                            <template:then>
+                                                <navpopover:SmartLink
+                                                        class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow ovpTableSmartLink' : 'sapTableDataRowIE ovpTableSmartLink' }"
+                                                        text="{path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"
+                                                        semanticObject="{parts:[{path:'entitySet>'}, {path:'dataField5>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                                </navpopover:SmartLink>
+                                            </template:then>
+                                            <template:else>
+                                                <Text class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                      text="{path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:then>
+                                    <template:elseif
+                                            test="{= ${dataField5>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                        <template:if test="{= ${dataField5>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+                                            <template:then>
+                                                <template:with path="dataField5>Target" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="contact">
+                                                    <VBox>
+                                                        <core:Fragment fragmentName="sap.ovp.cards.table.ContactDetails"
+                                                                       type="XML"/>
+                                                        <Link binding="{= ${ path: 'dataField5>Target/AnnotationPath'}.indexOf('/') > -1 ? '{' + ${path: 'dataField5>Target/AnnotationPath'}.slice(0, ${ path: 'dataField5>Target/AnnotationPath'}.indexOf('/')) + '}' : null}"
+                                                              class="textAlignLeft {= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                              text="{path: 'contact>fn', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                              press="onContactDetailsLinkPress">
+                                                        </Link>
+                                                    </VBox>
+                                                </template:with>
+                                            </template:then>
+                                            <template:elseif test="{= ${path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGeneric'} === true  &amp;&amp; ${ovpCardProperties>/enableLocaleCurrencyFormatting} === false}">
+                                                <sfi:SmartField class="{= ${path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                                editable="false" uomEditable="false" enabled="true"
+                                                                clientSideMandatoryCheck="false"
+                                                                value="{path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}">
+                                                    <sfi:controlProposal>
+                                                        <sfi:ControlProposal>
+                                                            <sfi:objectStatus>
+                                                                <sfi:ObjectStatus
+                                                                        criticality="{path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateForSmartFieldGeneric'}"
+                                                                        criticalityRepresentationType="WithoutIcon"/>
+                                                            </sfi:objectStatus>
+                                                        </sfi:ControlProposal>
+                                                    </sfi:controlProposal>
+                                                </sfi:SmartField>
+                                            </template:elseif>
+                                            <template:else>
+                                                <ObjectNumber
+                                                        class="{= ${path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                        number="{path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}"
+                                                        state="{path: 'dataField5>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:elseif>
+                                </template:if>
+                            </template:then>
+                        </template:if>
+                    </template:repeat>
+
+                    <template:repeat list="{path:'lineItem>'}" var="dataField6">
+                        <template:if
+                                test="{= ${dataField6>com.sap.vocabularies.UI.v1.Importance/EnumMember} === 'com.sap.vocabularies.UI.v1.ImportanceType/Low'}">
+                            <template:then>
+                                <template:if
+                                        test="{= ${dataField6>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                                    <template:then>
+                                        <template:if
+                                                test="{parts:[{path:'entitySet>'}, {path:'dataField6>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                            <template:then>
+                                                <navpopover:SmartLink
+                                                        class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow ovpTableSmartLink' : 'sapTableDataRowIE ovpTableSmartLink' }"
+                                                        text="{path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"
+                                                        semanticObject="{parts:[{path:'entitySet>'}, {path:'dataField6>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                                </navpopover:SmartLink>
+                                            </template:then>
+                                            <template:else>
+                                                <Text class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                      text="{path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:then>
+                                    <template:elseif
+                                            test="{= ${dataField6>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                        <template:if test="{= ${dataField6>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+                                            <template:then>
+                                                <template:with path="dataField6>Target" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="contact">
+                                                    <VBox>
+                                                        <core:Fragment fragmentName="sap.ovp.cards.table.ContactDetails"
+                                                                       type="XML"/>
+                                                        <Link binding="{= ${ path: 'dataField6>Target/AnnotationPath'}.indexOf('/') > -1 ? '{' + ${path: 'dataField6>Target/AnnotationPath'}.slice(0, ${ path: 'dataField6>Target/AnnotationPath'}.indexOf('/')) + '}' : null}"
+                                                              class="textAlignLeft {= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                              text="{path: 'contact>fn', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                              press="onContactDetailsLinkPress">
+                                                        </Link>
+                                                    </VBox>
+                                                </template:with>
+                                            </template:then>
+                                            <template:elseif test="{= ${path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGeneric'} === true  &amp;&amp; ${ovpCardProperties>/enableLocaleCurrencyFormatting} === false}">
+                                                <sfi:SmartField class="{= ${path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                                editable="false" uomEditable="false" enabled="true"
+                                                                clientSideMandatoryCheck="false"
+                                                                value="{path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}">
+                                                    <sfi:controlProposal>
+                                                        <sfi:ControlProposal>
+                                                            <sfi:objectStatus>
+                                                                <sfi:ObjectStatus
+                                                                        criticality="{path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateForSmartFieldGeneric'}"
+                                                                        criticalityRepresentationType="WithoutIcon"/>
+                                                            </sfi:objectStatus>
+                                                        </sfi:ControlProposal>
+                                                    </sfi:controlProposal>
+                                                </sfi:SmartField>
+                                            </template:elseif>
+                                            <template:else>
+                                                <ObjectNumber
+                                                        class="{= ${path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                        number="{path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}"
+                                                        state="{path: 'dataField6>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:elseif>
+                                </template:if>
+                            </template:then>
+                        </template:if>
+                    </template:repeat>
+
+                    <template:repeat list="{path:'lineItem>'}" var="dataField7">
+                        <template:if test="{=  !${dataField7>com.sap.vocabularies.UI.v1.Importance/EnumMember} }">
+                            <template:then>
+                                <template:if
+                                        test="{= ${dataField7>RecordType} === 'com.sap.vocabularies.UI.v1.DataField'}">
+                                    <template:then>
+                                        <template:if
+                                                test="{parts:[{path:'entitySet>'}, {path:'dataField7>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                            <template:then>
+                                                <navpopover:SmartLink
+                                                        class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow ovpTableSmartLink' : 'sapTableDataRowIE ovpTableSmartLink' }"
+                                                        text="{path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"
+                                                        semanticObject="{parts:[{path:'entitySet>'}, {path:'dataField7>'}], formatter: 'sap.ovp.cards.AnnotationHelper.formatsemanticObjectOfDataFieldGeneric'}">
+                                                </navpopover:SmartLink>
+                                            </template:then>
+                                            <template:else>
+                                                <Text class="{= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                      text="{path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataFieldValueGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:then>
+                                    <template:elseif
+                                            test="{= ${dataField7>RecordType} === 'com.sap.vocabularies.UI.v1.DataFieldForAnnotation'}">
+                                        <template:if test="{= ${dataField7>Target/AnnotationPath}.indexOf('com.sap.vocabularies.Communication.v1.Contact') >= 0}">
+                                            <template:then>
+                                                <template:with path="dataField7>Target" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="contact">
+                                                    <VBox>
+                                                        <core:Fragment fragmentName="sap.ovp.cards.table.ContactDetails"
+                                                                       type="XML"/>
+                                                        <Link binding="{= ${ path: 'dataField7>Target/AnnotationPath'}.indexOf('/') > -1 ? '{' + ${path: 'dataField7>Target/AnnotationPath'}.slice(0, ${ path: 'dataField7>Target/AnnotationPath'}.indexOf('/')) + '}' : null}"
+                                                              class="textAlignLeft {= ${ovpCardProperties>/webkitSupport} ? 'sapTableDataRow' : 'sapTableDataRowIE' }"
+                                                              text="{path: 'contact>fn', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"
+                                                              press="onContactDetailsLinkPress">
+                                                        </Link>
+                                                    </VBox>
+                                                </template:with>
+                                            </template:then>
+                                            <template:elseif test="{= ${path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGeneric'} === true  &amp;&amp; ${ovpCardProperties>/enableLocaleCurrencyFormatting} === false}">
+                                                <sfi:SmartField class="ovpSmartLink {= ${path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                                editable="false" uomEditable="false" enabled="true"
+                                                                clientSideMandatoryCheck="false"
+                                                                value="{path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}">
+                                                    <sfi:controlProposal>
+                                                        <sfi:ControlProposal>
+                                                            <sfi:objectStatus>
+                                                                <sfi:ObjectStatus
+                                                                        criticality="{path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateForSmartFieldGeneric'}"
+                                                                        criticalityRepresentationType="WithoutIcon"/>
+                                                            </sfi:objectStatus>
+                                                        </sfi:ControlProposal>
+                                                    </sfi:controlProposal>
+                                                </sfi:SmartField>
+                                            </template:elseif>
+                                            <template:else>
+                                                <ObjectNumber
+                                                        class="{= ${path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.checkCriticalityGenericForTableStatus'} === true ? 'textAlignCenter' : 'textAlignRight'}"
+                                                        number="{path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointValue'}"
+                                                        state="{path: 'dataField7>', formatter: 'sap.ovp.cards.AnnotationHelper.formatDataPointStateGeneric'}"/>
+                                            </template:else>
+                                        </template:if>
+                                    </template:elseif>
+                                </template:if>
+                            </template:then>
+                        </template:if>
+                    </template:repeat>
+
+                </cells>
+            </ColumnListItem>
+        </items>
+        </template:with>
+    </template:with>
+</core:FragmentDefinition>

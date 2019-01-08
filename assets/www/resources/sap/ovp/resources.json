@@ -1,0 +1,3157 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library"
+		},
+		{
+			"name": ".theming"
+		},
+		{
+			"name": "app/CardContainer.fragment.xml",
+			"module": "sap/ovp/app/CardContainer.fragment.xml",
+			"required": [
+				"sap/ovp/ui/EasyScanLayout.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/ComponentContainer.js"
+			]
+		},
+		{
+			"name": "app/Component-dbg.js",
+			"module": "sap/ovp/app/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/model/odata/AnnotationHelper.js",
+				"sap/ui/rta/RuntimeAuthoring.js"
+			]
+		},
+		{
+			"name": "app/Component.js",
+			"module": "sap/ovp/app/Component.js",
+			"required": [
+				"sap/ui/model/odata/AnnotationHelper.js",
+				"sap/ui/rta/RuntimeAuthoring.js"
+			]
+		},
+		{
+			"name": "app/DashboardCardContainer.fragment.xml",
+			"module": "sap/ovp/app/DashboardCardContainer.fragment.xml",
+			"required": [
+				"sap/ovp/ui/DashboardLayout.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ui/core/ComponentContainer.js"
+			]
+		},
+		{
+			"name": "app/Error.view.xml",
+			"module": "sap/ovp/app/Error.view.xml",
+			"required": [
+				"sap/m/MessagePage.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "app/Main-dbg.controller.js",
+			"module": "sap/ovp/app/Main.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/BusyDialog.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/MessageBox.js",
+				"sap/m/Switch.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/PersonalizationUtils.js",
+				"sap/ovp/cards/generic/Component.js",
+				"sap/ui/comp/smartvariants/PersonalizableInfo.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/comp/state/UIState.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/ui/generic/app/navigation/service/SelectionVariant.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			]
+		},
+		{
+			"name": "app/Main.controller.js",
+			"module": "sap/ovp/app/Main.controller.js",
+			"required": [
+				"sap/m/BusyDialog.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/MessageBox.js",
+				"sap/m/Switch.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/PersonalizationUtils.js",
+				"sap/ovp/cards/generic/Component.js",
+				"sap/ui/comp/smartvariants/PersonalizableInfo.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/comp/state/UIState.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/ui/generic/app/navigation/service/SelectionVariant.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			]
+		},
+		{
+			"name": "app/Main.view.xml",
+			"module": "sap/ovp/app/Main.view.xml",
+			"required": [
+				"sap/f/DynamicPage.js",
+				"sap/m/MessagePage.js",
+				"sap/ovp/app/Main.controller.js",
+				"sap/ovp/ui/OVPWrapper.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"{ui\u003e/cardContainerFragment}.fragment.xml"
+			],
+			"condRequired": [
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/HBox.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ovp/app/SmarFilterBarWithoutVariant.fragment.xml",
+				"sap/ovp/app/SmartFilterBarWithVariant.fragment.xml",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "app/SharePage.fragment.xml",
+			"module": "sap/ovp/app/SharePage.fragment.xml",
+			"required": [
+				"sap/m/ActionSheet.js",
+				"sap/m/Button.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "app/SmarFilterBarWithoutVariant.fragment.xml",
+			"module": "sap/ovp/app/SmarFilterBarWithoutVariant.fragment.xml",
+			"required": [
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/core/ExtensionPoint.js"
+			]
+		},
+		{
+			"name": "app/SmartFilterBarWithVariant.fragment.xml",
+			"module": "sap/ovp/app/SmartFilterBarWithVariant.fragment.xml",
+			"required": [
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/core/ExtensionPoint.js"
+			]
+		},
+		{
+			"name": "app/manifest.json",
+			"module": "sap/ovp/app/manifest.json"
+		},
+		{
+			"name": "cards/ActionUtils-dbg.js",
+			"module": "sap/ovp/cards/ActionUtils.js",
+			"isDebug": true,
+			"condRequired": [
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "cards/ActionUtils.js",
+			"module": "sap/ovp/cards/ActionUtils.js",
+			"condRequired": [
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "cards/AnnotationHelper-dbg.js",
+			"module": "sap/ovp/cards/AnnotationHelper.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js"
+			],
+			"condRequired": [
+				"sap/ui/model/analytics/odata4analytics.js"
+			]
+		},
+		{
+			"name": "cards/AnnotationHelper.js",
+			"module": "sap/ovp/cards/AnnotationHelper.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js"
+			],
+			"condRequired": [
+				"sap/ui/model/analytics/odata4analytics.js"
+			]
+		},
+		{
+			"name": "cards/AppSettingsUtils-dbg.js",
+			"module": "sap/ovp/cards/AppSettingsUtils.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js"
+			]
+		},
+		{
+			"name": "cards/AppSettingsUtils.js",
+			"module": "sap/ovp/cards/AppSettingsUtils.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js"
+			]
+		},
+		{
+			"name": "cards/CommonUtils-dbg.js",
+			"module": "sap/ovp/cards/CommonUtils.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/CommonUtils.js",
+			"module": "sap/ovp/cards/CommonUtils.js"
+		},
+		{
+			"name": "cards/LoadingUtils-dbg.js",
+			"module": "sap/ovp/cards/LoadingUtils.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/LoadingUtils.js",
+			"module": "sap/ovp/cards/LoadingUtils.js"
+		},
+		{
+			"name": "cards/PersonalizationUtils-dbg.js",
+			"module": "sap/ovp/cards/PersonalizationUtils.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js"
+			]
+		},
+		{
+			"name": "cards/PersonalizationUtils.js",
+			"module": "sap/ovp/cards/PersonalizationUtils.js",
+			"required": [
+				"jquery.sap.global.js"
+			]
+		},
+		{
+			"name": "cards/SettingsUtils-dbg.js",
+			"module": "sap/ovp/cards/SettingsUtils.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Link.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/rta/SettingsDialogConstants.js",
+				"sap/ui/Device.js"
+			]
+		},
+		{
+			"name": "cards/SettingsUtils.js",
+			"module": "sap/ovp/cards/SettingsUtils.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Link.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/rta/SettingsDialogConstants.js",
+				"sap/ui/Device.js"
+			]
+		},
+		{
+			"name": "cards/charts/OVPVizDataHandler-dbg.js",
+			"module": "sap/ovp/cards/charts/OVPVizDataHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "cards/charts/OVPVizDataHandler.js",
+			"module": "sap/ovp/cards/charts/OVPVizDataHandler.js",
+			"required": [
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "cards/charts/Utils-dbg.js",
+			"module": "sap/ovp/cards/charts/Utils.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/charts/Utils.js",
+			"module": "sap/ovp/cards/charts/Utils.js"
+		},
+		{
+			"name": "cards/charts/VizAnnotationManager-dbg.js",
+			"module": "sap/ovp/cards/charts/VizAnnotationManager.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/charts/Utils.js"
+			],
+			"condRequired": [
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/viz/ui5/api/env/Format.js"
+			]
+		},
+		{
+			"name": "cards/charts/VizAnnotationManager.js",
+			"module": "sap/ovp/cards/charts/VizAnnotationManager.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/charts/Utils.js"
+			],
+			"condRequired": [
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/viz/ui5/api/env/Format.js"
+			]
+		},
+		{
+			"name": "cards/charts/analytical/Component-dbg.js",
+			"module": "sap/ovp/cards/charts/analytical/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/charts/VizAnnotationManager.js",
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/charts/analytical/Component.js",
+			"module": "sap/ovp/cards/charts/analytical/Component.js",
+			"required": [
+				"sap/ovp/cards/charts/VizAnnotationManager.js",
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/charts/analytical/analyticalChart-dbg.controller.js",
+			"module": "sap/ovp/cards/charts/analytical/analyticalChart.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/charts/analytical/analyticalChart.controller.js",
+			"module": "sap/ovp/cards/charts/analytical/analyticalChart.controller.js"
+		},
+		{
+			"name": "cards/charts/analytical/analyticalChart.fragment.xml",
+			"module": "sap/ovp/cards/charts/analytical/analyticalChart.fragment.xml",
+			"required": [
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Text.js",
+				"sap/ovp/cards/charts/OVPVizDataHandler.js",
+				"sap/ui/core/Element.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/data/FlattenedDataset.js"
+			]
+		},
+		{
+			"name": "cards/charts/config.json"
+		},
+		{
+			"name": "cards/charts/generic/Component-dbg.js",
+			"module": "sap/ovp/cards/charts/generic/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/charts/Utils.js",
+				"sap/ovp/cards/charts/VizAnnotationManager.js",
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/charts/generic/Component.js",
+			"module": "sap/ovp/cards/charts/generic/Component.js",
+			"required": [
+				"sap/ovp/cards/charts/Utils.js",
+				"sap/ovp/cards/charts/VizAnnotationManager.js",
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/charts/generic/noData.fragment.xml",
+			"module": "sap/ovp/cards/charts/generic/noData.fragment.xml",
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/custom/Component-dbg.js",
+			"module": "sap/ovp/cards/custom/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/custom/Component.js",
+			"module": "sap/ovp/cards/custom/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/generic/Action.fragment.xml",
+			"module": "sap/ovp/cards/generic/Action.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Button.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/ui/core/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/generic/ActionsFooter.fragment.xml",
+			"module": "sap/ovp/cards/generic/ActionsFooter.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/OverflowToolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ovp/cards/generic/Action.fragment.xml",
+				"sap/ovp/ui/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/generic/Card-dbg.controller.js",
+			"module": "sap/ovp/cards/generic/Card.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/ActionUtils.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/ui/generic/app/navigation/service/PresentationVariant.js"
+			]
+		},
+		{
+			"name": "cards/generic/Card.controller.js",
+			"module": "sap/ovp/cards/generic/Card.controller.js",
+			"required": [
+				"sap/ovp/cards/ActionUtils.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/ui/generic/app/navigation/service/PresentationVariant.js"
+			]
+		},
+		{
+			"name": "cards/generic/Card.view.xml",
+			"module": "sap/ovp/cards/generic/Card.view.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/VBox.js",
+				"sap/ovp/cards/generic/Card.controller.js",
+				"sap/ui/core/mvc/XMLView.js"
+			],
+			"condRequired": [
+				"sap/ovp/cards/generic/ContentMiddle.fragment.xml",
+				"sap/ovp/cards/generic/ContentRight.fragment.xml",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js"
+			]
+		},
+		{
+			"name": "cards/generic/Component-dbg.js",
+			"module": "sap/ovp/cards/generic/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/AnnotationHelper.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/LoadingUtils.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "cards/generic/Component.js",
+			"module": "sap/ovp/cards/generic/Component.js",
+			"required": [
+				"sap/ovp/cards/AnnotationHelper.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/LoadingUtils.js",
+				"sap/ui/core/UIComponent.js"
+			]
+		},
+		{
+			"name": "cards/generic/ContentMiddle.fragment.xml",
+			"module": "sap/ovp/cards/generic/ContentMiddle.fragment.xml",
+			"required": [
+				"sap/m/VBox.js",
+				"sap/ovp/ui/Card.js",
+				"sap/ovp/ui/CardContentContainer.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Select.js",
+				"sap/m/Toolbar.js",
+				"sap/ui/core/Item.js",
+				"{ovpCardProperties\u003e/contentFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/footerFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/headerFragment}.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/generic/ContentRight.fragment.xml",
+			"module": "sap/ovp/cards/generic/ContentRight.fragment.xml",
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/ovp/cards/generic/Header.fragment.xml",
+				"sap/ovp/ui/Card.js",
+				"sap/ovp/ui/CardContentContainer.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"{ovpCardProperties\u003e/contentFragment}.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/generic/CountFooter.fragment.xml",
+			"module": "sap/ovp/cards/generic/CountFooter.fragment.xml",
+			"required": [
+				"sap/m/Text.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/generic/CountHeader.fragment.xml",
+			"module": "sap/ovp/cards/generic/CountHeader.fragment.xml",
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/generic/Header.fragment.xml",
+			"module": "sap/ovp/cards/generic/Header.fragment.xml",
+			"required": [
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/FlexBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/cards/generic/SubTitle.fragment.xml",
+				"sap/ovp/cards/generic/Title.fragment.xml",
+				"{ovpCardProperties\u003e/headerExtensionFragment}.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/generic/KPIHeader.fragment.xml",
+			"module": "sap/ovp/cards/generic/KPIHeader.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ovp/ui/OVPNumericContent.js"
+			]
+		},
+		{
+			"name": "cards/generic/SubTitle.fragment.xml",
+			"module": "sap/ovp/cards/generic/SubTitle.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/ui/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/generic/Title.fragment.xml",
+			"module": "sap/ovp/cards/generic/Title.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/ui/CustomData.js",
+				"{ovpCardProperties\u003e/countHeaderFragment}.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/image/Component-dbg.js",
+			"module": "sap/ovp/cards/image/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/image/Component.js",
+			"module": "sap/ovp/cards/image/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/image/Image-dbg.controller.js",
+			"module": "sap/ovp/cards/image/Image.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/image/Image.controller.js",
+			"module": "sap/ovp/cards/image/Image.controller.js"
+		},
+		{
+			"name": "cards/image/Image.fragment.xml",
+			"module": "sap/ovp/cards/image/Image.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/ovp/ui/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/linklist/AnnotationHelper-dbg.js",
+			"module": "sap/ovp/cards/linklist/AnnotationHelper.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/linklist/AnnotationHelper.js",
+			"module": "sap/ovp/cards/linklist/AnnotationHelper.js"
+		},
+		{
+			"name": "cards/linklist/Component-dbg.js",
+			"module": "sap/ovp/cards/linklist/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js",
+				"sap/ovp/cards/linklist/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "cards/linklist/Component.js",
+			"module": "sap/ovp/cards/linklist/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js",
+				"sap/ovp/cards/linklist/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "cards/linklist/LinkList-dbg.controller.js",
+			"module": "sap/ovp/cards/linklist/LinkList.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "cards/linklist/LinkList.controller.js",
+			"module": "sap/ovp/cards/linklist/LinkList.controller.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "cards/linklist/LinkList.fragment.xml",
+			"module": "sap/ovp/cards/linklist/LinkList.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ovp/cards/linklist/fragments/LinkListCarousel.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListContactDetails.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListGrid.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStandard.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataCarousel.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataGrid.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataStandard.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListCarousel.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListCarousel.fragment.xml",
+			"required": [
+				"sap/m/Carousel.js",
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListContactDetails.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListContactDetails.fragment.xml",
+			"required": [
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListGrid.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListGrid.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/Label.js",
+				"sap/m/List.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Carousel.js",
+				"sap/m/Image.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListNavigationTargets.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListNavigationTargets.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/HBox.js",
+				"sap/m/List.js",
+				"sap/m/Popover.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListStandard.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListStandard.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/HBox.js",
+				"sap/m/List.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/FlexBox.js",
+				"sap/m/Image.js",
+				"sap/m/Label.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListStaticDataCarousel.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListStaticDataCarousel.fragment.xml",
+			"required": [
+				"sap/m/Carousel.js",
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListStaticDataGrid.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListStaticDataGrid.fragment.xml",
+			"required": [
+				"sap/m/List.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Carousel.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/Image.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/linklist/fragments/LinkListStaticDataStandard.fragment.xml",
+			"module": "sap/ovp/cards/linklist/fragments/LinkListStaticDataStandard.fragment.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/List.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/CustomListItem.js",
+				"sap/m/FlexBox.js",
+				"sap/m/Image.js",
+				"sap/m/Label.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/list/Component-dbg.js",
+			"module": "sap/ovp/cards/list/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/list/Component.js",
+			"module": "sap/ovp/cards/list/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/list/CondensedBarList.fragment.xml",
+			"module": "sap/ovp/cards/list/CondensedBarList.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/HBox.js",
+				"sap/m/Text.js",
+				"sap/suite/ui/microchart/ComparisonMicroChart.js",
+				"sap/suite/ui/microchart/ComparisonMicroChartData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/ObjectNumber.js"
+			]
+		},
+		{
+			"name": "cards/list/ExtendedBarList.fragment.xml",
+			"module": "sap/ovp/cards/list/ExtendedBarList.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/suite/ui/microchart/ComparisonMicroChart.js",
+				"sap/suite/ui/microchart/ComparisonMicroChartData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/list/List-dbg.controller.js",
+			"module": "sap/ovp/cards/list/List.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "cards/list/List.controller.js",
+			"module": "sap/ovp/cards/list/List.controller.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "cards/list/List.fragment.xml",
+			"module": "sap/ovp/cards/list/List.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/List.js",
+				"sap/ovp/cards/list/CondensedBarList.fragment.xml",
+				"sap/ovp/cards/list/ExtendedBarList.fragment.xml",
+				"sap/ovp/cards/list/ObjectList.fragment.xml",
+				"sap/ovp/cards/list/StandardList.fragment.xml",
+				"sap/ovp/cards/list/StandardListImage.fragment.xml",
+				"sap/ovp/ui/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/list/ObjectList.fragment.xml",
+			"module": "sap/ovp/cards/list/ObjectList.fragment.xml",
+			"required": [
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectListItem.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/ObjectStatus.js"
+			]
+		},
+		{
+			"name": "cards/list/StandardList.fragment.xml",
+			"module": "sap/ovp/cards/list/StandardList.fragment.xml",
+			"required": [
+				"sap/m/StandardListItem.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/list/StandardListImage.fragment.xml",
+			"module": "sap/ovp/cards/list/StandardListImage.fragment.xml",
+			"required": [
+				"sap/m/List.js",
+				"sap/m/StandardListItem.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/Component-dbg.js",
+			"module": "sap/ovp/cards/loading/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/loading/Component.js",
+			"module": "sap/ovp/cards/loading/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/loading/Loading-dbg.controller.js",
+			"module": "sap/ovp/cards/loading/Loading.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/LoadingUtils.js"
+			]
+		},
+		{
+			"name": "cards/loading/Loading.controller.js",
+			"module": "sap/ovp/cards/loading/Loading.controller.js",
+			"required": [
+				"sap/ovp/cards/LoadingUtils.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingBar.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingBar.fragment.xml",
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingContent.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingContent.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/VBox.js",
+				"sap/ovp/cards/loading/LoadingBar.fragment.xml",
+				"sap/ovp/cards/loading/LoadingError.fragment.xml",
+				"sap/ovp/cards/loading/LoadingListExtended.fragment.xml",
+				"sap/ovp/cards/loading/LoadingStack.fragment.xml",
+				"sap/ovp/cards/loading/LoadingTable.fragment.xml",
+				"sap/ovp/cards/loading/StackLoadingError.fragment.xml",
+				"sap/ui/core/HTML.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingError.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingError.fragment.xml",
+			"required": [
+				"sap/m/MessagePage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingFooter.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingFooter.fragment.xml",
+			"required": [
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingList.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingList.fragment.xml",
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingListExtended.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingListExtended.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/FlexBox.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingStack.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingStack.fragment.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js"
+			]
+		},
+		{
+			"name": "cards/loading/LoadingTable.fragment.xml",
+			"module": "sap/ovp/cards/loading/LoadingTable.fragment.xml",
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/loading/StackLoadingError.fragment.xml",
+			"module": "sap/ovp/cards/loading/StackLoadingError.fragment.xml",
+			"required": [
+				"sap/m/MessagePage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/map/Analytical/AnalyticalMap-dbg.controller.js",
+			"module": "sap/ovp/cards/map/Analytical/AnalyticalMap.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/map/Analytical/AnalyticalMap.controller.js",
+			"module": "sap/ovp/cards/map/Analytical/AnalyticalMap.controller.js"
+		},
+		{
+			"name": "cards/map/Analytical/AnalyticalMap.fragment.xml",
+			"module": "sap/ovp/cards/map/Analytical/AnalyticalMap.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ovp/ui/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/map/Analytical/Component-dbg.js",
+			"module": "sap/ovp/cards/map/Analytical/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/map/Analytical/Component.js",
+			"module": "sap/ovp/cards/map/Analytical/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/map/Component-dbg.js",
+			"module": "sap/ovp/cards/map/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/map/Component.js",
+			"module": "sap/ovp/cards/map/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/map/GeographicalMap-dbg.controller.js",
+			"module": "sap/ovp/cards/map/GeographicalMap.controller.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/map/GeographicalMap.controller.js",
+			"module": "sap/ovp/cards/map/GeographicalMap.controller.js"
+		},
+		{
+			"name": "cards/map/GeographicalMap.fragment.xml",
+			"module": "sap/ovp/cards/map/GeographicalMap.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Bar.js",
+				"sap/m/Label.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/VBox.js",
+				"sap/ovp/cards/generic/ActionsFooter.fragment.xml",
+				"sap/ovp/cards/quickview/Quickview.fragment.xml",
+				"sap/ovp/ui/CustomData.js"
+			]
+		},
+		{
+			"name": "cards/quickview/Component-dbg.js",
+			"module": "sap/ovp/cards/quickview/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/quickview/Component.js",
+			"module": "sap/ovp/cards/quickview/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/quickview/Quickview-dbg.controller.js",
+			"module": "sap/ovp/cards/quickview/Quickview.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "cards/quickview/Quickview.controller.js",
+			"module": "sap/ovp/cards/quickview/Quickview.controller.js",
+			"required": [
+				"sap/ovp/cards/AnnotationHelper.js"
+			]
+		},
+		{
+			"name": "cards/quickview/Quickview.fragment.xml",
+			"module": "sap/ovp/cards/quickview/Quickview.fragment.xml",
+			"required": [
+				"sap/m/QuickViewCard.js",
+				"sap/m/QuickViewPage.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js"
+			]
+		},
+		{
+			"name": "cards/rta/AppSettingsDialog-dbg.controller.js",
+			"module": "sap/ovp/cards/rta/AppSettingsDialog.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/AppSettingsUtils.js",
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "cards/rta/AppSettingsDialog.controller.js",
+			"module": "sap/ovp/cards/rta/AppSettingsDialog.controller.js",
+			"required": [
+				"sap/ovp/cards/AppSettingsUtils.js",
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "cards/rta/AppSettingsDialog.view.xml",
+			"module": "sap/ovp/cards/rta/AppSettingsDialog.view.xml",
+			"required": [
+				"sap/m/SegmentedButton.js",
+				"sap/m/SegmentedButtonItem.js",
+				"sap/m/Select.js",
+				"sap/m/Switch.js",
+				"sap/m/VBox.js",
+				"sap/ovp/cards/rta/AppSettingsDialog.controller.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/form/Form.js",
+				"sap/ui/layout/form/FormContainer.js",
+				"sap/ui/layout/form/FormElement.js",
+				"sap/ui/layout/form/ResponsiveGridLayout.js"
+			]
+		},
+		{
+			"name": "cards/rta/Placeholder_Draft.png"
+		},
+		{
+			"name": "cards/rta/SettingsDialog-dbg.controller.js",
+			"module": "sap/ovp/cards/rta/SettingsDialog.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/MessageBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/SettingsUtils.js",
+				"sap/ovp/cards/rta/SettingsDialogConstants.js",
+				"sap/ui/comp/valuehelpdialog/ValueHelpDialog.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorChangeFactory.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorInlineChangeFactory.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "cards/rta/SettingsDialog.controller.js",
+			"module": "sap/ovp/cards/rta/SettingsDialog.controller.js",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/MessageBox.js",
+				"sap/m/Text.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/SettingsUtils.js",
+				"sap/ovp/cards/rta/SettingsDialogConstants.js",
+				"sap/ui/comp/valuehelpdialog/ValueHelpDialog.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorChangeFactory.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorInlineChangeFactory.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "cards/rta/SettingsDialog.view.xml",
+			"module": "sap/ovp/cards/rta/SettingsDialog.view.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/HBox.js",
+				"sap/m/Select.js",
+				"sap/m/VBox.js",
+				"sap/ovp/cards/rta/SettingsDialog.controller.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/mvc/XMLView.js"
+			],
+			"condRequired": [
+				"sap/m/Carousel.js",
+				"sap/m/ScrollContainer.js",
+				"sap/ovp/cards/rta/SettingsDialogCardPreview.fragment.xml",
+				"sap/ovp/cards/rta/SettingsDialogForm.fragment.xml",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "cards/rta/SettingsDialogCardPreview.fragment.xml",
+			"module": "sap/ovp/cards/rta/SettingsDialogCardPreview.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/rta/SettingsDialogConstants-dbg.js",
+			"module": "sap/ovp/cards/rta/SettingsDialogConstants.js",
+			"isDebug": true
+		},
+		{
+			"name": "cards/rta/SettingsDialogConstants.js",
+			"module": "sap/ovp/cards/rta/SettingsDialogConstants.js"
+		},
+		{
+			"name": "cards/rta/SettingsDialogForm.fragment.xml",
+			"module": "sap/ovp/cards/rta/SettingsDialogForm.fragment.xml",
+			"required": [
+				"sap/m/Input.js",
+				"sap/m/SegmentedButton.js",
+				"sap/m/SegmentedButtonItem.js",
+				"sap/m/Select.js",
+				"sap/m/Switch.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/layout/form/Form.js",
+				"sap/ui/layout/form/FormContainer.js",
+				"sap/ui/layout/form/FormElement.js",
+				"sap/ui/layout/form/ResponsiveGridLayout.js"
+			],
+			"condRequired": [
+				"sap/m/Button.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ovp/cards/rta/StaticLinkListCardLineItemsPanel.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/rta/StaticLinkListCardLineItemsPanel.fragment.xml",
+			"module": "sap/ovp/cards/rta/StaticLinkListCardLineItemsPanel.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/m/Input.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/RadioButton.js",
+				"sap/m/RadioButtonGroup.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/layout/form/Form.js",
+				"sap/ui/layout/form/FormContainer.js",
+				"sap/ui/layout/form/FormElement.js",
+				"sap/ui/layout/form/ResponsiveGridLayout.js"
+			]
+		},
+		{
+			"name": "cards/stack/Component-dbg.js",
+			"module": "sap/ovp/cards/stack/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/stack/Component.js",
+			"module": "sap/ovp/cards/stack/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/stack/Stack-dbg.controller.js",
+			"module": "sap/ovp/cards/stack/Stack.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/AnnotationHelper.js",
+				"sap/ovp/ui/ObjectStream.js"
+			]
+		},
+		{
+			"name": "cards/stack/Stack.controller.js",
+			"module": "sap/ovp/cards/stack/Stack.controller.js",
+			"required": [
+				"sap/ovp/cards/AnnotationHelper.js",
+				"sap/ovp/ui/ObjectStream.js"
+			]
+		},
+		{
+			"name": "cards/stack/Stack.fragment.xml",
+			"module": "sap/ovp/cards/stack/Stack.fragment.xml",
+			"required": [
+				"sap/m/Label.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js"
+			]
+		},
+		{
+			"name": "cards/table/Component-dbg.js",
+			"module": "sap/ovp/cards/table/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/table/Component.js",
+			"module": "sap/ovp/cards/table/Component.js",
+			"required": [
+				"sap/ovp/cards/generic/Component.js"
+			]
+		},
+		{
+			"name": "cards/table/ContactDetails.fragment.xml",
+			"module": "sap/ovp/cards/table/ContactDetails.fragment.xml",
+			"required": [
+				"sap/m/QuickView.js",
+				"sap/ovp/cards/table/ContactDetailsQuickViewGroup.fragment.xml",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/table/ContactDetailsQuickViewGroup.fragment.xml",
+			"module": "sap/ovp/cards/table/ContactDetailsQuickViewGroup.fragment.xml",
+			"required": [
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "cards/table/Table-dbg.controller.js",
+			"module": "sap/ovp/cards/table/Table.controller.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "cards/table/Table.controller.js",
+			"module": "sap/ovp/cards/table/Table.controller.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "cards/table/Table.fragment.xml",
+			"module": "sap/ovp/cards/table/Table.fragment.xml",
+			"required": [
+				"sap/m/Table.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/ovp/cards/table/TableDashBoardLayout.fragment.xml",
+				"sap/ovp/cards/table/TableEasyScanLayout.fragment.xml"
+			]
+		},
+		{
+			"name": "cards/table/TableDashBoardLayout.fragment.xml",
+			"module": "sap/ovp/cards/table/TableDashBoardLayout.fragment.xml",
+			"required": [
+				"sap/m/ColumnListItem.js",
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Column.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ovp/cards/table/ContactDetails.fragment.xml",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/comp/smartfield/ControlProposal.js",
+				"sap/ui/comp/smartfield/ObjectStatus.js",
+				"sap/ui/comp/smartfield/SmartField.js"
+			]
+		},
+		{
+			"name": "cards/table/TableEasyScanLayout.fragment.xml",
+			"module": "sap/ovp/cards/table/TableEasyScanLayout.fragment.xml",
+			"required": [
+				"sap/ui/core/Fragment.js"
+			],
+			"condRequired": [
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Text.js",
+				"sap/ovp/cards/table/TableDashBoardLayout.fragment.xml",
+				"sap/ui/comp/smartfield/ControlProposal.js",
+				"sap/ui/comp/smartfield/ObjectStatus.js",
+				"sap/ui/comp/smartfield/SmartField.js"
+			]
+		},
+		{
+			"name": "changeHandler/HideCardContainer-dbg.js",
+			"module": "sap/ovp/changeHandler/HideCardContainer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "changeHandler/HideCardContainer.js",
+			"module": "sap/ovp/changeHandler/HideCardContainer.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "changeHandler/UnhideCardContainer-dbg.js",
+			"module": "sap/ovp/changeHandler/UnhideCardContainer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "changeHandler/UnhideCardContainer.js",
+			"module": "sap/ovp/changeHandler/UnhideCardContainer.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "changeHandler/UnhideControl-dbg.js",
+			"module": "sap/ovp/changeHandler/UnhideControl.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "changeHandler/UnhideControl.js",
+			"module": "sap/ovp/changeHandler/UnhideControl.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "flexibility/DashboardLayout.flexibility-dbg.js",
+			"module": "sap/ovp/flexibility/DashboardLayout.flexibility.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/changeHandler/HideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideControl.js",
+				"sap/ui/fl/changeHandler/BaseRename.js"
+			]
+		},
+		{
+			"name": "flexibility/DashboardLayout.flexibility.js",
+			"module": "sap/ovp/flexibility/DashboardLayout.flexibility.js",
+			"required": [
+				"sap/ovp/changeHandler/HideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideControl.js",
+				"sap/ui/fl/changeHandler/BaseRename.js"
+			]
+		},
+		{
+			"name": "flexibility/EasyScanLayout.flexibility-dbg.js",
+			"module": "sap/ovp/flexibility/EasyScanLayout.flexibility.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/changeHandler/HideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideControl.js",
+				"sap/ui/fl/changeHandler/BaseRename.js"
+			]
+		},
+		{
+			"name": "flexibility/EasyScanLayout.flexibility.js",
+			"module": "sap/ovp/flexibility/EasyScanLayout.flexibility.js",
+			"required": [
+				"sap/ovp/changeHandler/HideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideControl.js",
+				"sap/ui/fl/changeHandler/BaseRename.js"
+			]
+		},
+		{
+			"name": "library-all-dbg.js",
+			"isDebug": true,
+			"merged": true
+		},
+		{
+			"name": "library-all.js",
+			"merged": true
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/ovp/library.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Core.js"
+			]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/ovp/library-preload.js",
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/f/DynamicPage.js",
+				"sap/m/ActionSheet.js",
+				"sap/m/BusyDialog.js",
+				"sap/m/Button.js",
+				"sap/m/Carousel.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePage.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/NumericContent.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Popover.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewCard.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/RadioButton.js",
+				"sap/m/RadioButtonGroup.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/SegmentedButton.js",
+				"sap/m/SegmentedButtonItem.js",
+				"sap/m/Select.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/Switch.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/suite/ui/microchart/ComparisonMicroChart.js",
+				"sap/suite/ui/microchart/ComparisonMicroChartData.js",
+				"sap/ui/Device.js",
+				"sap/ui/comp/navpopover/RTAHandler.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smartvariants/PersonalizableInfo.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/comp/state/UIState.js",
+				"sap/ui/comp/valuehelpdialog/ValueHelpDialog.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/delegate/ScrollEnablement.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/fl/changeHandler/BaseRename.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorChangeFactory.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorInlineChangeFactory.js",
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/ui/generic/app/navigation/service/PresentationVariant.js",
+				"sap/ui/generic/app/navigation/service/SelectionVariant.js",
+				"sap/ui/layout/form/Form.js",
+				"sap/ui/layout/form/FormContainer.js",
+				"sap/ui/layout/form/FormElement.js",
+				"sap/ui/layout/form/ResponsiveGridLayout.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/AnnotationHelper.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ui/rta/RuntimeAuthoring.js",
+				"sap/ushell/library.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js",
+				"{ui\u003e/cardContainerFragment}.fragment.xml"
+			],
+			"condRequired": [
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/Bar.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/comp/smartfield/ControlProposal.js",
+				"sap/ui/comp/smartfield/ObjectStatus.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/analytics/odata4analytics.js",
+				"sap/viz/ui5/api/env/Format.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/data/FlattenedDataset.js",
+				"{ovpCardProperties\u003e/contentFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/countHeaderFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/footerFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/headerExtensionFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/headerFragment}.fragment.xml"
+			],
+			"included": [
+				"sap/ovp/app/CardContainer.fragment.xml",
+				"sap/ovp/app/Component.js",
+				"sap/ovp/app/DashboardCardContainer.fragment.xml",
+				"sap/ovp/app/Error.view.xml",
+				"sap/ovp/app/Main.controller.js",
+				"sap/ovp/app/Main.view.xml",
+				"sap/ovp/app/SharePage.fragment.xml",
+				"sap/ovp/app/SmarFilterBarWithoutVariant.fragment.xml",
+				"sap/ovp/app/SmartFilterBarWithVariant.fragment.xml",
+				"sap/ovp/app/manifest.json",
+				"sap/ovp/cards/ActionUtils.js",
+				"sap/ovp/cards/AnnotationHelper.js",
+				"sap/ovp/cards/AppSettingsUtils.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/LoadingUtils.js",
+				"sap/ovp/cards/PersonalizationUtils.js",
+				"sap/ovp/cards/SettingsUtils.js",
+				"sap/ovp/cards/charts/OVPVizDataHandler.js",
+				"sap/ovp/cards/charts/Utils.js",
+				"sap/ovp/cards/charts/VizAnnotationManager.js",
+				"sap/ovp/cards/charts/analytical/Component.js",
+				"sap/ovp/cards/charts/analytical/analyticalChart.controller.js",
+				"sap/ovp/cards/charts/analytical/analyticalChart.fragment.xml",
+				"sap/ovp/cards/charts/generic/Component.js",
+				"sap/ovp/cards/charts/generic/noData.fragment.xml",
+				"sap/ovp/cards/custom/Component.js",
+				"sap/ovp/cards/generic/Action.fragment.xml",
+				"sap/ovp/cards/generic/ActionsFooter.fragment.xml",
+				"sap/ovp/cards/generic/Card.controller.js",
+				"sap/ovp/cards/generic/Card.view.xml",
+				"sap/ovp/cards/generic/Component.js",
+				"sap/ovp/cards/generic/ContentMiddle.fragment.xml",
+				"sap/ovp/cards/generic/ContentRight.fragment.xml",
+				"sap/ovp/cards/generic/CountFooter.fragment.xml",
+				"sap/ovp/cards/generic/CountHeader.fragment.xml",
+				"sap/ovp/cards/generic/Header.fragment.xml",
+				"sap/ovp/cards/generic/KPIHeader.fragment.xml",
+				"sap/ovp/cards/generic/SubTitle.fragment.xml",
+				"sap/ovp/cards/generic/Title.fragment.xml",
+				"sap/ovp/cards/image/Component.js",
+				"sap/ovp/cards/image/Image.controller.js",
+				"sap/ovp/cards/image/Image.fragment.xml",
+				"sap/ovp/cards/linklist/AnnotationHelper.js",
+				"sap/ovp/cards/linklist/Component.js",
+				"sap/ovp/cards/linklist/LinkList.controller.js",
+				"sap/ovp/cards/linklist/LinkList.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListCarousel.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListContactDetails.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListGrid.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListNavigationTargets.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStandard.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataCarousel.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataGrid.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataStandard.fragment.xml",
+				"sap/ovp/cards/list/Component.js",
+				"sap/ovp/cards/list/CondensedBarList.fragment.xml",
+				"sap/ovp/cards/list/ExtendedBarList.fragment.xml",
+				"sap/ovp/cards/list/List.controller.js",
+				"sap/ovp/cards/list/List.fragment.xml",
+				"sap/ovp/cards/list/ObjectList.fragment.xml",
+				"sap/ovp/cards/list/StandardList.fragment.xml",
+				"sap/ovp/cards/list/StandardListImage.fragment.xml",
+				"sap/ovp/cards/loading/Component.js",
+				"sap/ovp/cards/loading/Loading.controller.js",
+				"sap/ovp/cards/loading/LoadingBar.fragment.xml",
+				"sap/ovp/cards/loading/LoadingContent.fragment.xml",
+				"sap/ovp/cards/loading/LoadingError.fragment.xml",
+				"sap/ovp/cards/loading/LoadingFooter.fragment.xml",
+				"sap/ovp/cards/loading/LoadingList.fragment.xml",
+				"sap/ovp/cards/loading/LoadingListExtended.fragment.xml",
+				"sap/ovp/cards/loading/LoadingStack.fragment.xml",
+				"sap/ovp/cards/loading/LoadingTable.fragment.xml",
+				"sap/ovp/cards/loading/StackLoadingError.fragment.xml",
+				"sap/ovp/cards/map/Analytical/AnalyticalMap.controller.js",
+				"sap/ovp/cards/map/Analytical/AnalyticalMap.fragment.xml",
+				"sap/ovp/cards/map/Analytical/Component.js",
+				"sap/ovp/cards/map/Component.js",
+				"sap/ovp/cards/map/GeographicalMap.controller.js",
+				"sap/ovp/cards/map/GeographicalMap.fragment.xml",
+				"sap/ovp/cards/quickview/Component.js",
+				"sap/ovp/cards/quickview/Quickview.controller.js",
+				"sap/ovp/cards/quickview/Quickview.fragment.xml",
+				"sap/ovp/cards/rta/AppSettingsDialog.controller.js",
+				"sap/ovp/cards/rta/AppSettingsDialog.view.xml",
+				"sap/ovp/cards/rta/SettingsDialog.controller.js",
+				"sap/ovp/cards/rta/SettingsDialog.view.xml",
+				"sap/ovp/cards/rta/SettingsDialogCardPreview.fragment.xml",
+				"sap/ovp/cards/rta/SettingsDialogConstants.js",
+				"sap/ovp/cards/rta/SettingsDialogForm.fragment.xml",
+				"sap/ovp/cards/rta/StaticLinkListCardLineItemsPanel.fragment.xml",
+				"sap/ovp/cards/stack/Component.js",
+				"sap/ovp/cards/stack/Stack.controller.js",
+				"sap/ovp/cards/stack/Stack.fragment.xml",
+				"sap/ovp/cards/table/Component.js",
+				"sap/ovp/cards/table/ContactDetails.fragment.xml",
+				"sap/ovp/cards/table/ContactDetailsQuickViewGroup.fragment.xml",
+				"sap/ovp/cards/table/Table.controller.js",
+				"sap/ovp/cards/table/Table.fragment.xml",
+				"sap/ovp/cards/table/TableDashBoardLayout.fragment.xml",
+				"sap/ovp/cards/table/TableEasyScanLayout.fragment.xml",
+				"sap/ovp/changeHandler/HideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideControl.js",
+				"sap/ovp/flexibility/DashboardLayout.flexibility.js",
+				"sap/ovp/flexibility/EasyScanLayout.flexibility.js",
+				"sap/ovp/library.js",
+				"sap/ovp/manifest.json",
+				"sap/ovp/ui/Card.js",
+				"sap/ovp/ui/CardContentContainer.js",
+				"sap/ovp/ui/ComponentContainerDesigntimeMetadata.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ovp/ui/DashboardLayout.designtime.js",
+				"sap/ovp/ui/DashboardLayout.js",
+				"sap/ovp/ui/DashboardLayoutModel.js",
+				"sap/ovp/ui/DashboardLayoutRearrange.js",
+				"sap/ovp/ui/DashboardLayoutUtil.js",
+				"sap/ovp/ui/EasyScanLayout.designtime.js",
+				"sap/ovp/ui/EasyScanLayout.js",
+				"sap/ovp/ui/OVPNumericContent.js",
+				"sap/ovp/ui/OVPWrapper.designtime.js",
+				"sap/ovp/ui/OVPWrapper.js",
+				"sap/ovp/ui/ObjectStream.js",
+				"sap/ovp/ui/ObjectStreamRenderer.js",
+				"sap/ovp/ui/SmartphoneHeaderToggle.js",
+				"sap/ovp/ui/UIActions.js"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.json",
+			"module": "sap/ovp/library-preload.json",
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/f/DynamicPage.js",
+				"sap/f/library-preload.json",
+				"sap/m/ActionSheet.js",
+				"sap/m/BusyDialog.js",
+				"sap/m/Button.js",
+				"sap/m/Carousel.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/HBox.js",
+				"sap/m/Image.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePage.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/NumericContent.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Popover.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewCard.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/RadioButton.js",
+				"sap/m/RadioButtonGroup.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/SegmentedButton.js",
+				"sap/m/SegmentedButtonItem.js",
+				"sap/m/Select.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/Switch.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/m/library-preload.json",
+				"sap/suite/ui/microchart/ComparisonMicroChart.js",
+				"sap/suite/ui/microchart/ComparisonMicroChartData.js",
+				"sap/ui/Device.js",
+				"sap/ui/comp/library-preload.json",
+				"sap/ui/comp/navpopover/RTAHandler.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smartvariants/PersonalizableInfo.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/comp/state/UIState.js",
+				"sap/ui/comp/valuehelpdialog/ValueHelpDialog.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/delegate/ScrollEnablement.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library-preload.json",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/fl/changeHandler/BaseRename.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorChangeFactory.js",
+				"sap/ui/fl/descriptorRelated/api/DescriptorInlineChangeFactory.js",
+				"sap/ui/generic/app/library-preload.json",
+				"sap/ui/generic/app/navigation/service/NavigationHandler.js",
+				"sap/ui/generic/app/navigation/service/PresentationVariant.js",
+				"sap/ui/generic/app/navigation/service/SelectionVariant.js",
+				"sap/ui/layout/form/Form.js",
+				"sap/ui/layout/form/FormContainer.js",
+				"sap/ui/layout/form/FormElement.js",
+				"sap/ui/layout/form/ResponsiveGridLayout.js",
+				"sap/ui/layout/library-preload.json",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/AnnotationHelper.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ui/rta/RuntimeAuthoring.js",
+				"sap/ushell/library.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js",
+				"{ui\u003e/cardContainerFragment}.fragment.xml"
+			],
+			"condRequired": [
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/Bar.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/OverflowToolbarButton.js",
+				"sap/m/OverflowToolbarLayoutData.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/comp/smartfield/ControlProposal.js",
+				"sap/ui/comp/smartfield/ObjectStatus.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/analytics/odata4analytics.js",
+				"sap/viz/ui5/api/env/Format.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/data/FlattenedDataset.js",
+				"{ovpCardProperties\u003e/contentFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/countHeaderFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/footerFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/headerExtensionFragment}.fragment.xml",
+				"{ovpCardProperties\u003e/headerFragment}.fragment.xml"
+			],
+			"included": [
+				"sap/ovp/app/CardContainer.fragment.xml",
+				"sap/ovp/app/Component.js",
+				"sap/ovp/app/DashboardCardContainer.fragment.xml",
+				"sap/ovp/app/Error.view.xml",
+				"sap/ovp/app/Main.controller.js",
+				"sap/ovp/app/Main.view.xml",
+				"sap/ovp/app/SharePage.fragment.xml",
+				"sap/ovp/app/SmarFilterBarWithoutVariant.fragment.xml",
+				"sap/ovp/app/SmartFilterBarWithVariant.fragment.xml",
+				"sap/ovp/app/manifest.json",
+				"sap/ovp/cards/ActionUtils.js",
+				"sap/ovp/cards/AnnotationHelper.js",
+				"sap/ovp/cards/AppSettingsUtils.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/LoadingUtils.js",
+				"sap/ovp/cards/PersonalizationUtils.js",
+				"sap/ovp/cards/SettingsUtils.js",
+				"sap/ovp/cards/charts/OVPVizDataHandler.js",
+				"sap/ovp/cards/charts/Utils.js",
+				"sap/ovp/cards/charts/VizAnnotationManager.js",
+				"sap/ovp/cards/charts/analytical/Component.js",
+				"sap/ovp/cards/charts/analytical/analyticalChart.controller.js",
+				"sap/ovp/cards/charts/analytical/analyticalChart.fragment.xml",
+				"sap/ovp/cards/charts/generic/Component.js",
+				"sap/ovp/cards/charts/generic/noData.fragment.xml",
+				"sap/ovp/cards/custom/Component.js",
+				"sap/ovp/cards/generic/Action.fragment.xml",
+				"sap/ovp/cards/generic/ActionsFooter.fragment.xml",
+				"sap/ovp/cards/generic/Card.controller.js",
+				"sap/ovp/cards/generic/Card.view.xml",
+				"sap/ovp/cards/generic/Component.js",
+				"sap/ovp/cards/generic/ContentMiddle.fragment.xml",
+				"sap/ovp/cards/generic/ContentRight.fragment.xml",
+				"sap/ovp/cards/generic/CountFooter.fragment.xml",
+				"sap/ovp/cards/generic/CountHeader.fragment.xml",
+				"sap/ovp/cards/generic/Header.fragment.xml",
+				"sap/ovp/cards/generic/KPIHeader.fragment.xml",
+				"sap/ovp/cards/generic/SubTitle.fragment.xml",
+				"sap/ovp/cards/generic/Title.fragment.xml",
+				"sap/ovp/cards/image/Component.js",
+				"sap/ovp/cards/image/Image.controller.js",
+				"sap/ovp/cards/image/Image.fragment.xml",
+				"sap/ovp/cards/linklist/AnnotationHelper.js",
+				"sap/ovp/cards/linklist/Component.js",
+				"sap/ovp/cards/linklist/LinkList.controller.js",
+				"sap/ovp/cards/linklist/LinkList.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListCarousel.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListContactDetails.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListGrid.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListNavigationTargets.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStandard.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataCarousel.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataGrid.fragment.xml",
+				"sap/ovp/cards/linklist/fragments/LinkListStaticDataStandard.fragment.xml",
+				"sap/ovp/cards/list/Component.js",
+				"sap/ovp/cards/list/CondensedBarList.fragment.xml",
+				"sap/ovp/cards/list/ExtendedBarList.fragment.xml",
+				"sap/ovp/cards/list/List.controller.js",
+				"sap/ovp/cards/list/List.fragment.xml",
+				"sap/ovp/cards/list/ObjectList.fragment.xml",
+				"sap/ovp/cards/list/StandardList.fragment.xml",
+				"sap/ovp/cards/list/StandardListImage.fragment.xml",
+				"sap/ovp/cards/loading/Component.js",
+				"sap/ovp/cards/loading/Loading.controller.js",
+				"sap/ovp/cards/loading/LoadingBar.fragment.xml",
+				"sap/ovp/cards/loading/LoadingContent.fragment.xml",
+				"sap/ovp/cards/loading/LoadingError.fragment.xml",
+				"sap/ovp/cards/loading/LoadingFooter.fragment.xml",
+				"sap/ovp/cards/loading/LoadingList.fragment.xml",
+				"sap/ovp/cards/loading/LoadingListExtended.fragment.xml",
+				"sap/ovp/cards/loading/LoadingStack.fragment.xml",
+				"sap/ovp/cards/loading/LoadingTable.fragment.xml",
+				"sap/ovp/cards/loading/StackLoadingError.fragment.xml",
+				"sap/ovp/cards/map/Analytical/AnalyticalMap.controller.js",
+				"sap/ovp/cards/map/Analytical/AnalyticalMap.fragment.xml",
+				"sap/ovp/cards/map/Analytical/Component.js",
+				"sap/ovp/cards/map/Component.js",
+				"sap/ovp/cards/map/GeographicalMap.controller.js",
+				"sap/ovp/cards/map/GeographicalMap.fragment.xml",
+				"sap/ovp/cards/quickview/Component.js",
+				"sap/ovp/cards/quickview/Quickview.controller.js",
+				"sap/ovp/cards/quickview/Quickview.fragment.xml",
+				"sap/ovp/cards/rta/AppSettingsDialog.controller.js",
+				"sap/ovp/cards/rta/AppSettingsDialog.view.xml",
+				"sap/ovp/cards/rta/SettingsDialog.controller.js",
+				"sap/ovp/cards/rta/SettingsDialog.view.xml",
+				"sap/ovp/cards/rta/SettingsDialogCardPreview.fragment.xml",
+				"sap/ovp/cards/rta/SettingsDialogConstants.js",
+				"sap/ovp/cards/rta/SettingsDialogForm.fragment.xml",
+				"sap/ovp/cards/rta/StaticLinkListCardLineItemsPanel.fragment.xml",
+				"sap/ovp/cards/stack/Component.js",
+				"sap/ovp/cards/stack/Stack.controller.js",
+				"sap/ovp/cards/stack/Stack.fragment.xml",
+				"sap/ovp/cards/table/Component.js",
+				"sap/ovp/cards/table/ContactDetails.fragment.xml",
+				"sap/ovp/cards/table/ContactDetailsQuickViewGroup.fragment.xml",
+				"sap/ovp/cards/table/Table.controller.js",
+				"sap/ovp/cards/table/Table.fragment.xml",
+				"sap/ovp/cards/table/TableDashBoardLayout.fragment.xml",
+				"sap/ovp/cards/table/TableEasyScanLayout.fragment.xml",
+				"sap/ovp/changeHandler/HideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideCardContainer.js",
+				"sap/ovp/changeHandler/UnhideControl.js",
+				"sap/ovp/flexibility/DashboardLayout.flexibility.js",
+				"sap/ovp/flexibility/EasyScanLayout.flexibility.js",
+				"sap/ovp/library.js",
+				"sap/ovp/manifest.json",
+				"sap/ovp/ui/Card.js",
+				"sap/ovp/ui/CardContentContainer.js",
+				"sap/ovp/ui/ComponentContainerDesigntimeMetadata.js",
+				"sap/ovp/ui/CustomData.js",
+				"sap/ovp/ui/DashboardLayout.designtime.js",
+				"sap/ovp/ui/DashboardLayout.js",
+				"sap/ovp/ui/DashboardLayoutModel.js",
+				"sap/ovp/ui/DashboardLayoutRearrange.js",
+				"sap/ovp/ui/DashboardLayoutUtil.js",
+				"sap/ovp/ui/EasyScanLayout.designtime.js",
+				"sap/ovp/ui/EasyScanLayout.js",
+				"sap/ovp/ui/OVPNumericContent.js",
+				"sap/ovp/ui/OVPWrapper.designtime.js",
+				"sap/ovp/ui/OVPWrapper.js",
+				"sap/ovp/ui/ObjectStream.js",
+				"sap/ovp/ui/ObjectStreamRenderer.js",
+				"sap/ovp/ui/SmartphoneHeaderToggle.js",
+				"sap/ovp/ui/UIActions.js"
+			]
+		},
+		{
+			"name": "library.dependencies.json",
+			"designtime": true
+		},
+		{
+			"name": "library.dependencies.xml",
+			"designtime": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/ovp/library.js",
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Core.js"
+			]
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/ovp/manifest.json"
+		},
+		{
+			"name": "messagebundle.properties",
+			"module": "sap/ovp/messagebundle.properties",
+			"locale": "",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ar.properties",
+			"module": "sap/ovp/messagebundle_ar.properties",
+			"locale": "ar",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_bg.properties",
+			"module": "sap/ovp/messagebundle_bg.properties",
+			"locale": "bg",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ca.properties",
+			"module": "sap/ovp/messagebundle_ca.properties",
+			"locale": "ca",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_cs.properties",
+			"module": "sap/ovp/messagebundle_cs.properties",
+			"locale": "cs",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_da.properties",
+			"module": "sap/ovp/messagebundle_da.properties",
+			"locale": "da",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_de.properties",
+			"module": "sap/ovp/messagebundle_de.properties",
+			"locale": "de",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_el.properties",
+			"module": "sap/ovp/messagebundle_el.properties",
+			"locale": "el",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en.properties",
+			"module": "sap/ovp/messagebundle_en.properties",
+			"locale": "en",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_sappsd.properties",
+			"module": "sap/ovp/messagebundle_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_saptrc.properties",
+			"module": "sap/ovp/messagebundle_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_es.properties",
+			"module": "sap/ovp/messagebundle_es.properties",
+			"locale": "es",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_et.properties",
+			"module": "sap/ovp/messagebundle_et.properties",
+			"locale": "et",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fi.properties",
+			"module": "sap/ovp/messagebundle_fi.properties",
+			"locale": "fi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fr.properties",
+			"module": "sap/ovp/messagebundle_fr.properties",
+			"locale": "fr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hi.properties",
+			"module": "sap/ovp/messagebundle_hi.properties",
+			"locale": "hi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hr.properties",
+			"module": "sap/ovp/messagebundle_hr.properties",
+			"locale": "hr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hu.properties",
+			"module": "sap/ovp/messagebundle_hu.properties",
+			"locale": "hu",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_it.properties",
+			"module": "sap/ovp/messagebundle_it.properties",
+			"locale": "it",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_iw.properties",
+			"module": "sap/ovp/messagebundle_iw.properties",
+			"locale": "iw",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ja.properties",
+			"module": "sap/ovp/messagebundle_ja.properties",
+			"locale": "ja",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_kk.properties",
+			"module": "sap/ovp/messagebundle_kk.properties",
+			"locale": "kk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ko.properties",
+			"module": "sap/ovp/messagebundle_ko.properties",
+			"locale": "ko",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lt.properties",
+			"module": "sap/ovp/messagebundle_lt.properties",
+			"locale": "lt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lv.properties",
+			"module": "sap/ovp/messagebundle_lv.properties",
+			"locale": "lv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ms.properties",
+			"module": "sap/ovp/messagebundle_ms.properties",
+			"locale": "ms",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_nl.properties",
+			"module": "sap/ovp/messagebundle_nl.properties",
+			"locale": "nl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_no.properties",
+			"module": "sap/ovp/messagebundle_no.properties",
+			"locale": "no",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pl.properties",
+			"module": "sap/ovp/messagebundle_pl.properties",
+			"locale": "pl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pt.properties",
+			"module": "sap/ovp/messagebundle_pt.properties",
+			"locale": "pt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ro.properties",
+			"module": "sap/ovp/messagebundle_ro.properties",
+			"locale": "ro",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ru.properties",
+			"module": "sap/ovp/messagebundle_ru.properties",
+			"locale": "ru",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sh.properties",
+			"module": "sap/ovp/messagebundle_sh.properties",
+			"locale": "sh",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sk.properties",
+			"module": "sap/ovp/messagebundle_sk.properties",
+			"locale": "sk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sl.properties",
+			"module": "sap/ovp/messagebundle_sl.properties",
+			"locale": "sl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sv.properties",
+			"module": "sap/ovp/messagebundle_sv.properties",
+			"locale": "sv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_th.properties",
+			"module": "sap/ovp/messagebundle_th.properties",
+			"locale": "th",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_tr.properties",
+			"module": "sap/ovp/messagebundle_tr.properties",
+			"locale": "tr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_uk.properties",
+			"module": "sap/ovp/messagebundle_uk.properties",
+			"locale": "uk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_vi.properties",
+			"module": "sap/ovp/messagebundle_vi.properties",
+			"locale": "vi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_CN.properties",
+			"module": "sap/ovp/messagebundle_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_TW.properties",
+			"module": "sap/ovp/messagebundle_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "themes/base/.theming",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/BarListCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Card.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/DashboardLayout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/EasyScanLayout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ImageCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/LinkListCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ListCard.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Map.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/OVPApp.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ObjectStream.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/SettingsDialog.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_belize/.theming",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/BarListCard.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/Card.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/DashboardLayout.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/LinkListCard.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/OVPApp.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/ObjectStream.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-parameters.json",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.css",
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize_hcb/.theming",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/BarListCard.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/Card.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/DashboardLayout.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/LinkListCard.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/OVPApp.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/ObjectStream.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-RTL.css",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-parameters.json",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.css",
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcw/.theming",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/BarListCard.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/Card.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/DashboardLayout.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/LinkListCard.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/OVPApp.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/ObjectStream.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-RTL.css",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-parameters.json",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.css",
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_plus/.theming",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/OVPApp.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL.css",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-parameters.json",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.css",
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.source.less",
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_bluecrystal/.theming",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/BarListCard.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/Card.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/DashboardLayout.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/LinkListCard.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/OVPApp.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/ObjectStream.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/StackPlaceHolder.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/img-RTL/ovpDarkBg.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/img/ovpDarkBg.png",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-dbg.css",
+			"isDebug": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-parameters.json",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.css",
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.source.less",
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "ui/Card-dbg.js",
+			"module": "sap/ovp/ui/Card.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "ui/Card.js",
+			"module": "sap/ovp/ui/Card.js",
+			"required": [
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "ui/CardContentContainer-dbg.js",
+			"module": "sap/ovp/ui/CardContentContainer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ovp/library.js"
+			]
+		},
+		{
+			"name": "ui/CardContentContainer.js",
+			"module": "sap/ovp/ui/CardContentContainer.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ovp/library.js"
+			]
+		},
+		{
+			"name": "ui/ComponentContainerDesigntimeMetadata-dbg.js",
+			"module": "sap/ovp/ui/ComponentContainerDesigntimeMetadata.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/SettingsUtils.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "ui/ComponentContainerDesigntimeMetadata.js",
+			"module": "sap/ovp/ui/ComponentContainerDesigntimeMetadata.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/cards/SettingsUtils.js",
+				"sap/ui/fl/changeHandler/JsControlTreeModifier.js"
+			]
+		},
+		{
+			"name": "ui/CustomData-dbg.js",
+			"module": "sap/ovp/ui/CustomData.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ushell/library.js"
+			]
+		},
+		{
+			"name": "ui/CustomData.js",
+			"module": "sap/ovp/ui/CustomData.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ushell/library.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayout-dbg.js",
+			"module": "sap/ovp/ui/DashboardLayout.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ovp/library.js",
+				"sap/ovp/ui/DashboardLayoutUtil.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayout.designtime-dbg.js",
+			"module": "sap/ovp/ui/DashboardLayout.designtime.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/app/Component.js",
+				"sap/ui/comp/navpopover/RTAHandler.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayout.designtime.js",
+			"module": "sap/ovp/ui/DashboardLayout.designtime.js",
+			"designtime": true,
+			"required": [
+				"sap/ovp/app/Component.js",
+				"sap/ui/comp/navpopover/RTAHandler.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayout.js",
+			"module": "sap/ovp/ui/DashboardLayout.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ovp/library.js",
+				"sap/ovp/ui/DashboardLayoutUtil.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayoutModel-dbg.js",
+			"module": "sap/ovp/ui/DashboardLayoutModel.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayoutModel.js",
+			"module": "sap/ovp/ui/DashboardLayoutModel.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayoutRearrange-dbg.js",
+			"module": "sap/ovp/ui/DashboardLayoutRearrange.js",
+			"isDebug": true,
+			"condRequired": [
+				"sap/ovp/ui/UIActions.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayoutRearrange.js",
+			"module": "sap/ovp/ui/DashboardLayoutRearrange.js",
+			"condRequired": [
+				"sap/ovp/ui/UIActions.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayoutUtil-dbg.js",
+			"module": "sap/ovp/ui/DashboardLayoutUtil.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/ui/DashboardLayoutModel.js",
+				"sap/ovp/ui/DashboardLayoutRearrange.js"
+			]
+		},
+		{
+			"name": "ui/DashboardLayoutUtil.js",
+			"module": "sap/ovp/ui/DashboardLayoutUtil.js",
+			"required": [
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/ui/DashboardLayoutModel.js",
+				"sap/ovp/ui/DashboardLayoutRearrange.js"
+			]
+		},
+		{
+			"name": "ui/EasyScanLayout-dbg.js",
+			"module": "sap/ovp/ui/EasyScanLayout.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/library.js"
+			],
+			"condRequired": [
+				"sap/ovp/ui/UIActions.js"
+			]
+		},
+		{
+			"name": "ui/EasyScanLayout.designtime-dbg.js",
+			"module": "sap/ovp/ui/EasyScanLayout.designtime.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/ui/ComponentContainerDesigntimeMetadata.js",
+				"sap/ui/comp/navpopover/RTAHandler.js"
+			]
+		},
+		{
+			"name": "ui/EasyScanLayout.designtime.js",
+			"module": "sap/ovp/ui/EasyScanLayout.designtime.js",
+			"designtime": true,
+			"required": [
+				"sap/ovp/ui/ComponentContainerDesigntimeMetadata.js",
+				"sap/ui/comp/navpopover/RTAHandler.js"
+			]
+		},
+		{
+			"name": "ui/EasyScanLayout.js",
+			"module": "sap/ovp/ui/EasyScanLayout.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ovp/cards/CommonUtils.js",
+				"sap/ovp/library.js"
+			],
+			"condRequired": [
+				"sap/ovp/ui/UIActions.js"
+			]
+		},
+		{
+			"name": "ui/OVPNumericContent-dbg.js",
+			"module": "sap/ovp/ui/OVPNumericContent.js",
+			"isDebug": true,
+			"required": [
+				"sap/m/NumericContent.js"
+			]
+		},
+		{
+			"name": "ui/OVPNumericContent.js",
+			"module": "sap/ovp/ui/OVPNumericContent.js",
+			"required": [
+				"sap/m/NumericContent.js"
+			]
+		},
+		{
+			"name": "ui/OVPWrapper-dbg.js",
+			"module": "sap/ovp/ui/OVPWrapper.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "ui/OVPWrapper.designtime-dbg.js",
+			"module": "sap/ovp/ui/OVPWrapper.designtime.js",
+			"isDebug": true,
+			"required": [
+				"sap/ovp/cards/AppSettingsUtils.js"
+			]
+		},
+		{
+			"name": "ui/OVPWrapper.designtime.js",
+			"module": "sap/ovp/ui/OVPWrapper.designtime.js",
+			"designtime": true,
+			"required": [
+				"sap/ovp/cards/AppSettingsUtils.js"
+			]
+		},
+		{
+			"name": "ui/OVPWrapper.js",
+			"module": "sap/ovp/ui/OVPWrapper.js",
+			"required": [
+				"sap/ui/core/Control.js"
+			]
+		},
+		{
+			"name": "ui/ObjectStream-dbg.js",
+			"module": "sap/ovp/ui/ObjectStream.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/delegate/ScrollEnablement.js"
+			]
+		},
+		{
+			"name": "ui/ObjectStream.js",
+			"module": "sap/ovp/ui/ObjectStream.js",
+			"required": [
+				"jquery.sap.global.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/delegate/ScrollEnablement.js"
+			]
+		},
+		{
+			"name": "ui/ObjectStreamRenderer-dbg.js",
+			"module": "sap/ovp/ui/ObjectStreamRenderer.js",
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js"
+			]
+		},
+		{
+			"name": "ui/ObjectStreamRenderer.js",
+			"module": "sap/ovp/ui/ObjectStreamRenderer.js",
+			"required": [
+				"jquery.sap.global.js"
+			]
+		},
+		{
+			"name": "ui/SmartphoneHeaderToggle-dbg.js",
+			"module": "sap/ovp/ui/SmartphoneHeaderToggle.js",
+			"isDebug": true
+		},
+		{
+			"name": "ui/SmartphoneHeaderToggle.js",
+			"module": "sap/ovp/ui/SmartphoneHeaderToggle.js"
+		},
+		{
+			"name": "ui/UIActions-dbg.js",
+			"module": "sap/ovp/ui/UIActions.js",
+			"isDebug": true
+		},
+		{
+			"name": "ui/UIActions.js",
+			"module": "sap/ovp/ui/UIActions.js"
+		}
+	]
+}

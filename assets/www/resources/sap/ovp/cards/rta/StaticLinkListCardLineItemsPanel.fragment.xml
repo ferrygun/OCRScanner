@@ -1,0 +1,117 @@
+<core:FragmentDefinition  xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+                         xmlns="sap.m">
+    <ScrollContainer
+            id="scrollContainer"
+            class="sapOvpScrollContainer"
+            height="20rem"
+            width="100%"
+            horizontal="false"
+            vertical="true"
+            focusable="true">
+        <List id="sapOvpStaticLinkListLineItem"
+              items="{/staticContent}"
+              selectionChange="onSelectionChange"
+              mode="SingleSelectLeft"
+              includeItemInSelection="true">
+            <items>
+                <CustomListItem
+                    type="Active">
+                    <HBox>
+                        <VBox width="30%" visible="{= !${deviceSystemProperties>/phone}}">
+                            <HBox>
+                                <Image class="sapUiSmallMargin"
+                                       visible="{= !!${imageUri} &amp;&amp; ${path: 'imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isImageUrlStaticData'} === true}"
+                                       alt="{imageAltText}"
+                                       tooltip="{toolTip}" densityAware="true"
+                                       width="3rem" height="3rem"
+                                       backgroundPosition="center center" mode="Background"
+                                       src="{parts: [{path: '/'}, {path: 'imageUri'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getImageUrl'}"/>
+                                <VBox visible="{= !!${imageUri} &amp;&amp; ${path: 'imageUri', formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isImageUrlStaticData'} === false}"
+                                      class="sapUiSmallMargin sapOvpLinkListItem {= ${ovpCardProperties>/densityStyle} === 'cozy' ? 'sapOvpLinkListItemIconCozy' : 'sapOvpLinkListItemIconCompact' }">
+                                    <FlexBox height="7rem">
+                                        <core:Icon class="sapOvpLinkListImageCenter"
+                                                   tooltip="{toolTip}" useIconTooltip="false"
+                                                   size="2.5rem" src="{imageUri}"/>
+                                    </FlexBox>
+                                </VBox>
+                            </HBox>
+                            <HBox visible="{parts:[{path:'index'}, {path:'visibility>/showMore'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'}">
+                                <Button class="sapOvpSettingsMiniMarginBeginEnd" tooltip="Change Visual" icon="sap-icon://edit" press="onChangeVisualPress" enabled="true" type="Transparent"/>
+                                <Button class="sapOvpSettingsMiniMarginBeginEnd" tooltip="Remove Visual" icon="sap-icon://delete" press="onRemoveVisualPress"
+                                        enabled="{parts:[{path:'index'}, {path:'visibility>/showMore'}, {path:'visibility>/removeVisual'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'}"
+                                        type="Transparent"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <f:Form editable="true">
+                                <f:layout>
+                                    <f:ResponsiveGridLayout labelSpanXL="12"
+                                                            labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false"
+                                                            emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0"
+                                                            singleContainerFullSize="false" />
+                                </f:layout>
+                                <f:formContainers>
+                                    <f:FormContainer>
+                                        <f:formElements>
+                                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_TITLE_FOR_LINK}" visible="{visibility>/lineItemTitle}">
+                                                <f:fields>
+                                                    <Input id="sapOvpSettingsLineItemTitle" value="{title}" change="updateCard"
+                                                           class="sapOvpSettingsDialogPadding" />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <!-- Static Link List Line Item Sub Title -->
+                                            <f:FormElement label="{ovplibResourceBundle>OVP_KEYUSER_SUBTITLE_FOR_LINK}" visible="{parts:[{path:'index'}, {path:'visibility>/showMore'}, {path:'visibility>/lineItemSubTitle'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'}">
+                                                <f:fields>
+                                                    <Input id="sapOvpSettingsLineItemSubTitle" value="{subTitle}" change="updateCard"/>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <!-- Static Link List Line Item Links Selection -->
+                                            <f:FormElement label="Link Source" visible="{parts:[{path:'index'}, {path:'visibility>/showMore'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'}">
+                                                <f:fields>
+                                                    <RadioButtonGroup columns="2" select="onLinkSourceChange"
+                                                                      selectedIndex="{= ${parts:[{path:'index'}, {path:'visibility>/showMore'}, {path:'visibility>/staticLink'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'} === true ? 1 : 0}">
+                                                        <buttons>
+                                                            <RadioButton text="internal"/>
+                                                            <RadioButton text="external"/>
+                                                        </buttons>
+                                                    </RadioButtonGroup>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <!-- Static Link List Line Item Links -->
+                                            <f:FormElement label="Link"
+                                                           visible="{parts:[{path:'index'}, {path:'visibility>/showMore'}, {path:'visibility>/staticLink'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'}">
+                                                <f:fields>
+                                                    <Input value="{targetUri}"
+                                                           class="sapOvpSettingsDialogPadding" change="onExternalUrlChange"/>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <!-- Static Link List Line Item Links -->
+                                            <f:FormElement label="Link"
+                                                           visible="{parts:[{path:'index'}, {path:'visibility>/showMore'}, {path:'visibility>/links'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'}">
+                                                <f:fields>
+                                                    <Input value="{parts:[{path:'staticCardProperties>/links'}, {path:'semanticObject'}, {path:'action'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.getApplicationName'}"
+                                                           class="sapOvpSettingsDialogPadding"
+                                                           showValueHelp="true" editable="true" enabled="true" valueHelpOnly="true"
+                                                           valueHelpRequest="createValueHelpDialogForInternalUrl"/>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <!-- Static Link List Line Item Show More -->
+                                            <f:FormElement>
+                                                <f:fields>
+                                                    <FlexBox justifyContent="End">
+                                                        <Link text="{= !${parts:[{path:'index'}, {path:'visibility>/showMore'}], formatter: 'sap.ovp.cards.linklist.AnnotationHelper.isVisible'} ? 'Show More': 'Show Less'}"
+                                                              press="onShowMorePress"/>
+                                                    </FlexBox>
+                                                </f:fields>
+                                            </f:FormElement>
+                                        </f:formElements>
+                                    </f:FormContainer>
+                                </f:formContainers>
+                            </f:Form>
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+            </items>
+        </List>
+    </ScrollContainer>
+</core:FragmentDefinition>

@@ -1,0 +1,1777 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+@import "../base/library.less";
+
+@import "../../../../../Base/baseLib/sap_belize_hcw/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/sap_belize_hcw/base.less" */
+
+@import "../../../../sap/ui/core/themes/sap_belize_hcw/global.less";
+
+/* START "AboutDialog.less" */
+.sapUshellAboutDialogHeader {
+	color: @sapUiHcStandardForeground
+}
+/* END "AboutDialog.less" */
+
+/* START "ActionItem.less" */
+
+@sapUshellActionItemBackground:                                    fade(@sapUiButtonBackground, 60);
+
+
+/* ================================================================*/
+/* CSS for control sap.ushell/ActionItem.control  sap_hcb theme */
+/* =============================================================== */
+
+.sapUshellActionItem {
+  background-color: @sapUiButtonLiteBackground;
+  border: none;
+  color: @sapUiGroupTitleTextColor;
+
+  &:hover {
+
+    .sapMBtnIcon {
+      background-color: @sapUiButtonHoverBackground;
+    }
+  }
+
+  &:active {
+    .sapMBtnIcon {
+      background-color: @sapUiButtonActiveBackground;
+      color: @sapUiButtonActiveTextColor;
+    }
+  }
+
+  &:focus {
+    outline: @sapUshellOnePixel dotted @sapUiHcStandardForeground;
+  }
+
+}
+
+.sapUshellActionItem .sapMBtnIcon {
+  background-color: @sapUshellActionItemBackground;
+  font-size: 1.25rem;
+  color: @sapUiButtonTextColor;
+  border: 0.0625rem solid @sapUiButtonTextColor;
+}
+
+.sapUshellActionItem .sapMBtnContent {
+  color: @sapUiGroupTitleTextColor;
+}
+
+.sapUshellActionItemButton {
+  //TODO: change to parameters
+  background-color: @sapUshellActionItemBackground;
+  color: @sapUiGroupTitleTextColor;
+}
+
+.sapUshellAcionItemActive #ActionModeBtn-img {
+  background-color: @sapUiButtonActiveBackground;
+  color: @sapUiButtonActiveTextColor;
+}
+
+.sapUshellActionItemButton span{
+  font-size: 1.25rem;
+}
+
+/* END "ActionItem.less" */
+
+/* START "AnchorItem.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/AnchorItem.control */
+/* ============================================= */
+@sapUshellAnchorItemNotRenderedColor: rgba(255,255,255, 0.5);
+@sapUshellAnchorItemSelectedBorderWidth: @sapUshellOnePixel;
+
+/* AnchorItem Dashboard */
+//[Tags "Color"]
+//[Description "Anchor bar text color"]
+@sapUshellAnchorItemTextColor: @sapUiHcStandardForeground;
+
+.sap-desktop .sapUshellAnchorItem,.sap-tablet .sapUshellAnchorItem {
+  border: 0.1rem solid @sapUiTileBorderColor;
+}
+
+.sapUshellAnchorItem {
+  font-family: @sapUiFontHeaderFamily;
+  font-size: @sapMFontHeader6Size;
+  font-weight: @sapUiFontHeaderWeight;
+
+  &.sapUshellOverflowLeft {
+    -webkit-mask-image: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(50%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)))
+  }
+
+  &.sapUshellOverflowRight {
+    -webkit-mask-image: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 1)))
+  }
+}
+
+.sap-desktop,.sap-tablet {
+  .sapUshellAnchorNavigationBar .sapUshellAnchorItemSelected {
+    background-color: @sapUiHcHighlightAltBackground;
+
+    .sapUshellAnchorItemInner {
+      border-bottom: 0.2rem transparent;
+    }
+  }
+}
+
+.sapUshellAnchorItemOverFlow.sapUshellAnchorItemOverFlowPressed {
+  border: 0.0625rem solid @sapUiHcStandardForeground;
+  background-color: @sapUiHighlight;
+  color: @sapUshellAnchorItemTextColor;
+  opacity: 1;
+}
+.sapUshellAnchorItemOverFlow {
+  font-family: "SAP-icons";
+  font-size: 1rem;
+  color: @sapUiTileIconColor;
+  background-color: transparent;
+
+  button {
+    background-color: transparent;
+    border-style: none;
+  }
+
+  .sapUiIcon {
+    font-family: "SAP-icons";
+    font-size: 1rem;
+    color: @sapUiTileIconColor;
+    background-color: transparent;
+  }
+
+  .sapMBtnInner {
+    background-color: transparent;
+    background: transparent;
+  }
+}
+
+.sapUshellAnchorItemsPopover {
+  .sapUshellGroupLI.sapUshellAnchorPopoverItemSelected,
+  .sapUshellGroupLI.sapUshellAnchorPopoverItemHidden {
+    background-color: @sapUiHcStandardBackground;
+  }
+}
+
+.sapUshellAnchorItemNotRendered {
+  background: -moz-linear-gradient(left, @sapUshellAnchorItemNotRenderedColor, 0, @sapHC_StandardBackground, 1);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, @sapUshellAnchorItemNotRenderedColor), color-stop(1, @sapHC_StandardBackground));
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: slidetounlock 1s infinite;
+}
+
+.sapUshellAnchorItem:focus {
+  outline: @sapUshellTwoPixels dotted @sapUshellAnchorItemTextColor;
+  outline-offset: -0.2625rem;
+}
+/* END "AnchorItem.less" */
+
+/* START "AnchorNavigationBar.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/AnchorNavigationBar.control */
+/* ============================================= */
+@sapUshellOverflowArrowsLowerGradient:              rgba(0, 0, 0, 1);
+@sapUshellOverflowArrowsUpperGradient:              rgba(0, 0, 0, 0);
+@sapUshellAnchorItemSelectedBorderWidth:            @sapUshellTwoPixels;
+
+#anchorNavigationBar {
+  .sapUshellAnchorItemOverFlow button:focus > .sapMFocusable {
+    outline: 1px dotted @sapUiHcStandardForeground;
+  }
+
+  .sapMBtn:hover>.sapMBtnHoverable {
+    background-color: transparent;
+  }
+}
+
+.sapUshellAnchorRightOverFlowButton, .sapUshellAnchorLeftOverFlowButton {
+  .sapUiIcon {
+    color: @sapUiHcStandardForeground;
+  }
+}
+
+#sapUshellAnchorBarOverflowButton {
+  border: 0.125rem solid @sapUiHcStandardForeground;
+  border-radius: 0.375rem;
+  padding: 0;
+}
+
+/* END "AnchorNavigationBar.less" */
+
+/* START "ApplicationContainer.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/ApplicationContainer.control theme base */
+/* ============================================= */
+@media (min-width: 80rem) {
+  .sapUiMedia-Std-Desktop .sapUShellApplicationContainer.sapUShellApplicationContainerLimitedWidth {
+    box-shadow: 0 0 2.5rem 0.125rem fade(@sapUiHcStandardBackground, 80%);;
+  }
+}
+
+.sapUshellDefaultBackground {
+  background-color: @sapUiGlobalBackgroundColor;
+}
+
+/* END "ApplicationContainer.less" */
+
+/* START "Catalog.less" */
+/* SAP_HCB */
+
+/* ============================================= */
+/* CSS for control sap.ushell/Catalog */
+/* ============================================= */
+
+/* LESS Variables */
+/* ============================================= */
+
+/* Menu bar*/
+@sapUshellCatalogMenuBarBackground: 					transparent;
+@sapUshellCatalogMenuBarBoxShadow: 					none;
+
+/* Search Field */
+@sapUshellCatalogMenuBarSearchFieldBorderColor:		@sapUiDarkBorder; /*when not focused*/
+@sapUiSelectBorderColorPressed:						@sapUiHighlight;
+
+/* Styles */
+/* ============================================= */
+
+.sapUshellPanel {
+  & > .sapUshellCatalogHeader {
+
+    .sapUshellCatalogHeaderBar {
+      background: @sapUshellCatalogMenuBarBackground;
+      box-shadow: @sapUshellCatalogMenuBarBoxShadow;
+      border-bottom: none;
+      }
+    #catalogHeader-BarLeft {
+
+      #catalogSearch {
+        .sapMSF {
+          border-color: @sapUshellCatalogMenuBarSearchFieldBorderColor;
+          border-style: solid;
+          }
+        .sapMSFB {
+          border-left-color: @sapUshellCatalogMenuBarSearchFieldBorderColor;
+          border-left-style: solid;
+          }
+
+        .sapMSFF {
+          border-color: @sapUshellCatalogMenuBarSearchFieldBorderColor;
+          border-style: solid;
+          }
+        }
+
+      #catalogSearch:focus, #catalogSearch:hover {
+        .sapMSFB {
+          border-left-color: @sapUiSelectBorderColorPressed;
+          border-left-style: solid;
+          }
+
+        .sapMSFF {
+          border-color: @sapUiSelectBorderColorPressed;
+          border-style: solid;
+          }
+        }
+      }
+
+    }
+
+  &.sapMPanel {
+    border: 0;
+  }
+  }
+
+.sapUshellCatalogNewGroupBackButton{
+	background-color: transparent;
+}
+
+.sapUshellAppBox {
+  border: @sapUshellOnePixel solid @sapUiTileBorderColor;
+}
+
+.sapUshellAppBox {
+  background: @sapUiHcStandardBackground;
+  color: @sapUiHcStandardForeground;
+  box-shadow: 0 0 0 @sapUshellOnePixel @sapUiHcStandardForeground;
+  &:hover {
+    box-shadow: 0 0 0 @sapUshellTwoPixels @sapUiHcStandardForeground;
+  }
+
+  &:focus {
+    outline: 1px dotted @sapUiHcStandardForeground;
+    outline-offset: -0.125rem;
+  }
+}
+
+.sapUshellPinSelected {
+  background-color: @sapUiHcHighlightAltBackground;
+}
+
+.sapUshellHierarchyFolders .sapUshellEasyAccessMasterPageHeader {
+  background-color: transparent;
+  box-shadow: none;
+}
+/* END "Catalog.less" */
+
+/* START "ContactSupport.less" */
+/* ================================================================*/
+/* CSS for control sap.ushell/ContactSupportButton.control  sap_hcb theme */
+/* =============================================================== */
+
+.sapUshellTechnicalInfoBox{
+	border: @sapUshellOnePixel solid @sapUiHcStandardForeground;
+}
+
+.sapUshellContactSupportHeaderInfoText{
+	color: @sapUiLightText;
+	font-size: 0.895rem;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+}
+
+/* For #technicalInfoBox */
+.sapUshellContactSupportFixWidth{
+ @media screen and (orientation:portrait) {
+      max-width:13.82rem;
+ }
+}
+
+/* END "ContactSupport.less" */
+
+/* START "DynamicTile.less" */
+/* ============================================================= */
+/* CSS for control sap.ushell/DynamicTile.control sap_hcb theme */
+/* ============================================================= */
+
+
+.sapUshellDynamicTile {
+    /* Colors for displaying dynamic tile contents (esp. large numbers, arrows, text)
+    note: these values are different than the ones specified in TileBase */
+    .sapUshellDynamicTileData {
+        &.sapUshellDynamicTileDataNegative {
+             color: @sapUiHcNegativeColor;
+        .sapUshellDynamicTileDataUp {border-bottom-color: @sapUiHcNegativeColor; }
+        .sapUshellDynamicTileDataDown {border-top-color: @sapUiHcNegativeColor; }
+        }
+
+        &.sapUshellDynamicTileDataNeutral {
+             color: @sapUiHcNeutralColor;
+        .sapUshellDynamicTileDataUp {border-bottom-color: @sapUiHcNeutralColor; }
+        .sapUshellDynamicTileDataDown {border-top-color: @sapUiHcNeutralColor; }
+        }
+
+        &.sapUshellDynamicTileDataPositive {
+             color: @sapUiHcPositiveColor;
+        .sapUshellDynamicTileDataUp { border-bottom-color: @sapUiHcPositiveColor; }
+        .sapUshellDynamicTileDataDown { border-top-color: @sapUiHcPositiveColor; }
+        }
+
+        &.sapUshellDynamicTileDataCritical {
+             color: @sapUiHcCriticalColor;
+        .sapUshellDynamicTileDataUp { border-bottom-color: @sapUiHcCriticalColor; }
+        .sapUshellDynamicTileDataDown { border-top-color: @sapUiHcCriticalColor; }
+        }
+    }
+}
+
+.sapUiMedia-Std-Desktop, .sapUiMedia-Std-Tablet {
+  .sapUshellDynamicTile{
+
+    /* the number */
+    .sapUshellDynamicTileNumber {
+      font-size: @sapUshellDynamicTileNumberFontSizeDesktop;
+      font-weight: normal;
+    }
+    /* the scaling factor for the number */
+    .sapUshellDynamicTileNumberFactor {
+      font-weight: normal;
+      font-size: @sapUshellDynamicTileNumberFactorFontSizeDesktop;
+    }
+  }
+
+  .sapUshellDynamicTileStateArrow {
+    /* Desktop */
+    &.sapUshellDynamicTileDataUp, &.sapUshellDynamicTileDataDown {
+      font-size: @sapUshellDynamicTileNumberFontSizeDesktop;
+    }
+  }
+}
+
+.sapUiMedia-Std-Phone {
+  .sapUshellDynamicTile {
+    /* Phone */
+    /* the number */
+    .sapUshellDynamicTileNumber {
+      font-size:   @sapUshellDynamicTileNumberFontSizePhone;
+      font-weight: normal;
+    }
+    /* the scaling factor for the number */
+    .sapUshellDynamicTileNumberFactor {
+      font-weight: normal;
+      font-size:   @sapUshellDynamicTileNumberFactorFontSizePhone;
+    }
+  }
+}
+/* END "DynamicTile.less" */
+
+/* START "EndUserFeedback.less" */
+/* ================================================================*/
+/* CSS for control sap.ushell/EndUserFeedback.control  sap_hcb theme */
+/* =============================================================== */
+
+.sapUshellEndUserFeedbackDialog {
+  #PopoverTitle{
+    font-size:1rem;
+    }
+
+  #ratingSelectionText {
+    font-size: 1rem;
+    }
+
+  #ratingButtons  li span{
+    font-size: 1.375rem;
+    }
+
+  #ratingLabel{
+    font-size: 1rem;
+    }
+
+  #technicalDataLink{
+    font-size: 0.875rem;
+    }
+  }
+/* END "EndUserFeedback.less" */
+
+/* START "flower-standalone.less" */
+
+//[Tags "Color"]
+// [Description "Background color for the loading animation"]
+@sapUshellLoadingFlowerLeafBackgroundColor:			@sapUiHcStandardBackground;
+@sapUshellBaseColorOfLeavesForSandbox:			        @sapUiHcStandardBackground;
+
+#fiori2-startup-flower.demo .fiori2-leaf {
+  /* base color of leaves, for demo adapter: red */
+
+  background-color: @sapUshellLoadingFlowerLeafBackgroundColor;
+}
+#fiori2-startup-flower.abap .fiori2-leaf {
+  /* base color of leaves, for real launchpad : blue*/
+
+  background-color: @sapUshellLoadingFlowerLeafBackgroundColor;
+}
+#fiori2-startup-flower.sandbox .fiori2-leaf {
+  /* base color of leaves, for sandbox: pink */
+
+  background-color: @sapUshellBaseColorOfLeavesForSandbox;
+}
+.fiori2-leaf {
+  background-color: @sapUshellLoadingFlowerLeafBackgroundColor;
+}
+
+#fiori2-loader {
+
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    -webkit-opacity: 0.9;
+    opacity: 0.9;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=90);
+}
+/* END "flower-standalone.less" */
+
+/* START "GroupList.less" */
+/* ============================================= */
+/* CSS for controller sap.ushell/GroupList.controller */
+/* ============================================= */
+/* LESS Variables */
+/* ============================================= */
+
+    //[Tags "Color"]
+    // [Description "Background color on hover for item in left panel"]
+    @sapUshellListItemHoverBackgroundColor: @sapUiHighlight;
+    //[Tags "Color"]
+    // [Description "Background color on selected item in left panel"]
+    @sapUshellListItemSelectedBackgroundColor: @sapUiHcHighlightAltBackground;
+	//[Tags "Color"]
+	// [Description "Background color for item in left panel"]
+	@sapUshellGroupListItemBackgroundColor: @sapUiHcStandardBackground;
+/* List Item*/
+	@sapUshellListItemBackgroundColor: @sapUiHcStandardBackground;
+	@sapUshellListItemBorderBottom: @sapUshellOnePixel solid @sapHC_ReducedAltForeground;
+
+/* Group list*/
+	@sapUshellGroupListBackgroundColor: @sapUiHcStandardBackground;
+	@sapUshellGroupListFontFamily: @sapUiHcStandardForeground;
+
+    @sapMFontHeader6Size: 0.875em;  //TODO: remove when constant parameter will be available
+    @sapUiFontHeaderWeight: normal; //TODO: remove when constant parameter will be available
+
+	@sapUshellGroupListFontSize: @sapMFontHeader6Size;
+	@sapUshellGroupListFontWeight: @sapUiFontHeaderWeight;
+	@sapUshellGroupListColor: @sapUiHcStandardForeground;
+
+/* Styles */
+/* ============================================= */
+
+
+.sapUshellGroupList{
+	background-color: @sapUshellGroupListBackgroundColor;
+}
+.sapUshellGroupItemList{
+	background-color: @sapUiExtraLightBG;
+}
+
+.sapUshellGroupListItem.sapMLIB {
+	background-color: @sapUshellListItemBackgroundColor;
+	border-bottom: @sapUshellListItemBorderBottom;
+}
+.sapUshellGroupListItem .sapMSLITitleOnly {
+	color: @sapUshellGroupListColor;
+	font-size: @sapUshellGroupListFontSize;
+	font-family: @sapUshellGroupListFontFamily;
+	font-weight: @sapUshellGroupListFontWeight;
+}
+.sapUshellDefaultGroupItem.sapMLIB {
+	background-color: @sapUshellGroupListItemBackgroundColor;
+}
+.sapUshellDefaultGroupItem .sapMSLITitleOnly {
+	color: @sapUshellGroupListColor;
+	font-size: @sapUshellGroupListFontSize;
+	font-family: @sapUshellGroupListFontFamily;
+	font-weight: @sapUshellGroupListFontWeight;
+}
+.sapUshellGroupListItem.sapUshellOver {
+    background-color: @sapUshellListItemHoverBackgroundColor;
+}
+.sapUshellGroupListItem.sapUshellSelected {
+    background-color: @sapUshellListItemSelectedBackgroundColor;
+}
+.sapUshellDefaultGroupItem.sapUshellOver {
+  background-color: @sapUshellListItemHoverBackgroundColor;
+}
+.sapUshellDefaultGroupItem.sapUshellSelected {
+  background-color: @sapUshellListItemSelectedBackgroundColor;
+}
+.sapUshellDefaultGroupItem:active,
+.sapUshellGroupListItem:active {
+    @media @query-desktop { background-color: @sapUshellListItemHoverBackgroundColor; }
+}
+
+.sap-desktop .sapUshellDefaultGroupItem:hover,
+.sap-desktop .sapUshellGroupListItem:hover {
+    background-color: @sapUshellListItemHoverBackgroundColor;
+}
+
+/* END "GroupList.less" */
+
+/* START "HeaderTile.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/HeaderTile.control */
+/* ============================================= */
+
+
+.sapUshellHeaderTile{
+	font-family: @sapUiFontHeaderFamily;  
+    font-weight: @sapUiFontHeaderWeight;
+
+	h1& {
+	   font-size: @sapMFontHeader1Size; 
+	}
+
+    h2& {
+       font-size: @sapMFontHeader2Size; 
+    }
+
+    h3& {
+       font-size: @sapMFontHeader3Size; 
+    }
+
+    h4& {
+       font-size: @sapMFontHeader4Size; 
+    }
+
+    h5& {
+       font-size: @sapMFontHeader5Size; 
+    }
+
+    h6& {
+       font-size: @sapMFontHeader6Size; 
+    }
+}
+/* END "HeaderTile.less" */
+
+/* START "HistoryScreen.less" */
+/* ${copyright} */
+
+
+#searchHistoryScreen, #searchContainerHistoryScreen, .sapMHistoryScreen {
+    .sapUshellHistoryScreenRecentSearches {
+        .sapMListUl {
+            border-bottom: @sapUshellOnePixel solid @sapUiHcStandardForeground;
+            border-top: none;
+            .sapMSLITitleOnly {
+                color: @sapUiHcStandardForeground;
+            }
+        }
+    }
+}
+
+/* END "HistoryScreen.less" */
+
+/* START "LoadingDialog.less" */
+/* ================================================================*/
+/* CSS for control sap.ushell/LoadingDialog.control  sap_hcb theme */
+/* =============================================================== */
+
+.sapUshellLoadingDialogControl {
+
+
+.sapUiIcon {
+    font-size: 2.5rem;
+    color: @sapUiLightText;
+}
+
+.sapUshellLoadingDialogLabel {
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+}
+
+/* Phone */
+@media @query-phone {
+    .sapUshellLoadingDialog {
+    .sapUiIcon {
+        font-size: 1.88rem !important;
+    }
+
+    .sapUshellLoadingDialogLabel {
+        font-size: 1.3em;
+    }
+}
+}
+
+/* END "LoadingDialog.less" */
+
+/* START "MeArea.less" */
+@sapUshellImageBorder:                                    fade(@sapUiShellTextColor, 15);
+@sapUshellRecentActivitiesLine:				fade(@sapUiButtonTextColor, 40);
+
+
+#meAreaIconTabBar .sapMITBContainerContent {
+  border: 0;
+}
+
+.sapUshellMeAreaActivityItem {
+  margin-bottom: 0;
+
+  .sapMSLIInfo {
+    color: @sapUiContentLabelColor;
+  }
+  .sapMSLIImgIcon {
+    color: @sapUiContentNonInteractiveIconColor;
+  }
+}
+
+.sapUshellMeAreaUserName {
+  //TODO: change to parameters
+  color: @sapUiGroupTitleTextColor;
+  font-size: 1.5rem;
+}
+
+.sapUshellMeAreaUserImage {
+  //TODO: change to parameters
+  background-color: transparent;
+  font-size: 4rem;
+  border: 1px solid @sapUiShellTextColor;
+}
+
+.sapUshellMeAreaView {
+  #overflowActions {
+    border: none;
+  }
+  .sapMITBFilter  .sapMITBText {
+    //TODO: change to parameters
+    color: @sapUiShellTextColor;
+    text-shadow: @sapUiShadowText;
+    font-size: 1rem;
+  }
+
+  }
+
+
+#overflowActions-overflowButton .sapMBtnHoverable {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#overflowActions-overflowButton .sapMToggleBtnPressed .sapMBtnIcon {
+  background-color: @sapUiShellActiveBackground;
+}
+/* END "MeArea.less" */
+
+/* START "Notifications.less" */
+/*============================================= */
+/* CSS for Notifications list */
+/* ============================================= */
+
+/* LESS Variables */
+/* ============================================= */
+
+.sapMLIB.sapMNLI.sapUshellNotificationsListItem {
+  border: 1px solid @sapUiHcStandardForeground
+}
+/* END "Notifications.less" */
+
+/* START "PictureTile.less" */
+@sapUiBtnBGTransparentDown: @sapUiHighlight;
+
+.sapCaUiPTDeleteButton .sapUiIcon:before {
+	background-color: @sapUiWhiteBG;
+	color: @sapUiText;
+}
+
+.sapMBtn.sapCaUiPTDeleteButton.sapMBtnActive {
+	background-color: transparent;
+}
+
+.sapCaUiPTDeleteButton.sapMBtnActive .sapUiIcon:before {
+	color: @sapUiBtnBGTransparentDown;	
+
+}
+	
+
+
+/* END "PictureTile.less" */
+
+/* START "PlusTile.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/PlusTile.control sap_hcb theme*/
+/* ============================================= */
+
+/* General Plus Tile */
+@sapUshellPlusTileBoxColorBackground:          fade(@sapShell_Background,0);
+@sapUshellPlusTileBoxBorderColor:              @sapUiMediumBorder;
+
+@sapUshellPlusTileIconColor:                    fade(@sapUiHcStandardForeground,100);
+@sapUshellPlusTileIconColorHover:              fade(@sapUiHcStandardForeground,100);
+
+.sapUshellTile.sapUshellPlusTile {
+
+    background-color:   @sapUshellPlusTileBoxColorBackground;
+    border-color:       @sapUiTileBorderColor;
+
+    &:hover {
+      box-shadow:   0 0 0 @sapUshellOnePixel  @sapUiTileBorderColor;
+    }
+
+    &:hover .sapUiIcon {
+        color: @sapUiTileIconColor;
+    }
+
+    &:focus {
+    outline-color: @sapUiHcStandardForeground;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+    outline-offset: -0.125rem;
+    box-shadow: 0 0 0 @sapUshellOnePixel @sapUiHcStandardForeground;
+    border: none;
+    }
+
+    .sapUiIcon {
+        color:                @sapUiTileIconColor;
+        font-size:            @sapUshellPlusTileIconFontSize;
+    }
+}
+/* END "PlusTile.less" */
+
+/* START "SearchFacet.less" */
+
+
+/* END "SearchFacet.less" */
+
+/* START "SearchFieldGroup.less" */
+/******** search button in head end area ********/
+
+#sf {
+    width: 2.5rem
+}
+
+#sf:before {
+    border-right: @sapUshellOnePixel solid transparent;
+}
+
+#sf span {
+    margin-left: 0;
+    margin-right: 0
+}
+
+
+/* END "SearchFieldGroup.less" */
+
+/* START "SearchPieChart.less" */
+/*****************/
+
+
+/*** Pie Chart ***/
+
+
+/*****************/
+
+g.sap-piechart path{
+	fill: white;
+	stroke: black !important;
+	outline: none;
+}
+
+g.sap-piechart text.labelshadow {
+	stroke: white;
+	stroke-width: 0.5rem;
+}
+/* END "SearchPieChart.less" */
+
+/* START "SearchTileContainer.less" */
+
+/* END "SearchTileContainer.less" */
+
+/* START "ShellFloatingAction.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/ui/Shell/ShellFloatingAction sap_hcb theme*/
+/* ============================================= */
+.sapUshellShellFloatingAction div {
+  border: @sapUshellTwoPixels solid @sapUiHcStandardForeground;
+
+  .sapUiIcon {
+    margin: -@sapUshellOnePixel -@sapUshellOnePixel 0 -@sapUshellOnePixel;
+  }
+}
+
+.sapUshellShellFloatingAction.sapUshellActive {
+  .sapMBtnInner {
+    background-color: @sapUiHcHighlightAltBackground;
+  }
+
+  .sapMBtnInner:hover {
+    background-color: @sapUiHighlight;
+  }
+}
+
+.sapUshellShellFloatingAction .sapMBtnInner:focus {
+  border: @sapUshellTwoPixels dotted @sapUiHcStandardForeground;
+}
+
+.sapUshellShellFloatingAction:focus>.sapMBtnInner.sapMFocusable {
+  border-radius: 1.25rem;
+  border: @sapUshellTwoPixels dotted @sapUiHcStandardForeground;
+}
+
+.sapUshellShellFloatingAction:focus>.sapMBtnInner.sapMFocusable:not(.sapMBtnActive){
+  border-radius: 1.25rem;
+  border: @sapUshellTwoPixels dotted @sapUiHcStandardForeground;
+}
+/* END "ShellFloatingAction.less" */
+
+/* START "ShellHeader.less" */
+/* ================================================== */
+/* CSS for sap.ui.unfied.ShellHeader.control (hcb)    */
+/* ================================================== */
+
+//[Tags "Color"]
+//[Description "Color of title in header"]
+@sapUshellShellHeaderTitleColor: @sapUiShellBorderColor;
+
+@sapUshellShellHeadButtonBorderRadius: 0.37rem;
+@sapUshellShellHeadButtonBorderWidth: @sapUshellOnePixel;
+
+.sapUshellShellHeadBegin .sapUshellShellHeadItm.sapUshellShellHeadItmSep:after {
+	border-left: @sapUshellShellHeadButtonBorderWidth solid @sapUiHcStandardForeground;
+	right: -@sapUshellShellHeadButtonOuterSpace;
+	top: @sapUshellShellHeadButtonOuterSpace/2;
+}
+
+.sapUshellShellHeadSeparator:before,
+.sapUshellShellHeadEnd .sapUshellShellHeadItm.sapUshellShellHeadItmSep:before {
+	border-right: @sapUshellShellHeadButtonBorderWidth solid @sapUiHcStandardForeground;
+	top: @sapUshellShellHeadButtonOuterSpace/2;
+}
+
+.sap-desktop .sapUshellShellHeadItm:hover > span {
+	background-color: @sapUiHighlight;
+}
+
+.sapUshellShellHeadItm {
+	margin-right: @sapUshellShellHeadButtonOuterSpace;
+  > span {
+    border: @sapUshellShellHeadButtonBorderWidth solid @sapUiHcStandardForeground;
+    border-radius: @sapUshellShellHeadButtonBorderRadius;
+    font-weight: normal;
+    font-size: @sapUshellShellHeaderBarHeight / 2;
+    color: @sapUiHcStandardForeground;
+    height: @sapUshellShellHeadButtonHeight;
+    line-height: @sapUshellShellHeadButtonHeight - 2*@sapUshellShellHeadButtonOutlineWidth;
+    margin-right: 2*@sapUshellShellHeadButtonOuterSpace;
+    margin-top: @sapUshellShellHeadButtonOuterSpace / 2;
+    padding: @sapUshellShellHeadButtonBorderWidth;
+    width: @sapUshellShellHeadButtonHeight;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.sapUshellShellHeadAction {
+    color: @sapUiBaseText;
+  }
+
+.sapUshellShellHeadItm:active > span,
+.sapUshellShellHeadItm:active:hover > span,
+.sapUiMedia-Std-Desktop .sapUshellShellHeadItm:active:hover > span,
+.sapUiMedia-Std-Desktop .sapUshellShellHeadItm:hover > span,
+.sapUiMedia-Std-Desktop .sapUshellShellHeadAction:hover > *,
+.sapUiMedia-Std-Desktop .sapUshellShellHeadAction:hover:active > *,
+.sapUshellShellHeadAction:active > *,
+.sapUshellShellHeadItm.sapUshellShellHeadItmSel > span,
+.sapUshellShellHeadItm.sapUshellShellHeadItmSel:active > span,
+.sapUshellShellHeadItm.sapUshellShellHeadItmSel:active:hover > span {
+  background-color: @sapUiButtonHoverBackground;
+  }
+
+.sapUshellShellHeadItm.sapUshellShellHeadItmSel:hover > span {
+  background-color: darken(@sapUiHighlight, 5%);
+  }
+
+.sapUshellShellHeadActionImg,
+.sapUshellShellHeadActionName,
+.sapUshellShellHeadActionExp {
+	border: @sapUshellShellHeadButtonBorderWidth solid @sapUiHcStandardForeground;
+	height: @sapUshellShellHeadButtonHeight;
+	line-height: @sapUshellShellHeadButtonHeight - 2*@sapUshellShellHeadButtonOutlineWidth;;
+	margin-top: 0;
+	padding-top: @sapUshellShellHeadButtonBorderWidth;
+}
+
+.sapUshellShellHeadActionImg {
+  font-weight: normal;
+  font-size: @sapUshellShellHeaderBarHeight / 2;
+  }
+
+.sapUiMedia-Std-Desktop .sapUshellShellHeadActionImg,
+.sapUiMedia-Std-Tablet .sapUshellShellHeadActionImg {
+	border-bottom-left-radius: @sapUshellShellHeadButtonBorderRadius;
+	border-right: none;
+	border-top-left-radius: @sapUshellShellHeadButtonBorderRadius;
+}
+
+.sapUiMedia-Std-Desktop .sapUshellShellHeadActionImg > img,
+.sapUiMedia-Std-Tablet .sapUshellShellHeadActionImg > img {
+	margin: 0;
+}
+
+.sapUshellShellHeadActionName {
+    font-size: 0.87rem;
+	border-left: none;
+	border-right: none;
+}
+
+.sapUshellShellHeadActionExp {
+    font-size: 1rem;
+	border-bottom-right-radius: @sapUshellShellHeadButtonBorderRadius;
+	border-left: none;
+	border-top-right-radius: @sapUshellShellHeadButtonBorderRadius;
+}
+
+.sapUshellShellHeadAction:focus .sapUshellShellHeadActionImg,
+.sapUshellShellHeadAction:focus .sapUshellShellHeadActionName,
+.sapUshellShellHeadAction:focus .sapUshellShellHeadActionExp {
+	border-radius: 0;
+	border-style: dotted;
+	border-width: 2*@sapUshellShellHeadButtonBorderWidth;
+	padding-top: 0;
+}
+
+.sapUshellShellHeadAction:focus .sapUshellShellHeadActionImg {
+	border-right: none;
+	padding-bottom: 0;
+	padding-left: @sapUshellShellHeadButtonInnerSpace - @sapUshellShellHeadButtonBorderWidth;
+	padding-top: 0;
+}
+
+.sapUshellShellHeadAction:focus .sapUshellShellHeadActionName {
+	border-left: none;
+	border-right: none;
+}
+
+.sapUshellShellHeadAction:focus .sapUshellShellHeadActionExp {
+	border-left: none;
+	padding-bottom: 0;
+	padding-right: @sapUshellShellHeadButtonInnerSpace - @sapUshellShellHeadButtonBorderWidth;
+	padding-top: 0;
+}
+
+.sapUiMedia-Std-Phone .sapUshellShellHeadActionImg {
+	border-radius: @sapUshellShellHeadButtonBorderRadius;
+}
+
+.sapUiMedia-Std-Phone .sapUshellShellHeadAction:focus .sapUshellShellHeadActionImg {
+	border-right: 2*@sapUshellShellHeadButtonBorderWidth dotted @sapUiHcStandardForeground;
+	padding-right: @sapUshellShellHeadButtonInnerSpace - @sapUshellShellHeadButtonBorderWidth;
+}
+
+.sapUshellShellHeadItmMarker > div:after,
+.sapUshellShellHeadItmMarker > div:before {
+	border-bottom-color: @sapUiHcStandardForeground;
+}
+
+.sapUshellShellHeadItmMarker {
+    background-color: transparent;
+  }
+
+.sapUshellShellHeadItm:focus > span{
+	border: 2*@sapUshellShellHeadButtonBorderWidth dotted @sapUiHcStandardForeground;
+	border-radius: 0;
+	padding: 0;
+}
+
+.sapUshellShellAppTitleContainer{
+  display: inline-block;
+  max-width: 100%
+}
+
+.sapUshellHeadTitle {
+  color: @sapUshellShellHeaderTitleColor;
+}
+
+
+/** --------------------------------------- **/
+/** Styles for Shell Title's Navigation Menu**/
+/** --------------------------------------- **/
+
+.sapUshellShellAppTitleHeadActionImg {
+  border: 0 !important;
+}
+
+#sapUshellAppTitlePopover .sapMBar {
+  border-bottom: 0 !important;
+}
+
+.sapUshellAppTitle {
+  color: @sapUiShellTextColor;
+  border: 0.125rem solid @sapUiHcStandardForeground;
+  border-radius: 0.375rem;
+}
+
+.sapUshellAppTitleClickable:hover {
+  background-color: @sapUiButtonHoverBackground;
+  border-radius: 0.2rem;
+}
+
+.sapUshellAppTitleClickable:active {
+  background-color: @sapUiButtonActiveBackground;
+  color: @sapUiLinkActive !important;
+  text-shadow: 0 0 0 0 !important;
+  border-radius: 0.2rem;
+}
+
+.sapUshellAppTitle:focus {
+  outline: @sapUshellTwoPixels dotted @sapUiFieldFocusBorderColor;
+  margin-top: @sapUshellOnePixel;
+}
+
+/** Hierarchy Items - (List Items) Icon Styles **/
+.sapUshellNavigationMenuListItems {
+  color: @sapUiListBackground;
+  bottom-border: @sapUiMediumBorder @sapUshellOnePixel;
+}
+
+.sapUshellNavigationMenuListItems:not(:last-child) .sapMLIBContent:after {
+  background: @sapUiHcStandardForeground;
+}
+
+.sapUshellNavigationMenuListItems:not(:first-child) .sapMLIBContent:before {
+  background: @sapUiHcStandardForeground;
+}
+
+.sapUshellNavigationMenuListItems .sapMSLIImgIcon,
+.sapUshellNavigationMenuTitleItem .sapMSLIImgIcon{
+  color: @sapUiContentLabelColor;
+}
+
+/** Hierarchy Items - (List Items) - Text **/
+.sapUshellNavigationMenuListItems .sapMSLITitleOnly {
+  color: @sapUiHighlightTextColor;
+}
+
+.sapUshellNavigationMenuListItems .sapMSLITitle {
+  color: @sapUiHighlightTextColor;
+}
+
+.sapUshellNavigationMenuListItems .sapMSLIDescription {
+  color: @sapUiHighlightTextColor;
+}
+
+/** Shell Application Title control **/
+
+/** Shell Navigation Menu - ResponsivePopover**/
+#sapUshellAppTitlePopover {
+  background-color: @sapUiListBackground;
+}
+
+/** Shell Navigation Menu - related Apps grid (within a flexbox) - override the text-tab-bar content area height **/
+#sapUshellAppTitlePopover .sapMITBContent {
+  background-color: @sapUiButtonBackground;
+  top-border: @sapUiMediumBorder @sapUshellOnePixel;
+  bottom-border: @sapUiMediumBorder @sapUshellOnePixel;
+}
+
+/** Shell Navigation Menu - Popover Header color override **/
+#sapUshellAppTitlePopover .sapMIBar.sapMHeader-CTX {
+  background-color: @sapUiListBackground;
+}
+
+/** Shell Navigation Menu - override background color*/
+#sapUshellNavMenuTabBar {
+  background-color: @sapUiListBackground;
+}
+
+/** Shell Navigation Menu - override to style of the text-tab-bar head area background color**/
+#sapUshellNavMenuTabBar .sapMITH {
+  background-color: @sapUiListBackground;
+}
+
+#sapUshellNavMenuTabBar .sapMITBContainerContent {
+  border: 0;
+  border-top: 0.125rem solid @sapUiHcStandardForeground;
+}
+
+/** Shell Navigation Menu - Mini Tiles (of relatedApps)**/
+    .sapUshellNavMiniTile {
+  background-color: @sapUiListBackground;
+  box-shadow: 0 0 0 @sapUshellOnePixel @sapUiHcStandardForeground;
+}
+
+.sapUshellNavMiniTile:hover {
+  box-shadow: 0 0 0 @sapUshellTwoPixels @sapUiHcStandardForeground;
+  background-color: @sapUiButtonHoverBackground;
+}
+.sapUshellNavMiniTile:active {
+  box-shadow: 0 0 0 @sapUshellTwoPixels @sapUiHcStandardForeground;
+  background-color: @sapUiButtonHoverBackground;
+}
+.sapUshellNavMiniTile:focus {
+  box-shadow: 0 0 0 @sapUshellTwoPixels @sapUiHcStandardForeground;
+  background-color: @sapUiButtonHoverBackground;
+}
+
+/** Shell Navigation Menu - Mini Tiles - Title **/
+.sapUshellNavMiniTileTitle{
+  color: @sapUiHighlightTextColor;
+}
+/** Shell Navigation Menu - Mini Tiles - Subtitle **/
+.sapUshellNavMiniTileSubtitle{
+  color: @sapUiHighlightTextColor;
+}
+
+/** Shell Navigation Menu - Mini Tiles - Icon **/
+.sapUshellNavMiniTileIcon{
+  color: @sapUiBrand;
+}
+
+.sapUshellShellHeadItmCounter:after{
+  background: @sapUiHcNegativeColor;
+  color: @sapUiHcStandardBackground;
+}
+
+#sapUshellAllMyAppsMasterDetail-Master {
+  border-right: 1px solid @sapUiHcStandardForeground;
+}
+/* END "ShellHeader.less" */
+
+/* START "ShellLayout.less" */
+/* ==================================================== */
+/* CSS for sap.ui.unfied.ShellLayout.control (hcb)      */
+/* ==================================================== */
+
+.sapUshellShellCurtain,
+.sapUshellShell .sapUshellShellHead {
+	background-color: @sapUiBaseBG;
+}
+
+.sapUshellShell .sapUshellShellHead > div {
+	background-color: @sapUiBaseBG;
+	-webkit-box-shadow: inset 0 -0.0625em @sapUiBaseBorder;
+	box-shadow: inset 0 -0.0625em @sapUiShellBorderColor;
+}
+
+.sapUshellShell .sapUshellShellBrand {
+	background: transparent;
+}
+
+/* END "ShellLayout.less" */
+
+/* START "SplitContainer.less" */
+.sapUshellSpltContPane {
+	background-color: @sapUiHcStandardBackground;
+}
+
+/* END "SplitContainer.less" */
+
+/* START "Tile.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/Tile.control */
+/* ============================================= */
+
+/* LESS Variables */
+/* ============================================= */
+
+/* General Tile Colors */
+//[Tags "Color"]
+// [Description "Background color for tiles"]
+@sapUshellTileBackgroundColor:					@sapUiTileBackground;
+@sapUshellTileTextColor:							@sapUiHeaderText;
+
+@sapUiFontHeaderFamily: @sapUiFontFamily;
+@sapUiHeaderText: @sapUiDarkText;
+
+/* Tile Border */
+@sapUshellTileBorderColor: 						@sapUiMediumBorder;
+
+/* Tile Shadow */
+@sapUshellTileShadowDimensions:					0 0 @sapUshellTileShadowWidth;
+@sapUshellTileShadowColor:							fade(@sapUiShadowTint,10);
+
+/* Tile Footer (plus button in tile catalog) */
+@sapUshellTileFooterBorder:						@sapUiDarkBorder;
+@sapUshellTileFooterFontSize:						1rem;
+@sapUshellTileFooterIconColor:						@sapUiLightText;
+@sapUshellTileBorderThicknessHcb:                  @sapUshellOnePixel;
+@sapUshellTileBorderColor: 						@sapUiMediumBorder;
+
+/* Styles */
+/* ============================================= */
+
+.sapUshellTile:hover {
+    box-shadow: 0 0 0 @sapUshellOnePixel @sapUiHcStandardForeground;
+    border-radius: 0.375rem;
+}
+
+.sapUshellTile {
+    background: @sapUiTileBackground;
+    -moz-box-shadow: @sapUshellTileShadowDimensions @sapUshellTileShadowColor;
+    -webkit-box-shadow: @sapUshellTileShadowDimensions @sapUshellTileShadowColor;
+    box-shadow: @sapUshellTileShadowDimensions @sapUshellTileShadowColor;
+    border: @sapUshellTileBorderThicknessHcb solid @sapUiTileBorderColor;
+    color: @sapUiTileBorderColor;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+    border-radius: 0.375rem;
+    padding: 0 2px 2px 0;
+    &:focus{
+      outline-color: @sapUiHcStandardForeground;
+      outline-style: dotted;
+      outline-width: 0.125rem;
+      outline-offset: -0.25rem;
+      box-shadow: 0 0 0 @sapUshellOnePixel @sapUiHcStandardForeground;
+      border: none;
+
+      .sapMGT {
+        border-color: @sapUiHcStandardForeground;
+        background-color: transparent;
+      }
+    }
+	footer {
+
+		text-align: @sapUshellTileFooterTextAlignment;
+
+
+		& > * {
+			background: @sapUshellTileFooterBorder;
+
+			.sapUiIcon {
+				line-height: @sapUshellTileFooterLineHeight;
+				font-size: @sapUshellTileFooterFontSize;
+				color: @sapUshellTileFooterIconColor;
+				position: @sapUshellTileFooterPosition;
+				top: @sapUshellTileFooterPositionTop;
+			}
+
+			.sapMBtnInner{
+				height: 2rem;
+                -moz-box-shadow: inset 0 @sapUshellTwoPixels 0.19rem 0 rgba(0,0,0, 0.1);
+				-webkit-box-shadow: inset 0 @sapUshellTwoPixels 0.19rem 0 rgba(0,0,0, 0.1);
+				box-shadow: inset 0 @sapUshellTwoPixels 0.19rem 0 rgba(0,0,0, 0.1);
+			}
+
+			&:first-child {
+				border-bottom-left-radius: @sapUshellTileFooterLineHeight;
+			}
+			&:last-child {
+				border-bottom-right-radius: @sapUshellTileFooterLineHeight;
+			}
+
+            &.sapMBtn:focus>.sapMBtnInner.sapMFocusable {
+              border: none;
+              top: 0.125rem;
+              outline: @sapUshellTwoPixels dotted @sapUiHcStandardForeground;
+            }
+		}
+	}
+}
+
+.sapUshellTileFooterInfoNegative {
+  color: @sapUiNegativeElement;
+}
+
+.sapUshellTileFooterInfoNeutral {
+  color: @sapUiNeutralElement
+}
+
+.sapUshellTileFooterInfoPositive {
+  color: @sapUiPositiveElement
+}
+
+.sapUshellTileFooterInfoCritical {
+  color: @sapUiCriticalElement;
+}
+/* END "Tile.less" */
+
+/* START "TileBase.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/TileBase.control theme sap_hcb*/
+/* ============================================= */
+.sapUiMedia-Std-Desktop .sapUshellTileBase:hover {
+  .sapMBtnInner {
+    box-shadow: inset 0 @sapUshellTwoPixels 0 0 @sapUiLightShadowTint;
+  }
+}
+
+.sapUshellTileBase {
+  color: @sapUiHcStandardForeground;
+
+  .sapUshellTileBaseNeutral {color: @sapUiHcNeutralColor;}
+  .sapUshellTileBasePositive {color: @sapUiHcPositiveColor;}
+
+  .sapUshellTileBaseTitle {
+    font-weight: @sapUshellTileBaseTitleFontWeight;
+    font-family: @sapUshellTileBaseTitleFontFamily;
+    font-size:          @sapUshellTileBaseTitleFontSizeDesktop;
+
+    b {
+      font-weight: inherit;
+    }
+  }
+
+  .sapUshellTileBaseSubtitle {
+    font-weight: @sapUshellTileBaseSubtitleFontWeight;
+    font-family: @sapUshellTileBaseSubtitleFontFamily;
+    font-size: @sapUshellTileBaseSubtitleFontSizeDesktop;
+
+    b {
+      font-weight: inherit;
+    }
+  }
+
+  .sapUshellTileBaseIcon {
+    font-size: @sapUshellTileBaseIconFontSizeDesktop;
+  }
+
+  .sapUshellTileBaseInfo {
+
+    font-weight: @sapUshellTileBaseBottomlineFontWeight;
+    font-family: @sapUshellTileBaseBottomlineFontFamily;
+    font-size:   @sapUshellTileBaseBottomlineFontSizeDesktop;
+
+    &.sapUshellTileBaseNeutral {color: @sapUiHcNeutralColor;}
+    &.sapUshellTileBasePositive {color: @sapUiHcPositiveColor;}
+
+    b {
+      font-weight: inherit;
+    }
+  }
+  &:focus{
+     outline-color: @sapUiHcStandardForeground;
+     outline-style: dotted;
+     outline-width: 0.125rem;
+     outline-offset: -0.125rem;
+     box-shadow: 0 0 0 @sapUshellOnePixel @sapUiHcStandardForeground;
+  }
+}
+
+.sapUiMedia-Std-Phone .sapUshellTileBase {
+  /* Phone */
+
+  .sapUshellTileBaseTitle {
+    font-size: @sapUshellTileBaseTitleFontSizePhone;
+  }
+
+  .sapUshellTileBaseSubtitle {
+    font-size: @sapUshellTileBaseSubtitleFontSizePhone;
+  }
+
+  .sapUshellTileBaseIcon {
+    font-size: @sapUshellTileBaseIconFontSizePhone;
+  }
+
+  .sapUshellTileBaseInfo {
+    font-size: @sapUshellTileBaseBottomlineFontSizePhone;
+  }
+}
+
+
+/* END "TileBase.less" */
+
+/* START "TileContainer.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/TileContainer.control */
+/* ============================================= */
+
+/* LESS Variables */
+/* ============================================= */
+
+/* TileContainer Dashboard */
+  //[Tags "Color"]
+  //[Description "Group header title text color"]
+    @sapUshellGroupHeaderTitleColor:                                            @sapUiHcStandardForeground; //Since @sapUiTextInverted parameter is not stable yet, we use white color here.
+	@sapUshellTileContainerDashboardGroupTitleFontFamily:						@sapUiFontHeaderFamily;
+	@sapUshellTileContainerDashboardGroupTitleFontWeight:						@sapUiFontHeaderWeight;
+	@sapUshellTileContainerCloneColor:                                         @sapUiHcHighlightAltBackground;
+    @sapUshellTileContainerPlaceholderColor:                                   @sapUiHcStandardForeground;
+    
+    @sapUshellTileContainerBorder:                                             0.0625rem;
+    @sapUshellTileContainerOffsetForBorder:                                    2 * @sapUshellTileContainerBorder;
+	
+	/* Desktop */
+	@sapUshellTileContainerDashboardGroupTitleFontSizeDesktop:                 @sapMFontHeader2Size;
+
+	/* Phone */
+	@sapUshellTileContainerDashboardGroupTitleFontSizePhone:                   @sapMFontHeader4Size;
+
+			
+    /* TileContainer Catalog */
+	@sapUshellTileContainerCatalogGroupTitleFontFamily:						@sapUiFontFamily;
+	@sapUshellTileContainerCatalogGroupTitleFontWeight:						normal;
+
+/* Styles */
+/* ============================================= */
+
+.sapUshellTileContainerLocked h2:after{
+	color: @sapUiHcStandardForeground;
+}
+
+/* Only TileContainers located on the dashboard */
+.sapUshellDashboardGroupsContainer,#cloneArea {
+    .sapUshellContainerTitle{
+        font-family: @sapUshellTileContainerDashboardGroupTitleFontFamily;
+        font-weight: @sapUshellTileContainerDashboardGroupTitleFontWeight;
+    }
+}
+
+.sapUiMedia-Std-Desktop, .sapUiMedia-Std-Tablet {
+  .sapUshellContainerTitle {
+    color: @sapUshellGroupHeaderTitleColor;
+    font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+  }
+  .sapUshellTileContainerTitleInput {
+    ::-webkit-input-placeholder {
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+    }
+    :-moz-placeholder {
+      /* older Firefox*/
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+    }
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+    }
+    :-ms-input-placeholder {
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+    }
+    label {
+      /* ie */
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+      margin-top: 0.125rem;
+    }
+  }
+  .sapUshellTileContainerTitleInput input{
+    font-size: @sapUshellTileContainerDashboardGroupTitleFontSizeDesktop;
+  }
+}
+
+.sapUiMedia-Std-Phone {
+  .sapUshellContainerTitle {
+    color: @sapUshellGroupHeaderTitleColor;
+    font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+  }
+  .sapUshellTileContainerTitleInput {
+    ::-webkit-input-placeholder {
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+    }
+    :-moz-placeholder {
+      /* older Firefox*/
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+    }
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+    }
+    :-ms-input-placeholder {
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+    }
+    label {
+      font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+    }
+  }
+
+  .sapUshellTileContainerTitleInput input{
+    font-size: @sapUshellTileContainerDashboardGroupTitleFontSizePhone;
+  }
+}
+
+  /* Only TileContainers located on the catalog */
+  .sapUshellCatalog {
+    .sapUshellTileContainerContent{
+      h3 {
+        font-family: @sapUshellTileContainerCatalogGroupTitleFontFamily;
+        font-weight: @sapUshellTileContainerCatalogGroupTitleFontWeight;
+        margin-top : 0;
+        margin-bottom: 0rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .sapUshellTileContainerContent {
+    .sapUshellNoFilteredItems{
+      font-size: 1rem !important;
+    }
+
+    .sapUshellInner:after {
+      font-size: 0;
+    }
+  }
+
+  .sapUshellTilesContainerSeparator {
+    border-bottom: @sapUshellOnePixel solid #fff;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .sapUshellLinkTile:focus {
+     outline-color: #ffffff;
+  }
+  .sapUshellTileContainerHeader:focus {
+    outline: 0.125rem dotted @sapUiContentFocusColor;
+  }
+
+  .sapUshellDashboardGroupsContainer .sapUshellTileContainerContent {
+    &:focus {
+      border-color: @sapUiHcStandardForeground;
+    }
+  }
+
+  #dashboardGroups .sapUshellDashboardGroupsContainerItem-placeholder {
+    border: 0.125rem dashed @sapUshellTileContainerPlaceholderColor;
+    background-color: transparent;
+    border-radius: 0.375rem;
+
+    .sapUshellTileContainerEditMode {
+      background: transparent;
+    }
+  }
+  .sapUshellDashboardGroupsContainerItem.sapUshellDashboardGroupsContainerItem-clone {
+
+    .sapUshellContainerTitle {
+      background-color: @sapUshellTileContainerCloneColor;
+      font-weight: inherit;
+    }
+  }
+
+  .sapUshellTileContainerEditMode {
+    border : @sapUshellTileContainerBorder solid;
+    border-color: @sapUiHcStandardForeground;
+    border-radius: 0.375rem;
+  }
+
+  .sapUshellContainerIcon {
+    font-size: 1rem;
+  }
+
+  .sapUshellTileContainer {
+    .sapUshellTileContainerBeforeContent, .sapUshellTileContainerAfterContent {
+
+      .sapUshellAddGroupButton {
+        .sapMBtnIcon {
+          font-size: 1.0rem;
+        }
+        div {
+          font-size:   1.25rem;
+        }
+      }
+    }
+  }
+
+.sapUshellGroupBackgroundContainer {display: none;}
+/* END "TileContainer.less" */
+
+/* START "TileState.less" */
+
+/* ============================================= */
+/* CSS for control sap.ushell.ui.launchpad/TileState.control */
+/* ============================================= */
+
+.sapUshellGT {
+    background: @sapUiHcStandardForeground;
+    position: relative;
+}
+
+.sapUshellOverlay {
+    background-color: @sapUiBaseBG;
+}
+
+.sapUshellTileStateFtrFldTxt {
+    font-weight: normal;
+    font-family: @sapUiFontFamily;
+    font-size: @sapMFontMediumSize;
+    color:@sapUiHcStandardForeground;
+}
+
+/* END "TileState.less" */
+
+/* START "UserPreferencesButton.less" */
+/* ============================================= */
+/* CSS for control sap.ushell/UserPreferencesButton.control sap_hcb theme*/
+/* ============================================= */
+.sapUshellUserPrefUserIdentifier {
+    border-bottom: @sapUshellOnePixel solid @sapHC_ReducedAltForeground;
+    background-color: @sapUiHcStandardBackground;
+}
+/* END "UserPreferencesButton.less" */
+
+/* START "UserStatus.less" */
+/* Belize */
+
+/* ============================================= */
+/* CSS for User Status */
+/* ============================================= */
+
+/* LESS Variables */
+/* ============================================= */
+
+
+
+/* Styles */
+/* ============================================= */
+.sapUserStatusOpener {
+  background: none;
+}
+
+.sapUserStatusOpener:hover {
+  background: fade(@sapUiShellHoverBackground, 20);
+}
+
+.sapUserStatusPopOver {
+  background-color: @sapUiListBackground;
+  box-shadow: @sapUiShadowLevel2;
+}
+
+
+.sapUserStatusSignOutContainer:hover {
+  background: fade(@sapUiShellHoverBackground, 15);
+}
+
+.sapUserStatusSignOutContainer:active {
+  background: @sapUiShellActiveBackground;
+  outline: none;
+  .sapUserStatusText {
+    color: @sapUiShellActiveTextColor;
+  }
+}
+
+.sapUserStatusSignOutContainer:focus {
+  outline: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapUserStatusContainer:hover {
+  background: fade(@sapUiShellHoverBackground, 15);
+}
+
+.sapUserStatusContainer:active {
+  background: @sapUiShellActiveBackground;
+  outline: none;
+  .sapUserStatusText {
+    color: @sapUiShellActiveTextColor;
+  }
+}
+
+.sapUserStatusContainer:focus {
+  outline: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapUshellUserStatusBusyIndicator {
+  background-color: @sapUiNegativeElement;
+}
+
+.sapUshellUserStatusAwayIndicator {
+  background-color: @sapUiCriticalElement;
+}
+
+.sapUshellUserStatusAvailableIndicator {
+  background-color: @sapUiPositiveElement;
+}
+
+.sapUshellUserStatusAppearOfflineIndicator {
+  background-color: @sapUiNeutralElement;
+}
+
+.sapUserStatusText {
+  color : @sapUiShellTextColor;
+}
+
+.sapUshellUserStatusDropDownArrow {
+  color: @sapUiShellTextColor;
+}
+
+.sapUserStatusSignOutText {
+  font-weight: bold;
+}
+/* END "UserStatus.less" */
+
+/* START "ActionMode.less" */
+/* SAP_HCB */
+
+.sapUshellTileDeleteIconOuterClass {
+  color: @sapUiHcStandardForeground;
+  background: @sapUiHcStandardBackground;
+  border: 1px solid @sapUiHcStandardForeground;
+}
+
+.sapUshellTileDeleteIconInnerClass {
+  color: @sapUiHcStandardForeground;
+}
+
+.sapUshellTileDeleteIconInnerClass:focus {
+  border: 1px dotted @sapUiHcStandardForeground;
+}
+
+.sapUshellTileDeleteClickArea:hover {
+  .sapUshellTileDeleteIconOuterClass {
+    background: @sapUiHighlight;
+  }
+}
+
+.sapUshellTileDeleteIconOuterClass:hover {
+  background: @sapUiHighlight;
+}
+
+// actopms
+.sapUshellTileActionIconDivBottom {
+  background: @sapUiHcStandardBackground;
+}
+
+.sapUshellTile:hover .sapUshellTileActionIconDivBottom {
+  color: @sapUiBrand;
+}
+/* END "ActionMode.less" */
+

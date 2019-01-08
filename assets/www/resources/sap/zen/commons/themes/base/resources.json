@@ -1,0 +1,184 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"theme": "base"
+		},
+		{
+			"name": "AbsoluteLayout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_flat_0_aaaaaa_40x100.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_flat_75_ffffff_40x100.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_glass_55_fbf9ee_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_glass_65_ffffff_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_glass_75_dadada_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_glass_75_e6e6e6_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_glass_95_fef1ec_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-bg_highlight-soft_75_cccccc_1x100.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-icons_222222_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-icons_2e83ff_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-icons_454545_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-icons_888888_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/jQuery/ui-icons_cd0a0a_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/layout/separationLarge.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/layout/separationMedium.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/layout/separationSmall.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_flat_0_aaaaaa_40x100.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_flat_75_ffffff_40x100.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_glass_55_fbf9ee_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_glass_65_ffffff_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_glass_75_dadada_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_glass_75_e6e6e6_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_glass_95_fef1ec_1x400.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-bg_highlight-soft_75_cccccc_1x100.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-icons_222222_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-icons_2e83ff_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-icons_454545_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-icons_888888_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/jQuery/ui-icons_cd0a0a_256x240.png",
+			"theme": "base"
+		},
+		{
+			"name": "img/layout/separationLarge.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img/layout/separationMedium.gif",
+			"theme": "base"
+		},
+		{
+			"name": "img/layout/separationSmall.gif",
+			"theme": "base"
+		},
+		{
+			"name": "jQueryUiBase.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "layout.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"theme": "base"
+		},
+		{
+			"name": "library-dbg.css",
+			"isDebug": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

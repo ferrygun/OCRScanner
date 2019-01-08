@@ -1,0 +1,400 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+
+@import "../base/library.less";
+@import "../../../../../../../Base/baseLib/sap_belize/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../../sap/ui/core/themes/sap_belize/base.less" */
+
+@import "../../../../../../sap/ui/core/themes/sap_belize/global.less";
+
+/* START "AreaMicroChart.less" */
+/* ====================================================== */
+/* CSS for control sap.suite.ui.microchart/AreaMicroChart */
+/* Belize Theme                                           */
+/* ====================================================== */
+
+.sapSuiteAMCCanvas.sapSuiteAMCWithThreshold {
+	background-color: @sapUiChoroplethRegionBG;
+}
+
+.sapSuiteAMCTarget {
+	outline-width: 2px;
+}
+/* END "AreaMicroChart.less" */
+
+/* START "BulletMicroChart.less" */
+/* ======================================================== */
+/* CSS for control sap.suite.ui.microchart/BulletMicroChart */
+/* Belize Theme                                             */
+/* ======================================================== */
+
+.sapSuiteBMCTargetValue {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+.sapSuiteBMCForecastBarValue {
+	border-right: 1px solid @sapUiBaseBG;
+}
+
+/* Scale Colors Start */
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorLightest {
+	background-color: #ffffff;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorExtraLight {
+	background-color: #f2f2f2;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorLight {
+	background-color: #e5e5e5;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorMedium {
+	background-color: #dddddd;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorMediumLight {
+	background-color: @sapUiChartDataPointBG;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorDark {
+	background-color: #777777;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorExtraDark {
+	background-color: #333333;
+}
+
+.sapSuiteBMCBar.sapSuiteBMCScaleColorDarkest {
+	background-color: #000000;
+}
+
+/* Scale Colors End */
+/* END "BulletMicroChart.less" */
+
+/* START "ComparisonMicroChart.less" */
+/* ============================================================ */
+/* CSS for control sap.suite.ui.microchart/ComparisonMicroChart */
+/* Belize Theme                                                 */
+/* ============================================================ */
+
+/* Make sure that if there is no middle bar (sapSuiteCpMCChartBarValue) a double left border wouldn't appear. */
+.sapSuiteCpMCChartBarNegNoValue + .sapSuiteCpMCChartBarNoValue {
+	border-left: none;
+}
+
+.sapSuiteCpMCChartItemTitle {
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+/* END "ComparisonMicroChart.less" */
+
+/* START "DeltaMicroChart.less" */
+/* =============================================================== */
+/* CSS for control sap.suite.ui.microchart/DeltaMicroChart.control */
+/* Belize Theme                                                    */
+/* =============================================================== */
+
+.sapSuiteDMC {
+	font-family: @sapUiFontHeaderFamily;
+	font-weight: @sapUiFontHeaderWeight;
+	color: @sapUiChartCategoryAxisLabelFontColor;
+}
+
+/* END "DeltaMicroChart.less" */
+
+/* START "HarveyBallMicroChart.less" */
+/* ============================================================ */
+/* CSS for control sap.suite.ui.microchart/HarveyBallMicroChart */
+/* Belize Theme                                                 */
+/* ============================================================ */
+
+.sapSuiteHBMCSegment {
+	stroke: #ffffff; // as specified without variable
+}
+
+/* END "HarveyBallMicroChart.less" */
+
+/* START "InteractiveBarChart.less" */
+/* =========================================================== */
+/* CSS for control sap.suite.ui.microchart/InteractiveBarChart */
+/* Belize Theme                                                */
+/* =========================================================== */
+
+@_sap_suite_ui_microchart_InteractiveBarChart_BarBackground:				@sapUiBrand;
+@_sap_suite_ui_microchart_InteractiveBarChart_BarHoverBackground: 			fade(@sapUiBrand, 20);
+@_sap_suite_ui_microchart_InteractiveBarChart_BarSelectedBackground: 		fade(@sapUiBrand, 20);
+@_sap_suite_ui_microchart_InteractiveBarChart_BarSelectedHoverBackground:	fade(@sapUiBrand, 40);
+
+.sapSuiteIBCBar {
+	background-color: @_sap_suite_ui_microchart_InteractiveBarChart_BarBackground;
+}
+
+.sapSuiteIBCBarLabelText {
+	color: @sapUiContentLabelColor;
+}
+
+html.sap-desktop .sapSuiteIBC.sapSuiteIBCNonInteractive:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapSuiteIBC:not(.sapSuiteIBCNonInteractive) .sapSuiteIBCBarInteractionArea:hover {
+	background-color: @_sap_suite_ui_microchart_InteractiveBarChart_BarHoverBackground;
+	.sapSuiteIBCBarLabelText {
+		color: @sapUiContentForegroundTextColor;
+	}
+}
+
+.sapSuiteIBCBarSelected {
+	background-color: @_sap_suite_ui_microchart_InteractiveBarChart_BarSelectedBackground;
+}
+
+html.sap-desktop .sapSuiteIBC:not(.sapSuiteIBCNonInteractive) .sapSuiteIBCBarSelected:hover {
+	background-color: @_sap_suite_ui_microchart_InteractiveBarChart_BarSelectedHoverBackground;
+}
+
+.sapSuiteIBCBarSelected .sapSuiteIBCBarLabelText{
+	color: @sapUiContentForegroundTextColor;
+}
+
+.sapSuiteIBCBarValue.sapSuiteIBCBarValueOutside {
+	color: @sapUiContentForegroundTextColor;
+}
+
+.sapSuiteIBCBarValue {
+	color: @sapUiContentContrastTextColor;
+}
+
+html.sap-desktop .sapSuiteIBC:not(.sapSuiteIBCNonInteractive) .sapSuiteIBCBarInteractionArea:focus {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapSuiteIBCDivider {
+	background-color: @sapUiBaseText;
+}
+
+/* END "InteractiveBarChart.less" */
+
+/* START "InteractiveLineChart.less" */
+/* ============================================================ */
+/* CSS for control sap.suite.ui.microchart/InteractiveLineChart */
+/* Belize theme                                                 */
+/* ============================================================ */
+
+@_sap_suite_ui_microchart_InteractiveLineChart_LineColor:						@sapUiButtonActiveBackground;
+@_sap_suite_ui_microchart_InteractiveLineChart_SectionHoverBackground:			fade(@sapUiBrand, 20);
+@_sap_suite_ui_microchart_InteractiveLineChart_SectionSelectedBackground:		fade(@sapUiBrand, 20);
+@_sap_suite_ui_microchart_InteractiveLineChart_SectionSelectedHoverBackground:	fade(@sapUiBrand, 40);
+@_sap_suite_ui_microchart_InteractiveLineChart_BottomLabelBorderColor:			darken(@sapUiChartGridlineColor, 70);
+@_sap_suite_ui_microchart_InteractiveLineChart_DividerColor:					darken(@sapUiChartGridlineColor, 70);
+@_sap_suite_ui_microchart_InteractiveLineChart_SelectedPointBorder:				mix(@sapUiGlobalBackgroundColor, @sapUiBrand, 80%);
+@_sap_suite_ui_microchart_InteractiveLineChart_HoverPointBorder:				mix(@sapUiGlobalBackgroundColor, @sapUiBrand, 80%);
+@_sap_suite_ui_microchart_InteractiveLineChart_SelectedHoverPointBorder:		mix(@sapUiGlobalBackgroundColor, @sapUiBrand, 60%);
+
+.sapSuiteILC {
+	border: 1px dotted transparent;
+}
+
+.sapSuiteILCSvgElement {
+	stroke: @_sap_suite_ui_microchart_InteractiveLineChart_LineColor;
+}
+
+.sapSuiteILCPoint {
+	&.sapSuiteILCSelected {
+		border-color: @_sap_suite_ui_microchart_InteractiveLineChart_SelectedPointBorder;
+	}
+
+	&:not(.sapSuiteICSemanticColorGood):not(.sapSuiteICSemanticColorCritical):not(.sapSuiteICSemanticColorError) {
+		background-color: @_sap_suite_ui_microchart_InteractiveLineChart_LineColor;
+	}
+}
+
+.sapSuiteILCTextElement {
+	color: @sapUiContentLabelColor;
+}
+
+.sapSuiteILCSection.sapSuiteILCSelected .sapSuiteILCTextElement {
+	color: @sapUiContentForegroundTextColor;
+}
+
+html.sap-desktop .sapSuiteILC.sapSuiteILCNonInteractive .sapSuiteILCInteractionArea:focus,
+html.sap-tablet .sapSuiteILC:not(.sapSuiteILCNonInteractive) .sapSuiteILCInteractionArea:focus,
+html.sap-phone .sapSuiteILC:not(.sapSuiteILCNonInteractive) .sapSuiteILCInteractionArea:focus {
+	border: 1px dotted transparent;
+}
+
+html.sap-desktop .sapSuiteILC:not(.sapSuiteILCNonInteractive) .sapSuiteILCSection:hover {
+	.sapSuiteILCBackgroundArea {
+		background-color: @_sap_suite_ui_microchart_InteractiveLineChart_SectionHoverBackground;
+
+		.sapSuiteILCTextElement {
+			color: @sapUiContentForegroundTextColor;
+		}
+	}
+	.sapSuiteILCTextElement {
+		color: @sapUiContentForegroundTextColor;
+	}
+
+	.sapSuiteILCPoint {
+		border-color: @_sap_suite_ui_microchart_InteractiveLineChart_HoverPointBorder;
+
+		&.sapSuiteILCSelected {
+			border-color: @_sap_suite_ui_microchart_InteractiveLineChart_SelectedHoverPointBorder;
+		}
+	}
+}
+
+
+
+.sapSuiteILCSection.sapSuiteILCSelected .sapSuiteILCBackgroundArea {
+	background-color: @_sap_suite_ui_microchart_InteractiveLineChart_SectionSelectedBackground;
+}
+
+html.sap-desktop .sapSuiteILC:not(.sapSuiteILCNonInteractive) .sapSuiteILCSection.sapSuiteILCSelected:hover .sapSuiteILCBackgroundArea {
+	background-color: @_sap_suite_ui_microchart_InteractiveLineChart_SectionSelectedHoverBackground;
+}
+
+.sapSuiteILCBottomLabelArea {
+	border-top-color: @_sap_suite_ui_microchart_InteractiveLineChart_BottomLabelBorderColor;
+}
+
+html.sap-desktop .sapSuiteILC:not(.sapSuiteILCNonInteractive) .sapSuiteILCInteractionArea:focus {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapSuiteILC:focus {
+	border-color: @sapUiContentFocusColor;
+}
+
+.sapSuiteILCDivider {
+	stroke: @_sap_suite_ui_microchart_InteractiveLineChart_DividerColor;
+}
+
+/* END "InteractiveLineChart.less" */
+
+/* START "InteractiveDonutChart.less" */
+/* ===================================================================== */
+/* CSS for control sap.suite.ui.microchart/InteractiveDonutChart.control */
+/* Belize Theme                                                          */
+/* ===================================================================== */
+
+@_sap_suite_ui_microchart_InteractiveDonutChart_SegmentHoverBackground: 		fade(@sapUiBrand, 20);
+@_sap_suite_ui_microchart_InteractiveDonutChart_SegmentSelectedBackground: 		fade(@sapUiBrand, 20);
+@_sap_suite_ui_microchart_InteractiveDonutChart_SegmentSelectedHoverBackground:	fade(@sapUiBrand, 40);
+@_sap_suite_ui_microchart_InteractiveDonutChart_SegmentBorder:					fade(@sapUiBrand, 80);
+@_sap_suite_ui_microchart_InteractiveDonutChart_SegmentFillColor:				@sapUiBrand;
+
+/* GENERAL */
+.sapSuiteIDC {
+	border: 1px dotted transparent;
+}
+
+/* FOCUS */
+html.sap-desktop .sapSuiteIDC:focus {
+	border-color: @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapSuiteIDCLegendSegment:focus {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+/* LEGEND SEGMENTS */
+html.sap-desktop .sapSuiteIDC:not(.sapSuiteIDCNonInteractive) {
+	.sapSuiteIDCLegendSegmentHover {
+		background-color: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentHoverBackground;
+
+		.sapSuiteIDCLegendLabelValue {
+			color: @sapUiContentForegroundTextColor;
+		}
+	}
+	.sapSuiteIDCLegendSegmentSelected.sapSuiteIDCLegendSegmentHover {
+		background-color: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentSelectedHoverBackground;
+	}
+}
+
+.sapSuiteIDCLegendSegmentSelected {
+	background-color: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentSelectedBackground;
+}
+
+.sapSuiteIDCLegendMarker {
+	border-color: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentBorder;
+}
+
+/* SVG STYLE */
+.sapSuiteIDCChartSegment { /*normal*/
+	stroke: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentBorder;
+	stroke-width: 1px;
+}
+
+/* DONUT SEGMENTS */
+.sapSuiteIDCChartSegmentHighlight { /*hover*/
+	stroke-opacity: 0.3;
+}
+.sapSuiteIDCChartSegmentSelected{ /*selected*/
+	stroke-opacity: 0.7;
+}
+.sapSuiteIDCChartSegmentHighlight.sapSuiteIDCChartSegmentSelected { /*hover on selected*/
+	stroke-opacity: 0.4;
+}
+
+/* DONUT GHOST SEGMENTS */
+.sapSuiteIDCChartSegmentGhostHighlight { /*hover*/
+	fill: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentHoverBackground;
+}
+.sapSuiteIDCChartSegmentGhostSelected{ /*selected*/
+	fill: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentSelectedBackground;
+}
+.sapSuiteIDCChartSegmentGhostHighlight.sapSuiteIDCChartSegmentGhostSelected { /*hover on selected*/
+	fill: @_sap_suite_ui_microchart_InteractiveDonutChart_SegmentSelectedHoverBackground;
+}
+
+/* END "InteractiveDonutChart.less" */
+
+/* START "RadialMicroChart.less" */
+/* ======================================================== */
+/* CSS for sap.suite.ui.microchart/RadialMicroChart.control */
+/* Belize Theme                                             */
+/* ======================================================== */
+
+.sapSuiteRMCCircleBackground {
+	stroke: @sapUiChartRadialBG;
+	fill: @sapUiChartRadialBG;
+}
+
+/* PATH COLORS */
+.sapSuiteRMCRemainingCircle {
+	stroke: @sapUiChartRadialRemainingCircle;
+}
+
+/* END "RadialMicroChart.less" */
+
+/* START "StackedBarMicroChart.less" */
+/* ==================================================== */
+/* CSS for sap.suite.ui.microchart/StackedBarMicroChart */
+/* Belize Theme                                         */
+/* ==================================================== */
+
+.sapSuiteStackedMC:focus:not([tabindex]) {
+	outline: none;
+}
+
+.sapSuiteStackedMCBarSemanticColorNeutral {
+	background-color: @sapUiChartPaletteSemanticNeutral;
+}
+
+.sapSuiteStackedMCBarSemanticColorGood {
+	background-color: @sapUiChartPaletteSemanticGood;
+}
+
+.sapSuiteStackedMCBarSemanticColorCritical {
+	background-color: @sapUiChartPaletteSemanticCritical;
+}
+
+.sapSuiteStackedMCBarSemanticColorError {
+	background-color: @sapUiChartPaletteSemanticBad;
+}
+
+/* END "StackedBarMicroChart.less" */
+
